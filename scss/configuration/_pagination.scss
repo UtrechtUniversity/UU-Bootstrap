@@ -1,0 +1,25 @@
+
+$pagination-padding-y:              .375rem;
+$pagination-padding-x:              .75rem;
+$pagination-padding-y-sm:           .25rem;
+$pagination-padding-x-sm:           .5rem;
+$pagination-padding-y-lg:           .75rem;
+$pagination-padding-x-lg:           1.5rem;
+
+$pagination-color:                  $black;
+$pagination-bg:                     $gray-300;
+$pagination-border-width:           0;
+
+$pagination-focus-color:            $black;
+$pagination-focus-bg:               $primary;
+
+$pagination-hover-color:            $black;
+$pagination-hover-bg:               $primary;
+
+$pagination-active-color:           $black;
+$pagination-active-bg:              $primary;
+
+$pagination-disabled-color:         $white;
+$pagination-disabled-bg:            $gray-800;
+
+$pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

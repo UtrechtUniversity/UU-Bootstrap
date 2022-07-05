@@ -1,0 +1,78 @@
+@import '../configuration';
+
+.navbar {
+    $transition-time: .3s;
+    transition: background-color $transition-time ease-in-out,background-color  $transition-time ease-in-out, border-color  $transition-time ease-in-out, color $transition-time ease-in-out;
+
+    .nav-link {
+        transition: background-color $transition-time ease-in-out,background-color  $transition-time ease-in-out, border-color  $transition-time ease-in-out, color $transition-time ease-in-out;
+    }
+
+    @each $name, $pair in $colors-with-inverts {
+        $background: nth($pair, 1);
+        $color: nth($pair, 2);
+        &.is-#{$name} {
+
+            background-color: $background;
+
+            .navbar-brand {
+                color: $color;
+                font-weight: bold;
+
+                &:hover,
+                &:focus {
+                    color: $color;
+                }
+
+
+                .nav-link {
+                    color: $color;
+
+                    &:hover,
+                    &:focus {
+                        color: $color;
+                    }
+
+                    &.disabled {
+                        color: $color;
+                    }
+                }
+            }
+
+            .navbar-nav {
+                .nav-link {
+                    color: $color;
+
+                    &:hover,
+                    &:focus {
+                        color: $color;
+                    }
+
+                    &.disabled {
+                        color: $color;
+                    }
+                }
+
+                .show > .nav-link,
+                .nav-link.active {
+                    color: $color;
+                }
+            }
+
+            .navbar-toggler {
+                color: $color;
+                border-color: $color;
+            }
+
+            .navbar-text {
+                color: $color;
+
+                a,
+                a:hover,
+                a:focus {
+                    color: $color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "../configuration";
+
+// Generate extra classes which sets backgrounds with corresponding text color
+// Basically bg-{x} that also sets color
+@each $name, $pair in map_merge($colors-with-inverts, $theme-colors-with-inverts) {
+    $background: nth($pair, 1);
+    $color: nth($pair, 2);
+
+    .bg-text-#{$name} {
+        background-color: $background;
+        color: $color;
+    }
+}

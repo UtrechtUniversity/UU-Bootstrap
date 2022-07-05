@@ -1,0 +1,10 @@
+@import "../configuration";
+
+.box {
+    background: $white;
+    padding: 1rem 1.5rem;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
