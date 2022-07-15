@@ -1,0 +1,47 @@
+@import "../../configuration";
+
+// CSS Variables
+& {
+    --#{$uu-css-prefix}container-width: #{$uu-container-width};
+    --#{$uu-css-prefix}container-padding-y: #{$uu-container-padding-y};
+    --#{$uu-css-prefix}container-padding-x: #{$uu-container-padding-x};
+    --#{$uu-css-prefix}content-width: #{$uu-content-width};
+    --#{$uu-css-prefix}border-color: #{$uu-border-color};
+    --#{$uu-css-prefix}border-color-light: #{$uu-border-color-light};
+    --#{$uu-css-prefix}border-color-dark: #{$uu-border-color-dark};
+
+    --#{$uu-css-prefix}header-padding-y: #{$uu-header-padding-y};
+    --#{$uu-css-prefix}header-font-size: #{$uu-header-font-size};
+    --#{$uu-css-prefix}header-title-color: #{$uu-header-title-color};
+    --#{$uu-css-prefix}header-border-gap: #{$uu-header-border-gap};
+
+    --#{$uu-css-prefix}navbar-navlink-padding-x: #{$uu-navbar-navlink-padding-x};
+    --#{$uu-css-prefix}navbar-navlink-padding-y: #{$uu-navbar-navlink-padding-y};
+
+    --#{$uu-css-prefix}footer-padding-y: #{$uu-footer-padding-y};
+    --#{$uu-css-prefix}footer-color: #{$uu-footer-color};
+    --#{$uu-css-prefix}footer-background-color: #{$uu-footer-background-color};
+
+    --#{$uu-css-prefix}background-color: #{$uu-hero-background-color};
+    --#{$uu-css-prefix}hero-padding-y: #{$uu-hero-padding-y};
+    --#{$uu-css-prefix}hero-font-weight: #{$uu-hero-font-weight};
+
+    --#{$uu-css-prefix}cover-default-height: #{$uu-cover-default-height};
+    --#{$uu-css-prefix}cover-copyright-padding-x: #{$uu-cover-copyright-padding-x};
+    --#{$uu-css-prefix}cover-copyright-padding-y: #{$uu-cover-copyright-padding-y};
+    --#{$uu-css-prefix}cover-copyright-text-size: #{$uu-cover-copyright-text-size};
+    --#{$uu-css-prefix}cover-copyright-text-color: #{$uu-cover-copyright-text-color};
+    --#{$uu-css-prefix}cover-copyright-background-color: #{$uu-cover-copyright-background-color};
+
+    --#{$uu-css-prefix}sidebar-width: #{$uu-sidebar-width};
+    --#{$uu-css-prefix}sidebar-padding-x: #{$uu-sidebar-padding-x};
+    --#{$uu-css-prefix}sidebar-padding-y: #{$uu-sidebar-padding-y};
+    --#{$uu-css-prefix}sidebar-gap: #{$uu-sidebar-gap};
+    --#{$uu-css-prefix}sidebar-background: #{$uu-sidebar-background};
+    --#{$uu-css-prefix}sidebar-header-font-weight: #{$uu-sidebar-header-font-weight};
+    --#{$uu-css-prefix}sidebar-header-padding-y: #{$uu-sidebar-header-padding-y};
+    --#{$uu-css-prefix}sidebar-nav-padding-y: #{$uu-sidebar-nav-padding-y};
+    --#{$uu-css-prefix}sidebar-nav-padding-x: #{$uu-sidebar-nav-padding-x};
+    --#{$uu-css-prefix}sidebar-nav-disabled-color: #{$uu-sidebar-nav-disabled-color};
+    --#{$uu-css-prefix}sidebar-nav-active-font-weight: #{$uu-sidebar-nav-active-font-weight};
+}

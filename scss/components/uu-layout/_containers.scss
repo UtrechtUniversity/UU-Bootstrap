@@ -1,0 +1,38 @@
+@import "../../configuration";
+
+.#{$uu-prefix}content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.#{$uu-prefix}fullwidth-container {
+    width: 100%;
+    display: flex;
+    padding:
+        var(--#{$uu-css-prefix}container-padding-y)
+        var(--#{$uu-css-prefix}container-padding-x);
+}
+
+// For sass use only, not in your html! Use .uu-container instead.
+// It's a base class, which is extended _everywhere_.
+.-#{$uu-prefix}spaced-container {
+    @extend .#{$uu-prefix}fullwidth-container;
+    @media (min-width: $uu-content-start-spacing-breakpoint) {
+        padding-left: $uu-content-spacing-padding-x;
+        padding-right: $uu-content-spacing-padding-x;
+    }
+}
+
+.#{$uu-prefix}container {
+    @extend .-#{$uu-prefix}spaced-container;
+}
+
+// Removes padding from subsequent containers, to remove excess padding
+// Done @at-root, as CSS is somewhat picky with the + selector if classes have a 'parent' class
+@at-root .#{$uu-prefix}container + .#{$uu-prefix}container {
+    padding-top: 0;
+}

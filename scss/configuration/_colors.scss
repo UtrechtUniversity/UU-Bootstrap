@@ -1,91 +1,48 @@
-@import "node_modules/bootstrap/scss/functions";
-
-
-@function findColorInvert($color) {
-    @if (luminance($color) > 0.55) {
-        @return rgba(#000, 0.7);
-    } @else {
-        @return #fff;
-    }
-}
-
-
 //// UU Color pallette
 // Primary colors
-$yellow:              #FFCD00;
-$yellow-invert:       findColorInvert($yellow);
-$red:                 #C00A35;
-$red-invert:          findColorInvert($red);
+$yellow:          #FFCD00;
+$red:             #C00A35;
 // Secondary colors
-$cream:               #FFE6AB;
-$cream-invert:        findColorInvert($cream);
-$orange:              #F3965E;
-$orange-invert:       findColorInvert($orange);
-$bordeaux-red:        #AA1555;
-$bordeaux-red-invert: findColorInvert($bordeaux-red);
-$brown:               #6E3B23;
-$brown-invert:        findColorInvert($brown);
-$teal:                #24A793; // UU calls this Green, but it looks teal
-$teal-invert:         findColorInvert($teal);
-$blue:                #5287C6;
-$blue-invert:         findColorInvert($blue);
-$dark-blue:           #001240;
-$dark-blue-invert:    findColorInvert($dark-blue);
-$purple:              #5B2182;
-$purple-invert:       findColorInvert($purple);
+$cream:           #FFE6AB;
+$orange:          #F3965E;
+$bordeaux-red:    #AA1555;
+$brown:           #6E3B23;
+$teal:            #24A793; // UU calls this Green, but it looks teal
+$blue:            #5287C6;
+$dark-blue:       #001240;
+$purple:          #5B2182;
 
 // Bootstrap colors
 $white:           #fff;
-$white-invert:    findColorInvert($white);
+$gray-050:        #f8f9fa;
 $gray-100:        #f8f9fa;
-$gray-100-invert: findColorInvert($gray-100);
 $gray-200:        #e9ecef;
-$gray-200-invert: findColorInvert($gray-200);
 $gray-300:        #dee2e6;
-$gray-300-invert: findColorInvert($gray-300);
 $gray-400:        #ced4da;
-$gray-400-invert: findColorInvert($gray-400);
 $gray-500:        #adb5bd;
-$gray-500-invert: findColorInvert($gray-500);
 $gray-600:        #6c757d;
-$gray-600-invert: findColorInvert($gray-600);
 $gray-700:        #495057;
-$gray-700-invert: findColorInvert($gray-700);
 $gray-800:        #343a40;
-$gray-800-invert: findColorInvert($gray-800);
+// In between, custom
+$gray-850:        #262626;
 $gray-900:        #212529;
-$gray-900-invert: findColorInvert($gray-900);
 $black:           #000;
-$black-invert:    findColorInvert($black);
 
-$indigo:        #6610f2;
-$indigo-invert: findColorInvert($indigo);
-$pink:          #d63384;
-$pink-invert:   findColorInvert($pink);
-$green:         #198754;
-$green-invert:  findColorInvert($green);
-$cyan:          #0dcaf0;
-$cyan-invert:   findColorInvert($cyan);
+$indigo:          #6610f2;
+$pink:            #d63384;
+$green:           #198754;
+$cyan:            #0dcaf0;
 
-$primary:          $yellow;
-$primary-invert:   $yellow-invert;
-$secondary:        $gray-600;
-$secondary-invert: $gray-600-invert;
-$success:          $green;
-$success-invert:   $green-invert;
-$info:             $cyan;
-$info-invert:      $cyan-invert;
-$warning:          $orange; // TODO: new color
-$warning-invert:   $orange-invert;
-$danger:           $red;
-$danger-invert:    $red-invert;
-$light:            $gray-100;
-$light-invert:     $gray-100-invert;
-$dark:             $gray-900;
-$dark-invert:      $gray-900-invert;
+$primary:         $yellow;
+$secondary:       $black;
+$success:         $green;
+$info:            $cyan;
+$warning:         $orange;
+$danger:          $red;
+$light:           $gray-100;
+$dark:            $gray-850;
 
 $colors: (
-  "primary":      $primary,
   "blue":         $blue,
   "dark-blue":    $dark-blue,
   "indigo":       $indigo,
@@ -105,46 +62,19 @@ $colors: (
   "gray-dark":    $gray-800
 );
 
-$colors-with-inverts: (
-  "primary":    ($primary, $primary-invert),
-  "blue":       ($blue, $blue-invert),
-  "indigo":     ($indigo, $indigo-invert),
-  "purple":     ($purple, $purple-invert),
-  "pink":       ($pink, $pink-invert),
-  "red":        ($red, $red-invert),
-  "orange":     ($orange, $orange-invert),
-  "yellow":     ($yellow, $yellow-invert),
-  "green":      ($green, $green-invert),
-  "teal":       ($teal, $teal-invert),
-  "cyan":       ($cyan, $cyan-invert),
-  "white":      ($white, $white-invert),
-  "gray":       ($gray-600, $gray-600-invert),
-  "gray-dark":  ($gray-800, $gray-800-invert),
-);
-
-
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "dark":         $dark
 );
 
-
-$theme-colors-with-inverts: (
-  "primary":    ($primary, $primary-invert),
-  "secondary":  ($secondary, $secondary-invert),
-  "success":    ($success, $success-invert),
-  "info":       ($info, $info-invert),
-  "warning":    ($warning, $warning-invert),
-  "danger":     ($danger, $danger-invert),
-  "light":      ($light, $light-invert),
-  "dark":       ($dark, $dark-invert)
-);
+// All colors accessible
+$theme-colors: map-merge($theme-colors, $colors);
 
 $link-color: $blue;
-$body-bg: $gray-100;
+$body-bg: #F6F6F6;

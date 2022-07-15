@@ -2,6 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
+!dist/css/*.css.map
 
 node_modules
 *.log*

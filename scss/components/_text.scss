@@ -1,0 +1,11 @@
+@import "../configuration";
+.font-serif {
+  font-family: "Merriweather", serif;
+}
+
+@for $i from 1 through 7 {
+  h#{$i}.hdr-underlined {
+    border-bottom: 1px solid $uu-border-color;
+    padding-bottom: $uu-sidebar-header-padding-y;
+  }
+}

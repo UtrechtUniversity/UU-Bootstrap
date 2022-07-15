@@ -1,0 +1,16 @@
+@import "../configuration";
+
+
+code, pre.code {
+    background: $code-background;
+    color: $code-color;
+    padding: $code-padding-y $code-padding-x;
+    margin: 0;
+    font-size: $code-font-size;
+    border-radius: $code-border-radius;
+}
+
+pre.code {
+    padding: $code-padding-y $code-padding-x;
+    overflow: auto;
+}

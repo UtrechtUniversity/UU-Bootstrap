@@ -1,9 +1,10 @@
-@import '../configuration';
+@import '../../configuration';
 
 .btn {
     font-weight: bold;
     &.btn-loading {
         position: relative;
+        color: transparent;
         .btn-text {
             color: transparent;
         }
@@ -22,13 +23,15 @@
             animation: spinner-border .5s infinite linear;
         }
 
-        @each $name, $pair in $theme-colors-with-inverts {
-            $color: nth($pair, 2);
-
+        @each $name, $color in $theme-colors {
             @at-root &.btn-#{$name}::after {
-                border-color: $color;
+                border-color: color-contrast($color);
             }
         }
     }
 
+}
+
+.btn-group {
+    gap: $btn-group-gap;
 }

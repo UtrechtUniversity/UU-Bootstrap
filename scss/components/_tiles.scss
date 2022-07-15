@@ -1,0 +1,77 @@
+
+$gap: 10px;
+
+// Some mixin magic such that one can add extra classes to both a specific tile or the tiles container
+// $selector refers to the element that has the class applied to it
+// $element refers to the element that need the actual styles. Empty for .tile, as then it is equal to $selector
+@mixin styles($selector, $element: "") {
+    @each $name, $pair in $colors-with-inverts {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        @at-root #{$selector}.is-#{$name} #{$element} {
+            background-color: $color;
+            color: $color-invert !important;
+            border-color: $color;
+        }
+    }
+
+    @at-root #{$selector}.has-content-centered #{$element} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @at-root #{$selector}.has-border #{$element} {
+        border: 2px solid $border-color;
+    }
+
+    @at-root #{$selector}.is-hoverable #{$element} {
+        @at-root #{$selector}#{$element}:hover {
+            color: $primary-invert !important;
+            background: $primary;
+            border-color: $primary;
+            cursor: pointer;
+        }
+
+        @each $name, $pair in $colors-with-inverts {
+            $color: nth($pair, 1);
+            $color-invert: nth($pair, 2);
+            @at-root #{$selector}.is-hover-#{$name}#{$element}:hover {
+                background-color: $color;
+                color: $color-invert;
+                border-color: $color;
+            }
+        }
+    }
+}
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap;
+
+    @include styles(&, " .tile");
+
+    .tile {
+        width: calc(25% - $gap + ($gap / 4));
+        background: $white;
+        color: $body-color;
+        padding: 1rem;
+        aspect-ratio: 1 / 1 ;
+
+        a {
+            color: $body-color;
+        }
+
+        @include styles(&)
+    }
+
+    @for $i from 2 through 12 {
+        &.has-#{$i} > .tile {
+            width: calc((100% / $i) - $gap + ($gap / $i))
+        }
+    }
+
+}

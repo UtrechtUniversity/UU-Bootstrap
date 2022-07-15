@@ -1,0 +1,86 @@
+@use "sass:map";
+@import "../../configuration";
+
+.#{$uu-prefix}cover {
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-height: var(--#{$uu-css-prefix}cover-default-height);
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @include media-breakpoint-down($breakpoint, $grid-breakpoints) {
+            @each $height in [100, 200, 300, 400, 500] {
+                &.h#{$infix}-#{$height} {
+                    max-height: #{$height}px;
+                }
+            }
+        }
+    }
+
+    .#{$uu-prefix}cover-image {
+        display: block;
+        height: 100%;
+        width: 100%;
+        @media (max-width: map.get($grid-breakpoints, md)) {
+            width: unset;
+        }
+    }
+
+    .#{$uu-prefix}cover-copyright {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        padding:
+            var(--#{$uu-css-prefix}cover-copyright-padding-y)
+            var(--#{$uu-css-prefix}cover-copyright-padding-x);
+        background-color: var(--#{$uu-css-prefix}cover-copyright-background-color);
+        color: var(--#{$uu-css-prefix}cover-copyright-text-color);
+        font-size: var(--#{$uu-css-prefix}cover-copyright-text-size);
+
+        &.#{$uu-prefix}cover-copyright-right {
+            right: 0;
+            left: unset;
+        }
+    }
+
+    // Extra styles so you can use a hero inside a cover.
+    .#{$uu-prefix}cover-hero {
+        @extend .#{$uu-prefix}hero;
+        position: absolute;
+        bottom: 0;
+        width: calc(
+            100% - $uu-sidebar-full-width
+        );
+
+        @media (max-width: $uu-content-start-spacing-breakpoint) {
+            width: calc(100% - $uu-sidebar-intermediate-full-width);
+        }
+
+        // Sidebar is on the left
+        &:not(.#{$uu-prefix}cover-hero-left) {
+            right: 0;
+            padding-left: var(--#{$uu-css-prefix}sidebar-gap);
+        }
+
+        // Sidebar is on the right
+        &.#{$uu-prefix}cover-hero-left {
+            left: 0;
+            padding-right: var(--#{$uu-css-prefix}sidebar-gap);
+        }
+
+        @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+            width: 100%;
+
+            // We _could_ also use !important....
+            &:not(.#{$uu-prefix}cover-hero-left), &.#{$uu-prefix}cover-hero-left {
+                padding-left: var(--#{$uu-css-prefix}container-padding-x);
+                padding-right: var(--#{$uu-css-prefix}container-padding-x);
+            }
+        }
+    }
+}

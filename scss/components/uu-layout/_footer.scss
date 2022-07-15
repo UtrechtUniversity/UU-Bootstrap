@@ -1,0 +1,22 @@
+@use "sass:map";
+@import "../../configuration";
+
+.#{$uu-prefix}footer {
+    @extend .-#{$uu-prefix}spaced-container;
+
+    flex-wrap: wrap;
+    background: var(--#{$uu-css-prefix}footer-background-color);
+    color: var(--#{$uu-css-prefix}footer-color);
+    align-items: center;
+    padding-top: var(--#{$uu-css-prefix}footer-padding-y);
+    padding-bottom: var(--#{$uu-css-prefix}footer-padding-y);
+
+    @media (max-width: map.get($grid-breakpoints, md)) {
+        gap: 20px;
+    }
+
+    p:last-child {
+        margin: 0;
+        padding: 0;
+    }
+}

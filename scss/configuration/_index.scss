@@ -1,17 +1,8 @@
-// 1. Basic functions
-@import "node_modules/bootstrap/scss/functions";
+// Bootstrap
+@import "bootstrap";
 
-// 2. Variable overrides
-@import "generic";
+// Custom
 @import "colors";
 @import "fonts";
-
-@import "navbar";
-@import "button";
-@import "table";
-@import "pagination";
-
-// 3. Configuration
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/utilities";
+@import "code";
+@import "uu-layout";
