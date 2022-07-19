@@ -12,6 +12,7 @@
 .#{$uu-prefix}fullwidth-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     padding:
         var(--#{$uu-css-prefix}container-padding-y)
         var(--#{$uu-css-prefix}container-padding-x);
