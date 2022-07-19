@@ -38,3 +38,8 @@
 @import "button";
 @import "navbar";
 @import "pagination";
+
+.flex-fill {
+    // Otherwise it won't shrink...
+    min-width: 0;
+}
