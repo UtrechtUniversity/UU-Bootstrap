@@ -1,0 +1,89 @@
+@import "../configuration";
+
+$inactive-color: $gray-400;
+$stepper-padding-y: 0.75rem;
+
+.stepper {
+    position: relative;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 1rem;
+            height: calc(100% - 1rem);
+            width: 2px;
+            background: $inactive-color;
+            z-index: -1;
+        }
+
+        li {
+            line-height: 2rem;
+
+            > .stepper-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .stepper-bubble {
+                background: $inactive-color;
+                color: color-contrast($inactive-color);
+                font-weight: bold;
+                line-height: 2rem;
+                font-size: 0.8rem;
+                display: inline-block;
+                border-radius: 100%;
+                text-align: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-left: 0.375rem;
+                margin-right: 0.375rem;
+
+                &.finished {
+                    background: $green-300;
+                    color: color-contrast($green-300);
+                }
+
+                &.incomplete {
+                    background: $yellow;
+                    color: color-contrast($yellow);
+                }
+
+                &.stepper-bubble-large {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                &.stepper-bubble-small {
+                    width: 0.75rem;
+                    height: 0.75rem;
+                    margin-left: 0.625rem;
+                    margin-right: 0.625rem;
+                }
+            }
+
+            &:not(:last-of-type) {
+                padding-bottom: $stepper-padding-y;
+            }
+
+            > ul {
+                padding-top: $stepper-padding-y;
+            }
+        }
+    }
+}
