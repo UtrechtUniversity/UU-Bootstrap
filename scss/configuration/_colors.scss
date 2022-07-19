@@ -39,6 +39,7 @@ $success:         $green;
 $info:            $cyan;
 $warning:         $orange;
 $danger:          $red;
+$error:           $danger;
 $light:           $gray-100;
 $dark:            $gray-850;
 
@@ -69,6 +70,7 @@ $theme-colors: (
   "info":         $info,
   "warning":      $warning,
   "danger":       $danger,
+  "error":        $error,
   "light":        $light,
   "dark":         $dark
 );
