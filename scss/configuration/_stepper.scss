@@ -1,0 +1,22 @@
+@import "colors";
+
+$stepper-inactive-bg: $gray-400 !default;
+$stepper-min-width: 250px !default;
+$stepper-padding-y: 0.75rem !default;
+
+// Variables below are SCSS only vars
+$stepper-max-indent: 3rem !default;
+$stepper-bubble-max-size: 2rem !default;
+// Bit misleading, isn't _actually_ the min size unless you have a size 0
+$stepper-bubble-min-size: .3rem !default;
+// A map of size names (stepper-bubble-{size}) and ratios (higher number === larger actual size)
+$stepper-bubble-size-map: (
+    'largest': 5,
+    'large': 4,
+    'medium': 3,
+    'normal': 3,
+    'small': 2,
+    'smallest': 1,
+) !default;
+// Should be equal to the largest number in the size map
+$stepper-bubble-num-sizes: 5 !default;

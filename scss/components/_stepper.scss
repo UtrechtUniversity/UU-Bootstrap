@@ -1,33 +1,37 @@
+@use "sass:math";
 @import "../configuration";
 
-$inactive-color: $gray-400;
-$stepper-padding-y: 0.75rem;
 
 .stepper {
+    --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg};
+    --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg)};
+    --#{$prefix}stepper-min-width: #{$stepper-min-width};
+    --#{$prefix}stepper-padding-y: #{$stepper-padding-y};
+
     position: relative;
     z-index: 1;
-    min-width: 200px;
+    min-width: var(--#{$prefix}stepper-min-width);
 
     a {
         text-decoration: none;
+    }
+
+    > ul::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: calc($stepper-bubble-max-size / 2 - 1px);
+        top: 1rem;
+        height: calc(100% - 1rem);
+        width: 2px;
+        background: var(--#{$prefix}stepper-inactive-bg);
+        z-index: -1;
     }
 
     ul {
         list-style: none;
         padding-left: 0;
         margin: 0;
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 15px;
-            top: 1rem;
-            height: calc(100% - 1rem);
-            width: 2px;
-            background: $inactive-color;
-            z-index: -1;
-        }
 
         li {
             line-height: 2rem;
@@ -40,19 +44,15 @@ $stepper-padding-y: 0.75rem;
             }
 
             .stepper-bubble {
-                background: $inactive-color;
+                background: var(--#{$prefix}stepper-inactive-bg);
                 flex: 0 0 auto;
-                color: color-contrast($inactive-color);
+                color: var(--#{$prefix}stepper-inactive-color);
                 font-weight: bold;
-                line-height: 2rem;
+                line-height: $stepper-bubble-max-size;
                 font-size: 0.8rem;
                 display: inline-block;
                 border-radius: 100%;
                 text-align: center;
-                width: 1.25rem;
-                height: 1.25rem;
-                margin-left: 0.375rem;
-                margin-right: 0.375rem;
 
                 &.finished {
                     background: $green-300;
@@ -64,27 +64,25 @@ $stepper-padding-y: 0.75rem;
                     color: color-contrast($yellow);
                 }
 
-                &.stepper-bubble-large {
-                    width: 2rem;
-                    height: 2rem;
-                    margin-left: 0;
-                    margin-right: 0;
-                }
-
-                &.stepper-bubble-small {
-                    width: 0.75rem;
-                    height: 0.75rem;
-                    margin-left: 0.625rem;
-                    margin-right: 0.625rem;
+                @each $size, $portion in $stepper-bubble-size-map {
+                    &.stepper-bubble-#{$size} {
+                        $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($portion, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;
+                        $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
+                        $indent: math.div($stepper-bubble-num-sizes - $portion, $stepper-bubble-num-sizes) * $stepper-max-indent;
+                        width: $actual-size;
+                        height: $actual-size;
+                        margin-left: $spacing;
+                        margin-right: $spacing + $indent;
+                    }
                 }
             }
 
             &:not(:last-of-type) {
-                padding-bottom: $stepper-padding-y;
+                padding-bottom: var(--#{$prefix}stepper-padding-y);
             }
 
             > ul {
-                padding-top: $stepper-padding-y;
+                padding-top: var(--#{$prefix}stepper-padding-y);
             }
         }
     }
