@@ -6,6 +6,7 @@ $stepper-padding-y: 0.75rem;
 .stepper {
     position: relative;
     z-index: 1;
+    min-width: 200px;
 
     a {
         text-decoration: none;
@@ -40,6 +41,7 @@ $stepper-padding-y: 0.75rem;
 
             .stepper-bubble {
                 background: $inactive-color;
+                flex: 0 0 auto;
                 color: color-contrast($inactive-color);
                 font-weight: bold;
                 line-height: 2rem;
