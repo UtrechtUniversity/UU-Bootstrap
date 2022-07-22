@@ -1,5 +1,8 @@
 @import "colors";
 
+$stepper-disabled-color: $text-muted !default;
+$stepper-complete-bg: $green-300 !default;
+$stepper-incomplete-bg: $yellow !default;
 $stepper-inactive-bg: $gray-400 !default;
 $stepper-min-width: 250px !default;
 $stepper-padding-y: 0.75rem !default;

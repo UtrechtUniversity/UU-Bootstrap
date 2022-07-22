@@ -3,6 +3,11 @@
 
 
 .stepper {
+    --#{$prefix}stepper-disabled-color: #{$stepper-disabled-color};
+    --#{$prefix}stepper-complete-bg: #{$stepper-complete-bg};
+    --#{$prefix}stepper-complete-color: #{color-contrast($stepper-complete-bg)};
+    --#{$prefix}stepper-incomplete-bg: #{$stepper-incomplete-bg};
+    --#{$prefix}stepper-incomplete-color: #{color-contrast($stepper-incomplete-bg)};
     --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg};
     --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg)};
     --#{$prefix}stepper-min-width: #{$stepper-min-width};
@@ -41,38 +46,49 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 1rem;
-            }
 
-            .stepper-bubble {
-                background: var(--#{$prefix}stepper-inactive-bg);
-                flex: 0 0 auto;
-                color: var(--#{$prefix}stepper-inactive-color);
-                font-weight: bold;
-                line-height: $stepper-bubble-max-size;
-                font-size: 0.8rem;
-                display: inline-block;
-                border-radius: 100%;
-                text-align: center;
-
-                &.finished {
-                    background: $green-300;
-                    color: color-contrast($green-300);
+                &.active {
+                    font-weight: 600;
                 }
 
-                &.incomplete {
-                    background: $yellow;
-                    color: color-contrast($yellow);
+                &.disabled {
+                    color: var(--#{$prefix}stepper-disabled-color);
+                    font-style: italic;
                 }
 
-                @each $size, $portion in $stepper-bubble-size-map {
-                    &.stepper-bubble-#{$size} {
-                        $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($portion, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;
-                        $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
-                        $indent: math.div($stepper-bubble-num-sizes - $portion, $stepper-bubble-num-sizes) * $stepper-max-indent;
-                        width: $actual-size;
-                        height: $actual-size;
-                        margin-left: $spacing;
-                        margin-right: $spacing + $indent;
+                &.complete .stepper-bubble, .stepper-bubble.complete,
+                &.finished .stepper-bubble, .stepper-bubble.finished {
+                    background: var(--#{$prefix}stepper-complete-bg);
+                    color: var(--#{$prefix}stepper-complete-color);
+                }
+
+                &.incomplete .stepper-bubble, .stepper-bubble.incomplete {
+                    background: var(--#{$prefix}stepper-incomplete-bg);
+                    color: var(--#{$prefix}stepper-incomplete-color);
+                }
+
+                .stepper-bubble {
+                    background: var(--#{$prefix}stepper-inactive-bg);
+                    flex: 0 0 auto;
+                    color: var(--#{$prefix}stepper-inactive-color);
+                    font-weight: bold;
+                    line-height: $stepper-bubble-max-size;
+                    font-size: 0.8rem;
+                    display: inline-block;
+                    border-radius: 100%;
+                    text-align: center;
+
+                    @each $size, $portion in $stepper-bubble-size-map {
+                        &.stepper-bubble-#{$size} {
+                            $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($portion, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;
+                            $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
+                            $indent: math.div($stepper-bubble-num-sizes - $portion, $stepper-bubble-num-sizes) * $stepper-max-indent;
+                            width: $actual-size;
+                            height: $actual-size;
+                            margin-left: $spacing;
+                            margin-right: $spacing + $indent;
+                            line-height: $actual-size;
+                        }
                     }
                 }
             }
