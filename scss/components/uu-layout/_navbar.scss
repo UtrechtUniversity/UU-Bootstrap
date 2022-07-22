@@ -13,6 +13,8 @@
         border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
         flex-wrap: wrap;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
     }
 
     .#{$uu-prefix}navbar-container {
