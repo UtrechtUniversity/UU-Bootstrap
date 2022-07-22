@@ -71,6 +71,30 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            id="componentDropdown"
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Components
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <NuxtLink to="/components/stepper/" class="dropdown-item">
+                                    Stepper
+                                </NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/components/tiles/" class="dropdown-item">
+                                    Tiles
+                                </NuxtLink>
+                            </li>
+                        </ul>
+                    </li>
 
                 </ul>
             </div>
