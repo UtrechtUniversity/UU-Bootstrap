@@ -1,6 +1,10 @@
-# UU-bootstrap docs
+# Portaldev Bootstrap docs
 
-Small nuxt app to generate the docs (statically)
+Small nuxt app to serve as both documentation as well as developing
+
+## Requirements
+- Yarn
+- Node >= 16 (other versions untested)
 
 ## Setup
 
@@ -11,24 +15,10 @@ Make sure to install the dependencies:
 yarn install
 ```
 
-## Development Server
+## Run Server
 
 Start the development server on http://localhost:3000
 
 ```bash
 yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
 ```
