@@ -1,3 +1,4 @@
+@use "../configuration" as *;
 
 $gap: 10px;
 
@@ -5,7 +6,7 @@ $gap: 10px;
 // $selector refers to the element that has the class applied to it
 // $element refers to the element that need the actual styles. Empty for .tile, as then it is equal to $selector
 @mixin styles($selector, $element: "") {
-    @each $name, $pair in $colors-with-inverts {
+    @each $name, $pair in $theme-colors {
         $color: nth($pair, 1);
         $color-invert: nth($pair, 2);
         @at-root #{$selector}.is-#{$name} #{$element} {
@@ -28,15 +29,14 @@ $gap: 10px;
 
     @at-root #{$selector}.is-hoverable #{$element} {
         @at-root #{$selector}#{$element}:hover {
-            color: $primary-invert !important;
+            color: color-contrast($primary) !important;
             background: $primary;
             border-color: $primary;
             cursor: pointer;
         }
 
-        @each $name, $pair in $colors-with-inverts {
-            $color: nth($pair, 1);
-            $color-invert: nth($pair, 2);
+        @each $name, $color in $theme-colors {
+            $color-invert: color-contrast($color);
             @at-root #{$selector}.is-hover-#{$name}#{$element}:hover {
                 background-color: $color;
                 color: $color-invert;

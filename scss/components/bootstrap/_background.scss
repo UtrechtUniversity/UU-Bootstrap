@@ -1,9 +1,9 @@
-@import "../../configuration";
+@use "../../configuration" as c;
 
-@each $color, $value in $theme-colors {
-  $color-rgb: to-rgb($value);
+@each $color, $value in c.$theme-colors {
+  $color-rgb: c.to-rgb($value);
   .text-bg-hover-#{$color}:hover {
-    color: color-contrast($value) !important;
-    background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1)) !important;
+    color: c.color-contrast($value) !important;
+    background-color: RGBA($color-rgb, var(--#{c.$prefix}bg-opacity, 1)) !important;
   }
 }

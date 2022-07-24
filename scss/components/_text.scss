@@ -1,11 +1,12 @@
-@import "../configuration";
+@use "../configuration" as c;
+
 .font-serif {
   font-family: "Merriweather", serif;
 }
 
 @for $i from 1 through 7 {
   h#{$i}.hdr-underlined {
-    border-bottom: 1px solid $uu-border-color;
-    padding-bottom: $uu-sidebar-header-padding-y;
+    border-bottom: 1px solid c.$uu-border-color;
+    padding-bottom: c.$uu-sidebar-header-padding-y;
   }
 }

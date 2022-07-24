@@ -1,39 +1,41 @@
 @use "sass:map";
-@import "../../configuration";
+@use "../../configuration" as c;
 
-.#{$uu-prefix}navbar {
+.#{c.$uu-prefix}navbar {
     width: 100%;
-    background: $black;
+    background: c.$black;
     flex-wrap: nowrap;
     justify-content: flex-start;
 
-    @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-        background: $white !important;
-        color: $black !important;
-        border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
+    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        background: c.$white !important;
+        color: c.$black !important;
+        border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
         flex-wrap: wrap;
         justify-content: space-between;
         position: sticky;
         top: 0;
     }
 
-    .#{$uu-prefix}navbar-container {
+    .#{c.$uu-prefix}navbar-container {
         width: 100%;
         // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-        padding-left: calc($uu-content-spacing-padding-x - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
-        padding-right: calc($uu-content-spacing-padding-x - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
+        $-spaced-padding-x: calc(#{c.$uu-content-spacing-padding-x} - var(--#{c.$uu-css-prefix}navbar-navlink-padding-x));
+        padding-left: $-spaced-padding-x;
+        padding-right: $-spaced-padding-x;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: inherit;
 
-        @media (max-width: $uu-content-start-spacing-breakpoint) {
+        @media (max-width: c.$uu-content-start-spacing-breakpoint) {
             // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-            padding-left: calc(var(--#{$uu-css-prefix}container-padding-x) - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
-            padding-right: calc(var(--#{$uu-css-prefix}container-padding-x) - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
+            $-padding-x: calc(var(--#{c.$uu-css-prefix}container-padding-x) - var(--#{c.$uu-css-prefix}navbar-navlink-padding-x));
+            padding-left: $-padding-x;
+            padding-right: $-padding-x;
         }
 
-        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
             padding-left: 0;
             padding-right: 0;
         }
@@ -42,7 +44,7 @@
     .navbar-brand {
         padding-left: 0.75rem;
 
-        @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
             display: none;
         }
 
@@ -52,7 +54,7 @@
 
     }
 
-    @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
         .navbar-toggler {
             display: none;
         }
@@ -64,7 +66,7 @@
 
     .navbar-nav {
 
-        @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
             flex-direction: row;
         }
 
@@ -76,7 +78,7 @@
                 margin-top: 0;
             }
 
-            @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
                 position: absolute;
             }
 
@@ -88,26 +90,26 @@
         }
 
         .nav-link {
-            color: $white;
+            color: c.$white;
 
             &:hover,
             &:focus {
-                color: $yellow;
+                color: c.$yellow;
             }
 
             &.disabled {
-                color: $gray-500;
+                color: c.$gray-500;
             }
 
-            @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                padding: var(--#{$uu-css-prefix}navbar-navlink-padding-y) var(--#{$uu-css-prefix}navbar-navlink-padding-x);
+            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+                padding: var(--#{c.$uu-css-prefix}navbar-navlink-padding-y) var(--#{c.$uu-css-prefix}navbar-navlink-padding-x);
             }
 
-            @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                background: $black;
-                padding-left: var(--#{$uu-css-prefix}container-padding-x);
-                padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                border-top: 1px solid var(--#{$uu-css-prefix}border-color-dark);
+            @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+                background: c.$black;
+                padding-left: var(--#{c.$uu-css-prefix}container-padding-x);
+                padding-right: var(--#{c.$uu-css-prefix}container-padding-x);
+                border-top: 1px solid var(--#{c.$uu-css-prefix}border-color-dark);
             }
 
             &.dropdown-toggle.show::after {
@@ -117,31 +119,30 @@
 
         .show > .nav-link,
         .nav-link.active {
-            color: $yellow;
+            color: c.$yellow;
         }
     }
 
     .navbar-toggler {
-        color: $white;
+        color: c.$white;
         border-color: transparent;
-        //padding: .25rem 0;
     }
 
     .navbar-toggler-icon {
-        background-image: escape-svg($navbar-light-toggler-icon-bg);
+        background-image: c.escape-svg(c.$navbar-light-toggler-icon-bg);
     }
 
     .navbar-text {
-        color: $white;
+        color: c.$white;
 
         a,
         a:hover,
         a:focus {
-            color: $yellow;
+            color: c.$yellow;
         }
 
-        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-            color: $black;
+        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+            color: c.$black;
         }
     }
 }

@@ -1,4 +1,4 @@
-@import '../../configuration';
+@use '../../configuration' as c;
 
 .btn {
     font-weight: bold;
@@ -23,9 +23,9 @@
             animation: spinner-border .5s infinite linear;
         }
 
-        @each $name, $color in $theme-colors {
+        @each $name, $color in c.$theme-colors {
             @at-root &.btn-#{$name}::after {
-                border-color: color-contrast($color);
+                border-color: c.color-contrast($color);
             }
         }
     }
@@ -33,5 +33,5 @@
 }
 
 .btn-group {
-    gap: $btn-group-gap;
+    gap: c.$btn-group-gap;
 }
