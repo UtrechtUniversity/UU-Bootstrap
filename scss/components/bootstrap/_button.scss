@@ -2,6 +2,57 @@
 
 .btn {
     font-weight: bold;
+
+    &.btn-arrow-right, &.btn-arrow-left {
+        &:not([class^='btn-outline']):not([class*=' btn-outline']) {
+            // The border interferes with the arrow, so we remove it from non-outlined buttons
+            // We add the original border width to padding such that it will have the same size as other buttons
+            --#{c.$prefix}btn-border-width: 0;
+            --#{c.$prefix}btn-padding-x: calc(#{c.$btn-padding-x} + #{c.$btn-border-width});
+            --#{c.$prefix}btn-padding-y: calc(#{c.$btn-padding-y} + #{c.$btn-border-width});
+        }
+
+        &::after, &::before {
+            display: inline-block;
+            font-weight: 900;
+            border: 1px solid transparent;
+            @include c.transition(c.$btn-transition);
+        }
+
+        &:hover::after, &:hover::before {
+            background: var(--#{c.$prefix}btn-hover-color);
+            color: var(--#{c.$prefix}btn-hover-bg);
+            border-color: black;
+        }
+    }
+
+    &.btn-arrow-right::after {
+        content: '＞';
+        padding:
+            var(--#{c.$prefix}btn-padding-y)
+            calc(0.8 * var(--#{c.$prefix}btn-padding-x))
+            var(--#{c.$prefix}btn-padding-y)
+            calc(0.8 * var(--#{c.$prefix}btn-padding-x));
+        margin:
+            calc(0px - var(--#{c.$prefix}btn-padding-y))
+            calc(0px - var(--#{c.$prefix}btn-padding-x))
+            calc(0px - var(--#{c.$prefix}btn-padding-y))
+            calc(0.7 * var(--#{c.$prefix}btn-padding-x));
+    }
+    &.btn-arrow-left::before {
+        content: '＜';
+        padding:
+            var(--#{c.$prefix}btn-padding-y)
+            calc(0.8 * var(--#{c.$prefix}btn-padding-x))
+            var(--#{c.$prefix}btn-padding-y)
+            calc(0.8 * var(--#{c.$prefix}btn-padding-x));
+        margin:
+            calc(0px - var(--#{c.$prefix}btn-padding-y))
+            calc(0.7 * var(--#{c.$prefix}btn-padding-x))
+            calc(0px - var(--#{c.$prefix}btn-padding-y))
+            calc(0px - var(--#{c.$prefix}btn-padding-x));
+    }
+
     &.btn-loading {
         position: relative;
         color: transparent;

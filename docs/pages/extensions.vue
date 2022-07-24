@@ -179,6 +179,21 @@ $dark:                $gray-900;
                 Remember to set a coloring class!
             </p>
             <h3 class="hdr-underlined">
+                Button arrows
+            </h3>
+            <p>
+                Fancy arrows added to a button! As seen on uu.nl!
+            </p>
+            <p>
+                Just add <code>.btn-arrow-left</code> or <code>.btn-arrow-right</code>
+                to your <code>.btn</code>.
+                Note: while working with outlined buttons, it doesn't look good.
+            </p>
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-arrow-left">Previous page</button>
+                <button class="btn btn-primary btn-arrow-right">Next page</button>
+            </div>
+            <h3 class="hdr-underlined mt-4">
                 Button group
             </h3>
             <p>
