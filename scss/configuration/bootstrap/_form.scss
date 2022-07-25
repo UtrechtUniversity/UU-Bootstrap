@@ -1,7 +1,7 @@
-@import "../colors";
+@use "../colors";
 
-$input-bg: $white;
-$form-label-color: $gray-850;
+$input-bg: colors.$white;
+$form-label-color: colors.$gray-850;
 $form-label-font-weight: 500;
-$form-check-input-checked-bg-color: $blue;
-$form-check-input-checked-border-color: $blue;
+$form-check-input-checked-bg-color: colors.$blue;
+$form-check-input-checked-border-color: colors.$blue;

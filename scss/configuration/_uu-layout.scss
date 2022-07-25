@@ -1,4 +1,4 @@
-@import "colors";
+@use "colors";
 
 // Prefix used for all UU layout classes (eg. .uu-)
 $uu-prefix: 'uu-' !default;
@@ -12,9 +12,9 @@ $uu-content-width: 1200px !default;
 // Default paddings. With spaced container this only applies to < md breakpoints
 $uu-container-padding-x: 16px !default;
 $uu-container-padding-y: 16px !default;
-$uu-border-color: $gray-400 !default;
-$uu-border-color-light: $gray-200 !default;
-$uu-border-color-dark: $gray-800 !default;
+$uu-border-color: colors.$gray-400 !default;
+$uu-border-color-light: colors.$gray-200 !default;
+$uu-border-color-dark: colors.$gray-800 !default;
 // Padding in header rows
 $uu-header-padding-y: 0.7rem !default;
 $uu-header-font-size: 0.9rem !default;
@@ -27,9 +27,9 @@ $uu-navbar-breakpoint: md !default;
 $uu-navbar-navlink-padding-x: 12px !default;
 $uu-navbar-navlink-padding-y: 12px !default;
 $uu-footer-padding-y: 40px !default;
-$uu-footer-color: $gray-400 !default;
-$uu-footer-background-color: $gray-850 !default;
-$uu-hero-background-color: $yellow !default;
+$uu-footer-color: colors.$gray-400 !default;
+$uu-footer-background-color: colors.$gray-850 !default;
+$uu-hero-background-color: colors.$yellow !default;
 $uu-hero-padding-y: 1rem !default;
 $uu-hero-font-weight: 400 !default;
 // Default height of cover images, can be overriden with classes
@@ -37,12 +37,12 @@ $uu-cover-default-height: 400px !default;
 $uu-cover-copyright-padding-x: 10px !default;
 $uu-cover-copyright-padding-y: 10px !default;
 $uu-cover-copyright-text-size: 0.8rem !default;
-$uu-cover-copyright-text-color: $gray-300 !default;
+$uu-cover-copyright-text-color: colors.$gray-300 !default;
 $uu-cover-copyright-background-color: rgba(0,0,0, 0.5) !default;
 // Gap between content and sidebar in desktop view
 $uu-sidebar-width: 350px;
 $uu-sidebar-gap: 100px !default;
-$uu-sidebar-background: $gray-200 !default;
+$uu-sidebar-background: colors.$gray-200 !default;
 // Below this breakpoint the sidebar will turn into a pulldown menu instead
 // Intentionally 1 breakpoint higher than the rest because the sidebar takes a lot of horizontal space
 $uu-sidebar-breakpoint: lg !default;
@@ -53,7 +53,7 @@ $uu-sidebar-header-padding-y: 10px !default;
 $uu-sidebar-header-font-weight: 200 !default;
 $uu-sidebar-nav-padding-y: 7px !default;
 $uu-sidebar-nav-padding-x: 0 !default;
-$uu-sidebar-nav-disabled-color: $gray-600 !default;
+$uu-sidebar-nav-disabled-color: colors.$gray-600 !default;
 $uu-sidebar-nav-active-font-weight: 600 !default;
 
 

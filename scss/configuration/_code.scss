@@ -1,7 +1,7 @@
-@import "colors";
+@use "colors";
 
-$code-background: $gray-400;
-$code-color: $black;
+$code-background: colors.$gray-400;
+$code-color: colors.$black;
 $code-border-radius: .2em;
 $code-padding-y: .2em;
 $code-padding-x: .4em;
