@@ -42,6 +42,10 @@ $gap: 10px;
             background: var(--#{cb.$prefix}tiles-hover-bg);
             color: var(--#{cb.$prefix}tiles-hover-color);
         }
+
+        p:last-child {
+            margin: 0;
+        }
     }
 
     a.tile, .tile a {
