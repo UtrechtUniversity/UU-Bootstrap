@@ -12,5 +12,7 @@ For detailed implementation details, see the docs!
 
 ## Docs
 
-The ``docs/`` folder contains a Nuxt app that serves both as documentation as well as a development environment. See the
+See the documentation on [GH Pages](https://dh-it-portal-development.github.io/bootstrap-theme/).
+
+The ``docs/`` folder contains the source that also can act as a development environment. See the
 readme in that folder on how to set things up.
