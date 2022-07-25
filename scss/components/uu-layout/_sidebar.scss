@@ -107,10 +107,18 @@
             .nav {
                 flex-direction: column;
 
+                .nav {
+                    padding-left: 1.5rem;
+                }
+
                 .nav-link {
                     color: var(--#{c.$prefix}body-color);
                     border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
                     padding: var(--#{c.$uu-css-prefix}sidebar-nav-padding-y) var(--#{c.$uu-css-prefix}sidebar-nav-padding-y);
+
+                    &.is-active {
+                        font-weight: bold;
+                    }
 
                     &:hover,
                     &:focus {
