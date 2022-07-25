@@ -66,13 +66,13 @@ const filteredItems = computed(() => {
 });
 
 const sortedItems = computed(() => {
+    currentPage.value = 1;
     return filteredItems.value.sort((a, b) => {
         return a.first_name > b.first_name ? 1 : -1;
     });
 });
 
 const displayedItems = computed(() => {
-    currentPage.value = 1;
     return sortedItems.value.slice(
         (currentPage.value - 1) * pageSize.value,
         pageSize.value * currentPage.value
