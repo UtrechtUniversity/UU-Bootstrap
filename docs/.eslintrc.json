@@ -1,0 +1,72 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "@nuxtjs/eslint-config-typescript"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module",
+        "extraFileExtensions": [".vue"]
+    },
+    "overrides": [
+        {
+          "files": ["*.ts"],
+
+          "parserOptions": {
+            "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+          }
+        }
+      ],
+    "plugins": [
+        "vue",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/no-inferrable-types": "off",
+        "quotes": "off",
+        "semi": "off",
+        "@typescript-eslint/semi": ["warn", "always"],
+        "curly": ["warn", "multi-or-nest"],
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "only-multiline",
+            "imports": "only-multiline",
+            "exports": "only-multiline",
+            "functions": "only-multiline"
+        }],
+        "quote-props": "off",
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "vue/html-indent": ["warn", 4, {
+            "attribute": 1,
+            "baseIndent": 1,
+            "closeBracket": 0,
+            "alignAttributesVertically": true,
+            "ignores": []
+        }],
+        "vue/html-self-closing": ["error", {
+            "html": {
+                "void": "always",
+                "normal": "always",
+                "component": "always"
+            },
+            "svg": "always",
+            "math": "always"
+        }],
+        "vue/multiline-html-element-content-newline": ["warn", {
+            "allowEmptyLines": true
+        }],
+        "@typescript-eslint/no-unused-vars": ["warn", {
+            "varsIgnorePattern": "(props)|(emits?)|_"
+        }],
+        "vue/require-v-for-key": "warn",
+        "vue/no-v-model-argument": "off", // NO idea why this rule exists
+        "vue/multi-word-component-names": "off" // Doesn't realize its multiword due Nuxt
+    },
+    "ignorePatterns": ["**/*.test.ts", "generated/*", "plugins/__*", "node_modules/*"]
+}

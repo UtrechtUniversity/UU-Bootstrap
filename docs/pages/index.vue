@@ -4,7 +4,7 @@
             <Title>Portaldev Bootstrap theme docs</Title>
         </Head>
         <div class="uu-cover align-items-center">
-            <img class="uu-cover-image" alt="cover" src="/cover3.jpg" />
+            <img class="uu-cover-image" alt="cover" src="~/assets/cover3.jpg" />
             <div class="uu-cover-copyright">
                 Cover by Dick Boetekees
             </div>
@@ -28,7 +28,7 @@
                     <h2>
                         Cat!
                     </h2>
-                    <img src="http://thecatapi.com/api/images/get?format=src" alt="Cat!" class="mt-2" />
+                    <img src="https://thecatapi.com/api/images/get?format=src" alt="Cat!" class="mt-2" />
                     <p>
                         Every project must contain a cat
                     </p>

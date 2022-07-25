@@ -7,7 +7,7 @@ const currentYear = ref(new Date().getFullYear());
         <div class="uu-header" @click="toggle = !toggle">
             <div class="uu-header-row justify-content-between">
                 <div class="uu-logo">
-                    <img src="/uu-logo-en.svg" />
+                    <img src="~/assets/uu-logo-en.svg" />
                 </div>
                 <div class="text-center uu-header-title text-red">
                     Portaldev Bootstrap theme
@@ -27,7 +27,7 @@ const currentYear = ref(new Date().getFullYear());
         <slot />
         <footer class="uu-footer">
             <div class="col-12 col-md-4">
-                <img src="/uu-logo-en-white.svg" />
+                <img src="~/assets/uu-logo-en-white.svg" />
             </div>
             <div class="col-12 col-md-8 text-md-end">
                 <p>

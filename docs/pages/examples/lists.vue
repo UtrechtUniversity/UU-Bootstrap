@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Sidebar from "../../components/sidebar";
-import data from "@/public/MOCK_DATA.json";
+import data from "@/assets/MOCK_DATA.json";
 
 interface Item {
     id: number,
