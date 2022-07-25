@@ -50,12 +50,13 @@ $gap: 10px;
     }
 
      @each $breakpoint in map-keys(cb.$grid-breakpoints) {
-        @include cb.media-breakpoint-up($breakpoint) {
-            @for $n from 1 through 12 {
-                &.tiles-n-#{$breakpoint}-#{$n} {
-                    --#{cb.$prefix}tiles-n: #{$n};
-                }
-            }
-        }
+         $infix: cb.breakpoint-infix($breakpoint);
+         @include cb.media-breakpoint-up($breakpoint) {
+             @for $n from 1 through 12 {
+                 &.tiles-n#{$infix}-#{$n} {
+                     --#{cb.$prefix}tiles-n: #{$n} !important;
+                 }
+             }
+         }
      }
 }
