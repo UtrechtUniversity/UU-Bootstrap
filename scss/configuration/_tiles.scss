@@ -1,0 +1,16 @@
+@use 'bootstrap';
+@use 'colors';
+
+$tiles-gap: 10px !default;
+$tiles-padding: 1rem !default;
+$tiles-bg: colors.$light !default;
+$tiles-color: bootstrap.color-contrast($tiles-bg) !default;
+$tiles-hover-bg: colors.$primary !default;
+$tiles-hover-color: bootstrap.color-contrast($tiles-hover-bg) !default;
+$tiles-n-breakpoints-map: (
+    xs: 2,
+    sm: 4,
+    md: 5,
+    lg: 6,
+    xl: 7,
+) !default;
