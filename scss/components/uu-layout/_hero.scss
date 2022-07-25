@@ -10,7 +10,7 @@
     font-weight: var(--#{c.$uu-css-prefix}hero-font-weight);
 
     @for $i from 1 through 7 {
-        h#{$i} {
+        h#{$i}, .h#{$i} {
             font-weight: var(--#{c.$uu-css-prefix}hero-font-weight);
             margin: 0;
         }
