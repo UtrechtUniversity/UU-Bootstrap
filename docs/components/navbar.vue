@@ -2,7 +2,7 @@
     <nav class="navbar uu-navbar">
         <div class="uu-navbar-container">
             <a href="https://www.uu.nl" class="navbar-brand">
-                <img src="/uu-logo-en.svg" />
+                <img src="~/assets/uu-logo-en.svg" />
             </a>
             <button
                 class="navbar-toggler"
@@ -91,6 +91,25 @@
                             <li>
                                 <NuxtLink to="/components/tiles/" class="dropdown-item">
                                     Tiles
+                                </NuxtLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            id="examplesDropdown"
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Examples
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="examplesDropdown">
+                            <li>
+                                <NuxtLink to="/examples/lists/" class="dropdown-item">
+                                    List with filters
                                 </NuxtLink>
                             </li>
                         </ul>
