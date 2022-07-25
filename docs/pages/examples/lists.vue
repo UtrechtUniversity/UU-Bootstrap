@@ -72,6 +72,7 @@ const sortedItems = computed(() => {
 });
 
 const displayedItems = computed(() => {
+    currentPage.value = 1;
     return sortedItems.value.slice(
         (currentPage.value - 1) * pageSize.value,
         pageSize.value * currentPage.value
