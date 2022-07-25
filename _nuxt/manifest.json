@@ -1,0 +1,96 @@
+{
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-84b004f5.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/components/stepper.vue",
+      "pages/components/tiles.vue",
+      "pages/examples/lists.vue",
+      "pages/extensions.vue",
+      "pages/index.vue",
+      "pages/migrating.vue",
+      "pages/uu-layout/index.vue",
+      "layouts/default.vue"
+    ],
+    "css": [
+      "entry.6f1894ca.css"
+    ]
+  },
+  "pages/components/stepper.vue": {
+    "file": "stepper-44ed13f8.mjs",
+    "src": "pages/components/stepper.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/components/tiles.vue": {
+    "file": "tiles-386ecd16.mjs",
+    "src": "pages/components/tiles.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/examples/lists.vue": {
+    "file": "lists-87f1eb2a.mjs",
+    "src": "pages/examples/lists.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_sidebar-adebce67.mjs"
+    ]
+  },
+  "_sidebar-adebce67.mjs": {
+    "file": "sidebar-adebce67.mjs",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/extensions.vue": {
+    "file": "extensions-a79a48bd.mjs",
+    "src": "pages/extensions.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_sidebar-adebce67.mjs"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-493e6bb1.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/migrating.vue": {
+    "file": "migrating-aac94bf2.mjs",
+    "src": "pages/migrating.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/uu-layout/index.vue": {
+    "file": "index-8a6ef24f.mjs",
+    "src": "pages/uu-layout/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs",
+      "_sidebar-adebce67.mjs"
+    ]
+  },
+  "layouts/default.vue": {
+    "file": "default-637decc0.mjs",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ],
+    "css": [
+      "default.e423dc30.css"
+    ]
+  }
+}
