@@ -20,9 +20,8 @@ readme in that folder on how to set things up.
 
 # Disclaimer
 
- The UU branding is protected by copyright, with Utrecht University having the right of use. This is why the corporate
- style and the content of this website cannot be used and/or applied by third parties without permission granted in
- advance.
+The UU branding is protected by copyright, with Utrecht University having the right of use. This is why the corporate
+stylecannot be used and/or applied by third parties without permission granted in advance.
 
-This theme's code itself is licensed under the EUPL v1.2, and can be used in other projects as long as it's not used to
-recreate the UU branding outside the UU without permission granted in advance.
+This theme's code itself is available under the EUPL v1.2 license, and can be used in other projects as long as it's not
+used to recreate the UU branding outside the UU without permission granted in advance.
