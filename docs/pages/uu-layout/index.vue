@@ -55,8 +55,31 @@ const headerMarginSpaced = ref(`<div class="uu-header">
         </div>
     </div>
 </div>`);
-const headerFlexSpaced = ref(``);
-const headerGridSpaced = ref(``);
+const headerFlexSpaced = ref(`<div class="uu-header justify-content-between">
+    <div class="uu-header-row">
+        <div class="uu-logo">
+            <img src="/uu-logo-en.svg"/>
+        </div>
+        <div class="border-left text-muted text-uppercase">
+            <a href="change-lang/en/">
+                Nederlands
+            </a>
+        </div>
+    </div>
+</div>`);
+const headerGridSpaced = ref(`<div class="uu-header">
+    <div class="uu-header-row">
+        <div class="col-4 uu-logo">
+            <img src="/uu-logo-en.svg"/>
+        </div>
+        <div class="col-5" />
+        <div class="col-3 border-left text-muted text-uppercase">
+            <a href="change-lang/en/">
+                Nederlands
+            </a>
+        </div>
+    </div>
+</div>`);
 </script>
 <template>
     <div class="uu-content">
@@ -246,10 +269,59 @@ $uu-navbar-breakpoint: md;
                 <h2 class="uu-sidebar-header-linked">
                     Variables
                 </h2>
+                <p>
+                    None
+                </p>
             </template>
             <h2 class="uu-sidebar-header-linked">
                 Content
             </h2>
+            <p>
+                Your main content goes here. Unlike the other elements, this is not an element in itself but rather a
+                category of elements (<i>content elements</i>) that go here. These <i>content elements</i> can and
+                should be placed as a direct child of <code>.uu-root-container</code>.
+            </p>
+            <h3>UU Container</h3>
+            <p>
+                Your main <i>content element</i> is <code>.uu-container</code>. This is a generic container similar to
+                Bootstrap's <code>.row</code>, and should be used as such. It is recommended to use Bootstrap's
+                <code>.col-*</code> classes inside of this element for layouting, but any other flexbox based layouting
+                is supported too.
+            </p>
+            <p>
+                Tip: you can use Bootstrap's flex helpers like <code>.flex-column</code> and
+                <code>.justify-content-*</code> on the container element for advanced flexbox stuff.
+            </p>
+            <h3>Fullwidth container</h3>
+            <p>
+                The regular UU Layout container has the nice 'spaced' code applied to it, limiting it to
+                <code class="text-nowrap">$content-width</code>. If you have an interface which for whatever reason
+                needs more width, you can use <code class="text-nowrap">.uu-fullwidth-container</code> instead. This
+                container class will give you the entire width of the root container.
+            </p>
+            <div class="alert alert-warning">
+                Note: using this class is admitting your interface is not responsive and thus broken on smaller
+                screens. It is recommended you explore responsive options before using this as a last-resort option.
+            </div>
+            <h3>Other <i>content elements</i></h3>
+            <p>
+                Other content elements are <NuxtLink to="/uu-layout/cover/">Cover</NuxtLink>,
+                <NuxtLink to="/uu-layout/hero/">Hero</NuxtLink> and
+                <NuxtLink to="/uu-layout/sidebar/">Sidebar</NuxtLink>.
+            </p>
+            <h3 class="mt-3">Content container</h3>
+            <p>
+                If for whatever reason you cannot actually place all your <i>content elements</i> directly under
+                <code class="text-nowrap">.uu-root-container</code>*, you can use the
+                <code class="text-nowrap">.uu-content</code> class as an intermediate container.
+            </p>
+            <p>
+                This element sets just enough CSS rules to make sure the <i>content elements</i> still display
+                correctly.
+            </p>
+            <p>
+                * for example, if your framework needs one root element per page (<i>*cough* Vue *cough*</i>)
+            </p>
         </Sidebar>
         <Sidebar
             placement="right"
@@ -262,10 +334,30 @@ $uu-navbar-breakpoint: md;
                 <h2 class="uu-sidebar-header-linked">
                     Variables
                 </h2>
+                <prism language="scss">
+                    <pre>
+$uu-footer-padding-y: 40px;
+$uu-footer-color: $gray-400;
+$uu-footer-background-color: $gray-850;
+                    </pre>
+                </prism>
             </template>
             <h2 class="uu-sidebar-header-linked">
                 Footer
             </h2>
+            <p>
+               I'm tired, so a short summary:
+            </p>
+            <ul>
+                <li>It's a footer</li>
+                <li>Use <code>.uu-footer</code> on a <code>div</code> or (preferably) a <code>footer</code> element</li>
+                <li>It's a flexbox thing, same layouting requirements as basically every other element described on this page</li>
+                <li>It's convention to use the white/black UU logo as the leftmost element, but not required
+                    <ul>
+                        <li>For example, the corporate site has a sitemap there instead</li>
+                    </ul>
+                </li>
+            </ul>
         </Sidebar>
     </div>
 </template>
