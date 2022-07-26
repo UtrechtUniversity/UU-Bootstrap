@@ -66,6 +66,10 @@
 
     .navbar-nav {
 
+        --#{c.$prefix}nav-link-color: #{c.$white};
+        --#{c.$prefix}nav-link-disabled-color: #{c.$gray-500};
+        --#{c.$prefix}nav-link-hover-color: #{c.$yellow};
+
         @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
             flex-direction: row;
         }
@@ -90,16 +94,6 @@
         }
 
         .nav-link {
-            color: c.$white;
-
-            &:hover,
-            &:focus {
-                color: c.$yellow;
-            }
-
-            &.disabled {
-                color: c.$gray-500;
-            }
 
             @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
                 padding: var(--#{c.$uu-css-prefix}navbar-navlink-padding-y) var(--#{c.$uu-css-prefix}navbar-navlink-padding-x);
@@ -119,7 +113,7 @@
 
         .show > .nav-link,
         .nav-link.active {
-            color: c.$yellow;
+            color: var(--#{c.$prefix}nav-link-hover-color);
         }
     }
 

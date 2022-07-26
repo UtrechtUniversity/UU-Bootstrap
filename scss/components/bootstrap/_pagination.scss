@@ -1,26 +1,36 @@
+@use '../../configuration' as c;
+
 .pagination {
-    gap: 10px;
+    --#{c.$prefix}pagination-gap: #{c.$pagination-gap};
+    --#{c.$prefix}pagination-size: #{c.$pagination-size};
+    --#{c.$prefix}pagination-button-bg: #{c.$pagination-button-bg};
+    --#{c.$prefix}pagination-button-color: #{c.color-contrast(c.$pagination-button-bg)};
+    --#{c.$prefix}pagination-ellipsis-color: #{c.$pagination-ellipsis-color};
+
+    gap: var(--#{c.$prefix}pagination-gap);
 
     .page-item {
         height: 100%;
         .page-link {
             cursor: pointer;
-            height: 40px;
-            line-height: 40px;
+            height: var(--#{c.$prefix}pagination-size);
+            line-height: var(--#{c.$prefix}pagination-size);
             padding-top: 0;
             padding-bottom: 0;
             text-align: center;
         }
 
         &:not(.page-button):not(.next):not(.previous):not(.first):not(.last) .page-link {
-            width: 40px;
+            width: var(--#{c.$prefix}pagination-size);
             padding: 0;
         }
 
-        &.page-button .page-link {
-            background-color: black;
-            color: white;
+        &.page-button {
             font-weight: bold;
+            .page-link {
+                background-color: var(--#{c.$prefix}pagination-button-bg);
+                color: var(--#{c.$prefix}pagination-button-color);
+            }
         }
 
         &.active {
@@ -29,7 +39,13 @@
 
         &.page-ellipsis .page-link {
             background: transparent;
-            color: #555;
+            cursor: default;
+            font-size: 0;
+            &:before {
+                font-size: 1rem;
+                color: var(--#{c.$prefix}pagination-ellipsis-color);
+                content: '…';
+            }
         }
     }
 }
