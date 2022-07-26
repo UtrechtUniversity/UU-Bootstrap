@@ -90,7 +90,7 @@
             }
 
             @for $i from 1 through 7 {
-                h#{$i} {
+                h#{$i}, .h#{$i} {
                     border-bottom: 3px solid var(--#{c.$uu-css-prefix}border-color);
                     padding-bottom: var(--#{c.$uu-css-prefix}sidebar-header-padding-y);
                     margin-bottom: 0;
@@ -160,7 +160,7 @@
         }
 
         @for $i from 1 through 7 {
-            h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
+            h#{$i}.#{c.$uu-prefix}sidebar-header-linked, .h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
                 border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
                 padding-bottom: calc(var(--#{c.$uu-css-prefix}sidebar-header-padding-y) + 1px);
 
@@ -194,7 +194,7 @@
 
                 .#{c.$uu-prefix}sidebar-collapse {
                     @for $i from 1 through 7 {
-                        h#{$i} {
+                        h#{$i}, .h#{$i} {
                             &.#{c.$uu-prefix}sidebar-header-linked {
                                 padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
                                 margin-right: 0;
@@ -211,7 +211,7 @@
                 padding-left: c.$uu-content-spacing-padding-x;
 
                 @for $i from 1 through 7 {
-                    h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
+                    h#{$i}.#{c.$uu-prefix}sidebar-header-linked, .h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
                         padding-left: 0;
                         padding-right: var(--#{c.$uu-css-prefix}sidebar-gap);
                         margin-left: 0;
