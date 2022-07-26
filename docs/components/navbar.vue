@@ -83,6 +83,9 @@
                             Components
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-header">
+                                Custom
+                            </li>
                             <li>
                                 <NuxtLink to="/components/stepper/" class="dropdown-item">
                                     Stepper
@@ -91,6 +94,19 @@
                             <li>
                                 <NuxtLink to="/components/tiles/" class="dropdown-item">
                                     Tiles
+                                </NuxtLink>
+                            </li>
+                            <li class="dropdown-header">
+                                Bootstrap
+                            </li>
+                            <li>
+                                <NuxtLink to="/components/buttons/" class="dropdown-item">
+                                    Buttons
+                                </NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/components/pagination/" class="dropdown-item">
+                                    Pagination
                                 </NuxtLink>
                             </li>
                         </ul>
