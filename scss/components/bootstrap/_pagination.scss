@@ -27,9 +27,19 @@
 
         &.page-button {
             font-weight: bold;
+
             .page-link {
                 background-color: var(--#{c.$prefix}pagination-button-bg);
                 color: var(--#{c.$prefix}pagination-button-color);
+            }
+
+            &.disabled {
+                cursor: not-allowed;
+
+                .page-link {
+                    background-color: var(--#{c.$prefix}pagination-disabled-bg);
+                    color: var(--#{c.$prefix}pagination-disabled-color);
+                }
             }
         }
 

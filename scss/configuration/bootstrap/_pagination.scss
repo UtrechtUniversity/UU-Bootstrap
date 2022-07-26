@@ -28,7 +28,7 @@ $pagination-hover-bg:               colors.$primary;
 $pagination-active-color:           colors.$black;
 $pagination-active-bg:              colors.$primary;
 
-$pagination-disabled-color:         colors.$white;
-$pagination-disabled-bg:            colors.$gray-800;
+$pagination-disabled-color:         colors.$gray-500;
+$pagination-disabled-bg:            colors.$gray-100;
 
 $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
