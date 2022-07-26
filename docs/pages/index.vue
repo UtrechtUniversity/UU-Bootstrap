@@ -25,6 +25,17 @@
                     Toggle sidebar mobile
                 </button>
                 <div id="sidebar" class="uu-sidebar-collapse collapse">
+                    <h2>Disclaimer</h2>
+                    <p class="mt-2">
+                        The UU branding is protected by copyright, with Utrecht University having the right of use.
+                        This is why the corporate style and the content of this website cannot be used and/or applied
+                        by third parties without permission granted in advance.
+                    </p>
+                    <p>
+                        This theme's code itself is licensed under the EUPL v1.2, and can be used in other projects as
+                        long as it's not used to recreate the UU branding outside the UU without permission granted
+                        in advance.
+                    </p>
                     <h2>
                         Cat!
                     </h2>
