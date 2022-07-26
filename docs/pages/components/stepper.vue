@@ -1,9 +1,6 @@
 <script lang="ts" setup>
-import {onMounted} from "#imports";
-import {useNuxtApp} from "#app";
 import Prism from 'vue-prism-component';
 
-const nuxt = useNuxtApp();
 
 const example1 = ref(`<div class="stepper">
     <ul>
@@ -74,23 +71,6 @@ const example2 = ref(`<div class="d-md-none">
         </div>
     </div>
 </div>`);
-
-onMounted(() => {
-    const el = document.getElementById('content');
-    // Fixes hot update breaking scrollspy.. Sometimes
-    nuxt.$bootstrap.ScrollSpy.getInstance(el)?.refresh();
-
-    el?.addEventListener('activate.bs.scrollspy', (e) => {
-        const elements = document.querySelectorAll('.stepper-item');
-        let add = true;
-        for (const element of elements) {
-           if (element.classList.contains('active'))
-               add = false;
-
-           element.querySelector('.stepper-bubble')?.classList.toggle('complete', add)
-        }
-    })
-});
 </script>
 <template>
     <div class="uu-content">
@@ -185,23 +165,13 @@ onMounted(() => {
                     </ul>
                 </div>
             </div>
-            <div class="scrollspy-content" id="content" data-bs-target="#stepper" data-bs-spy="scroll">
+            <div id="content">
                 <h1 id="introduction">Introduction</h1>
                 <p>
                     The stepper is meant for navigation in a multi-page process (forms) to visualize where a user is
                     in a process and (optionally) navigate between the steps. In addition, it can provide feedback on
                     the status of the individual steps (e.g. if a step is complete, incomplete or not yet started).
                 </p>
-                <div class="alert alert-info mb-4">
-                    <p class="fw-bold">
-                        Note
-                    </p>
-                    <p class="mb-0">
-                        This component was designed for multi-page applications, thus the actual component itself is
-                        <i>static</i>. For demo purposes this page uses custom js/css and Bootstrap's ScrollSpy to demo
-                        the stepper in a single page; normally you need to program any dynamic changes yourself.
-                    </p>
-                </div>
                 <h1 id="usage">Usage</h1>
                 <prism language="html" class="w-100">
                     {{ example1 }}
@@ -530,17 +500,17 @@ onMounted(() => {
 <style scoped lang="scss">
 .stepper-container {
     flex: 0 0 250px;
+    position: relative;
+
+    .stepper {
+        position: sticky;
+        top: 15px;
+    }
 }
 
 .scrollspy-content {
     flex: 1 1 auto;
     min-width: 0;
-    height: 80vh;
-    overflow-y: scroll;
-}
-
-#stepper .stepper-item.active .stepper-bubble {
-    background-color: #FFCD00;
 }
 
 </style>
