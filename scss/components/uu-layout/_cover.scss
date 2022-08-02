@@ -13,7 +13,7 @@
     @each $breakpoint in map-keys(c.$grid-breakpoints) {
         $infix: c.breakpoint-infix($breakpoint, c.$grid-breakpoints);
         @include c.media-breakpoint-down($breakpoint, c.$grid-breakpoints) {
-            @each $height in [100, 200, 300, 400, 500] {
+            @each $height in [200, 300, 400, 500] {
                 &.h#{$infix}-#{$height} {
                     max-height: #{$height}px;
                 }
