@@ -46,6 +46,11 @@
             right: 0;
             left: unset;
         }
+
+        &.#{c.$uu-prefix}cover-copyright-top {
+            top: 0;
+            bottom: unset;
+        }
     }
 
     // Extra styles so you can use a hero inside a cover.
