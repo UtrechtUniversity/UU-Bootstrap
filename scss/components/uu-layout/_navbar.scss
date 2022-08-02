@@ -15,6 +15,8 @@
         justify-content: space-between;
         position: sticky;
         top: 0;
+        z-index: 9001;
+        height: 50px;
     }
 
     .#{c.$uu-prefix}navbar-container {

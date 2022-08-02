@@ -25,6 +25,7 @@ $uu-header-title-color: #094D8E !default;
 $uu-header-border-gap: 1.2rem !default;
 // At what breakpoint the navbar should be switching to mobile mode
 $uu-navbar-breakpoint: md !default;
+$uu-navbar-mobile-height: 50px !default;
 $uu-navbar-navlink-padding-x: 12px !default;
 $uu-navbar-navlink-padding-y: 12px !default;
 $uu-footer-padding-y: 40px !default;
@@ -42,7 +43,7 @@ $uu-cover-copyright-text-size: 0.8rem !default;
 $uu-cover-copyright-text-color: colors.$gray-300 !default;
 $uu-cover-copyright-background-color: rgba(0,0,0, 0.5) !default;
 // Gap between content and sidebar in desktop view
-$uu-sidebar-width: 350px;
+$uu-sidebar-width: 350px !default;
 $uu-sidebar-gap: 100px !default;
 $uu-sidebar-background: colors.$gray-200 !default;
 // Below this breakpoint the sidebar will turn into a pulldown menu instead
@@ -50,6 +51,7 @@ $uu-sidebar-background: colors.$gray-200 !default;
 $uu-sidebar-breakpoint: lg !default;
 $uu-sidebar-padding-x: 20px !default;
 $uu-sidebar-padding-y: 20px !default;
+$uu-sidebar-mobile-padding-y: 10px !default;
 // Padding applied below the header if using an underlined header
 $uu-sidebar-header-padding-y: 10px !default;
 $uu-sidebar-header-font-weight: 200 !default;

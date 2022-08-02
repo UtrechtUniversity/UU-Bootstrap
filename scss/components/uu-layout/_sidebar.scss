@@ -2,6 +2,7 @@
 @use "../../configuration" as c;
 
 .#{c.$uu-prefix}sidebar-container {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -21,6 +22,7 @@
             var(--#{c.$uu-css-prefix}sidebar-padding-x)
             var(--#{c.$uu-css-prefix}sidebar-padding-y)
             c.$uu-content-spacing-padding-x;
+        z-index: 100;
 
         @media (max-width: c.$uu-content-start-spacing-breakpoint) {
             padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
@@ -30,7 +32,7 @@
 
         @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
             flex-basis: auto;
-            padding: var(--#{c.$uu-css-prefix}sidebar-padding-y) var(--#{c.$uu-css-prefix}sidebar-padding-x);
+            padding: var(--#{c.$uu-css-prefix}sidebar-mobile-padding-y) var(--#{c.$uu-css-prefix}container-padding-x);
         }
 
         img, code, p, span, pre {
@@ -173,6 +175,44 @@
 
     }
 
+    // Modifiers
+
+    // Sticky sidebar > $breakpoint
+    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+        &.#{c.$uu-prefix}sidebar-sticky {
+            .#{c.$uu-prefix}sidebar > * {
+                position: sticky;
+                top: var(--#{c.$uu-css-prefix}sidebar-padding-y);
+            }
+        }
+    }
+
+    // Sticky sidebar < $breakpoint
+    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+        &.#{c.$uu-prefix}sidebar-mobile-sticky {
+            .#{c.$uu-prefix}sidebar {
+                position: sticky;
+                top: 0;
+            }
+        }
+        &.#{c.$uu-prefix}sidebar-mobile-sticky.#{c.$uu-prefix}sidebar-mobile-bottom {
+            .#{c.$uu-prefix}sidebar {
+                top: unset;
+                bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        &.#{c.$uu-prefix}sidebar-mobile-sticky {
+            .#{c.$uu-prefix}sidebar {
+                position: sticky;
+                top: var(--#{c.$uu-css-prefix}navbar-mobile-height);
+            }
+        }
+    }
+
+    // Sidebar at bottom < $breakpoint
     @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
         &.#{c.$uu-prefix}sidebar-mobile-bottom {
             .#{c.$uu-prefix}sidebar {
@@ -185,6 +225,7 @@
         }
     }
 
+    // Sidebar on right > $breakpoint
     @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
         &.#{c.$uu-prefix}sidebar-right {
             .#{c.$uu-prefix}sidebar {
