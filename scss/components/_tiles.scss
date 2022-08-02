@@ -22,8 +22,8 @@ $gap: 10px;
     display: grid;
     gap: var(--#{cb.$prefix}tiles-gap);
     grid-template-columns: repeat(
-            var(--#{cb.$prefix}tiles-n),
-            1fr
+        var(--#{cb.$prefix}tiles-n),
+        1fr
     );
 
     .tile {
