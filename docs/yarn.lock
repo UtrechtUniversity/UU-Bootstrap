@@ -561,7 +561,7 @@
     eslint-plugin-unicorn "^42.0.0"
     eslint-plugin-vue "^8.7.1"
 
-"@popperjs/core@^2.11.5":
+"@popperjs/core@^2.11.5", "@popperjs/core@^2.9.2":
   version "2.11.5"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
   integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
@@ -648,6 +648,13 @@
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
+
+"@types/bootstrap@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@types/bootstrap/-/bootstrap-5.2.0.tgz#e619da0357f243b1252bd82eb236389ea1fd811d"
+  integrity sha512-zncxyEdbShnbOkY1zGBNqvpdVuIGDEA3rxcANJ4v9b3yaMxp+xDCNSwrXK5+uM7Wz7cb1RoIoRUQ0Q5JyfjyfA==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
 
 "@types/eslint@^8.4.5":
   version "8.4.5"

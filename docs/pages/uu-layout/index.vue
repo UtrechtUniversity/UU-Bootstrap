@@ -91,7 +91,7 @@ const headerGridSpaced = ref(`<div class="uu-header">
         <div class="uu-hero">
             <h1>UU Layout overview</h1>
         </div>
-        <Sidebar placement="right">
+        <Sidebar placement="right" :sticky-sidebar="true" :mobile-sticky-sidebar="true">
             <template #sidebar-button>
                 See also
             </template>
@@ -117,6 +117,7 @@ const headerGridSpaced = ref(`<div class="uu-header">
         <Sidebar
             placement="right"
             mobile-placement="bottom"
+            :mobile-sticky-sidebar="true"
         >
             <template #sidebar-button>
                 Variables
@@ -154,6 +155,7 @@ $uu-border-color-dark: $gray-800;
         <Sidebar
             placement="right"
             mobile-placement="bottom"
+            :mobile-sticky-sidebar="true"
         >
             <template #sidebar-button>
                 Variables
@@ -261,6 +263,7 @@ $uu-navbar-breakpoint: md;
         <Sidebar
             placement="right"
             mobile-placement="bottom"
+            :mobile-sticky-sidebar="true"
         >
             <template #sidebar-button>
                 Variables
@@ -305,11 +308,19 @@ $uu-navbar-breakpoint: md;
             </div>
             <h3>Other <i>content elements</i></h3>
             <p>
-                Other content elements are <NuxtLink to="/uu-layout/cover/">Cover</NuxtLink>,
-                <NuxtLink to="/uu-layout/hero/">Hero</NuxtLink> and
-                <NuxtLink to="/uu-layout/sidebar/">Sidebar</NuxtLink>.
+                Other content elements are <NuxtLink to="/uu-layout/cover/">
+                    Cover
+                </NuxtLink>,
+                <NuxtLink to="/uu-layout/hero/">
+                    Hero
+                </NuxtLink> and
+                <NuxtLink to="/uu-layout/sidebar/">
+                    Sidebar
+                </NuxtLink>.
             </p>
-            <h3 class="mt-3">Content container</h3>
+            <h3 class="mt-3">
+                Content container
+            </h3>
             <p>
                 If for whatever reason you cannot actually place all your <i>content elements</i> directly under
                 <code class="text-nowrap">.uu-root-container</code>*, you can use the
@@ -326,6 +337,7 @@ $uu-navbar-breakpoint: md;
         <Sidebar
             placement="right"
             mobile-placement="bottom"
+            :mobile-sticky-sidebar="true"
         >
             <template #sidebar-button>
                 Variables
@@ -346,13 +358,14 @@ $uu-footer-background-color: $gray-850;
                 Footer
             </h2>
             <p>
-               I'm tired, so a short summary:
+                I'm tired, so a short summary:
             </p>
             <ul>
                 <li>It's a footer</li>
                 <li>Use <code>.uu-footer</code> on a <code>div</code> or (preferably) a <code>footer</code> element</li>
                 <li>It's a flexbox thing, same layouting requirements as basically every other element described on this page</li>
-                <li>It's convention to use the white/black UU logo as the leftmost element, but not required
+                <li>
+                    It's convention to use the white/black UU logo as the leftmost element, but not required
                     <ul>
                         <li>For example, the corporate site has a sitemap there instead</li>
                     </ul>

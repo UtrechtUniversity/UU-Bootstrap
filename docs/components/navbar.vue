@@ -128,6 +128,11 @@
                                     List with filters
                                 </NuxtLink>
                             </li>
+                            <li>
+                                <NuxtLink to="/examples/vwr-po-list/" class="dropdown-item">
+                                    VWR PO list
+                                </NuxtLink>
+                            </li>
                         </ul>
                     </li>
 

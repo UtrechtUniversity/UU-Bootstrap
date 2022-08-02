@@ -5,11 +5,15 @@ interface Props {
     id?: string | null,
     placement?: 'left'|'right',
     mobilePlacement?: 'top'|'bottom',
+    stickySidebar?: boolean,
+    mobileStickySidebar?: boolean,
 }
 const props = withDefaults(defineProps<Props>(), {
     id: null,
     placement: 'left',
     mobilePlacement: 'top',
+    stickySidebar: false,
+    mobileStickySidebar: false,
 });
 
 const elId = computed(() => {
@@ -27,6 +31,10 @@ const placementClasses = computed(() => {
         classes += 'uu-sidebar-right ';
     if (props.mobilePlacement === 'bottom')
         classes += 'uu-sidebar-mobile-bottom ';
+    if (props.stickySidebar)
+        classes += 'uu-sidebar-sticky ';
+    if (props.mobileStickySidebar)
+        classes += 'uu-sidebar-mobile-sticky ';
 
     return classes;
 });
@@ -35,7 +43,7 @@ const placementClasses = computed(() => {
 
 <template>
     <div class="uu-sidebar-container" :class="placementClasses">
-        <div class="uu-sidebar">
+        <aside class="uu-sidebar">
             <button
                 class="uu-sidebar-toggle"
                 type="button"
@@ -48,7 +56,7 @@ const placementClasses = computed(() => {
             <div :id="elId" class="uu-sidebar-collapse collapse">
                 <slot name="sidebar" />
             </div>
-        </div>
+        </aside>
         <div class="uu-sidebar-content">
             <slot />
         </div>

@@ -45,5 +45,6 @@ const currentYear = ref(new Date().getFullYear());
 <style>
 .uu-root-container.toggled {
     --bs-uu-container-width: 100%;
+    --bs-uu-content-width: calc(100% - 50px);
 }
 </style>
