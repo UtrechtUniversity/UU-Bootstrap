@@ -1,0 +1,7 @@
+@use "../colors";
+
+$nav-tabs-link-active-bg: colors.$white;
+$nav-tabs-link-active-color: colors.$black;
+$nav-tabs-border-color: colors.$gray-400;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg;
+$nav-pills-link-active-color: colors.$black;
