@@ -60,6 +60,22 @@ $uu-sidebar-nav-padding-x: 0 !default;
 $uu-sidebar-nav-disabled-color: colors.$gray-600 !default;
 $uu-sidebar-nav-active-font-weight: 600 !default;
 
+// Default breakpoint
+$uu-form-breakpoint: lg;
+// Gap between field and helptext
+$uu-form-column-gap: 2rem;
+// Gap between field rows
+$uu-form-row-gap: 1.5rem;
+$uu-form-field-padding-x: 1.5rem;
+$uu-form-field-padding-y: 1.3rem;
+// Visual fix for form labels, otherwise padding doesn't look symmetrical
+$uu-form-field-padding-y-compensation: 5px;
+$uu-form-field-bg: colors.$light;
+$uu-form-field-input-group-bg: colors.$gray-050;
+$uu-form-aside-font-size: 0.9rem;
+$uu-form-aside-color: bootstrap.$text-muted;
+$uu-form-help-padding-x: 0;
+$uu-form-help-padding-y: .5rem;
 
 // Some calculations that are shared, don't override!
 // Once we reach width == content-width we need to start spacing
