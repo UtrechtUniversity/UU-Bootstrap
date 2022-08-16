@@ -69,6 +69,11 @@
                                     Sidebar
                                 </NuxtLink>
                             </li>
+                            <li>
+                                <NuxtLink to="/uu-layout/form/" class="dropdown-item">
+                                    Form
+                                </NuxtLink>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -131,6 +136,11 @@
                             <li>
                                 <NuxtLink to="/examples/vwr-po-list/" class="dropdown-item">
                                     VWR PO list
+                                </NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/examples/forms/" class="dropdown-item">
+                                    Form
                                 </NuxtLink>
                             </li>
                         </ul>

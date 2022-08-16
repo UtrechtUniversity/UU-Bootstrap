@@ -29,6 +29,11 @@
                     Sidebar
                 </NuxtLink>
             </li>
+            <li class="nav-item">
+                <NuxtLink to="/uu-layout/form/" class="nav-link">
+                    Form
+                </NuxtLink>
+            </li>
         </ul>
     </div>
 </template>
