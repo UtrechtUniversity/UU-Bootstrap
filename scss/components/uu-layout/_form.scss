@@ -78,6 +78,10 @@
             }
         }
     }
+    .#{c.$uu-prefix}form-row.#{c.$uu-prefix}form-no-gap {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
     // Removes the asides from form text rows
     &.#{c.$uu-prefix}form-no-aside .#{c.$uu-prefix}form-text-row, .#{c.$uu-prefix}form-text-row.#{c.$uu-prefix}form-no-aside {
