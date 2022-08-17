@@ -3,8 +3,7 @@ import Prism from 'vue-prism-component';
 import Sidebar from '@/components/sidebar';
 
 const currentPage = ref(1);
-const totalPages = ref(10)
-
+const totalPages = ref(10);
 
 const items = computed(() => {
     const delta = 1;
@@ -33,7 +32,6 @@ const items = computed(() => {
     return rangeWithDots;
 });
 
-
 function changePage (page: number) {
     currentPage.value = Math.min(Math.max(page, 1), totalPages.value);
 }
@@ -41,6 +39,9 @@ function changePage (page: number) {
 
 <template>
     <div class="uu-content">
+        <Head>
+            <Title>Pagination | Portaldev Bootstrap theme docs</Title>
+        </Head>
         <Sidebar
             id="buttons"
             placement="right"

@@ -7,6 +7,9 @@ const loading = ref(false);
 
 <template>
     <div class="uu-content">
+        <Head>
+            <Title>Buttons | Portaldev Bootstrap theme docs</Title>
+        </Head>
         <Sidebar
             id="buttons"
             placement="right"
