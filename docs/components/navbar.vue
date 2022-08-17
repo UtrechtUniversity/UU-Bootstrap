@@ -114,6 +114,11 @@
                                     Pagination
                                 </NuxtLink>
                             </li>
+                            <li>
+                                <NuxtLink to="/components/modal-nav-tabs/" class="dropdown-item">
+                                    Modal Nav Tabs
+                                </NuxtLink>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
