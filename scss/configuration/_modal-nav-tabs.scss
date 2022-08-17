@@ -1,0 +1,8 @@
+@use "colors";
+
+$modal-nav-tabs-color: inherit;
+$modal-nav-tabs-bg: none;
+$modal-nav-tabs-active-color: colors.$black;
+$modal-nav-tabs-active-bg: colors.$white;
+$modal-nav-tabs-hover-color: colors.$black;
+$modal-nav-tabs-hover-bg: colors.$gray-100;

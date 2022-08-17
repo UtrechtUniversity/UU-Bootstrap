@@ -1,0 +1,36 @@
+@use "../configuration" as c;
+
+.modal-nav-tabs {
+    --#{c.$prefix}modal-nav-tabs-color: #{c.$modal-nav-tabs-color};
+    --#{c.$prefix}modal-nav-tabs-bg: #{c.$modal-nav-tabs-bg};
+    --#{c.$prefix}modal-nav-tabs-active-color: #{c.$modal-nav-tabs-active-color};
+    --#{c.$prefix}modal-nav-tabs-active-bg: #{c.$modal-nav-tabs-active-bg};
+    --#{c.$prefix}modal-nav-tabs-hover-color: #{c.$modal-nav-tabs-hover-color};
+    --#{c.$prefix}modal-nav-tabs-hover-bg: #{c.$modal-nav-tabs-hover-bg};
+
+    margin-bottom: calc(0px  - var(--#{c.$prefix}modal-header-padding-y));
+    border-bottom: 0;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    max-width: 100%;
+
+    .nav-link {
+        background-color: var(--#{c.$prefix}modal-nav-tabs-bg);
+        color: var(--#{c.$prefix}modal-nav-tabs-color);
+        white-space: nowrap;
+    }
+
+    .nav-link.active {
+        color: var(--#{c.$prefix}modal-nav-tabs-active-color);
+        background-color: var(--#{c.$prefix}modal-nav-tabs-active-bg);
+        border-color: transparent;
+    }
+
+    .nav-link:not(.active):hover {
+        color: var(--#{c.$prefix}modal-nav-tabs-hover-color);
+        background-color: var(--#{c.$prefix}modal-nav-tabs-hover-bg);
+        border-color: transparent;
+    }
+}
