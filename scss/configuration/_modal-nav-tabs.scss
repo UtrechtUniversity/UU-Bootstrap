@@ -1,8 +1,9 @@
 @use "colors";
+@use "bootstrap" as b;
 
 $modal-nav-tabs-color: inherit !default;
 $modal-nav-tabs-bg: none !default;
-$modal-nav-tabs-active-color: colors.$black !default;
-$modal-nav-tabs-active-bg: colors.$white !default;
+$modal-nav-tabs-active-color: var(--#{b.$prefix}modal-color) !default;
+$modal-nav-tabs-active-bg: var(--#{b.$prefix}modal-bg) !default;
 $modal-nav-tabs-hover-color: colors.$black !default;
 $modal-nav-tabs-hover-bg: colors.$gray-100 !default;
