@@ -28,7 +28,7 @@
         border-color: transparent;
     }
 
-    .nav-link:not(.active):hover {
+    .nav-link:not(.active):hover, .nav-link:not(.active):focus {
         color: var(--#{c.$prefix}modal-nav-tabs-hover-color);
         background-color: var(--#{c.$prefix}modal-nav-tabs-hover-bg);
         border-color: transparent;
