@@ -9,3 +9,9 @@ $input-focus-border-color: colors.$black;
 $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
 $form-select-focus-box-shadow: none;
+// To REALLY disable that annoying box shadow...
+$form-select-focus-width: 0;
+
+$form-select-border-radius: 0 !important;
+$form-select-border-radius-lg: 0 !important;
+$form-select-border-radius-sm: 0 !important;
