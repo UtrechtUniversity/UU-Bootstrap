@@ -1,4 +1,4 @@
-import{a as f,r as l,b as r,o as h,e as _,f as s,w as t,u as a,h as e,j as o,t as u,k as w,v as n}from"./entry-c0a3a061.mjs";import{_ as b}from"./sidebar-6058d88c.mjs";import{U as g}from"./uu-layout-nav-4065ff9a.mjs";const x={class:"uu-content"},v=o(" Form | UU Layout | Portaldev Bootstrap theme docs "),y=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Form")],-1),$=o(" Sidebar "),U=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-form-breakpoint: lg;
+import{a as f,r as l,b as r,o as h,e as _,f as s,w as t,u as a,h as e,j as o,t as u,k as w,v as n}from"./entry-e2e095d1.mjs";import{_ as b}from"./sidebar-f435af7a.mjs";import{U as g}from"./uu-layout-nav-c16211fc.mjs";const x={class:"uu-content"},v=o(" Form | UU Layout | Portaldev Bootstrap theme docs "),y=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Form")],-1),$=o(" Sidebar "),U=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-form-breakpoint: lg;
 $uu-form-column-gap: 2rem;
 $uu-form-row-gap: 1.5rem;
 $uu-form-field-padding-x: 1.5rem;

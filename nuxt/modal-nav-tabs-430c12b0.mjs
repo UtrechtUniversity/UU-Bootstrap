@@ -1,4 +1,4 @@
-import{a as k,r,b as m,o as n,e as l,f as e,w as t,u as d,h as a,i as u,p as v,q as _,j as s,t as x,k as q,v as b}from"./entry-c0a3a061.mjs";import{_ as C}from"./sidebar-6058d88c.mjs";const N={class:"uu-content"},$=s("Modal Nav Tabs | Portaldev Bootstrap theme docs"),y=a("div",{class:"uu-hero"},[a("h1",null,"Modal Nav Tabs")],-1),T=s(" Variables "),w=a("h2",{class:"d-lg-block d-none"}," Variables ",-1),B=a("pre",null,`$modal-nav-tabs-color: inherit;
+import{a as k,r,b as m,o as n,e as l,f as e,w as t,u as d,h as a,i as u,p as v,q as _,j as s,t as x,k as q,v as b}from"./entry-e2e095d1.mjs";import{_ as C}from"./sidebar-f435af7a.mjs";const N={class:"uu-content"},$=s("Modal Nav Tabs | Portaldev Bootstrap theme docs"),y=a("div",{class:"uu-hero"},[a("h1",null,"Modal Nav Tabs")],-1),T=s(" Variables "),w=a("h2",{class:"d-lg-block d-none"}," Variables ",-1),B=a("pre",null,`$modal-nav-tabs-color: inherit;
 $modal-nav-tabs-bg: none;
 $modal-nav-tabs-active-color: var(--bs-modal-color);
 $modal-nav-tabs-active-bg: var(--bs-modal-bg);

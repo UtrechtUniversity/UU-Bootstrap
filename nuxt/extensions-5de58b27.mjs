@@ -1,4 +1,4 @@
-import{x as u,a as h,b as r,o as p,e as b,f as s,w as n,u as d,h as e,j as t,k as g,v as m,z as f,A as x}from"./entry-c0a3a061.mjs";import{_ as c}from"./sidebar-6058d88c.mjs";const o=l=>(f("data-v-3308f7f5"),l=l(),x(),l),$={class:"w-100"},v=t("Extensions | Portaldev Bootstrap theme docs"),w=o(()=>e("div",{class:"uu-hero"},[e("h1",null,"Extensions")],-1)),k=t(" Variables "),y=o(()=>e("h1",{class:"uu-sidebar-header-linked d-lg-block d-none"}," Variables ",-1)),B=o(()=>e("pre",null,`//// UU Color palette
+import{x as u,a as h,b as r,o as p,e as b,f as s,w as n,u as d,h as e,j as t,k as g,v as m,z as f,A as x}from"./entry-e2e095d1.mjs";import{_ as c}from"./sidebar-f435af7a.mjs";const o=l=>(f("data-v-3308f7f5"),l=l(),x(),l),$={class:"w-100"},v=t("Extensions | Portaldev Bootstrap theme docs"),w=o(()=>e("div",{class:"uu-hero"},[e("h1",null,"Extensions")],-1)),k=t(" Variables "),y=o(()=>e("h1",{class:"uu-sidebar-header-linked d-lg-block d-none"}," Variables ",-1)),B=o(()=>e("pre",null,`//// UU Color palette
 // Primary colors
 $yellow:              #FFCD00;
 $red:                 #C00A35;

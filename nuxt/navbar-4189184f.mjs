@@ -1,4 +1,4 @@
-import{a as u,r as c,b as t,o as p,e as v,f as l,w as e,u as o,j as n,t as b,h as a,v as s}from"./entry-c0a3a061.mjs";import{_ as m}from"./sidebar-6058d88c.mjs";import{U as h}from"./uu-layout-nav-4065ff9a.mjs";const _={class:"uu-content"},g=n(" Navbar | UU Layout | Portaldev Bootstrap theme docs "),f=a("div",{class:"uu-hero"},[a("h1",null,"UU Layout Navbar")],-1),w=n(" Sidebar "),x=a("h2",{class:"mt-3"}," Variables ",-1),y=a("pre",null,`$uu-navbar-breakpoint: md;
+import{a as u,r as c,b as t,o as p,e as v,f as l,w as e,u as o,j as n,t as b,h as a,v as s}from"./entry-e2e095d1.mjs";import{_ as m}from"./sidebar-f435af7a.mjs";import{U as h}from"./uu-layout-nav-c16211fc.mjs";const _={class:"uu-content"},g=n(" Navbar | UU Layout | Portaldev Bootstrap theme docs "),f=a("div",{class:"uu-hero"},[a("h1",null,"UU Layout Navbar")],-1),w=n(" Sidebar "),x=a("h2",{class:"mt-3"}," Variables ",-1),y=a("pre",null,`$uu-navbar-breakpoint: md;
 $uu-navbar-mobile-height: 50px;
 $uu-navbar-navlink-padding-x: 12px;
 $uu-navbar-navlink-padding-y: 12px;
