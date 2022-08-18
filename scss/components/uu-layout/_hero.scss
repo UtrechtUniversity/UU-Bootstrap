@@ -1,17 +1,17 @@
 @use "../../configuration" as c;
 
-.#{c.$uu-prefix}hero {
-    @extend .-#{c.$uu-prefix}spaced-container;
+.#{$uu-prefix}hero {
+    @extend .-#{$uu-prefix}spaced-container;
 
-    background: var(--#{c.$uu-css-prefix}hero-bg);
-    color: var(--#{c.$uu-css-prefix}hero-color);
-    padding-top: var(--#{c.$uu-css-prefix}hero-padding-y);
-    padding-bottom: var(--#{c.$uu-css-prefix}hero-padding-y);
-    font-weight: var(--#{c.$uu-css-prefix}hero-font-weight);
+    background: var(--#{$uu-css-prefix}hero-bg);
+    color: var(--#{$uu-css-prefix}hero-color);
+    padding-top: var(--#{$uu-css-prefix}hero-padding-y);
+    padding-bottom: var(--#{$uu-css-prefix}hero-padding-y);
+    font-weight: var(--#{$uu-css-prefix}hero-font-weight);
 
     @for $i from 1 through 7 {
         & > h#{$i},  & > .h#{$i} {
-            font-weight: var(--#{c.$uu-css-prefix}hero-font-weight);
+            font-weight: var(--#{$uu-css-prefix}hero-font-weight);
             margin: 0;
         }
     }

@@ -1,12 +1,9 @@
-@use "../../configuration" as c;
-
-
-@each $state, $value in c.$theme-colors {
-  $alert-background: c.shift-color($value, c.$alert-bg-scale);
-  $alert-border: c.shift-color($value, c.$alert-border-scale);
-  $alert-color: c.color-contrast($alert-background);
+@each $state, $value in $theme-colors {
+  $alert-background: shift-color($value, $alert-bg-scale);
+  $alert-border: shift-color($value, $alert-border-scale);
+  $alert-color: color-contrast($alert-background);
 
   .alert-#{$state} {
-    @include c.alert-variant($alert-background, $alert-border, $alert-color);
+    @include alert-variant($alert-background, $alert-border, $alert-color);
   }
 }

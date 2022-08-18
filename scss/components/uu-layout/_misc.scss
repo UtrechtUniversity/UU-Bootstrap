@@ -1,9 +1,7 @@
-@use "../../configuration" as c;
-
 // Remove margin from last p, as the container already takes care of that
-@each $breakpoint in map-keys(c.$grid-breakpoints) {
-    $infix: c.breakpoint-infix($breakpoint, c.$grid-breakpoints);
-    @for $i from 1 through c.$grid-columns {
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
             p:last-child {
                 margin-bottom: 0;

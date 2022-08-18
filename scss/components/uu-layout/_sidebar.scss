@@ -1,38 +1,37 @@
 @use "sass:map";
-@use "../../configuration" as c;
 
-.#{c.$uu-prefix}sidebar-container {
+.#{$uu-prefix}sidebar-container {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: var(--#{c.$uu-css-prefix}sidebar-gap);
+    gap: var(--#{$uu-css-prefix}sidebar-gap);
 
-    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+    @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
         flex-direction: column;
         gap: 0;
     }
 
-    .#{c.$uu-prefix}sidebar {
+    .#{$uu-prefix}sidebar {
         order: 1;
-        background: var(--#{c.$uu-css-prefix}sidebar-background);
-        flex: 0 0 c.$uu-sidebar-full-width;
+        background: var(--#{$uu-css-prefix}sidebar-background);
+        flex: 0 0 $uu-sidebar-full-width;
         padding:
-            var(--#{c.$uu-css-prefix}sidebar-padding-y)
-            var(--#{c.$uu-css-prefix}sidebar-padding-x)
-            var(--#{c.$uu-css-prefix}sidebar-padding-y)
-            c.$uu-content-spacing-padding-x;
+            var(--#{$uu-css-prefix}sidebar-padding-y)
+            var(--#{$uu-css-prefix}sidebar-padding-x)
+            var(--#{$uu-css-prefix}sidebar-padding-y)
+            $uu-content-spacing-padding-x;
         z-index: 100;
 
-        @media (max-width: c.$uu-content-start-spacing-breakpoint) {
-            padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
+        @media (max-width: $uu-content-start-spacing-breakpoint) {
+            padding-left: var(--#{$uu-css-prefix}sidebar-padding-x);
             // flex-basis = width + 2 * padding-x
-            flex-basis: c.$uu-sidebar-intermediate-full-width;
+            flex-basis: $uu-sidebar-intermediate-full-width;
         }
 
-        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+        @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
             flex-basis: auto;
-            padding: var(--#{c.$uu-css-prefix}sidebar-mobile-padding-y) var(--#{c.$uu-css-prefix}container-padding-x);
+            padding: var(--#{$uu-css-prefix}sidebar-mobile-padding-y) var(--#{$uu-css-prefix}container-padding-x);
         }
 
         img, code, p, span, pre {
@@ -40,14 +39,14 @@
         }
 
         div, img, code, p, span, pre {
-            max-width: var(--#{c.$uu-css-prefix}sidebar-width);
-            @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+            max-width: var(--#{$uu-css-prefix}sidebar-width);
+            @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                 max-width: 100%;
             }
         }
 
-        .#{c.$uu-prefix}sidebar-toggle {
-            font-size: c.$h5-font-size;
+        .#{$uu-prefix}sidebar-toggle {
+            font-size: $h5-font-size;
             margin: 0;
             border: none;
             text-align: left;
@@ -76,31 +75,31 @@
                 transform: rotate(180deg);
             }
 
-            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+            @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                 display: none;
             }
         }
 
-        .#{c.$uu-prefix}sidebar-collapse {
+        .#{$uu-prefix}sidebar-collapse {
 
-            @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-                padding-top: var(--#{c.$uu-css-prefix}container-padding-y);
+            @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+                padding-top: var(--#{$uu-css-prefix}container-padding-y);
             }
 
-            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+            @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                 display: block;
             }
 
             @for $i from 1 through 7 {
                 h#{$i}, .h#{$i} {
-                    border-bottom: 3px solid var(--#{c.$uu-css-prefix}border-color);
-                    padding-bottom: var(--#{c.$uu-css-prefix}sidebar-header-padding-y);
+                    border-bottom: 3px solid var(--#{$uu-css-prefix}border-color);
+                    padding-bottom: var(--#{$uu-css-prefix}sidebar-header-padding-y);
                     margin-bottom: 0;
-                    font-weight: var(--#{c.$uu-css-prefix}sidebar-header-font-weight);
+                    font-weight: var(--#{$uu-css-prefix}sidebar-header-font-weight);
 
-                    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-                        &.#{c.$uu-prefix}sidebar-header-linked {
-                            margin-right: calc(-1 * var(--#{c.$uu-css-prefix}sidebar-padding-x));
+                    @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+                        &.#{$uu-prefix}sidebar-header-linked {
+                            margin-right: calc(-1 * var(--#{$uu-css-prefix}sidebar-padding-x));
                         }
                     }
                 }
@@ -114,9 +113,9 @@
                 }
 
                 .nav-link {
-                    color: var(--#{c.$prefix}body-color);
-                    border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
-                    padding: var(--#{c.$uu-css-prefix}sidebar-nav-padding-y) var(--#{c.$uu-css-prefix}sidebar-nav-padding-y);
+                    color: var(--#{$prefix}body-color);
+                    border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
+                    padding: var(--#{$uu-css-prefix}sidebar-nav-padding-y) var(--#{$uu-css-prefix}sidebar-nav-padding-y);
 
                     &.is-active {
                         font-weight: bold;
@@ -128,12 +127,12 @@
                     }
 
                     &.disabled {
-                        color: var(--#{c.$uu-css-prefix}sidebar-nav-disabled-color);
+                        color: var(--#{$uu-css-prefix}sidebar-nav-disabled-color);
                         cursor: not-allowed;
                     }
 
                     &.active {
-                        font-weight: var(--#{c.$uu-css-prefix}sidebar-nav-active-font-weight);
+                        font-weight: var(--#{$uu-css-prefix}sidebar-nav-active-font-weight);
                     }
                 }
 
@@ -141,34 +140,34 @@
         }
     }
 
-    .#{c.$uu-prefix}sidebar-content {
+    .#{$uu-prefix}sidebar-content {
         order: 2;
         flex: 1 1 auto;
         // Allows the div to shrink below initial content width
         min-width: 0;
         padding:
-            var(--#{c.$uu-css-prefix}sidebar-padding-y)
-            var(--#{c.$uu-css-prefix}container-padding-x)
-            var(--#{c.$uu-css-prefix}sidebar-padding-y);
+            var(--#{$uu-css-prefix}sidebar-padding-y)
+            var(--#{$uu-css-prefix}container-padding-x)
+            var(--#{$uu-css-prefix}sidebar-padding-y);
 
-        @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
+        @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
             // When shrinking, this might be smaller than one thinks
             padding-right: max(
-                #{c.$uu-content-spacing-padding-x},
-                var(--#{c.$uu-css-prefix}container-padding-x)
+                #{$uu-content-spacing-padding-x},
+                var(--#{$uu-css-prefix}container-padding-x)
             );
             padding-left: 0;
-            padding-top: var(--#{c.$uu-css-prefix}sidebar-padding-y);
+            padding-top: var(--#{$uu-css-prefix}sidebar-padding-y);
         }
 
         @for $i from 1 through 7 {
-            h#{$i}.#{c.$uu-prefix}sidebar-header-linked, .h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
-                border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
-                padding-bottom: calc(var(--#{c.$uu-css-prefix}sidebar-header-padding-y) + 1px);
+            h#{$i}.#{$uu-prefix}sidebar-header-linked, .h#{$i}.#{$uu-prefix}sidebar-header-linked {
+                border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
+                padding-bottom: calc(var(--#{$uu-css-prefix}sidebar-header-padding-y) + 1px);
 
-                @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-                    padding-left: var(--#{c.$uu-css-prefix}sidebar-gap);
-                    margin-left: calc(-1 * var(--#{c.$uu-css-prefix}sidebar-gap));
+                @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+                    padding-left: var(--#{$uu-css-prefix}sidebar-gap);
+                    margin-left: calc(-1 * var(--#{$uu-css-prefix}sidebar-gap));
                 }
             }
         }
@@ -178,90 +177,90 @@
     // Modifiers
 
     // Sticky sidebar > $breakpoint
-    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-        &.#{c.$uu-prefix}sidebar-sticky {
-            .#{c.$uu-prefix}sidebar > * {
+    @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+        &.#{$uu-prefix}sidebar-sticky {
+            .#{$uu-prefix}sidebar > * {
                 position: sticky;
-                top: var(--#{c.$uu-css-prefix}sidebar-padding-y);
+                top: var(--#{$uu-css-prefix}sidebar-padding-y);
             }
         }
     }
 
     // Sticky sidebar < $breakpoint
-    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-        &.#{c.$uu-prefix}sidebar-mobile-sticky {
-            .#{c.$uu-prefix}sidebar {
+    @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+        &.#{$uu-prefix}sidebar-mobile-sticky {
+            .#{$uu-prefix}sidebar {
                 position: sticky;
                 top: 0;
             }
         }
-        &.#{c.$uu-prefix}sidebar-mobile-sticky.#{c.$uu-prefix}sidebar-mobile-bottom {
-            .#{c.$uu-prefix}sidebar {
+        &.#{$uu-prefix}sidebar-mobile-sticky.#{$uu-prefix}sidebar-mobile-bottom {
+            .#{$uu-prefix}sidebar {
                 top: unset;
                 bottom: 0;
             }
         }
     }
 
-    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
-        &.#{c.$uu-prefix}sidebar-mobile-sticky {
-            .#{c.$uu-prefix}sidebar {
+    @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        &.#{$uu-prefix}sidebar-mobile-sticky {
+            .#{$uu-prefix}sidebar {
                 position: sticky;
-                top: var(--#{c.$uu-css-prefix}navbar-mobile-height);
+                top: var(--#{$uu-css-prefix}navbar-mobile-height);
             }
         }
     }
 
     // Sidebar at bottom < $breakpoint
-    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-        &.#{c.$uu-prefix}sidebar-mobile-bottom {
-            .#{c.$uu-prefix}sidebar {
+    @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+        &.#{$uu-prefix}sidebar-mobile-bottom {
+            .#{$uu-prefix}sidebar {
                 order: 2;
             }
 
-            .#{c.$uu-prefix}sidebar-content {
+            .#{$uu-prefix}sidebar-content {
                 order: 1;
             }
         }
     }
 
     // Sidebar on right > $breakpoint
-    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-sidebar-breakpoint)) {
-        &.#{c.$uu-prefix}sidebar-right {
-            .#{c.$uu-prefix}sidebar {
+    @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
+        &.#{$uu-prefix}sidebar-right {
+            .#{$uu-prefix}sidebar {
                 order: 2;
-                padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
-                padding-right: c.$uu-content-spacing-padding-x;
+                padding-left: var(--#{$uu-css-prefix}sidebar-padding-x);
+                padding-right: $uu-content-spacing-padding-x;
 
-                .#{c.$uu-prefix}sidebar-collapse {
+                .#{$uu-prefix}sidebar-collapse {
                     @for $i from 1 through 7 {
                         h#{$i}, .h#{$i} {
-                            &.#{c.$uu-prefix}sidebar-header-linked {
-                                padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
+                            &.#{$uu-prefix}sidebar-header-linked {
+                                padding-left: var(--#{$uu-css-prefix}sidebar-padding-x);
                                 margin-right: 0;
-                                margin-left: calc(-1 * var(--#{c.$uu-css-prefix}sidebar-padding-x));
+                                margin-left: calc(-1 * var(--#{$uu-css-prefix}sidebar-padding-x));
                             }
                         }
                     }
                 }
             }
 
-            .#{c.$uu-prefix}sidebar-content {
+            .#{$uu-prefix}sidebar-content {
                 order: 1;
                 padding-right: 0;
-                padding-left: c.$uu-content-spacing-padding-x;
+                padding-left: $uu-content-spacing-padding-x;
 
                 @for $i from 1 through 7 {
-                    h#{$i}.#{c.$uu-prefix}sidebar-header-linked, .h#{$i}.#{c.$uu-prefix}sidebar-header-linked {
+                    h#{$i}.#{$uu-prefix}sidebar-header-linked, .h#{$i}.#{$uu-prefix}sidebar-header-linked {
                         padding-left: 0;
-                        padding-right: var(--#{c.$uu-css-prefix}sidebar-gap);
+                        padding-right: var(--#{$uu-css-prefix}sidebar-gap);
                         margin-left: 0;
-                        margin-right: calc(-1 * var(--#{c.$uu-css-prefix}sidebar-gap));
+                        margin-right: calc(-1 * var(--#{$uu-css-prefix}sidebar-gap));
                     }
                 }
 
-                @media (max-width: c.$uu-content-start-spacing-breakpoint) {
-                    padding-left: var(--#{c.$uu-css-prefix}sidebar-padding-x);
+                @media (max-width: $uu-content-start-spacing-breakpoint) {
+                    padding-left: var(--#{$uu-css-prefix}sidebar-padding-x);
                 }
             }
         }

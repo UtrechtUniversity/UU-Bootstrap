@@ -1,21 +1,19 @@
 @use "sass:math";
-@use "../configuration" as c;
-
 
 .stepper {
-    --#{c.$prefix}stepper-disabled-color: #{c.$stepper-disabled-color};
-    --#{c.$prefix}stepper-complete-bg: #{c.$stepper-complete-bg};
-    --#{c.$prefix}stepper-complete-color: #{c.color-contrast(c.$stepper-complete-bg)};
-    --#{c.$prefix}stepper-incomplete-bg: #{c.$stepper-incomplete-bg};
-    --#{c.$prefix}stepper-incomplete-color: #{c.color-contrast(c.$stepper-incomplete-bg)};
-    --#{c.$prefix}stepper-inactive-bg: #{c.$stepper-inactive-bg};
-    --#{c.$prefix}stepper-inactive-color: #{c.color-contrast(c.$stepper-inactive-bg)};
-    --#{c.$prefix}stepper-min-width: #{c.$stepper-min-width};
-    --#{c.$prefix}stepper-padding-y: #{c.$stepper-padding-y};
+    --#{$prefix}stepper-disabled-color: #{$stepper-disabled-color};
+    --#{$prefix}stepper-complete-bg: #{$stepper-complete-bg};
+    --#{$prefix}stepper-complete-color: #{color-contrast($stepper-complete-bg)};
+    --#{$prefix}stepper-incomplete-bg: #{$stepper-incomplete-bg};
+    --#{$prefix}stepper-incomplete-color: #{color-contrast($stepper-incomplete-bg)};
+    --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg};
+    --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg)};
+    --#{$prefix}stepper-min-width: #{$stepper-min-width};
+    --#{$prefix}stepper-padding-y: #{$stepper-padding-y};
 
     position: relative;
     z-index: 1;
-    min-width: var(--#{c.$prefix}stepper-min-width);
+    min-width: var(--#{$prefix}stepper-min-width);
 
     a {
         text-decoration: none;
@@ -25,11 +23,11 @@
         content: '';
         display: block;
         position: absolute;
-        left: calc(#{c.$stepper-bubble-max-size} / 2 - 1px);
+        left: calc(#{$stepper-bubble-max-size} / 2 - 1px);
         top: 1rem;
         height: calc(100% - 1rem);
         width: 2px;
-        background: var(--#{c.$prefix}stepper-inactive-bg);
+        background: var(--#{$prefix}stepper-inactive-bg);
         z-index: -1;
     }
 
@@ -52,37 +50,37 @@
                 }
 
                 &.disabled {
-                    color: var(--#{c.$prefix}stepper-disabled-color);
+                    color: var(--#{$prefix}stepper-disabled-color);
                     font-style: italic;
                 }
 
                 &.complete .stepper-bubble, .stepper-bubble.complete,
                 &.finished .stepper-bubble, .stepper-bubble.finished {
-                    background: var(--#{c.$prefix}stepper-complete-bg);
-                    color: var(--#{c.$prefix}stepper-complete-color);
+                    background: var(--#{$prefix}stepper-complete-bg);
+                    color: var(--#{$prefix}stepper-complete-color);
                 }
 
                 &.incomplete .stepper-bubble, .stepper-bubble.incomplete {
-                    background: var(--#{c.$prefix}stepper-incomplete-bg);
-                    color: var(--#{c.$prefix}stepper-incomplete-color);
+                    background: var(--#{$prefix}stepper-incomplete-bg);
+                    color: var(--#{$prefix}stepper-incomplete-color);
                 }
 
                 .stepper-bubble {
-                    background: var(--#{c.$prefix}stepper-inactive-bg);
+                    background: var(--#{$prefix}stepper-inactive-bg);
                     flex: 0 0 auto;
-                    color: var(--#{c.$prefix}stepper-inactive-color);
+                    color: var(--#{$prefix}stepper-inactive-color);
                     font-weight: bold;
-                    line-height: c.$stepper-bubble-max-size;
+                    line-height: $stepper-bubble-max-size;
                     font-size: 0.8rem;
                     display: inline-block;
                     border-radius: 100%;
                     text-align: center;
 
-                    @each $size, $portion in c.$stepper-bubble-size-map {
+                    @each $size, $portion in $stepper-bubble-size-map {
                         &.stepper-bubble-#{$size} {
-                            $actual-size: (c.$stepper-bubble-max-size - c.$stepper-bubble-min-size) * math.div($portion, c.$stepper-bubble-num-sizes) + c.$stepper-bubble-min-size;
-                            $spacing: math.div(c.$stepper-bubble-max-size - $actual-size, 2);
-                            $indent: math.div(c.$stepper-bubble-num-sizes - $portion, c.$stepper-bubble-num-sizes) * c.$stepper-max-indent;
+                            $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($portion, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;
+                            $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
+                            $indent: math.div($stepper-bubble-num-sizes - $portion, $stepper-bubble-num-sizes) * $stepper-max-indent;
                             width: $actual-size;
                             height: $actual-size;
                             margin-left: $spacing;
@@ -94,11 +92,11 @@
             }
 
             &:not(:last-of-type) {
-                padding-bottom: var(--#{c.$prefix}stepper-padding-y);
+                padding-bottom: var(--#{$prefix}stepper-padding-y);
             }
 
             > ul {
-                padding-top: var(--#{c.$prefix}stepper-padding-y);
+                padding-top: var(--#{$prefix}stepper-padding-y);
             }
         }
     }

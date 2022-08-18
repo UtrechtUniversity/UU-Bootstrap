@@ -1,6 +1,4 @@
-@use "../../configuration" as c;
-
-.#{c.$uu-prefix}content {
+.#{$uu-prefix}content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,31 +7,31 @@
     margin: 0;
 }
 
-.#{c.$uu-prefix}fullwidth-container {
+.#{$uu-prefix}fullwidth-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding:
-        var(--#{c.$uu-css-prefix}container-padding-y)
-        var(--#{c.$uu-css-prefix}container-padding-x);
+        var(--#{$uu-css-prefix}container-padding-y)
+        var(--#{$uu-css-prefix}container-padding-x);
 }
 
 // For sass use only, not in your html! Use .uu-container instead.
 // It's a base class, which is extended _everywhere_.
-.-#{c.$uu-prefix}spaced-container {
-    @extend .#{c.$uu-prefix}fullwidth-container;
-    @media (min-width: c.$uu-content-start-spacing-breakpoint) {
-        padding-left: c.$uu-content-spacing-padding-x;
-        padding-right: c.$uu-content-spacing-padding-x;
+.-#{$uu-prefix}spaced-container {
+    @extend .#{$uu-prefix}fullwidth-container;
+    @media (min-width: $uu-content-start-spacing-breakpoint) {
+        padding-left: $uu-content-spacing-padding-x;
+        padding-right: $uu-content-spacing-padding-x;
     }
 }
 
-.#{c.$uu-prefix}container {
-    @extend .-#{c.$uu-prefix}spaced-container;
+.#{$uu-prefix}container {
+    @extend .-#{$uu-prefix}spaced-container;
 }
 
 // Removes padding from subsequent containers, to remove excess padding
 // Done @at-root, as CSS is somewhat picky with the + selector if classes have a 'parent' class
-@at-root .#{c.$uu-prefix}container + .#{c.$uu-prefix}container {
+@at-root .#{$uu-prefix}container + .#{$uu-prefix}container {
     padding-top: 0;
 }

@@ -1,7 +1,6 @@
 @use "sass:map";
-@use "../../configuration" as c;
 
-.#{c.$uu-prefix}header {
+.#{$uu-prefix}header {
 
     width: 100%;
     flex: 1 1 100%;
@@ -9,51 +8,51 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: var(--#{c.$uu-css-prefix}header-font-size);
+    font-size: var(--#{$uu-css-prefix}header-font-size);
 
-    .#{c.$uu-prefix}header-row {
+    .#{$uu-prefix}header-row {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         width: 100%;
-        padding-left: c.$uu-content-spacing-padding-x;
-        padding-right: c.$uu-content-spacing-padding-x;
+        padding-left: $uu-content-spacing-padding-x;
+        padding-right: $uu-content-spacing-padding-x;
 
-        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
             display: none;
         }
 
         // Give all direct children proper padding and alignment
         & > * {
-            padding-top: var(--#{c.$uu-css-prefix}header-padding-y);
-            padding-bottom: var(--#{c.$uu-css-prefix}header-padding-y);
+            padding-top: var(--#{$uu-css-prefix}header-padding-y);
+            padding-bottom: var(--#{$uu-css-prefix}header-padding-y);
             align-items: center;
             display: flex;
         }
 
-        @media (max-width: c.$uu-content-start-spacing-breakpoint) {
-            padding-left: var(--#{c.$uu-css-prefix}container-padding-x);
-            padding-right: var(--#{c.$uu-css-prefix}container-padding-x);
+        @media (max-width: $uu-content-start-spacing-breakpoint) {
+            padding-left: var(--#{$uu-css-prefix}container-padding-x);
+            padding-right: var(--#{$uu-css-prefix}container-padding-x);
         }
 
         &:not(:last-child) {
-            border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color-light);
+            border-bottom: 1px solid var(--#{$uu-css-prefix}border-color-light);
         }
 
         @each $x in ['left', 'right'] {
             .border-#{$x} {
-                padding-#{$x}: var(--#{c.$uu-css-prefix}header-border-gap);
-                border-#{$x}: 1px solid var(--#{c.$uu-css-prefix}border-color-light);
+                padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap);
+                border-#{$x}: 1px solid var(--#{$uu-css-prefix}border-color-light);
             }
         }
 
-        .#{c.$uu-prefix}header-title, .#{c.$uu-prefix}header-title a {
-            color: var(--#{c.$uu-css-prefix}header-title-color);
+        .#{$uu-prefix}header-title, .#{$uu-prefix}header-title a {
+            color: var(--#{$uu-css-prefix}header-title-color);
             text-decoration: none;
-            font-size: c.$h2-font-size;
+            font-size: $h2-font-size;
         }
 
-        .#{c.$uu-prefix}logo img {
+        .#{$uu-prefix}logo img {
             max-height: 3rem;
         }
 

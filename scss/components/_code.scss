@@ -1,15 +1,13 @@
-@use "../configuration" as c;
-
 code, pre.code {
-    background: c.$code-background;
-    color: c.$code-color;
-    padding: c.$code-padding-y c.$code-padding-x;
+    background: $code-background;
+    color: $code-color;
+    padding: $code-padding-y $code-padding-x;
     margin: 0;
-    font-size: c.$code-font-size;
-    border-radius: c.$code-border-radius;
+    font-size: $code-font-size;
+    border-radius: $code-border-radius;
 }
 
 pre.code {
-    padding: c.$code-padding-y c.$code-padding-x;
+    padding: $code-padding-y $code-padding-x;
     overflow: auto;
 }

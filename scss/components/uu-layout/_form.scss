@@ -1,51 +1,49 @@
-@use "../../configuration" as c;
-
-.#{c.$uu-prefix}form {
+.#{$uu-prefix}form {
     %aside {
-        color: var(--#{c.$uu-css-prefix}form-aside-color);
-        font-size: var(--#{c.$uu-css-prefix}form-aside-font-size);
+        color: var(--#{$uu-css-prefix}form-aside-color);
+        font-size: var(--#{$uu-css-prefix}form-aside-font-size);
 
         p:last-child {
             margin-bottom: 0;
         }
     }
 
-    .#{c.$uu-prefix}form-row, .#{c.$uu-prefix}form-text-row {
+    .#{$uu-prefix}form-row, .#{$uu-prefix}form-text-row {
         display: grid;
-        margin-bottom: var(--#{c.$uu-css-prefix}form-row-gap);
+        margin-bottom: var(--#{$uu-css-prefix}form-row-gap);
 
         grid-template-rows: auto auto;
 
-        @include c.media-breakpoint-up(c.$uu-form-breakpoint) {
+        @include media-breakpoint-up($uu-form-breakpoint) {
             grid-template-rows: unset;
             grid-template-columns: 2fr 1fr;
-            gap: var(--#{c.$uu-css-prefix}form-column-gap);
+            gap: var(--#{$uu-css-prefix}form-column-gap);
         }
     }
 
-    .#{c.$uu-prefix}form-row {
-        .#{c.$uu-prefix}form-field {
-            background-color: var(--#{c.$uu-css-prefix}form-field-bg);
+    .#{$uu-prefix}form-row {
+        .#{$uu-prefix}form-field {
+            background-color: var(--#{$uu-css-prefix}form-field-bg);
             // The compensation is mostly for visual purposes. With symmetrical padding it doesn't look symmetrical
             // Probably something to do with line-heights etc
             padding:
-                calc(var(--#{c.$uu-css-prefix}form-field-padding-y) - var(--#{c.$uu-css-prefix}form-field-padding-y-compensation))
-                var(--#{c.$uu-css-prefix}form-field-padding-y)
-                var(--#{c.$uu-css-prefix}form-field-padding-y);
+                calc(var(--#{$uu-css-prefix}form-field-padding-y) - var(--#{$uu-css-prefix}form-field-padding-y-compensation))
+                var(--#{$uu-css-prefix}form-field-padding-y)
+                var(--#{$uu-css-prefix}form-field-padding-y);
 
             .input-group-text, .form-control::file-selector-button {
-                background: var(--#{c.$uu-css-prefix}form-field-input-group-bg);
+                background: var(--#{$uu-css-prefix}form-field-input-group-bg);
             }
         }
 
-        .#{c.$uu-prefix}form-help {
+        .#{$uu-prefix}form-help {
             @extend %aside;
-            padding: var(--#{c.$uu-css-prefix}form-help-padding-y) var(--#{c.$uu-css-prefix}form-help-padding-x);
+            padding: var(--#{$uu-css-prefix}form-help-padding-y) var(--#{$uu-css-prefix}form-help-padding-x);
         }
     }
 
-    .#{c.$uu-prefix}form-text-row {
-        .#{c.$uu-prefix}form-text {
+    .#{$uu-prefix}form-text-row {
+        .#{$uu-prefix}form-text {
             @for $i from 1 through 7 {
                 .h#{$i}:last-child, h#{$i}:last-child {
                     margin-bottom: 0;
@@ -57,7 +55,7 @@
             }
         }
 
-        .#{c.$uu-prefix}form-text-aside {
+        .#{$uu-prefix}form-text-aside {
             @extend %aside;
         }
     }
@@ -67,46 +65,46 @@
     //
 
     // Removes the gap between form rows
-    &.#{c.$uu-prefix}form-no-gap {
-        .#{c.$uu-prefix}form-row {
+    &.#{$uu-prefix}form-no-gap {
+        .#{$uu-prefix}form-row {
             margin-bottom: 0;
         }
 
-        .#{c.$uu-prefix}form-row + .#{c.$uu-prefix}form-row {
-            .#{c.$uu-prefix}form-field {
+        .#{$uu-prefix}form-row + .#{$uu-prefix}form-row {
+            .#{$uu-prefix}form-field {
                 padding-top: 0;
             }
         }
     }
-    .#{c.$uu-prefix}form-row.#{c.$uu-prefix}form-no-gap {
+    .#{$uu-prefix}form-row.#{$uu-prefix}form-no-gap {
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     // Removes the asides from form text rows
-    &.#{c.$uu-prefix}form-no-aside .#{c.$uu-prefix}form-text-row, .#{c.$uu-prefix}form-text-row.#{c.$uu-prefix}form-no-aside {
+    &.#{$uu-prefix}form-no-aside .#{$uu-prefix}form-text-row, .#{$uu-prefix}form-text-row.#{$uu-prefix}form-no-aside {
         grid-template-rows: 1fr;
 
-        @include c.media-breakpoint-up(c.$uu-form-breakpoint) {
+        @include media-breakpoint-up($uu-form-breakpoint) {
             grid-template-rows: unset;
             grid-template-columns: 1fr;
         }
 
-        .#{c.$uu-prefix}form-text-aside {
+        .#{$uu-prefix}form-text-aside {
             display: none;
         }
     }
 
     // Removes the help texts from form rows
-    &.#{c.$uu-prefix}form-no-help .#{c.$uu-prefix}form-row, .#{c.$uu-prefix}form-row.#{c.$uu-prefix}form-no-help {
+    &.#{$uu-prefix}form-no-help .#{$uu-prefix}form-row, .#{$uu-prefix}form-row.#{$uu-prefix}form-no-help {
         grid-template-rows: 1fr;
 
-        @include c.media-breakpoint-up(c.$uu-form-breakpoint) {
+        @include media-breakpoint-up($uu-form-breakpoint) {
             grid-template-rows: unset;
             grid-template-columns: 1fr;
         }
 
-        .#{c.$uu-prefix}form-help {
+        .#{$uu-prefix}form-help {
             display: none;
         }
     }

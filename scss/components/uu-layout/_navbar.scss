@@ -1,16 +1,15 @@
 @use "sass:map";
-@use "../../configuration" as c;
 
-.#{c.$uu-prefix}navbar {
+.#{$uu-prefix}navbar {
     width: 100%;
-    background: c.$black;
+    background: $black;
     flex-wrap: nowrap;
     justify-content: flex-start;
 
-    @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
-        background: c.$white !important;
-        color: c.$black !important;
-        border-bottom: 1px solid var(--#{c.$uu-css-prefix}border-color);
+    @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        background: $white !important;
+        color: $black !important;
+        border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
         flex-wrap: wrap;
         justify-content: space-between;
         position: sticky;
@@ -19,10 +18,10 @@
         height: 50px;
     }
 
-    .#{c.$uu-prefix}navbar-container {
+    .#{$uu-prefix}navbar-container {
         width: 100%;
         // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-        $-spaced-padding-x: calc(#{c.$uu-content-spacing-padding-x} - var(--#{c.$uu-css-prefix}navbar-navlink-padding-x));
+        $-spaced-padding-x: calc(#{$uu-content-spacing-padding-x} - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
         padding-left: $-spaced-padding-x;
         padding-right: $-spaced-padding-x;
         display: flex;
@@ -30,14 +29,14 @@
         align-items: center;
         flex-wrap: inherit;
 
-        @media (max-width: c.$uu-content-start-spacing-breakpoint) {
+        @media (max-width: $uu-content-start-spacing-breakpoint) {
             // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-            $-padding-x: calc(var(--#{c.$uu-css-prefix}container-padding-x) - var(--#{c.$uu-css-prefix}navbar-navlink-padding-x));
+            $-padding-x: calc(var(--#{$uu-css-prefix}container-padding-x) - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
             padding-left: $-padding-x;
             padding-right: $-padding-x;
         }
 
-        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
             padding-left: 0;
             padding-right: 0;
         }
@@ -46,7 +45,7 @@
     .navbar-brand {
         padding-left: 0.75rem;
 
-        @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
             display: none;
         }
 
@@ -56,7 +55,7 @@
 
     }
 
-    @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+    @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
         .navbar-toggler {
             display: none;
         }
@@ -68,11 +67,11 @@
 
     .navbar-nav {
 
-        --#{c.$prefix}nav-link-color: #{c.$white};
-        --#{c.$prefix}nav-link-disabled-color: #{c.$gray-500};
-        --#{c.$prefix}nav-link-hover-color: #{c.$yellow};
+        --#{$prefix}nav-link-color: #{$white};
+        --#{$prefix}nav-link-disabled-color: #{$gray-500};
+        --#{$prefix}nav-link-hover-color: #{$yellow};
 
-        @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+        @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
             flex-direction: row;
         }
 
@@ -84,7 +83,7 @@
                 margin-top: 0;
             }
 
-            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
+            @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
                 position: absolute;
             }
 
@@ -97,15 +96,15 @@
 
         .nav-link {
 
-            @media (min-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
-                padding: var(--#{c.$uu-css-prefix}navbar-navlink-padding-y) var(--#{c.$uu-css-prefix}navbar-navlink-padding-x);
+            @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                padding: var(--#{$uu-css-prefix}navbar-navlink-padding-y) var(--#{$uu-css-prefix}navbar-navlink-padding-x);
             }
 
-            @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
-                background: c.$black;
-                padding-left: var(--#{c.$uu-css-prefix}container-padding-x);
-                padding-right: var(--#{c.$uu-css-prefix}container-padding-x);
-                border-top: 1px solid var(--#{c.$uu-css-prefix}border-color-dark);
+            @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                background: $black;
+                padding-left: var(--#{$uu-css-prefix}container-padding-x);
+                padding-right: var(--#{$uu-css-prefix}container-padding-x);
+                border-top: 1px solid var(--#{$uu-css-prefix}border-color-dark);
             }
 
             &.dropdown-toggle.show::after {
@@ -115,30 +114,30 @@
 
         .show > .nav-link,
         .nav-link.active {
-            color: var(--#{c.$prefix}nav-link-hover-color);
+            color: var(--#{$prefix}nav-link-hover-color);
         }
     }
 
     .navbar-toggler {
-        color: c.$white;
+        color: $white;
         border-color: transparent;
     }
 
     .navbar-toggler-icon {
-        background-image: c.escape-svg(c.$navbar-light-toggler-icon-bg);
+        background-image: escape-svg($navbar-light-toggler-icon-bg);
     }
 
     .navbar-text {
-        color: c.$white;
+        color: $white;
 
         a,
         a:hover,
         a:focus {
-            color: c.$yellow;
+            color: $yellow;
         }
 
-        @media (max-width: map.get(c.$grid-breakpoints, c.$uu-navbar-breakpoint)) {
-            color: c.$black;
+        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+            color: $black;
         }
     }
 }

@@ -1,17 +1,16 @@
 @use "sass:map";
-@use "../../configuration" as c;
 
-.#{c.$uu-prefix}footer {
-    @extend .-#{c.$uu-prefix}spaced-container;
+.#{$uu-prefix}footer {
+    @extend .-#{$uu-prefix}spaced-container;
 
     flex-wrap: wrap;
-    background: var(--#{c.$uu-css-prefix}footer-background-color);
-    color: var(--#{c.$uu-css-prefix}footer-color);
+    background: var(--#{$uu-css-prefix}footer-background-color);
+    color: var(--#{$uu-css-prefix}footer-color);
     align-items: center;
-    padding-top: var(--#{c.$uu-css-prefix}footer-padding-y);
-    padding-bottom: var(--#{c.$uu-css-prefix}footer-padding-y);
+    padding-top: var(--#{$uu-css-prefix}footer-padding-y);
+    padding-bottom: var(--#{$uu-css-prefix}footer-padding-y);
 
-    @media (max-width: map.get(c.$grid-breakpoints, md)) {
+    @media (max-width: map.get($grid-breakpoints, md)) {
         gap: 20px;
     }
 
@@ -21,6 +20,6 @@
     }
 
     a, a:hover, a:focus, a:active {
-        color: var(--#{c.$uu-css-prefix}footer-color);
+        color: var(--#{$uu-css-prefix}footer-color);
     }
 }

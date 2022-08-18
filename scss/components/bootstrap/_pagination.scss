@@ -1,27 +1,25 @@
-@use '../../configuration' as c;
-
 .pagination {
-    --#{c.$prefix}pagination-gap: #{c.$pagination-gap};
-    --#{c.$prefix}pagination-size: #{c.$pagination-size};
-    --#{c.$prefix}pagination-button-bg: #{c.$pagination-button-bg};
-    --#{c.$prefix}pagination-button-color: #{c.color-contrast(c.$pagination-button-bg)};
-    --#{c.$prefix}pagination-ellipsis-color: #{c.$pagination-ellipsis-color};
+    --#{$prefix}pagination-gap: #{$pagination-gap};
+    --#{$prefix}pagination-size: #{$pagination-size};
+    --#{$prefix}pagination-button-bg: #{$pagination-button-bg};
+    --#{$prefix}pagination-button-color: #{color-contrast($pagination-button-bg)};
+    --#{$prefix}pagination-ellipsis-color: #{$pagination-ellipsis-color};
 
-    gap: var(--#{c.$prefix}pagination-gap);
+    gap: var(--#{$prefix}pagination-gap);
 
     .page-item {
         height: 100%;
         .page-link {
             cursor: pointer;
-            height: var(--#{c.$prefix}pagination-size);
-            line-height: var(--#{c.$prefix}pagination-size);
+            height: var(--#{$prefix}pagination-size);
+            line-height: var(--#{$prefix}pagination-size);
             padding-top: 0;
             padding-bottom: 0;
             text-align: center;
         }
 
         &:not(.page-button):not(.next):not(.previous):not(.first):not(.last) .page-link {
-            width: var(--#{c.$prefix}pagination-size);
+            width: var(--#{$prefix}pagination-size);
             padding: 0;
         }
 
@@ -29,16 +27,16 @@
             font-weight: bold;
 
             .page-link {
-                background-color: var(--#{c.$prefix}pagination-button-bg);
-                color: var(--#{c.$prefix}pagination-button-color);
+                background-color: var(--#{$prefix}pagination-button-bg);
+                color: var(--#{$prefix}pagination-button-color);
             }
 
             &.disabled {
                 cursor: not-allowed;
 
                 .page-link {
-                    background-color: var(--#{c.$prefix}pagination-disabled-bg);
-                    color: var(--#{c.$prefix}pagination-disabled-color);
+                    background-color: var(--#{$prefix}pagination-disabled-bg);
+                    color: var(--#{$prefix}pagination-disabled-color);
                 }
             }
         }
@@ -53,7 +51,7 @@
             font-size: 0;
             &:before {
                 font-size: 1rem;
-                color: var(--#{c.$prefix}pagination-ellipsis-color);
+                color: var(--#{$prefix}pagination-ellipsis-color);
                 content: '…';
             }
         }

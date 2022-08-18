@@ -1,13 +1,11 @@
-@use "../../configuration" as c;
-
 .modal {
-    --#{c.$prefix}modal-header-bg: #{c.$modal-header-bg};
-    --#{c.$prefix}modal-header-color: #{c.$modal-header-color};
-    --#{c.$prefix}modal-header-font-weight: #{c.$modal-header-font-weight};
+    --#{$prefix}modal-header-bg: #{$modal-header-bg};
+    --#{$prefix}modal-header-color: #{$modal-header-color};
+    --#{$prefix}modal-header-font-weight: #{$modal-header-font-weight};
 
     .modal-header {
-        background-color:var(--#{c.$prefix}modal-header-bg);
-        color: var(--#{c.$prefix}modal-header-color);
-        font-weight: var(--#{c.$prefix}modal-header-font-weight);
+        background-color:var(--#{$prefix}modal-header-bg);
+        color: var(--#{$prefix}modal-header-color);
+        font-weight: var(--#{$prefix}modal-header-font-weight);
     }
 }

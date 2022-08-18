@@ -1,28 +1,23 @@
-@use "../configuration/bootstrap" as cb;
-@use "../configuration/tiles" as ct;
-
-$gap: 10px;
-
 .tiles {
-    --#{cb.$prefix}tiles-gap: #{ct.$tiles-gap};
-    --#{cb.$prefix}tiles-padding: #{ct.$tiles-padding};
-    --#{cb.$prefix}tiles-bg: #{ct.$tiles-bg};
-    --#{cb.$prefix}tiles-color: #{ct.$tiles-color};
-    --#{cb.$prefix}tiles-hover-bg: #{ct.$tiles-hover-bg};
-    --#{cb.$prefix}tiles-hover-color: #{ct.$tiles-hover-color};
+    --#{$prefix}tiles-gap: #{$tiles-gap};
+    --#{$prefix}tiles-padding: #{$tiles-padding};
+    --#{$prefix}tiles-bg: #{$tiles-bg};
+    --#{$prefix}tiles-color: #{$tiles-color};
+    --#{$prefix}tiles-hover-bg: #{$tiles-hover-bg};
+    --#{$prefix}tiles-hover-color: #{$tiles-hover-color};
 
-    @each $breakpoint, $n in ct.$tiles-n-breakpoints-map {
-        --#{cb.$prefix}tiles-n-#{$breakpoint}: #{$n};
-        @include cb.media-breakpoint-up($breakpoint) {
-            --#{cb.$prefix}tiles-n: var(--#{cb.$prefix}tiles-n-#{$breakpoint});
+    @each $breakpoint, $n in $tiles-n-breakpoints-map {
+        --#{$prefix}tiles-n-#{$breakpoint}: #{$n};
+        @include media-breakpoint-up($breakpoint) {
+            --#{$prefix}tiles-n: var(--#{$prefix}tiles-n-#{$breakpoint});
         }
     }
 
     width: 100%;
     display: grid;
-    gap: var(--#{cb.$prefix}tiles-gap);
+    gap: var(--#{$prefix}tiles-gap);
     grid-template-columns: repeat(
-        var(--#{cb.$prefix}tiles-n),
+        var(--#{$prefix}tiles-n),
         1fr
     );
 
@@ -32,15 +27,15 @@ $gap: 10px;
         justify-content: center;
         align-items: center;
 
-        padding: var(--#{cb.$prefix}tiles-padding);
+        padding: var(--#{$prefix}tiles-padding);
         aspect-ratio: 1 / 1 ;
 
-        background: var(--#{cb.$prefix}tiles-bg);
-        color: var(--#{cb.$prefix}tiles-color);
+        background: var(--#{$prefix}tiles-bg);
+        color: var(--#{$prefix}tiles-color);
 
         &:hover {
-            background: var(--#{cb.$prefix}tiles-hover-bg);
-            color: var(--#{cb.$prefix}tiles-hover-color);
+            background: var(--#{$prefix}tiles-hover-bg);
+            color: var(--#{$prefix}tiles-hover-color);
         }
 
         p:last-child {
@@ -53,12 +48,12 @@ $gap: 10px;
         text-decoration: none;
     }
 
-     @each $breakpoint in map-keys(cb.$grid-breakpoints) {
-         $infix: cb.breakpoint-infix($breakpoint);
-         @include cb.media-breakpoint-up($breakpoint) {
+     @each $breakpoint in map-keys($grid-breakpoints) {
+         $infix: breakpoint-infix($breakpoint);
+         @include media-breakpoint-up($breakpoint) {
              @for $n from 1 through 12 {
                  &.tiles-n#{$infix}-#{$n} {
-                     --#{cb.$prefix}tiles-n: #{$n} !important;
+                     --#{$prefix}tiles-n: #{$n} !important;
                  }
              }
          }

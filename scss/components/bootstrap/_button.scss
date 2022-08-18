@@ -1,5 +1,3 @@
-@use '../../configuration' as c;
-
 .btn {
     font-weight: bold;
 
@@ -7,21 +5,21 @@
         &:not([class^='btn-outline']):not([class*=' btn-outline']) {
             // The border interferes with the arrow, so we remove it from non-outlined buttons
             // We add the original border width to padding such that it will have the same size as other buttons
-            --#{c.$prefix}btn-border-width: 0;
-            --#{c.$prefix}btn-padding-x: calc(#{c.$btn-padding-x} + #{c.$btn-border-width});
-            --#{c.$prefix}btn-padding-y: calc(#{c.$btn-padding-y} + #{c.$btn-border-width});
+            --#{$prefix}btn-border-width: 0;
+            --#{$prefix}btn-padding-x: calc(#{$btn-padding-x} + #{$btn-border-width});
+            --#{$prefix}btn-padding-y: calc(#{$btn-padding-y} + #{$btn-border-width});
         }
 
         &::after, &::before {
             display: inline-block;
             font-weight: 900;
             border: 1px solid transparent;
-            @include c.transition(c.$btn-transition);
+            @include transition($btn-transition);
         }
 
         &:hover::after, &:hover::before {
-            background: var(--#{c.$prefix}btn-hover-color);
-            color: var(--#{c.$prefix}btn-hover-bg);
+            background: var(--#{$prefix}btn-hover-color);
+            color: var(--#{$prefix}btn-hover-bg);
             border-color: black;
         }
     }
@@ -29,28 +27,28 @@
     &.btn-arrow-right::after {
         content: '＞';
         padding:
-            var(--#{c.$prefix}btn-padding-y)
-            calc(0.8 * var(--#{c.$prefix}btn-padding-x))
-            var(--#{c.$prefix}btn-padding-y)
-            calc(0.8 * var(--#{c.$prefix}btn-padding-x));
+            var(--#{$prefix}btn-padding-y)
+            calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y)
+            calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin:
-            calc(0px - var(--#{c.$prefix}btn-padding-y))
-            calc(0px - var(--#{c.$prefix}btn-padding-x))
-            calc(0px - var(--#{c.$prefix}btn-padding-y))
-            calc(0.7 * var(--#{c.$prefix}btn-padding-x));
+            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0px - var(--#{$prefix}btn-padding-x))
+            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0.7 * var(--#{$prefix}btn-padding-x));
     }
     &.btn-arrow-left::before {
         content: '＜';
         padding:
-            var(--#{c.$prefix}btn-padding-y)
-            calc(0.8 * var(--#{c.$prefix}btn-padding-x))
-            var(--#{c.$prefix}btn-padding-y)
-            calc(0.8 * var(--#{c.$prefix}btn-padding-x));
+            var(--#{$prefix}btn-padding-y)
+            calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y)
+            calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin:
-            calc(0px - var(--#{c.$prefix}btn-padding-y))
-            calc(0.7 * var(--#{c.$prefix}btn-padding-x))
-            calc(0px - var(--#{c.$prefix}btn-padding-y))
-            calc(0px - var(--#{c.$prefix}btn-padding-x));
+            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0.7 * var(--#{$prefix}btn-padding-x))
+            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0px - var(--#{$prefix}btn-padding-x));
     }
 
     &.btn-loading {
@@ -74,9 +72,9 @@
             animation: spinner-border .5s infinite linear;
         }
 
-        @each $name, $color in c.$theme-colors {
+        @each $name, $color in $theme-colors {
             @at-root &.btn-#{$name}::after {
-                border-color: c.color-contrast($color);
+                border-color: color-contrast($color);
             }
         }
     }
@@ -84,5 +82,5 @@
 }
 
 .btn-group {
-    gap: c.$btn-group-gap;
+    gap: $btn-group-gap;
 }

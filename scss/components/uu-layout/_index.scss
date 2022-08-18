@@ -1,16 +1,15 @@
 @use "sass:map";
-@use "../../configuration" as c;
 
-.#{c.$uu-prefix}root-container {
+.#{$uu-prefix}root-container {
     @import "css_variables";
     width: 100%;
-    max-width: var(--#{c.$uu-css-prefix}container-width);
+    max-width: var(--#{$uu-css-prefix}container-width);
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0;
-    background: var(--#{c.$prefix}white);
+    background: var(--#{$prefix}white);
 
     // Import under this class to ensure it's a de facto namespace
     @import "containers";
@@ -25,5 +24,5 @@
 
 // Backwards compatibility with old bootstrap 4 theme
 .uu-inner-container {
-    @extend .#{c.$uu-prefix}container;
+    @extend .#{$uu-prefix}container;
 }
