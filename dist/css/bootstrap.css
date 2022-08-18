@@ -13530,6 +13530,7 @@ pre.code {
 .uu-root-container {
   width: 100%;
   max-width: var(--bs-uu-container-width);
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -13593,6 +13594,7 @@ pre.code {
   width: 100%;
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
   flex-direction: column;
   padding: 0;
   margin: 0;
@@ -13615,7 +13617,6 @@ pre.code {
 
 .uu-root-container .uu-header {
   width: 100%;
-  flex: 1 1 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
