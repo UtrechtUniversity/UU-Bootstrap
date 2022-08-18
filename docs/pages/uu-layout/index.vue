@@ -29,7 +29,9 @@ const full_page_code = ref(`<body>
             </div>
         </div>
         <!--navbar, see navbar page-->
-        <!--content-->
+        <div class="uu-content">
+            <!--content-->
+        </div>
         <footer class="uu-footer">
             <div class="col-12 col-md-4">
                 <img src="/uu-logo-en-white.svg" />
@@ -280,9 +282,11 @@ $uu-navbar-breakpoint: md;
                 Content
             </h2>
             <p>
-                Your main content goes here. Unlike the other elements, this is not an element in itself but rather a
-                category of elements (<i>content elements</i>) that go here. These <i>content elements</i> can and
-                should be placed as a direct child of <code>.uu-root-container</code>.
+                An div with <code class="text-nowrap">.uu-content</code> that should contain all <em>content elements</em>.
+                This div will automatically grow to fill the page if the actual content is not long enough.
+            </p>
+            <p>
+                An overview of <em>content elements</em>:
             </p>
             <h3>UU Container</h3>
             <p>
@@ -317,21 +321,6 @@ $uu-navbar-breakpoint: md;
                 <NuxtLink to="/uu-layout/sidebar/">
                     Sidebar
                 </NuxtLink>.
-            </p>
-            <h3 class="mt-3">
-                Content container
-            </h3>
-            <p>
-                If for whatever reason you cannot actually place all your <i>content elements</i> directly under
-                <code class="text-nowrap">.uu-root-container</code>*, you can use the
-                <code class="text-nowrap">.uu-content</code> class as an intermediate container.
-            </p>
-            <p>
-                This element sets just enough CSS rules to make sure the <i>content elements</i> still display
-                correctly.
-            </p>
-            <p>
-                * for example, if your framework needs one root element per page (<i>*cough* Vue *cough*</i>)
             </p>
         </Sidebar>
         <Sidebar

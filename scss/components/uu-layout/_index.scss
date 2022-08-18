@@ -4,6 +4,7 @@
     @import "css_variables";
     width: 100%;
     max-width: var(--#{$uu-css-prefix}container-width);
+    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
