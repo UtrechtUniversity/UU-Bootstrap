@@ -1,6 +1,27 @@
 <script lang="ts" setup>
 import Prism from 'vue-prism-component';
 import Sidebar from '@/components/sidebar';
+
+function pickRandom (array: string[]) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+const fakeTableData = computed(() => {
+    const firstnames = ["John", "Jane", "Tim", "Agnes", "Boy", "Karin", "Margaret", "Boris", "Mark", "Sigrid", "Dick", "K.C."];
+    const lastnames = ["Doe", "Thatcher", "Johnson", "Jameson", "Fos", "Marks", "Thijs", "Janssen", "Denton"];
+
+    const data = [];
+
+    for (let i = 0; i < 40; i++) {
+        data.push({
+            firstname: pickRandom(firstnames),
+            lastname: pickRandom(lastnames),
+            age: Math.floor(Math.random() * 100),
+        });
+    }
+
+    return data;
+});
 </script>
 <template>
     <div class="w-100">
@@ -131,12 +152,172 @@ $dark:                $gray-900;
             </div>
         </Sidebar>
         <Sidebar
+            id="table"
+            placement="right"
+            mobile-placement="bottom"
+        >
+            <template #sidebar-button>
+                Links
+            </template>
+            <template #sidebar>
+                <h1 class="uu-sidebar-header-linked d-lg-block d-none">
+                    Links
+                </h1>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <NuxtLink
+                            href="https://getbootstrap.com/docs/5.2/content/tables/"
+                            target="_blank"
+                            class="nav-link"
+                        >
+                            Bootstrap Table docs
+                        </NuxtLink>
+                    </li>
+                </ul>
+            </template>
+            <h1 class="uu-sidebar-header-linked">
+                Table sticky header/footer
+            </h1>
+            <p>
+                For big tables it might be handy to have the table header
+                'stick' to the top (or the footer to the bottom). For this
+                usecase, <code class="text-nowrap">.table-sticky-header</code>
+                and <code class="text-nowrap">.table-sticky-footer</code> have
+                been added as modifiers for
+                <code class="text-nowrap">table.table</code>.
+            </p>
+            <p>
+                By default tables have their background set to
+                <code>transparant</code>; as a consequence, the sticky
+                header/footer will have no background resulting the table
+                content being visible behind the sticky header/footer.<br />
+                Thus, it is highly recommended you apply a table variant to the
+                <code>table</code> or the 'sticky'
+                <code>thead</code>/<code>tfoot</code>.
+            </p>
+            <div class="alert alert-warning">
+                <p>
+                    If the table is used inside an UU layout container, the
+                    header will automatically compensate for the sticky navbar
+                    to make sure the table header is just below the navbar.
+                </p>
+                <p>
+                    This can cause problems if the <em>nearest scrolling
+                        ancestor</em> of the table is not the UU layout root
+                    container. In which case, you should add
+                    <code class="text-nowrap">.table-sticky-header-top-0</code>
+                    on the table to force the table to never compensate.
+                </p>
+                <p>
+                    There are also similar cases where the default <code>top</code>
+                    setting will force the header behind/on top of another
+                    element. In which case you should set the <code>top</code>
+                    value manually.
+                </p>
+            </div>
+            <table class="table table-striped table-striped table-sticky-header table-sticky-footer">
+                <thead class="table-primary">
+                    <tr>
+                        <th>
+                            First name
+                        </th>
+                        <th>
+                            Last name
+                        </th>
+                        <th>
+                            Age
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="person in fakeTableData">
+                        <td>
+                            {{ person.firstname }}
+                        </td>
+                        <td>
+                            {{ person.lastname }}
+                        </td>
+                        <td>
+                            {{ person.age }}
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot class="table-light">
+                    <tr>
+                        <th>
+                            First name
+                        </th>
+                        <th>
+                            Last name
+                        </th>
+                        <th>
+                            Age
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </Sidebar>
+        <Sidebar
+            id="cursor"
+            placement="right"
+            mobile-placement="bottom"
+        >
+            <template #sidebar-button>
+                Variables
+            </template>
+            <template #sidebar>
+                <h1 class="uu-sidebar-header-linked d-lg-block d-none">
+                    Variables
+                </h1>
+                <Prism language="scss" class="w-100">
+                    <pre>
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab copy default help text none not-allowed progress wait zoom-in zoom-out,
+    )
+  )
+);</pre>
+                </Prism>
+            </template>
+            <h1 class="uu-sidebar-header-linked">
+                Cursors
+            </h1>
+            <p>
+                Bootstrap is suspiciously missing some really useful cursor utility classes, so we added them!
+            </p>
+            <p>
+                The following cursor classes have been added:
+            </p>
+            <ul>
+                <li
+                    v-for="cursor in ['pointer', 'not-allowed', 'progress', 'wait', 'grab', 'copy', 'zoom-in', 'zoom-out', 'help', 'text', 'default', 'auto', 'none']"
+                    :key="cursor"
+                    :class="'cursor-md-' + cursor"
+                >
+                    <code class="text-nowrap">cursor-{{ cursor }}</code> and
+                    <code class="text-nowrap">cursor-{sm|md|lg|xl|xxl}-{{ cursor }}</code>
+                </li>
+            </ul>
+        </Sidebar>
+        <Sidebar
             id="text"
             placement="right"
             mobile-placement="bottom"
         >
-            <template #sidebar-button />
-            <template #sidebar />
+            <template #sidebar-button>
+                Variables
+            </template>
+            <template #sidebar>
+                <h1 class="uu-sidebar-header-linked d-lg-block d-none">
+                    Variables
+                </h1>
+                None
+            </template>
             <h1 class="uu-sidebar-header-linked">
                 Text
             </h1>
