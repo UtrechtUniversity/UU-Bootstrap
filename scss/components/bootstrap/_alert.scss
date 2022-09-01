@@ -7,3 +7,9 @@
     @include alert-variant($alert-background, $alert-border, $alert-color);
   }
 }
+
+.alert {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}

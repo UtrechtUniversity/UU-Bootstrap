@@ -1,0 +1,32 @@
+@use "sass:map";
+
+.table {
+    &.table-sticky-header {
+        thead {
+            position: sticky;
+            top: 0;
+        }
+
+        &.table-sticky-header-top-0 {
+            thead {
+                top: 0 !important;
+            }
+        }
+    }
+
+    &.table-sticky-footer {
+        tfoot {
+            position: sticky;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+    .uu-root-container .table.table-sticky-header {
+        thead {
+            top: var(--bs-uu-navbar-mobile-height);
+        }
+    }
+}
+

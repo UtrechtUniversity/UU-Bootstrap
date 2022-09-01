@@ -3,6 +3,7 @@
 .#{$uu-prefix}sidebar-container {
     position: relative;
     width: 100%;
+    flex-grow: 1; // Fill the entire height if the container is larger than the sidebar's content
     display: flex;
     flex-direction: row;
     gap: var(--#{$uu-css-prefix}sidebar-gap);
