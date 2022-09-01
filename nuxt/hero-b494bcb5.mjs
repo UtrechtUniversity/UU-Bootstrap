@@ -1,4 +1,4 @@
-import{a as m,r as p,b as r,o as a,e as n,f as s,w as t,u as i,F as _,s as b,j as o,h as e,v as l,t as f}from"./entry-e2e095d1.mjs";import{_ as g}from"./sidebar-f435af7a.mjs";import{U as v}from"./uu-layout-nav-c16211fc.mjs";const y={class:"uu-content"},w=o(" Hero | UU Layout | Portaldev Bootstrap theme docs "),U=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Hero")],-1),x=o(" Sidebar "),H=e("h2",{class:"mt-3"}," Variables ",-1),k=e("pre",null,`$uu-hero-bg:          $yellow;
+import{a as m,r as p,b as r,o as a,e as n,f as s,w as t,u as i,F as _,s as b,j as o,h as e,v as l,t as f}from"./entry-0ccd6c11.mjs";import{_ as g}from"./sidebar-ab5239ce.mjs";import{U as v}from"./uu-layout-nav-79b233eb.mjs";const y={class:"uu-content"},w=o(" Hero | UU Layout | Portaldev Bootstrap theme docs "),U=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Hero")],-1),x=o(" Sidebar "),H=e("h2",{class:"mt-3"}," Variables ",-1),k=e("pre",null,`$uu-hero-bg:          $yellow;
 $uu-hero-color:       color-contrast($uu-hero-bg);
 $uu-hero-padding-y:   1rem;
 $uu-hero-font-weight: 400;

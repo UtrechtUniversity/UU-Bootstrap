@@ -1,4 +1,4 @@
-import{a as y,r as v,l as P,b as f,o as h,e as m,f as c,w as n,u as g,h as e,i as b,F as x,s as C,j as s,k as S,v as $,t as T}from"./entry-e2e095d1.mjs";import{_ as w}from"./sidebar-f435af7a.mjs";const L={class:"uu-content"},B=s("Pagination | Portaldev Bootstrap theme docs"),I=s(" Variables "),E=e("h1",{class:"uu-sidebar-header-linked d-lg-block d-none"}," Variables ",-1),N=e("pre",null,`$pagination-gap:            10px;
+import{a as y,r as v,l as P,b as f,o as h,e as m,f as c,w as n,u as g,h as e,i as b,F as x,s as C,j as s,k as S,v as $,t as T}from"./entry-0ccd6c11.mjs";import{_ as w}from"./sidebar-ab5239ce.mjs";const L={class:"uu-content"},B=s("Pagination | Portaldev Bootstrap theme docs"),I=s(" Variables "),E=e("h1",{class:"uu-sidebar-header-linked d-lg-block d-none"}," Variables ",-1),N=e("pre",null,`$pagination-gap:            10px;
 $pagination-size:           2.5rem;
 $pagination-button-bg:      $black;
 $pagination-ellipsis-color: $gray-700;

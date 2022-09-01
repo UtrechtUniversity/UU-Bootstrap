@@ -1,4 +1,4 @@
-import{a as p,r as _,b as i,o as b,e as m,f as o,w as s,u as a,h as e,t as g,j as t,k as f,v as d}from"./entry-e2e095d1.mjs";import{_ as l}from"./sidebar-f435af7a.mjs";import{U as y}from"./uu-layout-nav-c16211fc.mjs";const v={class:"uu-content"},w=t(" Sidebar | UU Layout | Portaldev Bootstrap theme docs "),k=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Sidebar")],-1),x=t(" Sidebar "),S=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-sidebar-width: 350px;
+import{a as p,r as _,b as i,o as b,e as m,f as o,w as s,u as a,h as e,t as g,j as t,k as f,v as d}from"./entry-0ccd6c11.mjs";import{_ as l}from"./sidebar-ab5239ce.mjs";import{U as y}from"./uu-layout-nav-79b233eb.mjs";const v={class:"uu-content"},w=t(" Sidebar | UU Layout | Portaldev Bootstrap theme docs "),k=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Sidebar")],-1),x=t(" Sidebar "),S=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-sidebar-width: 350px;
 $uu-sidebar-gap: 100px;
 $uu-sidebar-background: $gray-200;
 $uu-sidebar-breakpoint: lg;
