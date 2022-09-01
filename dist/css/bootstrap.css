@@ -2274,6 +2274,58 @@
   visibility: hidden !important;
 }
 
+.cursor-auto {
+  cursor: auto !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-grab {
+  cursor: grab !important;
+}
+
+.cursor-copy {
+  cursor: copy !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.cursor-help {
+  cursor: help !important;
+}
+
+.cursor-text {
+  cursor: text !important;
+}
+
+.cursor-none {
+  cursor: none !important;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.cursor-progress {
+  cursor: progress !important;
+}
+
+.cursor-wait {
+  cursor: wait !important;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in !important;
+}
+
+.cursor-zoom-out {
+  cursor: zoom-out !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -2768,6 +2820,45 @@
   }
   .text-sm-center {
     text-align: center !important;
+  }
+  .cursor-sm-auto {
+    cursor: auto !important;
+  }
+  .cursor-sm-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-sm-grab {
+    cursor: grab !important;
+  }
+  .cursor-sm-copy {
+    cursor: copy !important;
+  }
+  .cursor-sm-default {
+    cursor: default !important;
+  }
+  .cursor-sm-help {
+    cursor: help !important;
+  }
+  .cursor-sm-text {
+    cursor: text !important;
+  }
+  .cursor-sm-none {
+    cursor: none !important;
+  }
+  .cursor-sm-not-allowed {
+    cursor: not-allowed !important;
+  }
+  .cursor-sm-progress {
+    cursor: progress !important;
+  }
+  .cursor-sm-wait {
+    cursor: wait !important;
+  }
+  .cursor-sm-zoom-in {
+    cursor: zoom-in !important;
+  }
+  .cursor-sm-zoom-out {
+    cursor: zoom-out !important;
   }
 }
 @media (min-width: 768px) {
@@ -3265,6 +3356,45 @@
   .text-md-center {
     text-align: center !important;
   }
+  .cursor-md-auto {
+    cursor: auto !important;
+  }
+  .cursor-md-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-md-grab {
+    cursor: grab !important;
+  }
+  .cursor-md-copy {
+    cursor: copy !important;
+  }
+  .cursor-md-default {
+    cursor: default !important;
+  }
+  .cursor-md-help {
+    cursor: help !important;
+  }
+  .cursor-md-text {
+    cursor: text !important;
+  }
+  .cursor-md-none {
+    cursor: none !important;
+  }
+  .cursor-md-not-allowed {
+    cursor: not-allowed !important;
+  }
+  .cursor-md-progress {
+    cursor: progress !important;
+  }
+  .cursor-md-wait {
+    cursor: wait !important;
+  }
+  .cursor-md-zoom-in {
+    cursor: zoom-in !important;
+  }
+  .cursor-md-zoom-out {
+    cursor: zoom-out !important;
+  }
 }
 @media (min-width: 992px) {
   .float-lg-start {
@@ -3760,6 +3890,45 @@
   }
   .text-lg-center {
     text-align: center !important;
+  }
+  .cursor-lg-auto {
+    cursor: auto !important;
+  }
+  .cursor-lg-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-lg-grab {
+    cursor: grab !important;
+  }
+  .cursor-lg-copy {
+    cursor: copy !important;
+  }
+  .cursor-lg-default {
+    cursor: default !important;
+  }
+  .cursor-lg-help {
+    cursor: help !important;
+  }
+  .cursor-lg-text {
+    cursor: text !important;
+  }
+  .cursor-lg-none {
+    cursor: none !important;
+  }
+  .cursor-lg-not-allowed {
+    cursor: not-allowed !important;
+  }
+  .cursor-lg-progress {
+    cursor: progress !important;
+  }
+  .cursor-lg-wait {
+    cursor: wait !important;
+  }
+  .cursor-lg-zoom-in {
+    cursor: zoom-in !important;
+  }
+  .cursor-lg-zoom-out {
+    cursor: zoom-out !important;
   }
 }
 @media (min-width: 1200px) {
@@ -4257,6 +4426,45 @@
   .text-xl-center {
     text-align: center !important;
   }
+  .cursor-xl-auto {
+    cursor: auto !important;
+  }
+  .cursor-xl-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-xl-grab {
+    cursor: grab !important;
+  }
+  .cursor-xl-copy {
+    cursor: copy !important;
+  }
+  .cursor-xl-default {
+    cursor: default !important;
+  }
+  .cursor-xl-help {
+    cursor: help !important;
+  }
+  .cursor-xl-text {
+    cursor: text !important;
+  }
+  .cursor-xl-none {
+    cursor: none !important;
+  }
+  .cursor-xl-not-allowed {
+    cursor: not-allowed !important;
+  }
+  .cursor-xl-progress {
+    cursor: progress !important;
+  }
+  .cursor-xl-wait {
+    cursor: wait !important;
+  }
+  .cursor-xl-zoom-in {
+    cursor: zoom-in !important;
+  }
+  .cursor-xl-zoom-out {
+    cursor: zoom-out !important;
+  }
 }
 @media (min-width: 1400px) {
   .float-xxl-start {
@@ -4752,6 +4960,45 @@
   }
   .text-xxl-center {
     text-align: center !important;
+  }
+  .cursor-xxl-auto {
+    cursor: auto !important;
+  }
+  .cursor-xxl-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-xxl-grab {
+    cursor: grab !important;
+  }
+  .cursor-xxl-copy {
+    cursor: copy !important;
+  }
+  .cursor-xxl-default {
+    cursor: default !important;
+  }
+  .cursor-xxl-help {
+    cursor: help !important;
+  }
+  .cursor-xxl-text {
+    cursor: text !important;
+  }
+  .cursor-xxl-none {
+    cursor: none !important;
+  }
+  .cursor-xxl-not-allowed {
+    cursor: not-allowed !important;
+  }
+  .cursor-xxl-progress {
+    cursor: progress !important;
+  }
+  .cursor-xxl-wait {
+    cursor: wait !important;
+  }
+  .cursor-xxl-zoom-in {
+    cursor: zoom-in !important;
+  }
+  .cursor-xxl-zoom-out {
+    cursor: zoom-out !important;
   }
 }
 @media (min-width: 1200px) {
@@ -12682,6 +12929,10 @@ textarea.form-control-lg {
   color: black;
 }
 
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
 .text-bg-hover-primary:hover {
   color: #000 !important;
   background-color: RGBA(255, 205, 0, var(--bs-bg-opacity, 1)) !important;
@@ -13036,6 +13287,23 @@ textarea.form-control-lg {
   font-weight: var(--bs-modal-header-font-weight);
 }
 
+.table.table-sticky-header thead {
+  position: sticky;
+  top: 0;
+}
+.table.table-sticky-header.table-sticky-header-top-0 thead {
+  top: 0 !important;
+}
+.table.table-sticky-footer tfoot {
+  position: sticky;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .uu-root-container .table.table-sticky-header thead {
+    top: var(--bs-uu-navbar-mobile-height);
+  }
+}
 .flex-fill {
   min-width: 0;
 }
@@ -13983,6 +14251,7 @@ pre.code {
 .uu-root-container .uu-sidebar-container {
   position: relative;
   width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   gap: var(--bs-uu-sidebar-gap);
