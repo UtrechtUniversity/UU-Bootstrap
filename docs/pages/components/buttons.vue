@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 
 const loading = ref(false);
 </script>
@@ -10,14 +10,8 @@ const loading = ref(false);
         <Head>
             <Title>Buttons | Portaldev Bootstrap theme docs</Title>
         </Head>
-        <Sidebar
-            id="buttons"
-            placement="right"
-            mobile-placement="bottom"
-        >
-            <template #sidebar-button>
-                Variables
-            </template>
+        <Sidebar id="buttons" placement="right" mobile-placement="bottom">
+            <template #sidebar-button> Variables </template>
             <template #sidebar>
                 <h1 class="uu-sidebar-header-linked d-lg-block d-none">
                     Variables
@@ -25,9 +19,7 @@ const loading = ref(false);
                 <Prism language="scss" class="w-100">
                     <pre>$btn-group-gap: .5rem;</pre>
                 </Prism>
-                <h3 class="mt-3">
-                    See also
-                </h3>
+                <h3 class="mt-3">See also</h3>
                 <ul class="nav">
                     <li class="nav-item">
                         <NuxtLink
@@ -49,23 +41,17 @@ const loading = ref(false);
                     </li>
                 </ul>
             </template>
-            <h1 class="uu-sidebar-header-linked">
-                Buttons
-            </h1>
+            <h1 class="uu-sidebar-header-linked">Buttons</h1>
             <p>
                 Buttons are mostly untouched. Just a couple of small additions;
                 Remember to set a coloring class!
             </p>
-            <h3 class="hdr-underlined">
-                Button arrows
-            </h3>
+            <h3 class="hdr-underlined">Button arrows</h3>
+            <p>Fancy arrows added to a button! As seen on uu.nl!</p>
             <p>
-                Fancy arrows added to a button! As seen on uu.nl!
-            </p>
-            <p>
-                Just add <code>.btn-arrow-left</code> or <code>.btn-arrow-right</code>
-                to your <code>.btn</code>.
-                Note: while working with outlined buttons, it doesn't look good.
+                Just add <code>.btn-arrow-left</code> or
+                <code>.btn-arrow-right</code> to your <code>.btn</code>. Note:
+                while working with outlined buttons, it doesn't look good.
             </p>
             <div class="btn-group">
                 <button class="btn btn-secondary btn-arrow-left">
@@ -75,30 +61,19 @@ const loading = ref(false);
                     Next page
                 </button>
             </div>
-            <h3 class="hdr-underlined mt-4">
-                Button group
-            </h3>
+            <h3 class="hdr-underlined mt-4">Button group</h3>
             <p>
                 Button groups in Bootstrap normally join buttons together. We've
-                introduced a new variable that set's the flexbox's gap parameter.
+                introduced a new variable that set's the flexbox's gap
+                parameter.
             </p>
-            <p>
-                Nothing fancy, but it looks nicer:
-            </p>
+            <p>Nothing fancy, but it looks nicer:</p>
             <div class="btn-group">
-                <button class="btn btn-primary">
-                    Save
-                </button>
-                <button class="btn btn-secondary">
-                    Cancel
-                </button>
-                <button class="btn btn-secondary">
-                    Reset
-                </button>
+                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-secondary">Cancel</button>
+                <button class="btn btn-secondary">Reset</button>
             </div>
-            <h3 class="hdr-underlined mt-3">
-                Loading
-            </h3>
+            <h3 class="hdr-underlined mt-3">Loading</h3>
             <p>
                 If you've got some action bound to a button that might take a
                 sec, you can add the <code>.btn-loading</code> class that will
@@ -112,6 +87,77 @@ const loading = ref(false);
                 >
                     Do something that takes a while
                 </button>
+            </div>
+            <h3 class="hdr-underlined mt-3">Radio/checkbox toggle buttons</h3>
+            <p>
+                Bootstrap uses the active button variant for radio/checkbox
+                toggle buttons. However, in the UU style you might want more
+                flexibility in the 'active' color. To accomplish this, a new
+                button modifier was added:
+            </p>
+            <p>
+                <code class="text-nowrap">.btn-checked-{variant}</code> and
+                <code class="text-nowrap">.btn-checked-outline-{variant}</code>
+            </p>
+            <p>
+                These are identical in options and styles to the normal button
+                variant classes, but are only added when used with Bootstrap's
+                toggle buttons when it's toggled on.
+            </p>
+            <div class="btn-group">
+                <input
+                    id="option1"
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    autocomplete="off"
+                    checked
+                />
+                <label
+                    class="btn btn-outline-secondary btn-checked-primary"
+                    for="option1"
+                    >Checked</label
+                >
+
+                <input
+                    id="option2"
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    autocomplete="off"
+                />
+                <label
+                    class="btn btn-outline-secondary btn-checked-outline-danger"
+                    for="option2"
+                    >Radio</label
+                >
+
+                <input
+                    id="option3"
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    autocomplete="off"
+                    disabled
+                />
+                <label
+                    class="btn btn-outline-secondary btn-checked-red"
+                    for="option3"
+                    >Disabled</label
+                >
+
+                <input
+                    id="option4"
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    autocomplete="off"
+                />
+                <label
+                    class="btn btn-outline-secondary btn-checked-green"
+                    for="option4"
+                    >Radio</label
+                >
             </div>
         </Sidebar>
     </div>
