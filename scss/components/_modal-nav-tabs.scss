@@ -1,4 +1,5 @@
 .modal-nav-tabs {
+    --#{$prefix}modal-nav-tabs-gap: #{$modal-nav-tabs-gap};
     --#{$prefix}modal-nav-tabs-color: #{$modal-nav-tabs-color};
     --#{$prefix}modal-nav-tabs-bg: #{$modal-nav-tabs-bg};
     --#{$prefix}modal-nav-tabs-active-color: #{$modal-nav-tabs-active-color};
@@ -8,7 +9,7 @@
 
     margin-bottom: calc(0px  - var(--#{$prefix}modal-header-padding-y));
     border-bottom: 0;
-    gap: 10px;
+    gap: var(--#{$prefix}modal-nav-tabs-gap);
     overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
