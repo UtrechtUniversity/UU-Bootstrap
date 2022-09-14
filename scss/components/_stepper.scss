@@ -10,6 +10,7 @@
     --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg)};
     --#{$prefix}stepper-min-width: #{$stepper-min-width};
     --#{$prefix}stepper-padding-y: #{$stepper-padding-y};
+    --#{$prefix}stepper-line-width: #{$stepper-line-width};
 
     position: relative;
     z-index: 1;
@@ -26,7 +27,7 @@
         left: calc(#{$stepper-bubble-max-size} / 2 - 1px);
         top: 1rem;
         height: calc(100% - 1rem);
-        width: 2px;
+        width: var(--#{$prefix}stepper-line-width);
         background: var(--#{$prefix}stepper-inactive-bg);
         z-index: -1;
     }

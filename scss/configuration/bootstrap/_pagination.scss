@@ -2,7 +2,7 @@
 
 // New
 
-$pagination-gap:                    10px;
+$pagination-gap:                    .625rem;
 $pagination-size:                   2.5rem;
 $pagination-button-bg:              colors.$black;
 $pagination-ellipsis-color:         colors.$gray-700;
@@ -14,6 +14,8 @@ $pagination-padding-y-sm:           .25rem;
 $pagination-padding-x-sm:           .5rem;
 $pagination-padding-y-lg:           .75rem;
 $pagination-padding-x-lg:           1.5rem;
+
+$pagination-border-radius:          .25rem;
 
 $pagination-color:                  colors.$black;
 $pagination-bg:                     colors.$gray-300;

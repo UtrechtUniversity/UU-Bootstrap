@@ -51,6 +51,7 @@ const example = ref(`<div class="modal" tabindex="-1">
                 </h2>
                 <Prism language="scss" class="w-100">
                     <pre>
+$modal-nav-tabs-gap: 0.625rem;
 $modal-nav-tabs-color: inherit;
 $modal-nav-tabs-bg: none;
 $modal-nav-tabs-active-color: var(--bs-modal-color);

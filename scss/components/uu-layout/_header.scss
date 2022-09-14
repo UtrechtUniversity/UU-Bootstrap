@@ -34,13 +34,13 @@
         }
 
         &:not(:last-child) {
-            border-bottom: 1px solid var(--#{$uu-css-prefix}border-color-light);
+            border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color-light);
         }
 
         @each $x in ['left', 'right'] {
             .border-#{$x} {
                 padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap);
-                border-#{$x}: 1px solid var(--#{$uu-css-prefix}border-color-light);
+                border-#{$x}: .0625rem solid var(--#{$uu-css-prefix}border-color-light);
             }
         }
 

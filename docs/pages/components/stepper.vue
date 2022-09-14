@@ -401,7 +401,7 @@ const example2 = ref(`<div class="d-md-none">
                                 <code>$stepper-min-width</code>
                             </td>
                             <td>
-                                <code>250px</code>
+                                <code>15.625rem</code>
                             </td>
                             <td></td>
                             <td>Yes</td>
@@ -415,6 +415,18 @@ const example2 = ref(`<div class="d-md-none">
                             </td>
                             <td>
                                 Padding between items
+                            </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <code>$stepper-line-width</code>
+                            </td>
+                            <td>
+                                <code>0.125rem</code>
+                            </td>
+                            <td>
+                                The size of the stepper vertical line.
                             </td>
                             <td>Yes</td>
                         </tr>

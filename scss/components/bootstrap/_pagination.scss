@@ -25,6 +25,7 @@
 
         &.page-button {
             font-weight: bold;
+            user-select: none;
 
             .page-link {
                 background-color: var(--#{$prefix}pagination-button-bg);

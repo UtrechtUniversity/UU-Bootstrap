@@ -1,6 +1,7 @@
 @use "colors";
 @use "bootstrap" as b;
 
+$modal-nav-tabs-gap: 0.625rem;
 $modal-nav-tabs-color: inherit !default;
 $modal-nav-tabs-bg: none !default;
 $modal-nav-tabs-active-color: var(--#{b.$prefix}modal-color) !default;

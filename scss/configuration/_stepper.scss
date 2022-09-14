@@ -5,8 +5,9 @@ $stepper-disabled-color: bootstrap.$text-muted !default;
 $stepper-complete-bg: bootstrap.$green-300 !default;
 $stepper-incomplete-bg: colors.$yellow !default;
 $stepper-inactive-bg: colors.$gray-400 !default;
-$stepper-min-width: 250px !default;
+$stepper-min-width: 15.625rem !default;
 $stepper-padding-y: 0.75rem !default;
+$stepper-line-width: 0.125rem !default;
 
 // Variables below are SCSS only vars
 $stepper-max-indent: 3rem !default;

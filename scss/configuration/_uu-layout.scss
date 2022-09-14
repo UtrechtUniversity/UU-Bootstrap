@@ -7,12 +7,12 @@ $uu-prefix: 'uu-' !default;
 $uu-css-prefix: 'bs-uu-' !default;
 
 // Width of the outer container
-$uu-container-width: 1600px !default;
+$uu-container-width: 100rem !default;
 // Width of the actual content inside the container
-$uu-content-width: 1200px !default;
+$uu-content-width: 75rem !default;
 // Default paddings. With spaced container this only applies to < md breakpoints
-$uu-container-padding-x: 16px !default;
-$uu-container-padding-y: 16px !default;
+$uu-container-padding-x: 1rem !default;
+$uu-container-padding-y: 1rem !default;
 $uu-border-color: colors.$gray-400 !default;
 $uu-border-color-light: colors.$gray-200 !default;
 $uu-border-color-dark: colors.$gray-800 !default;
@@ -25,10 +25,10 @@ $uu-header-title-color: #094D8E !default;
 $uu-header-border-gap: 1.2rem !default;
 // At what breakpoint the navbar should be switching to mobile mode
 $uu-navbar-breakpoint: md !default;
-$uu-navbar-mobile-height: 50px !default;
-$uu-navbar-navlink-padding-x: 12px !default;
-$uu-navbar-navlink-padding-y: 12px !default;
-$uu-footer-padding-y: 40px !default;
+$uu-navbar-mobile-height: 3.125rem !default;
+$uu-navbar-navlink-padding-x: .75rem !default;
+$uu-navbar-navlink-padding-y: .75rem !default;
+$uu-footer-padding-y: 2.5rem !default;
 $uu-footer-color: colors.$gray-400 !default;
 $uu-footer-background-color: colors.$gray-850 !default;
 $uu-hero-bg: colors.$yellow !default;
@@ -37,25 +37,25 @@ $uu-hero-padding-y: 1rem !default;
 $uu-hero-font-weight: 400 !default;
 // Default height of cover images, can be overriden with classes
 $uu-cover-default-height: 400px !default;
-$uu-cover-copyright-padding-x: 10px !default;
-$uu-cover-copyright-padding-y: 10px !default;
+$uu-cover-copyright-padding-x: .625rem !default;
+$uu-cover-copyright-padding-y: .625rem !default;
 $uu-cover-copyright-text-size: 0.8rem !default;
 $uu-cover-copyright-text-color: colors.$gray-300 !default;
 $uu-cover-copyright-background-color: rgba(0,0,0, 0.5) !default;
 // Gap between content and sidebar in desktop view
-$uu-sidebar-width: 350px !default;
-$uu-sidebar-gap: 100px !default;
+$uu-sidebar-width: 21.875rem !default;
+$uu-sidebar-gap: 6.25rem !default;
 $uu-sidebar-background: colors.$gray-200 !default;
 // Below this breakpoint the sidebar will turn into a pulldown menu instead
 // Intentionally 1 breakpoint higher than the rest because the sidebar takes a lot of horizontal space
 $uu-sidebar-breakpoint: lg !default;
-$uu-sidebar-padding-x: 20px !default;
-$uu-sidebar-padding-y: 20px !default;
-$uu-sidebar-mobile-padding-y: 10px !default;
+$uu-sidebar-padding-x: 1.25rem !default;
+$uu-sidebar-padding-y: 1.25rem !default;
+$uu-sidebar-mobile-padding-y: .625rem !default;
 // Padding applied below the header if using an underlined header
-$uu-sidebar-header-padding-y: 10px !default;
+$uu-sidebar-header-padding-y: .625rem !default;
 $uu-sidebar-header-font-weight: 200 !default;
-$uu-sidebar-nav-padding-y: 7px !default;
+$uu-sidebar-nav-padding-y: .4375rem !default;
 $uu-sidebar-nav-padding-x: 0 !default;
 $uu-sidebar-nav-disabled-color: colors.$gray-600 !default;
 $uu-sidebar-nav-active-font-weight: 600 !default;
@@ -69,7 +69,7 @@ $uu-form-row-gap: 1.5rem !default;
 $uu-form-field-padding-x: 1.5rem !default;
 $uu-form-field-padding-y: 1.3rem !default;
 // Visual fix for form labels, otherwise padding doesn't look symmetrical
-$uu-form-field-padding-y-compensation: 5px !default;
+$uu-form-field-padding-y-compensation: .3125rem !default;
 $uu-form-field-bg: colors.$light !default;
 $uu-form-field-input-group-bg: colors.$gray-050 !default;
 $uu-form-aside-font-size: 0.9rem !default;

@@ -89,9 +89,9 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
                 <Prism language="scss" class="w-100">
                     <pre>
 $uu-navbar-breakpoint: md;
-$uu-navbar-mobile-height: 50px;
-$uu-navbar-navlink-padding-x: 12px;
-$uu-navbar-navlink-padding-y: 12px;
+$uu-navbar-mobile-height: 3.125rem;
+$uu-navbar-navlink-padding-x: .75rem;
+$uu-navbar-navlink-padding-y: .75rem;
                     </pre>
                 </Prism>
             </template>

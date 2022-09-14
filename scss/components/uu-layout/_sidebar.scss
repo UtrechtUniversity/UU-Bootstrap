@@ -93,7 +93,7 @@
 
             @for $i from 1 through 7 {
                 h#{$i}, .h#{$i} {
-                    border-bottom: 3px solid var(--#{$uu-css-prefix}border-color);
+                    border-bottom: .1875rem solid var(--#{$uu-css-prefix}border-color);
                     padding-bottom: var(--#{$uu-css-prefix}sidebar-header-padding-y);
                     margin-bottom: 0;
                     font-weight: var(--#{$uu-css-prefix}sidebar-header-font-weight);
@@ -115,7 +115,7 @@
 
                 .nav-link {
                     color: var(--#{$prefix}body-color);
-                    border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
+                    border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
                     padding: var(--#{$uu-css-prefix}sidebar-nav-padding-y) var(--#{$uu-css-prefix}sidebar-nav-padding-y);
 
                     &.is-active {
@@ -163,8 +163,8 @@
 
         @for $i from 1 through 7 {
             h#{$i}.#{$uu-prefix}sidebar-header-linked, .h#{$i}.#{$uu-prefix}sidebar-header-linked {
-                border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
-                padding-bottom: calc(var(--#{$uu-css-prefix}sidebar-header-padding-y) + 1px);
+                border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
+                padding-bottom: calc(var(--#{$uu-css-prefix}sidebar-header-padding-y) + .0625rem);
 
                 @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                     padding-left: var(--#{$uu-css-prefix}sidebar-gap);
