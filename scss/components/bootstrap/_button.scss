@@ -28,12 +28,18 @@
         content: '＞';
         padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x)) var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin: calc(0px - var(--#{$prefix}btn-padding-y)) calc(0px - var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y)) calc(0.7 * var(--#{$prefix}btn-padding-x));
+
+        border-top-right-radius: var(--#{$prefix}btn-border-radius);
+        border-bottom-right-radius: var(--#{$prefix}btn-border-radius);
     }
 
     &.btn-arrow-left::before {
         content: '＜';
         padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x)) var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin: calc(0px - var(--#{$prefix}btn-padding-y)) calc(0.7 * var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y)) calc(0px - var(--#{$prefix}btn-padding-x));
+
+        border-top-left-radius: var(--#{$prefix}btn-border-radius);
+        border-bottom-left-radius: var(--#{$prefix}btn-border-radius);
     }
 
     &.btn-loading {
