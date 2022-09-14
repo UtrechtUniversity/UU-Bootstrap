@@ -401,7 +401,7 @@ const example2 = ref(`<div class="d-md-none">
                                 <code>$stepper-min-width</code>
                             </td>
                             <td>
-                                <code>250px</code>
+                                <code>15.625rem</code>
                             </td>
                             <td></td>
                             <td>Yes</td>

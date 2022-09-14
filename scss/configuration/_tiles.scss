@@ -1,7 +1,7 @@
 @use 'bootstrap';
 @use 'colors';
 
-$tiles-gap: 10px !default;
+$tiles-gap: .625rem !default;
 $tiles-padding: 1rem !default;
 $tiles-bg: colors.$light !default;
 $tiles-color: bootstrap.color-contrast($tiles-bg) !default;

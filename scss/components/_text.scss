@@ -4,7 +4,7 @@
 
 @for $i from 1 through 7 {
   h#{$i}.hdr-underlined {
-    border-bottom: 1px solid $uu-border-color;
+    border-bottom: 0.0625rem solid $uu-border-color;
     padding-bottom: $uu-sidebar-header-padding-y;
   }
 }

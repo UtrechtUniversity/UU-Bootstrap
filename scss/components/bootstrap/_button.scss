@@ -13,7 +13,7 @@
         &::after, &::before {
             display: inline-block;
             font-weight: 900;
-            border: 1px solid transparent;
+            border: .0625rem solid transparent;
             @include transition($btn-transition);
         }
 
@@ -51,7 +51,7 @@
         }
 
         &::after {
-            border: 2px solid #000;
+            border: .125rem solid #000;
             border-radius: 999999px;
             border-top-color: transparent !important;
             content: "";

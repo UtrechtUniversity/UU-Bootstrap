@@ -48,8 +48,8 @@ const heroExample = ref(`<div class="uu-cover">
                 <Prism language="scss" class="w-100">
                     <pre>
 $uu-cover-default-height:             400px;
-$uu-cover-copyright-padding-x:        10px;
-$uu-cover-copyright-padding-y:        10px;
+$uu-cover-copyright-padding-x:        .625rem;
+$uu-cover-copyright-padding-y:        .625rem;
 $uu-cover-copyright-text-size:        0.8rem;
 $uu-cover-copyright-text-color:       $gray-300;
 $uu-cover-copyright-background-color: rgba(0,0,0, 0.5);

@@ -9,13 +9,13 @@
     @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
         background: $white !important;
         color: $black !important;
-        border-bottom: 1px solid var(--#{$uu-css-prefix}border-color);
+        border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
         flex-wrap: wrap;
         justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 9001;
-        height: 50px;
+        height: var(--#{$uu-css-prefix}navbar-mobile-height);
     }
 
     .#{$uu-prefix}navbar-container {
@@ -104,7 +104,7 @@
                 background: $black;
                 padding-left: var(--#{$uu-css-prefix}container-padding-x);
                 padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                border-top: 1px solid var(--#{$uu-css-prefix}border-color-dark);
+                border-top: .0625rem solid var(--#{$uu-css-prefix}border-color-dark);
             }
 
             &.dropdown-toggle.show::after {

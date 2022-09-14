@@ -25,7 +25,7 @@
 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
     .uu-root-container .table.table-sticky-header {
         thead {
-            top: var(--bs-uu-navbar-mobile-height);
+            top: var(--#{$uu-css-prefix}navbar-mobile-height);
         }
     }
 }

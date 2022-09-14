@@ -43,16 +43,16 @@ const minimalExample = ref(`<div class="uu-sidebar-container">
                 </h2>
                 <Prism language="scss" class="w-100">
                     <pre>
-$uu-sidebar-width: 350px;
-$uu-sidebar-gap: 100px;
+$uu-sidebar-width: 21.875rem;
+$uu-sidebar-gap: 6.25rem;
 $uu-sidebar-background: $gray-200;
 $uu-sidebar-breakpoint: lg;
-$uu-sidebar-padding-x: 20px;
-$uu-sidebar-padding-y: 20px;
-$uu-sidebar-mobile-padding-y: 10px;
-$uu-sidebar-header-padding-y: 10px;
+$uu-sidebar-padding-x: 1.25rem;
+$uu-sidebar-padding-y: 1.25rem;
+$uu-sidebar-mobile-padding-y: .625rem;
+$uu-sidebar-header-padding-y: .625rem;
 $uu-sidebar-header-font-weight: 200;
-$uu-sidebar-nav-padding-y: 7px;
+$uu-sidebar-nav-padding-y: .4375rem;
 $uu-sidebar-nav-padding-x: 0;
 $uu-sidebar-nav-disabled-color: $gray-600;
 $uu-sidebar-nav-active-font-weight: 600;
@@ -121,8 +121,8 @@ $uu-sidebar-nav-active-font-weight: 600;
             <Prism language="css" class="w-100">
                 <pre>
 .compact-sidebar {
-    --bs-uu-sidebar-width: 250px;
-    --bs-uu-sidebar-gap: 40px;
+    --bs-uu-sidebar-width: 16rem;
+    --bs-uu-sidebar-gap: 2.5rem;
 }</pre>
             </Prism>
             <h2 id="modifiers" class="mt-3">

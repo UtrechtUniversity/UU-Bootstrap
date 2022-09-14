@@ -130,7 +130,7 @@ const headerGridSpaced = ref(`<div class="uu-header">
                 </h2>
                 <prism language="scss">
                     <pre>
-$uu-container-width: 1600px;
+$uu-container-width: 100rem; // 1600px
 $uu-border-color: $gray-400;
 $uu-border-color-light: $gray-200;
 $uu-border-color-dark: $gray-800;
@@ -168,10 +168,10 @@ $uu-border-color-dark: $gray-800;
                 </h2>
                 <prism language="scss" class="w-100">
                     <pre>
-$uu-header-padding-y: 10px;
-$uu-header-font-size: 14px;
+$uu-header-padding-y: 0.7rem;
+$uu-header-font-size: 0.9rem;
 $uu-header-title-color: #094D8E;
-$uu-header-border-gap: 20px;
+$uu-header-border-gap: 1.2rem;
 // Also the header breakpoint
 $uu-navbar-breakpoint: md;
                     </pre>
@@ -337,7 +337,7 @@ $uu-navbar-breakpoint: md;
                 </h2>
                 <prism language="scss">
                     <pre>
-$uu-footer-padding-y: 40px;
+$uu-footer-padding-y: 2.5rem;
 $uu-footer-color: $gray-400;
 $uu-footer-background-color: $gray-850;
                     </pre>

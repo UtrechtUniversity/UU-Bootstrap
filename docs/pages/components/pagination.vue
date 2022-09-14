@@ -56,7 +56,7 @@ function changePage (page: number) {
                 </h1>
                 <Prism language="scss">
                     <pre>
-$pagination-gap:            10px;
+$pagination-gap:            .625rem;
 $pagination-size:           2.5rem;
 $pagination-button-bg:      $black;
 $pagination-ellipsis-color: $gray-700;
