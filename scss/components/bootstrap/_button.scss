@@ -10,6 +10,26 @@
             --#{$prefix}btn-padding-y: calc(#{$btn-padding-y} + #{$btn-border-width});
         }
 
+        &.btn-sm {
+            &:not([class^='btn-outline']):not([class*=' btn-outline']) {
+                // The border interferes with the arrow, so we remove it from non-outlined buttons
+                // We add the original border width to padding such that it will have the same size as other buttons
+                --#{$prefix}btn-border-width: 0;
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-sm} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+            }
+        }
+
+        &.btn-lg {
+            &:not([class^='btn-outline']):not([class*=' btn-outline']) {
+                // The border interferes with the arrow, so we remove it from non-outlined buttons
+                // We add the original border width to padding such that it will have the same size as other buttons
+                --#{$prefix}btn-border-width: 0;
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-lg} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-lg} + #{$btn-border-width});
+            }
+        }
+
         &::after, &::before {
             display: inline-block;
             font-weight: 900;
