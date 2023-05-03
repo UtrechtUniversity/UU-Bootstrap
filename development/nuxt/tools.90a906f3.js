@@ -1,1 +1,0 @@
-import{_ as t}from"./navbar.vue_vue_type_script_setup_true_lang.46cfc000.js";import{A as s,o as a,e as n,f as r,m as c}from"./entry.df906c9a.js";const _={},l={class:"uu-tool-container bg-white"};function f(o,i){const e=t;return a(),n("div",l,[r(e,{"tool-layout":!0}),c(o.$slots,"default")])}const u=s(_,[["render",f]]);export{u as default};
