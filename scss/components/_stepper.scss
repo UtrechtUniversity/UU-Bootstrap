@@ -66,6 +66,10 @@
                     color: var(--#{$prefix}stepper-incomplete-color);
                 }
 
+                &.disabled .stepper-bubble, .stepper-bubble.disabled {
+                    font-style: normal;
+                }
+
                 .stepper-bubble {
                     background: var(--#{$prefix}stepper-inactive-bg);
                     flex: 0 0 auto;
