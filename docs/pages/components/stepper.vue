@@ -267,43 +267,43 @@ const example2 = ref(`<div class="d-md-none">
                             <ul>
                                 <li>
                                     <span class="stepper-item active">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">1</span>
                                         <span>Active step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item active incomplete">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">2</span>
                                         <span>Active incompleted step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item active complete">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">3</span>
                                         <span>Active completed step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item disabled">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">4</span>
                                         <span>Disabled step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item incomplete">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">5</span>
                                         <span>Incompleted step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item complete">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">6</span>
                                         <span>Completed step</span>
                                     </span>
                                 </li>
                                 <li>
                                     <span class="stepper-item">
-                                        <span class="stepper-bubble stepper-bubble-largest"></span>
+                                        <span class="stepper-bubble stepper-bubble-largest">7</span>
                                         <span>Unreached step</span>
                                     </span>
                                 </li>
