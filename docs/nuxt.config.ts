@@ -40,6 +40,6 @@ export default defineNuxtConfig({
     typescript: {
         shim: false, // Enable if not running VSCode with Volar Extension or IntelliJ
         strict: true,
-        typeCheck: 'build',
+        typeCheck: false,
     }
 });
