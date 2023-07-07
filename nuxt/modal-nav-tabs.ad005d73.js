@@ -1,4 +1,4 @@
-import{a as k,r,b as m,o as n,e as l,f as e,w as t,u as d,h as a,i as u,p as v,q as _,j as s,t as x,k as $,v as b}from"./entry.b65621f5.js";import{_ as q}from"./sidebar.vue_vue_type_script_setup_true_lang.fbbb2804.js";const C={class:"uu-content"},N=s("Modal Nav Tabs | Portaldev Bootstrap theme docs"),y=a("div",{class:"uu-hero"},[a("h1",null,"Modal Nav Tabs")],-1),T=s(" Variables "),w=a("h2",{class:"d-lg-block d-none"}," Variables ",-1),B=a("pre",null,`$modal-nav-tabs-gap: 0.625rem;
+import{a as k,r,b as m,o as n,e as l,f as e,w as t,u as d,h as a,i as u,p as v,q as _,j as s,t as x,k as $,v as b}from"./entry.ce066766.js";import{_ as q}from"./sidebar.vue_vue_type_script_setup_true_lang.8fbd809d.js";const C={class:"uu-content"},N=s("Modal Nav Tabs | Portaldev Bootstrap theme docs"),y=a("div",{class:"uu-hero"},[a("h1",null,"Modal Nav Tabs")],-1),T=s(" Variables "),w=a("h2",{class:"d-lg-block d-none"}," Variables ",-1),B=a("pre",null,`$modal-nav-tabs-gap: 0.625rem;
 $modal-nav-tabs-color: inherit;
 $modal-nav-tabs-bg: none;
 $modal-nav-tabs-active-color: var(--bs-modal-color);

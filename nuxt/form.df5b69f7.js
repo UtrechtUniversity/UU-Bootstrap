@@ -1,4 +1,4 @@
-import{a as f,r as l,b as r,o as h,e as _,f as s,w as t,u as a,h as e,j as o,t as u,k as w,v as n}from"./entry.b65621f5.js";import{_ as b}from"./sidebar.vue_vue_type_script_setup_true_lang.fbbb2804.js";import{U as g}from"./uu-layout-nav.bfc7dcc8.js";const x={class:"uu-content"},v=o(" Form | UU Layout | Portaldev Bootstrap theme docs "),y=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Form")],-1),$=o(" Sidebar "),U=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-form-breakpoint: lg;
+import{a as f,r as l,b as r,o as h,e as _,f as s,w as t,u as a,h as e,j as o,t as u,k as w,v as n}from"./entry.ce066766.js";import{_ as b}from"./sidebar.vue_vue_type_script_setup_true_lang.8fbd809d.js";import{U as g}from"./uu-layout-nav.910e517f.js";const x={class:"uu-content"},v=o(" Form | UU Layout | Portaldev Bootstrap theme docs "),y=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Form")],-1),$=o(" Sidebar "),U=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-form-breakpoint: lg;
 $uu-form-column-gap: 2rem;
 $uu-form-row-gap: 1.5rem;
 $uu-form-field-padding-x: 1.5rem;

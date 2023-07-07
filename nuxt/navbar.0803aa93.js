@@ -1,4 +1,4 @@
-import{a as u,r as c,b as t,o as p,e as v,f as l,w as n,u as o,j as e,t as m,h as a,v as s}from"./entry.b65621f5.js";import{_ as b}from"./sidebar.vue_vue_type_script_setup_true_lang.fbbb2804.js";import{U as h}from"./uu-layout-nav.bfc7dcc8.js";const _={class:"uu-content"},g=e(" Navbar | UU Layout | Portaldev Bootstrap theme docs "),f=a("div",{class:"uu-hero"},[a("h1",null,"UU Layout Navbar")],-1),w=e(" Sidebar "),x=a("h2",{class:"mt-3"}," Variables ",-1),y=a("pre",null,`$uu-navbar-breakpoint: md;
+import{a as u,r as c,b as t,o as p,e as v,f as l,w as n,u as o,j as e,t as m,h as a,v as s}from"./entry.ce066766.js";import{_ as b}from"./sidebar.vue_vue_type_script_setup_true_lang.8fbd809d.js";import{U as h}from"./uu-layout-nav.910e517f.js";const _={class:"uu-content"},g=e(" Navbar | UU Layout | Portaldev Bootstrap theme docs "),f=a("div",{class:"uu-hero"},[a("h1",null,"UU Layout Navbar")],-1),w=e(" Sidebar "),x=a("h2",{class:"mt-3"}," Variables ",-1),y=a("pre",null,`$uu-navbar-breakpoint: md;
 $uu-navbar-mobile-height: 3.125rem;
 $uu-navbar-navlink-padding-x: .75rem;
 $uu-navbar-navlink-padding-y: .75rem;

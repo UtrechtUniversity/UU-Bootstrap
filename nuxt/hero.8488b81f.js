@@ -1,4 +1,4 @@
-import{a as m,r as p,b as r,o as a,e as n,f as s,w as t,u as i,F as _,s as b,j as o,h as e,v as l,t as f}from"./entry.b65621f5.js";import{_ as g}from"./sidebar.vue_vue_type_script_setup_true_lang.fbbb2804.js";import{U as v}from"./uu-layout-nav.bfc7dcc8.js";const y={class:"uu-content"},w=o(" Hero | UU Layout | Portaldev Bootstrap theme docs "),U=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Hero")],-1),x=o(" Sidebar "),H=e("h2",{class:"mt-3"}," Variables ",-1),k=e("pre",null,`$uu-hero-bg:          $yellow;
+import{a as m,r as p,b as r,o as a,e as n,f as s,w as t,u as i,F as _,s as b,j as o,h as e,v as l,t as f}from"./entry.ce066766.js";import{_ as g}from"./sidebar.vue_vue_type_script_setup_true_lang.8fbd809d.js";import{U as v}from"./uu-layout-nav.910e517f.js";const y={class:"uu-content"},w=o(" Hero | UU Layout | Portaldev Bootstrap theme docs "),U=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Hero")],-1),x=o(" Sidebar "),H=e("h2",{class:"mt-3"}," Variables ",-1),k=e("pre",null,`$uu-hero-bg:          $yellow;
 $uu-hero-color:       color-contrast($uu-hero-bg);
 $uu-hero-padding-y:   1rem;
 $uu-hero-font-weight: 400;

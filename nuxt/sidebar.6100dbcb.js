@@ -1,4 +1,4 @@
-import{a as _,r as b,b as i,o as p,e as m,f as o,w as s,u as a,h as e,t as g,j as t,k as f,v as d}from"./entry.b65621f5.js";import{_ as l}from"./sidebar.vue_vue_type_script_setup_true_lang.fbbb2804.js";import{U as y}from"./uu-layout-nav.bfc7dcc8.js";const v={class:"uu-content"},w=t(" Sidebar | UU Layout | Portaldev Bootstrap theme docs "),k=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Sidebar")],-1),x=t(" Sidebar "),S=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-sidebar-width: 21.875rem;
+import{a as _,r as b,b as i,o as p,e as m,f as o,w as s,u as a,h as e,t as g,j as t,k as f,v as d}from"./entry.ce066766.js";import{_ as l}from"./sidebar.vue_vue_type_script_setup_true_lang.8fbd809d.js";import{U as y}from"./uu-layout-nav.910e517f.js";const v={class:"uu-content"},w=t(" Sidebar | UU Layout | Portaldev Bootstrap theme docs "),k=e("div",{class:"uu-hero"},[e("h1",null,"UU Layout Sidebar")],-1),x=t(" Sidebar "),S=e("h2",{class:"mt-3"}," Variables ",-1),T=e("pre",null,`$uu-sidebar-width: 21.875rem;
 $uu-sidebar-gap: 6.25rem;
 $uu-sidebar-background: $gray-200;
 $uu-sidebar-breakpoint: lg;
