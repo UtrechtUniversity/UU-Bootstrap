@@ -4,16 +4,16 @@ import Sidebar from '@/components/sidebar';
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 const minimalExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
 </div>`);
 const copyrightExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
     <div class="uu-cover-copyright">
         Cover by John Doe
     </div>
 </div>`);
 const heroExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
     <div class="uu-cover-hero">
         <h1>Page title</h1>
     </div>
@@ -28,9 +28,9 @@ const heroExample = ref(`<div class="uu-cover">
         </Head>
 
         <div class="uu-cover h-100 align-items-center">
-            <img class="uu-cover-image" alt="cover" src="~/assets/cover.png" />
+            <img class="uu-cover-image" alt="cover" src="~/assets/cover2.jpg" />
             <div class="uu-cover-copyright uu-cover-copyright-right uu-cover-copyright-top">
-                Cover by Simona Evsatieva
+                Photo by <a href="https://unsplash.com/@maxvdo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max van den Oetelaar</a> on <a href="https://unsplash.com/photos/HtxypbwQEVM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
             <div class="uu-cover-hero uu-cover-hero-left">
                 <h1>UU Layout Cover</h1>

@@ -6,7 +6,7 @@
         <div class="uu-cover align-items-center">
             <img class="uu-cover-image" alt="cover" src="~/assets/cover3.jpg" />
             <div class="uu-cover-copyright">
-                Cover by Dick Boetekees
+                Photo by <a href="https://unsplash.com/es/@lievemax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lieve Ransijn</a> on <a href="https://unsplash.com/photos/WunbySkHf54?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
 
             <div class="uu-cover-hero">
