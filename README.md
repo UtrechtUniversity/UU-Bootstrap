@@ -21,7 +21,9 @@ that folder on how to set things up.
 
 # Copyright
 
-All files with a copyright header are available under the EUPL v1.2 license (see LICENSE).
+This project is available under the EUPL v1.2 license (see LICENSE).
+
+The documentation uses images used under the Unsplash licence, see docs/assets/cover-credits.txt for more information.
 
 Versions prior to 1.3.2 ship with some copyrighted work under a UU exclusive license work in-tree. Thus, it is generally
 unsafe to use outside the UU. Starting from 1.3.2 this work has been replaced with freely available content.
