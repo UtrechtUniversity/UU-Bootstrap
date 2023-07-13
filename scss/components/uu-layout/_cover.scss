@@ -41,6 +41,10 @@
         color: var(--#{$uu-css-prefix}cover-copyright-text-color);
         font-size: var(--#{$uu-css-prefix}cover-copyright-text-size);
 
+        a {
+            color: inherit;
+        }
+
         &.#{$uu-prefix}cover-copyright-right {
             right: 0;
             left: unset;

@@ -1,19 +1,38 @@
+<!--
+Copyright 2022, 2023 Utrecht University
+
+Licensed under the EUPL, Version 1.2 only
+You may not use this work except in compliance with the
+Licence.
+A copy of the Licence is provided in the 'LICENCE' file in this project.
+You may also obtain a copy of the Licence at:
+
+https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+-->
 <script lang="ts" setup>
 import Prism from 'vue-prism-component';
 import Sidebar from '@/components/sidebar';
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 const minimalExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
 </div>`);
 const copyrightExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
     <div class="uu-cover-copyright">
         Cover by John Doe
     </div>
 </div>`);
 const heroExample = ref(`<div class="uu-cover">
-    <img class="uu-cover-image" alt="cover" src="img/cover.png" />
+    <img class="uu-cover-image" alt="cover" src="img/example.png" />
     <div class="uu-cover-hero">
         <h1>Page title</h1>
     </div>
@@ -28,9 +47,9 @@ const heroExample = ref(`<div class="uu-cover">
         </Head>
 
         <div class="uu-cover h-100 align-items-center">
-            <img class="uu-cover-image" alt="cover" src="~/assets/cover.png" />
+            <img class="uu-cover-image" alt="cover" src="~/assets/cover2.jpg" />
             <div class="uu-cover-copyright uu-cover-copyright-right uu-cover-copyright-top">
-                Cover by Simona Evsatieva
+                Photo by <a href="https://unsplash.com/@maxvdo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max van den Oetelaar</a> on <a href="https://unsplash.com/photos/HtxypbwQEVM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
             <div class="uu-cover-hero uu-cover-hero-left">
                 <h1>UU Layout Cover</h1>

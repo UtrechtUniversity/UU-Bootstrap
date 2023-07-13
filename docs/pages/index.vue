@@ -1,3 +1,22 @@
+<!--
+Copyright 2022, 2023 Utrecht University
+
+Licensed under the EUPL, Version 1.2 only
+You may not use this work except in compliance with the
+Licence.
+A copy of the Licence is provided in the 'LICENCE' file in this project.
+You may also obtain a copy of the Licence at:
+
+https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+-->
 <template>
     <div class="w-100">
         <Head>
@@ -6,7 +25,7 @@
         <div class="uu-cover align-items-center">
             <img class="uu-cover-image" alt="cover" src="~/assets/cover3.jpg" />
             <div class="uu-cover-copyright">
-                Cover by Dick Boetekees
+                Photo by <a href="https://unsplash.com/es/@lievemax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lieve Ransijn</a> on <a href="https://unsplash.com/photos/WunbySkHf54?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
 
             <div class="uu-cover-hero">
@@ -25,16 +44,9 @@
                     Toggle sidebar mobile
                 </button>
                 <div id="sidebar" class="uu-sidebar-collapse collapse">
-                    <h2>Disclaimer</h2>
+                    <h2>Copyright</h2>
                     <p class="mt-2">
-                        The UU branding is protected by copyright, with Utrecht University having the right of use.
-                        This is why the corporate style cannot be used and/or applied by third parties without
-                        permission granted in advance.
-                    </p>
-                    <p>
-                        This theme's code itself is available under the EUPL v1.2 license, and can be used in other
-                        projects as long as it's not used to recreate the UU branding outside the UU without permission
-                        granted in advance.
+                        All files with a copyright header are available under the EUPL v1.2 license.
                     </p>
                     <h2>
                         Cat!

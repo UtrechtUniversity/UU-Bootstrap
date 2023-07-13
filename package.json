@@ -1,6 +1,6 @@
 {
   "name": "uu-bootstrap",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "UU theme for bootstrap + several extensions ",
   "repository": "git@github.com:DH-IT-Portal-Development/bootstrap-theme.git",
   "author": "DH-IT Portal development",
@@ -17,7 +17,6 @@
   "sass": "scss/bootstrap.scss",
   "style": "dist/css/bootstrap.css",
   "files": [
-    "dist/css/*.{css,map}",
     "scss/**/*.scss"
   ],
   "scripts": {
