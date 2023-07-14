@@ -76,6 +76,7 @@
         }
 
         .dropdown-menu {
+            --#{$prefix}dropdown-bg: #{$white};
             border-top: none;
 
             &[data-bs-popper] {
