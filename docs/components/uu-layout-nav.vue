@@ -29,8 +29,13 @@ permissions and limitations under the Licence.
                 </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/navbar/" class="nav-link">
-                    Navbar
+                <NuxtLink to="/uu-layout/classic-header/" class="nav-link">
+                    Classic Header & Navbar
+                </NuxtLink>
+            </li>
+            <li class="nav-item">
+                <NuxtLink to="/uu-layout/unified-header/" class="nav-link">
+                    Unified Header
                 </NuxtLink>
             </li>
             <li class="nav-item">
