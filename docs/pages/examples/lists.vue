@@ -18,6 +18,7 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
+import { Ref } from "vue";
 import Sidebar from "../../components/sidebar";
 import data from "@/assets/MOCK_DATA.json";
 
@@ -53,8 +54,8 @@ const currentPage = ref(1);
 
 const search = ref("");
 const favorites = ref(false);
-const statusFilters = ref([]);
-const facultyFilters = ref([]);
+const statusFilters = ref<(string|number)[]>([]);
+const facultyFilters = ref<(string|number)[]>([]);
 
 const filteredItems = computed(() => {
     const searchValue = search.value.toLowerCase();
@@ -104,7 +105,7 @@ const totalPages = computed<number>(() => {
 
 const pages = computed<number[]>(() => { return [...Array(totalPages.value).keys()].map(i => i + 1); });
 
-function toggleSelected (list, key: string|number) {
+function toggleSelected (list: Ref<(string|number)[]>, key: string|number) {
     key = Number(key);
     const curVal = list.value.includes(key);
 

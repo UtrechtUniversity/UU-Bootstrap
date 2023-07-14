@@ -25,28 +25,7 @@ import UuLayoutNav from "~/components/uu-layout-nav.vue";
 // As a var because stuff breaks otherwise
 const full_page_code = ref(`<body>
     <div class="uu-root-container">
-        <div class="uu-header">
-            <!--First row contains the UU logo and a language switcher-->
-            <div class="uu-header-row">
-                <div class="me-auto uu-logo">
-                    <img src="/uu-logo-en.svg"/>
-                </div>
-                <div class="border-left text-muted text-uppercase ms-auto">
-                    <a href="change-lang/en/">
-                        Nederlands
-                    </a>
-                </div>
-            </div>
-            <!--Second row has the app title and a user info/login box-->
-            <div class="uu-header-row">
-                <div class="me-auto uu-header-title">
-                    App name
-                </div>
-                <div class="ms-auto">
-                    Welcome, John Doe (Log out)
-                </div>
-            </div>
-        </div>
+        <!--header, see header pages-->
         <!--navbar, see navbar page-->
         <div class="uu-content">
             <!--content-->
@@ -63,44 +42,6 @@ const full_page_code = ref(`<body>
         </footer>
     </div>
 </body>`);
-
-const headerMarginSpaced = ref(`<div class="uu-header">
-    <div class="uu-header-row">
-        <div class="me-auto uu-logo">
-            <img src="/uu-logo-en.svg"/>
-        </div>
-        <div class="border-left text-muted text-uppercase ms-auto">
-            <a href="change-lang/en/">
-                Nederlands
-            </a>
-        </div>
-    </div>
-</div>`);
-const headerFlexSpaced = ref(`<div class="uu-header justify-content-between">
-    <div class="uu-header-row">
-        <div class="uu-logo">
-            <img src="/uu-logo-en.svg"/>
-        </div>
-        <div class="border-left text-muted text-uppercase">
-            <a href="change-lang/en/">
-                Nederlands
-            </a>
-        </div>
-    </div>
-</div>`);
-const headerGridSpaced = ref(`<div class="uu-header">
-    <div class="uu-header-row">
-        <div class="col-4 uu-logo">
-            <img src="/uu-logo-en.svg"/>
-        </div>
-        <div class="col-5" />
-        <div class="col-3 border-left text-muted text-uppercase">
-            <a href="change-lang/en/">
-                Nederlands
-            </a>
-        </div>
-    </div>
-</div>`);
 </script>
 <template>
     <div class="uu-content">
@@ -183,103 +124,38 @@ $uu-border-color-dark: $gray-800;
             </template>
             <template #sidebar>
                 <h2 class="uu-sidebar-header-linked">
-                    Variables
+                    Links
                 </h2>
-                <prism language="scss" class="w-100">
-                    <pre>
-$uu-header-padding-y: 0.7rem;
-$uu-header-font-size: 0.9rem;
-$uu-header-title-color: #094D8E;
-$uu-header-border-gap: 1.2rem;
-// Also the header breakpoint
-$uu-navbar-breakpoint: md;
-                    </pre>
-                </prism>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <NuxtLink to="/uu-layout/classic-header/" class="nav-link">
+                            Classic Header
+                        </NuxtLink>
+                    </li>
+                    <li class="nav-item">
+                        <NuxtLink to="/uu-layout/unified-header/" class="nav-link">
+                            Unified Header
+                        </NuxtLink>
+                    </li>
+                </ul>
             </template>
             <h2 class="uu-sidebar-header-linked">
                 Header
             </h2>
             <p>
-                The header refers to all the space above the navbar. It's setup to be fairly modular, but <i>should</i>
-                at the very least contain the UU logo. Other elements often found inside the header are: langauge
-                switcher, app name title, search box and a login/logout link.
+                This project provides two distinct <em>styles</em> of header:
+                classic and unified. The classic style implements the most common
+                style found on UU sites.
+                The unified style is a smaller alternative, used mostly by new
+                internal 'tool' websites.
             </p>
             <p>
-                It is important to note that the header is only visible above a certain breakpoint (<code>md</code> by
-                default). Below that breakpoint, the navbar takes over as the topmost element. Thus, make sure you
-                provide alternatives for mobile users for anything functional in the header.
+                By default, this documentation uses the 'classic' header, but
+                the classic can be previewed by selecting it under 'theme settings'.
             </p>
             <p>
-                A header consists of a <code>div.uu-header</code> containing one or more <code>div.uu-header-row</code>
-                elements. These rows are flex containers, so you have the option to use Bootstrap's flexbox helpers to
-                layout your header, or using Bootstrap's columns (<code>.col-4</code> etc)
+                Please refer to the linked pages for more information.
             </p>
-
-            <div class="accordion">
-                <div class="accordion-item">
-                    <h2 id="headingOne" class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                        >
-                            Margin spaced example
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-                        <div class="accordion-body">
-                            <prism language="html">
-                                {{ headerMarginSpaced }}
-                            </prism>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 id="headingTwo" class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                        >
-                            Flex spaced
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                        <div class="accordion-body">
-                            <prism language="html">
-                                {{ headerFlexSpaced }}
-                            </prism>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 id="headingThree" class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                        >
-                            Column spaced
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                        <div class="accordion-body">
-                            <prism language="html">
-                                {{ headerGridSpaced }}
-                            </prism>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </Sidebar>
         <Sidebar
             placement="right"

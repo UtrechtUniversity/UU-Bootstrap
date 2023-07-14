@@ -18,7 +18,7 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <template>
-    <div class="w-100">
+    <div class="uu-content">
         <Head>
             <Title>Portaldev Bootstrap theme docs</Title>
         </Head>
@@ -29,7 +29,7 @@ permissions and limitations under the Licence.
             </div>
 
             <div class="uu-cover-hero">
-                <h1>Home</h1>
+                <h1>Portaldev Bootstrap theme</h1>
             </div>
         </div>
         <div class="uu-sidebar-container">

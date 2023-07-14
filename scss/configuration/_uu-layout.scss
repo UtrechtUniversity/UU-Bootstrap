@@ -28,6 +28,24 @@ $uu-navbar-breakpoint: md !default;
 $uu-navbar-mobile-height: 3.125rem !default;
 $uu-navbar-navlink-padding-x: .75rem !default;
 $uu-navbar-navlink-padding-y: .75rem !default;
+
+$uu-unified-header-height: 4.5rem;
+$uu-unified-header-mobile-height: 3rem;
+$uu-unified-header-border-size: 0.0625rem;
+$uu-unified-header-padding-x: 2rem;
+$uu-unified-header-padding-mobile-x: 1rem;
+$uu-unified-header-navlink-indicator-height: 0.3125rem;
+$uu-unified-header-navlink-mobile-bg: $black;
+$uu-unified-header-navlink-mobile-color: $white;
+$uu-brand-padding-x: 2.5rem;
+$uu-brand-padding-y: 1rem;
+$uu-brand-logo-padding-x: 0.5rem;
+$uu-brand-logo-padding-y: 0;
+$uu-brand-sender-bg: $primary;
+$uu-brand-sender-color: $black;
+$uu-brand-sender-min-width: 220px;
+$uu-brand-sender-max-width: 300px;
+
 $uu-footer-padding-y: 2.5rem !default;
 $uu-footer-color: colors.$gray-400 !default;
 $uu-footer-background-color: colors.$gray-850 !default;

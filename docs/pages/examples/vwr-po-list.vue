@@ -281,11 +281,11 @@ function toggleFaculty (key: string|number) {
 function statusColor (status: number) {
     switch (status) {
         case 1:
-            return 'text-bg-danger';
+            return 'var(--bs-blue)';
         case 2:
-            return 'text-bg-warning';
+            return 'var(--bs-red)';
         case 3:
-            return 'text-bg-success';
+            return 'var(--bs-green)';
     }
 }
 </script>
@@ -388,7 +388,11 @@ function statusColor (status: number) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="item in displayedItems" :key="item.id">
+                    <tr
+                        v-for="item in displayedItems"
+                        :key="item.id"
+                        class="align-middle"
+                    >
                         <td>
                             {{ item.title }}
                         </td>
@@ -398,7 +402,9 @@ function statusColor (status: number) {
                         <td>
                             {{ item.principal_investigator }}
                         </td>
-                        <td :class="statusColor(item.status)">
+                        <td
+                            :style="'border-left: 4px solid ' + statusColor(item.status)"
+                        >
                             {{ statusMap[item.status] }}
                         </td>
                         <td class="text-center">
