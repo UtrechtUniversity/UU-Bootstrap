@@ -154,6 +154,7 @@
             }
 
             .dropdown-menu {
+                --#{$prefix}dropdown-bg: #{$white};
                 border-top: none;
 
                 // Spacing fix, todo: figure out why BS places it offset
