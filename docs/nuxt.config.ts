@@ -8,6 +8,12 @@ export default defineNuxtConfig({
         buildAssetsDir: '/nuxt/'
     },
 
+    runtimeConfig: {
+        public: {
+            dark_mode: false,
+        },
+    },
+
     css: [
         "@/../scss/bootstrap.scss",
     ],

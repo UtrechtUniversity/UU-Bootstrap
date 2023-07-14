@@ -25,6 +25,8 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {});
 const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
+
+const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
@@ -32,6 +34,23 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
         <template #title>
             Theme settings
         </template>
+
+        <!-- Only show dark mode settings if enabled -->
+        <template v-if="runtimeConfig.public.dark_mode">
+            <div class="fw-bold fs-4">
+                Color mode settings
+            </div>
+
+            <div class="form-check form-switch mt-2">
+                <input class="form-check-input" type="checkbox" role="switch" name="spaced" v-model="themeSettings.dark_theme" />
+                <label class="form-check-label" for="spaced">Dark mode</label>
+            </div>
+        </template>
+
+        <div class="fw-bold fs-4 mt-3">
+            Header settings
+        </div>
+
         <label for="header" class="form-label">Header</label>
         <select v-model="themeSettings.header" class="form-select" name="header">
             <option value="classic">
