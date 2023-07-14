@@ -5,6 +5,7 @@ import ThemeSettingsModal from "~/components/ThemeSettingsModal.vue";
 const themeSettings = ref({
     header: 'classic',
     showSettings: false,
+    dark_theme: false,
     unifiedHeaderSettings: {
         spaced: true,
         app_name: true,
