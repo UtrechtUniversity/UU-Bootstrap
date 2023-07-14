@@ -113,7 +113,8 @@
         }
 
         .show > .nav-link,
-        .nav-link.active {
+        .nav-link.active,
+        .nav-link.show {
             color: var(--#{$prefix}nav-link-hover-color);
         }
     }
