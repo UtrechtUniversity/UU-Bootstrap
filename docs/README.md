@@ -33,7 +33,7 @@ disabled by default. (It's a pretty basic set of patches, so don't expect it to
 look good.)
 
 To develop with dark mode on, you have to change two booleans:
-``enable-dark-theme`` in ``_colors.scss`` and ``dark_mode`` in
+``enable-dark-mode`` in ``_colors.scss`` and ``dark_mode`` in
 ``nuxt.config.ts``. Please make sure you don't commit these changes!
 
 You can then switch between light and dark using the theme settings.
