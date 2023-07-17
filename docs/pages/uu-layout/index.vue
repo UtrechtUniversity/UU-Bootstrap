@@ -91,6 +91,8 @@ const full_page_code = ref(`<body>
                 <prism language="scss">
                     <pre>
 $uu-container-width: 100rem; // 1600px
+$uu-container-bg: $white;
+$uu-container-color: $body-color;
 $uu-border-color: $gray-400;
 $uu-border-color-light: $gray-200;
 $uu-border-color-dark: $gray-800;

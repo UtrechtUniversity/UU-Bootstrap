@@ -65,6 +65,7 @@ const minimalExample = ref(`<div class="uu-sidebar-container">
 $uu-sidebar-width: 21.875rem;
 $uu-sidebar-gap: 6.25rem;
 $uu-sidebar-background: $gray-200;
+$uu-sidebar-color: $uu-container-color;
 $uu-sidebar-breakpoint: lg;
 $uu-sidebar-padding-x: 1.25rem;
 $uu-sidebar-padding-y: 1.25rem;
