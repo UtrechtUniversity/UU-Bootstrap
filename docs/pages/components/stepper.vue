@@ -346,8 +346,9 @@ const example2 = ref(`<div class="d-md-none">
                 </prism>
                 <h1 id="variables" class="mt-3">Variables</h1>
                 <p>
-                    The following variables are availabe. Not all of them are also exposed as CSS variables, which is
-                    indicated by the 'CSS var?' column.
+                    The following variables are available. Not all of them are also exposed as CSS variables, which is
+                    indicated by the 'CSS var?' column. Color related variables also have dark theme variant SCSS
+                    variable, all with the <code>-dark</code> postfix. This is indicated by the 'Dark variant?' column.
                 </p>
                 <p>
                     CSS vars can be overriden by setting them in CSS under the <code>.stepper</code> class, using the
@@ -359,13 +360,14 @@ const example2 = ref(`<div class="d-md-none">
     --bs-stepper-complete-bg: pink;
 }</pre>
                 </Prism>
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Variable</th>
                             <th>Default value</th>
                             <th>Comment</th>
                             <th>CSS Var?</th>
+                            <th>Dark variant?</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -377,6 +379,7 @@ const example2 = ref(`<div class="d-md-none">
                                 <code>$text-muted</code>
                             </td>
                             <td></td>
+                            <td>Yes</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
@@ -390,6 +393,22 @@ const example2 = ref(`<div class="d-md-none">
                                 Color for the background of bubbles and the vertical line
                             </td>
                             <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>$stepper-inactive-color</code>
+                            </td>
+                            <td class="text-nowrap">
+                                <pre class="code">color-contrast(
+$stepper-inactive-bg
+)</pre>
+                            </td>
+                            <td>
+                                Color for the text in inactive bubbles
+                            </td>
+                            <td>Yes</td>
+                            <td>Yes</td>
                         </tr>
                         <tr>
                             <td>
@@ -401,6 +420,21 @@ const example2 = ref(`<div class="d-md-none">
                             <td>
                                 Color for the background of completed bubbles
                             </td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr><tr>
+                            <td>
+                                <code>$stepper-complete-color</code>
+                            </td>
+                            <td class="text-nowrap">
+                                <pre class="code">color-contrast(
+$stepper-complete-bg
+)</pre>
+                            </td>
+                            <td>
+                                Color for the text of completed bubbles
+                            </td>
+                            <td>Yes</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
@@ -414,6 +448,22 @@ const example2 = ref(`<div class="d-md-none">
                                 Color for the background of incompleted bubbles
                             </td>
                             <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>$stepper-incomplete-color</code>
+                            </td>
+                            <td class="text-nowrap">
+                                <pre class="code">color-contrast(
+$stepper-incomplete-bg
+)</pre>
+                            </td>
+                            <td>
+                                Color for the text of incompleted bubbles
+                            </td>
+                            <td>Yes</td>
+                            <td>Yes</td>
                         </tr>
                         <tr>
                             <td>
@@ -424,6 +474,7 @@ const example2 = ref(`<div class="d-md-none">
                             </td>
                             <td></td>
                             <td>Yes</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td>
@@ -436,6 +487,7 @@ const example2 = ref(`<div class="d-md-none">
                                 Padding between items
                             </td>
                             <td>Yes</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap">
@@ -448,6 +500,7 @@ const example2 = ref(`<div class="d-md-none">
                                 The size of the stepper vertical line.
                             </td>
                             <td>Yes</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td>
@@ -461,6 +514,7 @@ const example2 = ref(`<div class="d-md-none">
                                 is evenly spread over the 5 levels of depth.
                             </td>
                             <td>No</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap">
@@ -472,6 +526,7 @@ const example2 = ref(`<div class="d-md-none">
                             <td>
                                 The size of the largest bubble.
                             </td>
+                            <td>No</td>
                             <td>No</td>
                         </tr>
                         <tr>
@@ -485,6 +540,7 @@ const example2 = ref(`<div class="d-md-none">
                                 Not actually the smallest size, but a calculation helper:<br/>
                                 <code>($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($size-number, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;</code><br/>
                             </td>
+                            <td>No</td>
                             <td>No</td>
                         </tr>
                         <tr>
@@ -507,6 +563,7 @@ const example2 = ref(`<div class="d-md-none">
                                 A map of all sizes, the number represents <code>$size-number</code> in the calculation above.
                             </td>
                             <td>No</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap">
@@ -519,6 +576,7 @@ const example2 = ref(`<div class="d-md-none">
                                 Another calculation helper, should match the highest <code>$size-number</code> in
                                 <code>$stepper-bubble-size-map</code>
                             </td>
+                            <td>No</td>
                             <td>No</td>
                         </tr>
                     </tbody>
