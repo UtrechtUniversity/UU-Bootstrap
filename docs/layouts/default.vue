@@ -48,3 +48,17 @@ const colorMode = computed(() => themeSettings?.value.dark_theme ? 'dark' : 'lig
         </footer>
     </div>
 </template>
+
+<style lang="scss">
+// This is a temporary set of config overrides for UU Layout dark theme.
+// Atm, no dark theme support is planned for UU Layout, but we do want to have
+// a functional dev environment for the other components.
+@import "../../scss/configuration";
+.uu-root-container[data-bs-theme="dark"] {
+    --bs-uu-container-bg: #{$gray-900};
+    --bs-uu-container-color: #{$gray-300};
+    --bs-uu-sidebar-background: #{$gray-950};
+    --bs-uu-sidebar-color: #{$gray-400};
+    --bs-uu-footer-background-color: #{$black};
+}
+</style>
