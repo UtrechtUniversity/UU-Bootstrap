@@ -68,6 +68,7 @@ $uu-cover-copyright-background-color: rgba(0,0,0, 0.5) !default;
 $uu-sidebar-width: 21.875rem !default;
 $uu-sidebar-gap: 6.25rem !default;
 $uu-sidebar-background: colors.$gray-200 !default;
+$uu-sidebar-color: $uu-container-color !default;
 // Below this breakpoint the sidebar will turn into a pulldown menu instead
 // Intentionally 1 breakpoint higher than the rest because the sidebar takes a lot of horizontal space
 $uu-sidebar-breakpoint: lg !default;
