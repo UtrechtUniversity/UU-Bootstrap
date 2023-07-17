@@ -10,6 +10,10 @@ $uu-css-prefix: 'bs-uu-' !default;
 $uu-container-width: 100rem !default;
 // Width of the actual content inside the container
 $uu-content-width: 75rem !default;
+// Background color of the outer container
+$uu-container-bg: colors.$white !default;
+// Text color used in UU Layout
+$uu-container-color: bootstrap.$body-color !default;
 // Default paddings. With spaced container this only applies to < md breakpoints
 $uu-container-padding-x: 1rem !default;
 $uu-container-padding-y: 1rem !default;

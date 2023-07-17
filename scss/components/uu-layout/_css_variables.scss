@@ -1,6 +1,8 @@
 // CSS Variables
 & {
     --#{$uu-css-prefix}container-width: #{$uu-container-width};
+    --#{$uu-css-prefix}container-bg: #{$uu-container-bg};
+    --#{$uu-css-prefix}container-color: #{$uu-container-color};
     --#{$uu-css-prefix}container-padding-y: #{$uu-container-padding-y};
     --#{$uu-css-prefix}container-padding-x: #{$uu-container-padding-x};
     --#{$uu-css-prefix}content-width: #{$uu-content-width};
