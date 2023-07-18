@@ -3,7 +3,7 @@
 .#{$uu-prefix}fullwidth-unified-header, .#{$uu-prefix}unified-header {
     width: 100%;
 
-    background: var(--#{$prefix}white);
+    background: var(--#{$uu-css-prefix}container-bg);
 
     display: flex;
     height: var(--#{$uu-css-prefix}unified-header-height);
