@@ -1,4 +1,5 @@
 .tiles {
+    // Dark mode vars at end of file!
     --#{$prefix}tiles-gap: #{$tiles-gap};
     --#{$prefix}tiles-padding: #{$tiles-padding};
     --#{$prefix}tiles-bg: #{$tiles-bg};
@@ -58,4 +59,14 @@
              }
          }
      }
+}
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .tiles {
+            --#{$prefix}tiles-bg: #{$tiles-bg-dark};
+            --#{$prefix}tiles-color: #{$tiles-color-dark};
+            --#{$prefix}tiles-hover-bg: #{$tiles-hover-bg-dark};
+            --#{$prefix}tiles-hover-color: #{$tiles-hover-color-dark};
+        }
+    }
 }

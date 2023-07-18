@@ -1,6 +1,8 @@
 // CSS Variables
 & {
     --#{$uu-css-prefix}container-width: #{$uu-container-width};
+    --#{$uu-css-prefix}container-bg: #{$uu-container-bg};
+    --#{$uu-css-prefix}container-color: #{$uu-container-color};
     --#{$uu-css-prefix}container-padding-y: #{$uu-container-padding-y};
     --#{$uu-css-prefix}container-padding-x: #{$uu-container-padding-x};
     --#{$uu-css-prefix}content-width: #{$uu-content-width};
@@ -56,6 +58,7 @@
     --#{$uu-css-prefix}sidebar-mobile-padding-y: #{$uu-sidebar-mobile-padding-y};
     --#{$uu-css-prefix}sidebar-gap: #{$uu-sidebar-gap};
     --#{$uu-css-prefix}sidebar-background: #{$uu-sidebar-background};
+    --#{$uu-css-prefix}sidebar-color: #{$uu-sidebar-color};
     --#{$uu-css-prefix}sidebar-header-font-weight: #{$uu-sidebar-header-font-weight};
     --#{$uu-css-prefix}sidebar-header-padding-y: #{$uu-sidebar-header-padding-y};
     --#{$uu-css-prefix}sidebar-nav-padding-y: #{$uu-sidebar-nav-padding-y};

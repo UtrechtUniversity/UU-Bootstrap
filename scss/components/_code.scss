@@ -1,13 +1,27 @@
 code, pre.code {
-    background: $code-background;
-    color: $code-color;
-    padding: $code-padding-y $code-padding-x;
+    --#{$prefix}code-bg: #{$code-background};
+    --#{$prefix}code-color: #{$code-color};
+    --#{$prefix}code-border-radius: #{$code-border-radius};
+    --#{$prefix}code-padding-y: #{$code-padding-y};
+    --#{$prefix}code-padding-x: #{$code-padding-x};
+    --#{$prefix}code-font-size: #{$code-font-size};
+    background: var(--#{$prefix}code-bg);
+    color: var(--#{$prefix}code-color);
+    padding: var(--#{$prefix}code-padding-y) var(--#{$prefix}code-padding-x);
     margin: 0;
-    font-size: $code-font-size;
-    border-radius: $code-border-radius;
+    font-size: var(--#{$prefix}code-font-size);
+    border-radius: var(--#{$prefix}code-border-radius);
 }
 
 pre.code {
-    padding: $code-padding-y $code-padding-x;
     overflow: auto;
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        code, pre.code {
+            --#{$prefix}code-bg: #{$code-background-dark};
+            --#{$prefix}code-color: #{$code-color-dark};
+        }
+    }
 }

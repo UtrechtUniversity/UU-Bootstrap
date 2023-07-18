@@ -27,7 +27,8 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
     <div class="uu-header">
         <div class="uu-header-row justify-content-between">
             <NuxtLink to="/" class="uu-logo">
-                <img src="~/assets/uu-logo-en.svg" />
+                <img v-if="themeSettings.dark_theme" src="~/assets/uu-logo-en-w.svg" />
+                <img v-else src="~/assets/uu-logo-en.svg" />
             </NuxtLink>
             <div class="text-center uu-header-title text-red ms-auto">
                 Portaldev Bootstrap theme

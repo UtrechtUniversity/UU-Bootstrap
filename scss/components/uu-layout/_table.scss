@@ -1,0 +1,5 @@
+.table {
+    // In tables used UU-layout containers, use that BG variable instead of
+    // the default bs-body-bg variable
+    --#{$prefix}table-bg: var(--#{$uu-css-prefix}container-bg);
+}

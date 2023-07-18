@@ -82,6 +82,10 @@ $pagination-ellipsis-color: $gray-700;
                     </pre>
                 </Prism>
                 <p>
+                    Not listed, but also added are dark variants of all 'bg'
+                    and 'color' variables. (Using the <code>-dark</code> postfix).
+                </p>
+                <p>
                     These variables are in addition to Bootstrap's pagination vars.
                 </p>
                 <h2>See also</h2>

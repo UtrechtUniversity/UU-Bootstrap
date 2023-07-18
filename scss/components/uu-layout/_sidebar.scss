@@ -16,6 +16,7 @@
     .#{$uu-prefix}sidebar {
         order: 1;
         background: var(--#{$uu-css-prefix}sidebar-background);
+        color: var(--#{$uu-css-prefix}sidebar-color);
         flex: 0 0 $uu-sidebar-full-width;
         padding:
             var(--#{$uu-css-prefix}sidebar-padding-y)

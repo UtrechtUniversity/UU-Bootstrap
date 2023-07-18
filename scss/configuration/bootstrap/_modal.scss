@@ -1,12 +1,16 @@
 @use "../colors";
 
 $modal-content-color: colors.$gray-900;
+$modal-content-color-dark: colors.$gray-100;
 $modal-content-bg: colors.$white;
+$modal-content-bg-dark: colors.$gray-800;
 $modal-content-inner-border-radius: 0;
 $modal-content-border-radius: 0;
 $modal-header-border-width: 0;
 $modal-header-bg: colors.$primary;
+$modal-header-bg-dark: colors.$primary;
 $modal-header-color: colors.$black;
+$modal-header-color-dark: colors.$black;
 $modal-header-font-weight: 500;
 $modal-footer-border-width: .0625rem;
 $zindex-modal: 9002; // One tad higher than the UU navbar

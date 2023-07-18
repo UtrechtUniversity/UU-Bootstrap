@@ -28,6 +28,8 @@ $gray-800:        #343434;
 // In between, custom
 $gray-850:        #262626;
 $gray-900:        #212121;
+// In between, custom
+$gray-950:        #171717;
 $black:           #000;
 
 $indigo:          #6610f2;
@@ -44,6 +46,8 @@ $danger:          $red;
 $error:           $danger;
 $light:           $gray-100;
 $dark:            $gray-850;
+
+$body-color:      $gray-900;
 
 $colors: (
   "blue":         $blue,

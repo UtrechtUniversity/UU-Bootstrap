@@ -1,10 +1,23 @@
 @use "bootstrap";
 @use "colors";
+@use "colors-dark";
 
+$stepper-color: colors.$body-color;
+$stepper-color-dark: colors-dark.$body-color-dark;
 $stepper-disabled-color: bootstrap.$text-muted !default;
+$stepper-disabled-color-dark: bootstrap.$text-muted !default;
 $stepper-complete-bg: bootstrap.$green-300 !default;
+$stepper-complete-bg-dark: bootstrap.$green-500 !default;
+$stepper-complete-color: bootstrap.color-contrast($stepper-complete-bg) !default;
+$stepper-complete-color-dark: bootstrap.color-contrast($stepper-complete-bg-dark) !default;
 $stepper-incomplete-bg: colors.$yellow !default;
+$stepper-incomplete-bg-dark: bootstrap.$yellow-600 !default;
+$stepper-incomplete-color: bootstrap.color-contrast($stepper-incomplete-bg) !default;
+$stepper-incomplete-color-dark: bootstrap.$white !default; // No color-contrast, as it looks weird
 $stepper-inactive-bg: colors.$gray-400 !default;
+$stepper-inactive-bg-dark: colors.$gray-600 !default;
+$stepper-inactive-color: bootstrap.color-contrast($stepper-inactive-bg) !default;
+$stepper-inactive-color-dark: bootstrap.color-contrast($stepper-inactive-bg-dark) !default;
 $stepper-min-width: 15.625rem !default;
 $stepper-padding-y: 0.75rem !default;
 $stepper-line-width: 0.125rem !default;

@@ -1,4 +1,5 @@
 .pagination {
+    // Dark theme variables at bottom
     --#{$prefix}pagination-gap: #{$pagination-gap};
     --#{$prefix}pagination-size: #{$pagination-size};
     --#{$prefix}pagination-button-bg: #{$pagination-button-bg};
@@ -55,6 +56,25 @@
                 color: var(--#{$prefix}pagination-ellipsis-color);
                 content: '…';
             }
+        }
+    }
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .pagination {
+            --#{$prefix}pagination-button-bg-dark: #{$pagination-button-bg-dark};
+            --#{$prefix}pagination-ellipsis-color: #{$pagination-ellipsis-color-dark};
+            --#{$prefix}pagination-color: #{$pagination-color-dark};
+            --#{$prefix}pagination-bg: #{$pagination-bg-dark};
+            --#{$prefix}pagination-focus-color: #{$pagination-focus-color-dark};
+            --#{$prefix}pagination-focus-bg: #{$pagination-focus-bg-dark};
+            --#{$prefix}pagination-hover-color: #{$pagination-hover-color-dark};
+            --#{$prefix}pagination-hover-bg: #{$pagination-hover-bg-dark};
+            --#{$prefix}pagination-active-color: #{$pagination-active-color-dark};
+            --#{$prefix}pagination-active-bg: #{$pagination-active-bg-dark};
+            --#{$prefix}pagination-disabled-color: #{$pagination-disabled-color-dark};
+            --#{$prefix}pagination-disabled-bg: #{$pagination-disabled-bg-dark};
         }
     }
 }
