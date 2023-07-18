@@ -52,7 +52,8 @@ const headerClasses = computed(() => {
         <div class="uu-unified-header-container">
             <div class="navbar-brand uu-brand">
                 <NuxtLink href="http://www.uu.nl/" target="_blank" class="uu-logo">
-                    <img src="~/assets/uu-logo-en.svg"/>
+                    <img v-if="themeSettings.dark_theme" src="~/assets/uu-logo-en-w.svg" />
+                    <img v-else src="~/assets/uu-logo-en.svg" />
                 </NuxtLink>
             </div>
 
