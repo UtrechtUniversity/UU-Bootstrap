@@ -83,7 +83,7 @@ const headerClasses = computed(() => {
                 </NuxtLink>
             </div>
             <button
-                class="navbar-toggler border-left"
+                class="navbar-toggler border-left ms-3"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#unified-header-nav"
