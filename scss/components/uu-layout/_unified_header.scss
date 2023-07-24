@@ -72,13 +72,6 @@
                 }
             }
 
-            .#{$uu-prefix}sender {
-
-                @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    display: none;
-                }
-            }
-
             @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
                 grid-template-columns: unset;
                 grid-template-rows: 1fr 1fr;
