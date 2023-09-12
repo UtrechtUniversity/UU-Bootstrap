@@ -1,0 +1,10 @@
+dist
+build_targets
+*.log*
+docs/.nuxt
+docs/.nitro
+docs/.cache
+docs/.output
+docs/.env
+docs/dist
+docs/.eslintrc.json
