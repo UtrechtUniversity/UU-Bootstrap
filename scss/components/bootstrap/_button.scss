@@ -7,12 +7,8 @@
             // The border interferes with the arrow, so we remove it from non-outlined buttons
             // We add the original border width to padding such that it will have the same size as other buttons
             --#{$prefix}btn-border-width: 0;
-            --#{$prefix}btn-padding-x: calc(
-                #{$btn-padding-x} + #{$btn-border-width}
-            );
-            --#{$prefix}btn-padding-y: calc(
-                #{$btn-padding-y} + #{$btn-border-width}
-            );
+            --#{$prefix}btn-padding-x: calc(#{$btn-padding-x} + #{$btn-border-width});
+            --#{$prefix}btn-padding-y: calc(#{$btn-padding-y} + #{$btn-border-width});
         }
 
         &.btn-sm {
@@ -20,12 +16,8 @@
                 // The border interferes with the arrow, so we remove it from non-outlined buttons
                 // We add the original border width to padding such that it will have the same size as other buttons
                 --#{$prefix}btn-border-width: 0;
-                --#{$prefix}btn-padding-x: calc(
-                    #{$btn-padding-x-sm} + #{$btn-border-width}
-                );
-                --#{$prefix}btn-padding-y: calc(
-                    #{$btn-padding-y-sm} + #{$btn-border-width}
-                );
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-sm} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
             }
         }
 
@@ -34,12 +26,8 @@
                 // The border interferes with the arrow, so we remove it from non-outlined buttons
                 // We add the original border width to padding such that it will have the same size as other buttons
                 --#{$prefix}btn-border-width: 0;
-                --#{$prefix}btn-padding-x: calc(
-                    #{$btn-padding-x-lg} + #{$btn-border-width}
-                );
-                --#{$prefix}btn-padding-y: calc(
-                    #{$btn-padding-y-lg} + #{$btn-border-width}
-                );
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-lg} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-lg} + #{$btn-border-width});
             }
         }
 
@@ -61,13 +49,10 @@
 
     &.btn-arrow-right::after {
         content: "＞";
-        padding: var(--#{$prefix}btn-padding-y)
-            calc(0.8 * var(--#{$prefix}btn-padding-x))
-            var(--#{$prefix}btn-padding-y)
-            calc(0.8 * var(--#{$prefix}btn-padding-x));
+        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin: calc(0px - var(--#{$prefix}btn-padding-y))
-            calc(0px - var(--#{$prefix}btn-padding-x))
-            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0px - var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y))
             calc(0.7 * var(--#{$prefix}btn-padding-x));
 
         border-top-right-radius: var(--#{$prefix}btn-border-radius);
@@ -76,13 +61,10 @@
 
     &.btn-arrow-left::before {
         content: "＜";
-        padding: var(--#{$prefix}btn-padding-y)
-            calc(0.8 * var(--#{$prefix}btn-padding-x))
-            var(--#{$prefix}btn-padding-y)
-            calc(0.8 * var(--#{$prefix}btn-padding-x));
+        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
         margin: calc(0px - var(--#{$prefix}btn-padding-y))
-            calc(0.7 * var(--#{$prefix}btn-padding-x))
-            calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0.7 * var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y))
             calc(0px - var(--#{$prefix}btn-padding-x));
 
         border-top-left-radius: var(--#{$prefix}btn-border-radius);
@@ -130,14 +112,10 @@
             @include button-variant(
                 $value,
                 $value,
-                $hover-background:
-                    shade-color($value, $btn-hover-bg-shade-amount),
-                $hover-border:
-                    shade-color($value, $btn-hover-border-shade-amount),
-                $active-background:
-                    shade-color($value, $btn-active-bg-shade-amount),
-                $active-border:
-                    shade-color($value, $btn-active-border-shade-amount)
+                $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+                $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+                $active-background: shade-color($value, $btn-active-bg-shade-amount),
+                $active-border: shade-color($value, $btn-active-border-shade-amount)
             );
         } @else if $color == "dark" {
             @include button-variant(
@@ -145,10 +123,8 @@
                 $value,
                 $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
                 $hover-border: tint-color($value, $btn-hover-border-tint-amount),
-                $active-background:
-                    tint-color($value, $btn-active-bg-tint-amount),
-                $active-border:
-                    tint-color($value, $btn-active-border-tint-amount)
+                $active-background: tint-color($value, $btn-active-bg-tint-amount),
+                $active-border: tint-color($value, $btn-active-border-tint-amount)
             );
         } @else {
             @include button-variant($value, $value);

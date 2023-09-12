@@ -27,66 +27,43 @@ const help = ref(true);
     <div class="uu-content">
         <div class="uu-hero align-items-center">
             <h1>Form example</h1>
-            <div
-                class="btn btn-outline-secondary ms-auto"
-                @click="stepper = !stepper"
-            >
+            <div class="btn btn-outline-secondary ms-auto" @click="stepper = !stepper">
                 Toggle stepper
             </div>
-            <div class="btn btn-outline-secondary ms-2" @click="gap = !gap">
-                Toggle gap
-            </div>
-            <div class="btn btn-outline-secondary ms-2" @click="help = !help">
-                Toggle help
-            </div>
+            <div class="btn btn-outline-secondary ms-2" @click="gap = !gap">Toggle gap</div>
+            <div class="btn btn-outline-secondary ms-2" @click="help = !help">Toggle help</div>
         </div>
         <div class="uu-container">
-            <div
-                class="col-2 d-lg-block d-none"
-                :class="stepper ? '' : 'd-lg-none'"
-            >
+            <div class="col-2 d-lg-block d-none" :class="stepper ? '' : 'd-lg-none'">
                 <div class="stepper">
                     <ul>
                         <li>
                             <a class="stepper-item">
-                                <span
-                                    class="stepper-bubble stepper-bubble-largest"
-                                    >1</span
-                                >
+                                <span class="stepper-bubble stepper-bubble-largest">1</span>
                                 <span>Hello</span>
                             </a>
                         </li>
                         <li>
                             <a class="stepper-item">
-                                <span
-                                    class="stepper-bubble stepper-bubble-largest"
-                                    >2</span
-                                >
+                                <span class="stepper-bubble stepper-bubble-largest">2</span>
                                 <span>World</span>
                             </a>
                         </li>
                         <li>
                             <a class="stepper-item">
-                                <span
-                                    class="stepper-bubble stepper-bubble-largest"
-                                    >3</span
-                                >
+                                <span class="stepper-bubble stepper-bubble-largest">3</span>
                                 <span>This has children</span>
                             </a>
                             <ul>
                                 <li>
                                     <a class="stepper-item">
-                                        <span
-                                            class="stepper-bubble stepper-bubble-large"
-                                        />
+                                        <span class="stepper-bubble stepper-bubble-large" />
                                         <span>Child 1</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="stepper-item">
-                                        <span
-                                            class="stepper-bubble stepper-bubble-large"
-                                        />
+                                        <span class="stepper-bubble stepper-bubble-large" />
                                         <span>Child 2</span>
                                     </a>
                                 </li>
@@ -95,10 +72,7 @@ const help = ref(true);
 
                         <li>
                             <a class="stepper-item">
-                                <span
-                                    class="stepper-bubble stepper-bubble-largest"
-                                    >3</span
-                                >
+                                <span class="stepper-bubble stepper-bubble-largest">3</span>
                                 <span>End node</span>
                             </a>
                         </li>
@@ -106,10 +80,7 @@ const help = ref(true);
                 </div>
             </div>
 
-            <div
-                class="d-flex flex-column col-12 col-lg-10"
-                :class="stepper ? '' : 'col-lg-12'"
-            >
+            <div class="d-flex flex-column col-12 col-lg-10" :class="stepper ? '' : 'col-lg-12'">
                 <form
                     class="uu-form"
                     :class="
@@ -121,14 +92,13 @@ const help = ref(true);
                     <div class="uu-form-text-row">
                         <div class="uu-form-text">
                             <p>
-                                This is an example/test of the standard form
-                                layout. You can use the toggles in the hero to
-                                enabled/disable elements on this page to see the
-                                full range of options.
+                                This is an example/test of the standard form layout. You can use the
+                                toggles in the hero to enabled/disable elements on this page to see
+                                the full range of options.
                             </p>
                             <p>
-                                A basic stepper is included for completeness, as
-                                most usages will include a stepper.
+                                A basic stepper is included for completeness, as most usages will
+                                include a stepper.
                             </p>
                         </div>
                         <div class="uu-form-text-aside">
@@ -145,10 +115,7 @@ const help = ref(true);
                             <input id="test_1" class="form-control" />
                         </div>
                         <div class="uu-form-help">
-                            <p>
-                                This will be something to explain what you
-                                should fill in here.
-                            </p>
+                            <p>This will be something to explain what you should fill in here.</p>
                         </div>
                     </div>
                     <div class="uu-form-row">
@@ -157,9 +124,7 @@ const help = ref(true);
                                 What is your quest?
                             </label>
                             <div class="input-group">
-                                <span id="inputGroup" class="input-group-text"
-                                    >Quest</span
-                                >
+                                <span id="inputGroup" class="input-group-text">Quest</span>
                                 <input type="Email" class="form-control" />
                             </div>
                         </div>
@@ -180,9 +145,7 @@ const help = ref(true);
                                     type="radio"
                                     name="color"
                                 />
-                                <label class="form-check-label" for="color1">
-                                    Blue
-                                </label>
+                                <label class="form-check-label" for="color1"> Blue </label>
                             </div>
                             <div class="form-check">
                                 <input
@@ -191,9 +154,7 @@ const help = ref(true);
                                     type="radio"
                                     name="color"
                                 />
-                                <label class="form-check-label" for="color1">
-                                    No, yellow!
-                                </label>
+                                <label class="form-check-label" for="color1"> No, yellow! </label>
                             </div>
                         </div>
                         <div class="uu-form-help" />
@@ -208,12 +169,10 @@ const help = ref(true);
                         </div>
                         <div class="uu-form-help">
                             <p>
-                                Assyria was a major ancient Mesopotamian
-                                civilization which existed as a city-state from
-                                the 21st century BC to the 14th century BC and
-                                then as a territorial state and eventually an
-                                empire from the 14th century BC to the 7th
-                                century BC.
+                                Assyria was a major ancient Mesopotamian civilization which existed
+                                as a city-state from the 21st century BC to the 14th century BC and
+                                then as a territorial state and eventually an empire from the 14th
+                                century BC to the 7th century BC.
                                 <sup>[1]</sup>
                             </p>
                         </div>
@@ -221,8 +180,7 @@ const help = ref(true);
                     <div class="uu-form-row">
                         <div class="uu-form-field">
                             <label for="test_1" class="form-label d-block">
-                                What is the air-speed velocity of an unladen
-                                swallow?
+                                What is the air-speed velocity of an unladen swallow?
                             </label>
                             <textarea class="form-control" rows="8" />
                         </div>
@@ -231,12 +189,8 @@ const help = ref(true);
                     <div class="row" :class="gap ? '' : 'mt-4'">
                         <div class="col-12">
                             <div class="btn-group">
-                                <div class="btn btn-secondary btn-arrow-left">
-                                    Previous
-                                </div>
-                                <div class="btn btn-primary btn-arrow-right">
-                                    Next
-                                </div>
+                                <div class="btn btn-secondary btn-arrow-left">Previous</div>
+                                <div class="btn btn-primary btn-arrow-right">Next</div>
                             </div>
                         </div>
                     </div>
@@ -244,8 +198,7 @@ const help = ref(true);
             </div>
         </div>
         <div class="uu-container text-muted">
-            [1] En.wikipedia.org. 2022. Assyria - Wikipedia. [online] Available
-            at:
+            [1] En.wikipedia.org. 2022. Assyria - Wikipedia. [online] Available at:
             <a href="https://en.wikipedia.org/wiki/Assyria">Wikipedia</a>
             [Accessed 16 August 2022].
         </div>

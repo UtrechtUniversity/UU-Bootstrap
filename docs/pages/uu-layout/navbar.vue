@@ -108,35 +108,29 @@ $uu-navbar-navlink-padding-y: .75rem;
                 </Prism>
             </template>
             <p>
-                The UU layout navbar is mostly identical to the regular
-                Bootstrap navbar (which it extends); the only differences are:
+                The UU layout navbar is mostly identical to the regular Bootstrap navbar (which it
+                extends); the only differences are:
             </p>
             <ul>
-                <li>
-                    It has a <code>.uu-navbar</code> class on the
-                    <code>.navbar</code> element.
-                </li>
+                <li>It has a <code>.uu-navbar</code> class on the <code>.navbar</code> element.</li>
                 <li>
                     The internal container must be a
                     <code>.uu-navbar-container</code>.
                 </li>
                 <li>
                     You don't need to use
-                    <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the
-                    <code>.navbar</code>. The UU navbar has all the CSS normally
-                    provided by those classes.
+                    <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the <code>.navbar</code>.
+                    The UU navbar has all the CSS normally provided by those classes.
                     <ul>
                         <li>
-                            If you want it to 'expand' on a different
-                            breakpoint, change the
+                            If you want it to 'expand' on a different breakpoint, change the
                             <code>$uu-navbar-breakpoint</code> SCSS variable.
                         </li>
                     </ul>
                 </li>
                 <li>
-                    The <code>.navbar-brand</code> must only contain an
-                    <code>img</code> (of the UU logo). (Optionally wrapped in a
-                    link)
+                    The <code>.navbar-brand</code> must only contain an <code>img</code> (of the UU
+                    logo). (Optionally wrapped in a link)
                 </li>
             </ul>
             <p>The rest is identical in use to the normal Navbar</p>

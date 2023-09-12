@@ -11,9 +11,7 @@ $tiles-hover-color: bootstrap.color-contrast($tiles-hover-bg) !default;
 $tiles-bg-dark: colors.$gray-700 !default;
 $tiles-color-dark: bootstrap.color-contrast($tiles-bg-dark) !default;
 $tiles-hover-bg-dark: colors.$primary !default;
-$tiles-hover-color-dark: bootstrap.color-contrast(
-    $tiles-hover-bg-dark
-) !default;
+$tiles-hover-color-dark: bootstrap.color-contrast($tiles-hover-bg-dark) !default;
 
 $tiles-n-breakpoints-map: (
     xs: 2,

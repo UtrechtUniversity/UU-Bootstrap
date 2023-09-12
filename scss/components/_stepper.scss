@@ -90,16 +90,10 @@
 
                     @each $size, $portion in $stepper-bubble-size-map {
                         &.stepper-bubble-#{$size} {
-                            $actual-size: (
-                                    $stepper-bubble-max-size -
-                                        $stepper-bubble-min-size
-                                ) *
+                            $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) *
                                 math.div($portion, $stepper-bubble-num-sizes) +
                                 $stepper-bubble-min-size;
-                            $spacing: math.div(
-                                $stepper-bubble-max-size - $actual-size,
-                                2
-                            );
+                            $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
                             $indent: math.div(
                                     $stepper-bubble-num-sizes - $portion,
                                     $stepper-bubble-num-sizes
@@ -136,9 +130,7 @@
             --#{$prefix}stepper-incomplete-bg: #{$stepper-incomplete-bg-dark};
             --#{$prefix}stepper-incomplete-color: #{$stepper-incomplete-color-dark};
             --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg-dark};
-            --#{$prefix}stepper-inactive-color: #{color-contrast(
-                    $stepper-inactive-bg-dark
-                )};
+            --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg-dark)};
         }
     }
 }

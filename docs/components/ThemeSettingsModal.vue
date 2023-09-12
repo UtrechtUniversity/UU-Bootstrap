@@ -57,11 +57,7 @@ const runtimeConfig = useRuntimeConfig();
         <div class="fw-bold fs-4 mt-3">Header settings</div>
 
         <label for="header" class="form-label">Header</label>
-        <select
-            v-model="themeSettings.header"
-            class="form-select"
-            name="header"
-        >
+        <select v-model="themeSettings.header" class="form-select" name="header">
             <option value="classic">Classic</option>
             <option value="unified">Unified</option>
         </select>
@@ -69,9 +65,7 @@ const runtimeConfig = useRuntimeConfig();
         <div v-if="themeSettings.header === 'unified'" class="mt-3">
             <div class="fw-bold">Unified header settings</div>
 
-            <label for="unified-menu-alignment" class="form-label"
-                >Menu alignment</label
-            >
+            <label for="unified-menu-alignment" class="form-label">Menu alignment</label>
             <select
                 v-model="themeSettings.unifiedHeaderSettings.menuLocation"
                 class="form-select"
@@ -90,9 +84,7 @@ const runtimeConfig = useRuntimeConfig();
                     name="spaced"
                     v-model="themeSettings.unifiedHeaderSettings.spaced"
                 />
-                <label class="form-check-label" for="spaced"
-                    >Use spaced layout</label
-                >
+                <label class="form-check-label" for="spaced">Use spaced layout</label>
             </div>
             <div class="form-check form-switch mt-2">
                 <input
@@ -102,17 +94,12 @@ const runtimeConfig = useRuntimeConfig();
                     name="app_name"
                     v-model="themeSettings.unifiedHeaderSettings.app_name"
                 />
-                <label class="form-check-label" for="app_name"
-                    >Show app name block</label
-                >
+                <label class="form-check-label" for="app_name">Show app name block</label>
             </div>
         </div>
 
         <template #footer>
-            <button
-                class="btn btn-primary"
-                @click="themeSettings.showSettings = false"
-            >
+            <button class="btn btn-primary" @click="themeSettings.showSettings = false">
                 Close
             </button>
         </template>

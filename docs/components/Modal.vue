@@ -141,10 +141,7 @@ watch(
 <template>
     <Teleport to="body">
         <div :id="elId" class="modal fade" tabindex="-1">
-            <div
-                class="modal-dialog modal-dialog-scrollable"
-                :class="modalClasses"
-            >
+            <div class="modal-dialog modal-dialog-scrollable" :class="modalClasses">
                 <div class="modal-content">
                     <div
                         v-if="$slots.title || showCloseButton"
@@ -167,10 +164,7 @@ watch(
                         <slot />
                     </div>
 
-                    <div
-                        v-if="$slots.footer"
-                        class="modal-footer justify-content-start"
-                    >
+                    <div v-if="$slots.footer" class="modal-footer justify-content-start">
                         <slot name="footer" />
                     </div>
                 </div>

@@ -46,8 +46,7 @@ const placementClasses = computed(() => {
     let classes = "";
 
     if (props.placement === "right") classes += "uu-sidebar-right ";
-    if (props.mobilePlacement === "bottom")
-        classes += "uu-sidebar-mobile-bottom ";
+    if (props.mobilePlacement === "bottom") classes += "uu-sidebar-mobile-bottom ";
     if (props.stickySidebar) classes += "uu-sidebar-sticky ";
     if (props.mobileStickySidebar) classes += "uu-sidebar-mobile-sticky ";
 

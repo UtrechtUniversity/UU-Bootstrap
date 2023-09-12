@@ -151,46 +151,31 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
 <template>
     <div class="uu-content">
         <Head>
-            <Title>
-                Classic header & Navbar | UU Layout | Portaldev Bootstrap theme
-                docs
-            </Title>
+            <Title> Classic header & Navbar | UU Layout | Portaldev Bootstrap theme docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Classic Header & Navbar</h1>
         </div>
-        <Sidebar
-            placement="right"
-            :sticky-sidebar="true"
-            :mobile-sticky-sidebar="true"
-        >
+        <Sidebar placement="right" :sticky-sidebar="true" :mobile-sticky-sidebar="true">
             <template #sidebar-button> See also </template>
             <template #sidebar>
                 <uu-layout-nav />
             </template>
             <p>
-                The classic header and navbar replicates the most common layout
-                found on UU websites. (And is the default header used for this
-                documentation.)
+                The classic header and navbar replicates the most common layout found on UU
+                websites. (And is the default header used for this documentation.)
             </p>
             <p>
-                It consists of a desktop-only header (with 1 or more 'rows')
-                with a black menu bar below. On mobile the header disappears,
-                and the navbar takes over it's duty.
+                It consists of a desktop-only header (with 1 or more 'rows') with a black menu bar
+                below. On mobile the header disappears, and the navbar takes over it's duty.
             </p>
             <p>
-                While named 'classic', it is considered up to date and still
-                fully supported by this project. Alternatively you can use the
-                <NuxtLink to="/uu-layout/unified-header/"
-                    >Unified Header</NuxtLink
-                >.
+                While named 'classic', it is considered up to date and still fully supported by this
+                project. Alternatively you can use the
+                <NuxtLink to="/uu-layout/unified-header/">Unified Header</NuxtLink>.
             </p>
         </Sidebar>
-        <Sidebar
-            placement="right"
-            mobile-placement="bottom"
-            :mobile-sticky-sidebar="true"
-        >
+        <Sidebar placement="right" mobile-placement="bottom" :mobile-sticky-sidebar="true">
             <template #sidebar-button> Variables </template>
             <template #sidebar>
                 <h2 class="uu-sidebar-header-linked">Variables</h2>
@@ -207,25 +192,22 @@ $uu-navbar-breakpoint: md;
             </template>
             <h2 class="uu-sidebar-header-linked">Header</h2>
             <p>
-                The header refers to all the space above the navbar. It's setup
-                to be fairly modular, but <i>should</i>
-                at the very least contain the UU logo. Other elements often
-                found inside the header are: langauge switcher, app name title,
-                search box and a login/logout link.
+                The header refers to all the space above the navbar. It's setup to be fairly
+                modular, but <i>should</i>
+                at the very least contain the UU logo. Other elements often found inside the header
+                are: langauge switcher, app name title, search box and a login/logout link.
             </p>
             <p>
-                It is important to note that the header is only visible above a
-                certain breakpoint (<code>md</code> by default). Below that
-                breakpoint, the navbar takes over as the topmost element. Thus,
-                make sure you provide alternatives for mobile users for anything
-                functional in the header.
+                It is important to note that the header is only visible above a certain breakpoint
+                (<code>md</code> by default). Below that breakpoint, the navbar takes over as the
+                topmost element. Thus, make sure you provide alternatives for mobile users for
+                anything functional in the header.
             </p>
             <p>
-                A header consists of a <code>div.uu-header</code> containing one
-                or more <code>div.uu-header-row</code> elements. These rows are
-                flex containers, so you have the option to use Bootstrap's
-                flexbox helpers to layout your header, or using Bootstrap's
-                columns (<code>.col-4</code> etc)
+                A header consists of a <code>div.uu-header</code> containing one or more
+                <code>div.uu-header-row</code> elements. These rows are flex containers, so you have
+                the option to use Bootstrap's flexbox helpers to layout your header, or using
+                Bootstrap's columns (<code>.col-4</code> etc)
             </p>
             <p>An example of a header implementation:</p>
 
@@ -328,35 +310,29 @@ $uu-navbar-navlink-padding-y: .75rem;
         </template>
         <h2 class="uu-sidebar-header-linked">Navbar</h2>
         <p>
-            The UU layout navbar is mostly identical to the regular Bootstrap
-            navbar (which it extends); the only differences are:
+            The UU layout navbar is mostly identical to the regular Bootstrap navbar (which it
+            extends); the only differences are:
         </p>
         <ul>
-            <li>
-                It has a <code>.uu-navbar</code> class on the
-                <code>.navbar</code> element.
-            </li>
+            <li>It has a <code>.uu-navbar</code> class on the <code>.navbar</code> element.</li>
             <li>
                 The internal container must be a
                 <code>.uu-navbar-container</code>.
             </li>
             <li>
                 You don't need to use
-                <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the
-                <code>.navbar</code>. The UU navbar has all the CSS normally
-                provided by those classes.
+                <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the <code>.navbar</code>. The
+                UU navbar has all the CSS normally provided by those classes.
                 <ul>
                     <li>
-                        If you want it to 'expand' on a different breakpoint,
-                        change the
+                        If you want it to 'expand' on a different breakpoint, change the
                         <code>$uu-navbar-breakpoint</code> SCSS variable.
                     </li>
                 </ul>
             </li>
             <li>
-                The <code>.navbar-brand</code> must only contain an
-                <code>img</code> (of the UU logo). (Optionally wrapped in a
-                link)
+                The <code>.navbar-brand</code> must only contain an <code>img</code> (of the UU
+                logo). (Optionally wrapped in a link)
             </li>
         </ul>
         <p>The rest is identical in use to the normal Navbar</p>

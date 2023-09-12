@@ -24,16 +24,10 @@ import { computed } from "#imports";
 const currentYear = ref(new Date().getFullYear());
 const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
 
-const colorMode = computed(() =>
-    themeSettings?.value.dark_theme ? "dark" : "light",
-);
+const colorMode = computed(() => (themeSettings?.value.dark_theme ? "dark" : "light"));
 </script>
 <template>
-    <div
-        class="uu-root-container"
-        style="flex-basis: 100%"
-        :data-bs-theme="colorMode"
-    >
+    <div class="uu-root-container" style="flex-basis: 100%" :data-bs-theme="colorMode">
         <ClassicHeader v-if="themeSettings.header === 'classic'" />
         <UnifiedNavbar v-else />
         <slot />

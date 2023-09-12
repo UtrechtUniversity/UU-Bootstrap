@@ -110,8 +110,7 @@
                 background: $black;
                 padding-left: var(--#{$uu-css-prefix}container-padding-x);
                 padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                border-top: 0.0625rem solid
-                    var(--#{$uu-css-prefix}border-color-dark);
+                border-top: 0.0625rem solid var(--#{$uu-css-prefix}border-color-dark);
             }
 
             &.dropdown-toggle.show::after {

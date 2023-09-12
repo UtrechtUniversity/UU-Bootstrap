@@ -84,18 +84,14 @@ $uu-hero-font-weight: 400;
                 </Prism>
             </template>
             <p>
-                The UU Layout Hero is basically a colored banner. It's very
-                simple, but also very versatile.
+                The UU Layout Hero is basically a colored banner. It's very simple, but also very
+                versatile.
             </p>
             <p>
                 Once again, it's internal layouting is similar to
-                <code>.row</code>, thus you can customize to your hart's
-                content.
+                <code>.row</code>, thus you can customize to your hart's content.
             </p>
-            <p>
-                Some examples of how you can use this element are at the bottom
-                of this page.
-            </p>
+            <p>Some examples of how you can use this element are at the bottom of this page.</p>
         </Sidebar>
         <div v-for="example in example_list" class="uu-content">
             <div class="uu-content" v-html="example" />

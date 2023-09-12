@@ -102,12 +102,9 @@ $uu-form-help-padding-y: 0.5rem !default;
 
 // Some calculations that are shared, don't override!
 // Once we reach width == content-width we need to start spacing
-$uu-content-start-spacing-breakpoint: $uu-content-width +
-    $uu-container-padding-x;
+$uu-content-start-spacing-breakpoint: $uu-content-width + $uu-container-padding-x;
 // Calculation function for the needed padding to keep any content's actual width at $content-width
-$uu-content-spacing-padding-x: calc(
-    50% - var(--#{$uu-css-prefix}content-width) / 2
-);
+$uu-content-spacing-padding-x: calc(50% - var(--#{$uu-css-prefix}content-width) / 2);
 
 // flex-basis = width + padding (calculated) + padding-x
 $uu-sidebar-full-width: calc(
@@ -116,6 +113,5 @@ $uu-sidebar-full-width: calc(
 );
 // flex-basis = width + padding-x (both sides)
 $uu-sidebar-intermediate-full-width: calc(
-    var(--#{$uu-css-prefix}sidebar-width) +
-        var(--#{$uu-css-prefix}sidebar-padding-x) * 2
+    var(--#{$uu-css-prefix}sidebar-width) + var(--#{$uu-css-prefix}sidebar-padding-x) * 2
 );

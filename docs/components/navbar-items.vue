@@ -38,48 +38,32 @@ permissions and limitations under the Licence.
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                    <NuxtLink to="/uu-layout/" class="dropdown-item">
-                        Overview
-                    </NuxtLink>
+                    <NuxtLink to="/uu-layout/" class="dropdown-item"> Overview </NuxtLink>
                 </li>
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
                 <li>
-                    <NuxtLink
-                        to="/uu-layout/classic-header/"
-                        class="dropdown-item"
-                    >
+                    <NuxtLink to="/uu-layout/classic-header/" class="dropdown-item">
                         Classic Header & Navbar
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink
-                        to="/uu-layout/unified-header/"
-                        class="dropdown-item"
-                    >
+                    <NuxtLink to="/uu-layout/unified-header/" class="dropdown-item">
                         Unified Header
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/cover/" class="dropdown-item">
-                        Cover
-                    </NuxtLink>
+                    <NuxtLink to="/uu-layout/cover/" class="dropdown-item"> Cover </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/hero/" class="dropdown-item">
-                        Hero
-                    </NuxtLink>
+                    <NuxtLink to="/uu-layout/hero/" class="dropdown-item"> Hero </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/sidebar/" class="dropdown-item">
-                        Sidebar
-                    </NuxtLink>
+                    <NuxtLink to="/uu-layout/sidebar/" class="dropdown-item"> Sidebar </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/form/" class="dropdown-item">
-                        Form
-                    </NuxtLink>
+                    <NuxtLink to="/uu-layout/form/" class="dropdown-item"> Form </NuxtLink>
                 </li>
             </ul>
         </li>
@@ -97,34 +81,22 @@ permissions and limitations under the Licence.
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li class="dropdown-header">Custom</li>
                 <li>
-                    <NuxtLink to="/components/stepper/" class="dropdown-item">
-                        Stepper
-                    </NuxtLink>
+                    <NuxtLink to="/components/stepper/" class="dropdown-item"> Stepper </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/components/tiles/" class="dropdown-item">
-                        Tiles
-                    </NuxtLink>
+                    <NuxtLink to="/components/tiles/" class="dropdown-item"> Tiles </NuxtLink>
                 </li>
                 <li class="dropdown-header">Bootstrap</li>
                 <li>
-                    <NuxtLink to="/components/buttons/" class="dropdown-item">
-                        Buttons
-                    </NuxtLink>
+                    <NuxtLink to="/components/buttons/" class="dropdown-item"> Buttons </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink
-                        to="/components/pagination/"
-                        class="dropdown-item"
-                    >
+                    <NuxtLink to="/components/pagination/" class="dropdown-item">
                         Pagination
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink
-                        to="/components/modal-nav-tabs/"
-                        class="dropdown-item"
-                    >
+                    <NuxtLink to="/components/modal-nav-tabs/" class="dropdown-item">
                         Modal Nav Tabs
                     </NuxtLink>
                 </li>
@@ -143,9 +115,7 @@ permissions and limitations under the Licence.
             </a>
             <ul class="dropdown-menu" aria-labelledby="examplesDropdown">
                 <li>
-                    <NuxtLink to="/examples/forms/" class="dropdown-item">
-                        Form
-                    </NuxtLink>
+                    <NuxtLink to="/examples/forms/" class="dropdown-item"> Form </NuxtLink>
                 </li>
             </ul>
         </li>

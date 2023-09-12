@@ -45,9 +45,7 @@
 
         @each $x in [ "left", "right"] {
             .border-#{$x} {
-                padding-#{$x}: var(
-                    --#{$uu-css-prefix}header-border-gap
-                ) !important;
+                padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap) !important;
                 border-#{$x}: var(--#{$uu-css-prefix}unified-header-border-size)
                     solid
                     var(--#{$uu-css-prefix}border-color-light) !important;
@@ -64,13 +62,11 @@
             .#{$uu-prefix}logo {
                 height: var(--#{$uu-css-prefix}unified-header-height);
                 padding: var(--#{$uu-css-prefix}brand-padding-y)
-                    var(--#{$uu-css-prefix}brand-padding-x)
-                    var(--#{$uu-css-prefix}brand-padding-y) 0;
+                    var(--#{$uu-css-prefix}brand-padding-x) var(--#{$uu-css-prefix}brand-padding-y)
+                    0;
 
                 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    height: var(
-                        --#{$uu-css-prefix}unified-header-mobile-height
-                    );
+                    height: var(--#{$uu-css-prefix}unified-header-mobile-height);
                     padding: var(--#{$uu-css-prefix}brand-logo-padding-y)
                         var(--#{$uu-css-prefix}brand-logo-padding-x);
                 }
@@ -181,29 +177,19 @@
                     display: flex;
                     align-items: center;
                     height: var(--#{$uu-css-prefix}unified-header-height);
-                    border-top: var(
-                            --#{$uu-css-prefix}unified-header-navlink-indicator-height
-                        )
+                    border-top: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height)
                         solid transparent;
-                    border-bottom: var(
-                            --#{$uu-css-prefix}unified-header-navlink-indicator-height
-                        )
+                    border-bottom: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height)
                         solid transparent;
                 }
 
                 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    background: var(
-                        --#{$uu-css-prefix}unified-header-navlink-mobile-bg
-                    );
-                    color: var(
-                        --#{$uu-css-prefix}unified-header-navlink-mobile-color
-                    );
+                    background: var(--#{$uu-css-prefix}unified-header-navlink-mobile-bg);
+                    color: var(--#{$uu-css-prefix}unified-header-navlink-mobile-color);
                     padding-left: var(--#{$uu-css-prefix}container-padding-x);
                     padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                    border-top: var(
-                            --#{$uu-css-prefix}unified-header-border-size
-                        )
-                        solid var(--#{$uu-css-prefix}border-color-dark);
+                    border-top: var(--#{$uu-css-prefix}unified-header-border-size) solid
+                        var(--#{$uu-css-prefix}border-color-dark);
                 }
 
                 &.dropdown-toggle.show::after {
@@ -215,9 +201,7 @@
             .nav-link.active,
             .nav-link:hover,
             .nav-link.show {
-                border-bottom-color: var(
-                    --#{$prefix}nav-link-hover-border-color
-                );
+                border-bottom-color: var(--#{$prefix}nav-link-hover-border-color);
             }
         }
     }

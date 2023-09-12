@@ -35,9 +35,7 @@
 
         padding: var(--#{$uu-css-prefix}cover-copyright-padding-y)
             var(--#{$uu-css-prefix}cover-copyright-padding-x);
-        background-color: var(
-            --#{$uu-css-prefix}cover-copyright-background-color
-        );
+        background-color: var(--#{$uu-css-prefix}cover-copyright-background-color);
         color: var(--#{$uu-css-prefix}cover-copyright-text-color);
         font-size: var(--#{$uu-css-prefix}cover-copyright-text-size);
 
