@@ -143,16 +143,6 @@ permissions and limitations under the Licence.
             </a>
             <ul class="dropdown-menu" aria-labelledby="examplesDropdown">
                 <li>
-                    <NuxtLink to="/examples/lists/" class="dropdown-item">
-                        List with filters
-                    </NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/examples/vwr-po-list/" class="dropdown-item">
-                        VWR PO list
-                    </NuxtLink>
-                </li>
-                <li>
                     <NuxtLink to="/examples/forms/" class="dropdown-item">
                         Form
                     </NuxtLink>
