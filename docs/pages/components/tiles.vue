@@ -41,17 +41,13 @@ const range = ref([...Array(5).keys()]);
                     </thead>
                     <tbody>
                         <tr>
-                            <th>
-                                Default tiles per row
-                            </th>
+                            <th>Default tiles per row</th>
                             <td v-for="i in [2, 4, 5, 6, 7]">
                                 {{ i }}
                             </td>
                         </tr>
                         <tr>
-                            <th>
-                                CSS class
-                            </th>
+                            <th>CSS class</th>
                             <td v-for="name in ['xs', 'sm', 'md', 'lg', 'xl']">
                                 .tiles-n-{{ name }}-{i}
                             </td>

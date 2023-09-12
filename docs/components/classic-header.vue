@@ -27,7 +27,10 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
     <div class="uu-header">
         <div class="uu-header-row justify-content-between">
             <NuxtLink to="/" class="uu-logo">
-                <img v-if="themeSettings.dark_theme" src="~/assets/uu-logo-en-w.svg" />
+                <img
+                    v-if="themeSettings.dark_theme"
+                    src="~/assets/uu-logo-en-w.svg"
+                />
                 <img v-else src="~/assets/uu-logo-en.svg" />
             </NuxtLink>
             <div class="text-center uu-header-title text-red ms-auto">
@@ -53,7 +56,7 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
     <nav class="navbar uu-navbar">
         <div class="uu-navbar-container">
             <a href="https://www.uu.nl" class="navbar-brand">
-                <img src="~/assets/uu-logo-en.svg"/>
+                <img src="~/assets/uu-logo-en.svg" />
             </a>
             <button
                 class="navbar-toggler"
@@ -63,12 +66,11 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"/>
+                <span class="navbar-toggler-icon" />
             </button>
             <div id="navbar-content" class="collapse navbar-collapse">
                 <navbar-items />
             </div>
-
         </div>
     </nav>
 </template>

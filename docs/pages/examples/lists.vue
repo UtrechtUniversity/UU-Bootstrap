@@ -23,14 +23,14 @@ import Sidebar from "../../components/sidebar";
 import data from "@/assets/MOCK_DATA.json";
 
 interface Item {
-    id: number,
-    first_name: string,
-    last_name: string,
-    title: string,
-    description: string,
-    status: number,
-    faculty: number,
-    favorite: boolean,
+    id: number;
+    first_name: string;
+    last_name: string;
+    title: string;
+    description: string;
+    status: number;
+    faculty: number;
+    favorite: boolean;
 }
 
 const facultyMap = {
@@ -54,30 +54,32 @@ const currentPage = ref(1);
 
 const search = ref("");
 const favorites = ref(false);
-const statusFilters = ref<(string|number)[]>([]);
-const facultyFilters = ref<(string|number)[]>([]);
+const statusFilters = ref<(string | number)[]>([]);
+const facultyFilters = ref<(string | number)[]>([]);
 
 const filteredItems = computed(() => {
     const searchValue = search.value.toLowerCase();
 
     return items.value.filter((item) => {
-        if (favorites.value && !item.favorite)
-            return false;
+        if (favorites.value && !item.favorite) return false;
 
         if (statusFilters.value.length !== 0) {
-            if (!statusFilters.value.includes(item.status))
-                return false;
+            if (!statusFilters.value.includes(item.status)) return false;
         }
 
         if (facultyFilters.value.length !== 0) {
-            if (!facultyFilters.value.includes(item.faculty))
-                return false;
+            if (!facultyFilters.value.includes(item.faculty)) return false;
         }
 
         if (search.value) {
-            const fullName = `${item.first_name} ${item.last_name}`.toLowerCase();
+            const fullName =
+                `${item.first_name} ${item.last_name}`.toLowerCase();
 
-            if (!fullName.includes(searchValue) && !item.title.toLowerCase().includes(searchValue) && !item.description.toLowerCase().includes(searchValue))
+            if (
+                !fullName.includes(searchValue) &&
+                !item.title.toLowerCase().includes(searchValue) &&
+                !item.description.toLowerCase().includes(searchValue)
+            )
                 return false;
         }
 
@@ -95,7 +97,7 @@ const sortedItems = computed(() => {
 const displayedItems = computed(() => {
     return sortedItems.value.slice(
         (currentPage.value - 1) * pageSize.value,
-        pageSize.value * currentPage.value
+        pageSize.value * currentPage.value,
     );
 });
 
@@ -103,25 +105,25 @@ const totalPages = computed<number>(() => {
     return Math.ceil(filteredItems.value.length / pageSize.value);
 });
 
-const pages = computed<number[]>(() => { return [...Array(totalPages.value).keys()].map(i => i + 1); });
+const pages = computed<number[]>(() => {
+    return [...Array(totalPages.value).keys()].map((i) => i + 1);
+});
 
-function toggleSelected (list: Ref<(string|number)[]>, key: string|number) {
+function toggleSelected(list: Ref<(string | number)[]>, key: string | number) {
     key = Number(key);
     const curVal = list.value.includes(key);
 
-    if (!curVal)
-        list.value.push(key);
+    if (!curVal) list.value.push(key);
     else {
         const index = list.value.indexOf(key);
-        if (index > -1)
-            list.value.splice(index, 1); // 2nd parameter means remove one item only
+        if (index > -1) list.value.splice(index, 1); // 2nd parameter means remove one item only
     }
 }
 
-function toggleStatus (key: string|number) {
+function toggleStatus(key: string | number) {
     toggleSelected(statusFilters, key);
 }
-function toggleFaculty (key: string|number) {
+function toggleFaculty(key: string | number) {
     toggleSelected(facultyFilters, key);
 }
 </script>
@@ -135,14 +137,14 @@ function toggleFaculty (key: string|number) {
             <h1>List example</h1>
         </div>
         <Sidebar>
-            <template #sidebar-button>
-                Filters
-            </template>
+            <template #sidebar-button> Filters </template>
             <template #sidebar>
-                <h1 class="uu-sidebar-header-linked">
-                    Filters
-                </h1>
-                <input v-model="search" class="form-control mt-2" placeholder="Search..." />
+                <h1 class="uu-sidebar-header-linked">Filters</h1>
+                <input
+                    v-model="search"
+                    class="form-control mt-2"
+                    placeholder="Search..."
+                />
 
                 <div class="mt-3 form-check">
                     <input
@@ -152,9 +154,15 @@ function toggleFaculty (key: string|number) {
                         class="form-check-input"
                         @click="favorites = !favorites"
                     />
-                    <label class="form-check-label" for="favourite">Favourites</label>
+                    <label class="form-check-label" for="favourite"
+                        >Favourites</label
+                    >
                 </div>
-                <div v-for="(status, id) in statusMap" :key="id" class="mt-2 form-check">
+                <div
+                    v-for="(status, id) in statusMap"
+                    :key="id"
+                    class="mt-2 form-check"
+                >
                     <input
                         :id="'status' + id"
                         type="checkbox"
@@ -162,12 +170,16 @@ function toggleFaculty (key: string|number) {
                         :value="id"
                         @click="toggleStatus(id)"
                     />
-                    <label class="form-check-label" :for="'status' + id">{{ status }}</label>
+                    <label class="form-check-label" :for="'status' + id">{{
+                        status
+                    }}</label>
                 </div>
-                <h3 class="mt-4">
-                    Faculty
-                </h3>
-                <div v-for="(faculty, id) in facultyMap" :key="id" class="mt-2 form-check">
+                <h3 class="mt-4">Faculty</h3>
+                <div
+                    v-for="(faculty, id) in facultyMap"
+                    :key="id"
+                    class="mt-2 form-check"
+                >
                     <input
                         :id="'faculty' + id"
                         type="checkbox"
@@ -175,27 +187,32 @@ function toggleFaculty (key: string|number) {
                         :value="id"
                         @click="toggleFaculty(id)"
                     />
-                    <label class="form-check-label" :for="'faculty' + id">{{ faculty }}</label>
+                    <label class="form-check-label" :for="'faculty' + id">{{
+                        faculty
+                    }}</label>
                 </div>
             </template>
-            <h1 class="uu-sidebar-header-linked">
-                Items
-            </h1>
-            <div v-for="item in displayedItems" :key="item.id" class="border-bottom mt-2">
+            <h1 class="uu-sidebar-header-linked">Items</h1>
+            <div
+                v-for="item in displayedItems"
+                :key="item.id"
+                class="border-bottom mt-2"
+            >
                 <h4>{{ item.title }}</h4>
                 <p class="text-muted mb-1">
                     {{ item.description }}
                 </p>
             </div>
-            <ul class="pagination justify-content-center mt-4" role="navigation" aria-label="pagination">
+            <ul
+                class="pagination justify-content-center mt-4"
+                role="navigation"
+                aria-label="pagination"
+            >
                 <li
                     class="page-item page-button"
                     :class="currentPage === 1 ? 'disabled' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = (currentPage - 1)"
-                    >
+                    <a class="page-link" @click="currentPage = currentPage - 1">
                         Previous
                     </a>
                 </li>
@@ -203,12 +220,9 @@ function toggleFaculty (key: string|number) {
                     v-for="item in pages"
                     :key="item"
                     class="page-item"
-                    :class="(item === currentPage ? 'active' : '')"
+                    :class="item === currentPage ? 'active' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = item"
-                    >
+                    <a class="page-link" @click="currentPage = item">
                         {{ item }}
                     </a>
                 </li>
@@ -216,10 +230,7 @@ function toggleFaculty (key: string|number) {
                     class="page-item page-button"
                     :class="currentPage === totalPages ? 'disabled' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = (currentPage + 1)"
-                    >
+                    <a class="page-link" @click="currentPage = currentPage + 1">
                         Next
                     </a>
                 </li>

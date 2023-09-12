@@ -1,7 +1,7 @@
-@use 'bootstrap';
-@use 'colors';
+@use "bootstrap";
+@use "colors";
 
-$tiles-gap: .625rem !default;
+$tiles-gap: 0.625rem !default;
 $tiles-padding: 1rem !default;
 $tiles-bg: colors.$light !default;
 $tiles-color: bootstrap.color-contrast($tiles-bg) !default;
@@ -11,7 +11,9 @@ $tiles-hover-color: bootstrap.color-contrast($tiles-hover-bg) !default;
 $tiles-bg-dark: colors.$gray-700 !default;
 $tiles-color-dark: bootstrap.color-contrast($tiles-bg-dark) !default;
 $tiles-hover-bg-dark: colors.$primary !default;
-$tiles-hover-color-dark: bootstrap.color-contrast($tiles-hover-bg-dark) !default;
+$tiles-hover-color-dark: bootstrap.color-contrast(
+    $tiles-hover-bg-dark
+) !default;
 
 $tiles-n-breakpoints-map: (
     xs: 2,

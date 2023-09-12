@@ -19,7 +19,8 @@
             text-align: center;
         }
 
-        &:not(.page-button):not(.next):not(.previous):not(.first):not(.last) .page-link {
+        &:not(.page-button):not(.next):not(.previous):not(.first):not(.last)
+            .page-link {
             width: var(--#{$prefix}pagination-size);
             padding: 0;
         }
@@ -54,7 +55,7 @@
             &:before {
                 font-size: 1rem;
                 color: var(--#{$prefix}pagination-ellipsis-color);
-                content: '…';
+                content: "…";
             }
         }
     }

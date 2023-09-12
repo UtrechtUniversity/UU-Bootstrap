@@ -1,6 +1,7 @@
 @use "sass:map";
 
-.#{$uu-prefix}fullwidth-unified-header, .#{$uu-prefix}unified-header {
+.#{$uu-prefix}fullwidth-unified-header,
+.#{$uu-prefix}unified-header {
     width: 100%;
 
     background: var(--#{$uu-css-prefix}container-bg);
@@ -14,7 +15,8 @@
     font-size: 1rem;
     padding-left: var(--#{$uu-css-prefix}unified-header-padding-x);
     padding-right: var(--#{$uu-css-prefix}unified-header-padding-x);
-    border-bottom: var(--#{$uu-css-prefix}unified-header-border-size) solid var(--#{$uu-css-prefix}border-color-light);
+    border-bottom: var(--#{$uu-css-prefix}unified-header-border-size) solid
+        var(--#{$uu-css-prefix}border-color-light);
 
     @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
         height: var(--#{$uu-css-prefix}unified-header-mobile-height);
@@ -41,11 +43,12 @@
             font-size: var(--bs-uu-header-font-size);
         }
 
-        @each $x in ['left', 'right'] {
+        @each $x in [ "left", "right"] {
             .border-#{$x} {
-                padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap) !important;
-                border-#{$x}:
-                    var(--#{$uu-css-prefix}unified-header-border-size)
+                padding-#{$x}: var(
+                    --#{$uu-css-prefix}header-border-gap
+                ) !important;
+                border-#{$x}: var(--#{$uu-css-prefix}unified-header-border-size)
                     solid
                     var(--#{$uu-css-prefix}border-color-light) !important;
             }
@@ -60,15 +63,16 @@
 
             .#{$uu-prefix}logo {
                 height: var(--#{$uu-css-prefix}unified-header-height);
-                padding:
-                    var(--#{$uu-css-prefix}brand-padding-y)
+                padding: var(--#{$uu-css-prefix}brand-padding-y)
                     var(--#{$uu-css-prefix}brand-padding-x)
-                    var(--#{$uu-css-prefix}brand-padding-y)
-                    0;
+                    var(--#{$uu-css-prefix}brand-padding-y) 0;
 
                 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    height: var(--#{$uu-css-prefix}unified-header-mobile-height);
-                    padding: var(--#{$uu-css-prefix}brand-logo-padding-y) var(--#{$uu-css-prefix}brand-logo-padding-x);
+                    height: var(
+                        --#{$uu-css-prefix}unified-header-mobile-height
+                    );
+                    padding: var(--#{$uu-css-prefix}brand-logo-padding-y)
+                        var(--#{$uu-css-prefix}brand-logo-padding-x);
                 }
             }
 
@@ -105,7 +109,11 @@
         }
 
         > .#{$uu-prefix}logo img {
-            max-height: calc(var(--#{$uu-css-prefix}unified-header-height) - calc(2 * var(--#{$uu-css-prefix}header-padding-y)));
+            max-height: calc(
+                var(--#{$uu-css-prefix}unified-header-height) - calc(
+                        2 * var(--#{$uu-css-prefix}header-padding-y)
+                    )
+            );
         }
 
         .navbar-toggler {
@@ -158,7 +166,8 @@
                     position: absolute;
                 }
 
-                .dropdown-item.active, .dropdown-item:active {
+                .dropdown-item.active,
+                .dropdown-item:active {
                     color: inherit;
                     background: inherit;
                     font-weight: bold;
@@ -166,25 +175,35 @@
             }
 
             .nav-link {
-
                 @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    padding:
-                        0
-                        var(--#{$uu-css-prefix}navbar-navlink-padding-x);
+                    padding: 0 var(--#{$uu-css-prefix}navbar-navlink-padding-x);
 
                     display: flex;
                     align-items: center;
                     height: var(--#{$uu-css-prefix}unified-header-height);
-                    border-top: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height) solid transparent;
-                    border-bottom: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height) solid transparent;
+                    border-top: var(
+                            --#{$uu-css-prefix}unified-header-navlink-indicator-height
+                        )
+                        solid transparent;
+                    border-bottom: var(
+                            --#{$uu-css-prefix}unified-header-navlink-indicator-height
+                        )
+                        solid transparent;
                 }
 
                 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                    background: var(--#{$uu-css-prefix}unified-header-navlink-mobile-bg);
-                    color: var(--#{$uu-css-prefix}unified-header-navlink-mobile-color);
+                    background: var(
+                        --#{$uu-css-prefix}unified-header-navlink-mobile-bg
+                    );
+                    color: var(
+                        --#{$uu-css-prefix}unified-header-navlink-mobile-color
+                    );
                     padding-left: var(--#{$uu-css-prefix}container-padding-x);
                     padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                    border-top: var(--#{$uu-css-prefix}unified-header-border-size) solid var(--#{$uu-css-prefix}border-color-dark);
+                    border-top: var(
+                            --#{$uu-css-prefix}unified-header-border-size
+                        )
+                        solid var(--#{$uu-css-prefix}border-color-dark);
                 }
 
                 &.dropdown-toggle.show::after {
@@ -196,7 +215,9 @@
             .nav-link.active,
             .nav-link:hover,
             .nav-link.show {
-                border-bottom-color: var(--#{$prefix}nav-link-hover-border-color)
+                border-bottom-color: var(
+                    --#{$prefix}nav-link-hover-border-color
+                );
             }
         }
     }

@@ -17,9 +17,9 @@ express or implied.
 * See the Licence for the specific language governing
 permissions and limitations under the Licence.
 */
-import 'prismjs';
-import 'prismjs/components/prism-scss';
-import 'prismjs/components/prism-markup';
-import 'prismjs/themes/prism-tomorrow.css';
-import '@/assets/prism.css';
+import "prismjs";
+import "prismjs/components/prism-scss";
+import "prismjs/components/prism-markup";
+import "prismjs/themes/prism-tomorrow.css";
+import "@/assets/prism.css";
 export default {};

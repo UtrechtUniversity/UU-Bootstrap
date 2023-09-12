@@ -3,23 +3,22 @@ import { ThemeSettingsKey } from "~/theme_settings";
 import ThemeSettingsModal from "~/components/ThemeSettingsModal.vue";
 
 const themeSettings = ref({
-    header: 'classic',
+    header: "unified",
     showSettings: false,
     dark_theme: false,
     unifiedHeaderSettings: {
         spaced: true,
         app_name: true,
-        menuLocation: 'right',
-    }
+        menuLocation: "right",
+    },
 });
 
 provide(ThemeSettingsKey, themeSettings);
-
 </script>
 
 <template>
     <div>
-        <ThemeSettingsModal :active="themeSettings.showSettings"  />
+        <ThemeSettingsModal :active="themeSettings.showSettings" />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>

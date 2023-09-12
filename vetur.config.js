@@ -3,7 +3,5 @@
 module.exports = {
     settings: {},
     // Tell vetur the actual project is in the frontend folder
-    projects: [
-        './docs',
-    ]
+    projects: ["./docs"],
 };

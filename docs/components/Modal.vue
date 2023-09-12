@@ -117,7 +117,7 @@ onMounted(() => {
     bsModal = ref(
         new nuxt.$bootstrap.Modal(modalEl.value, {
             backdrop,
-        })
+        }),
     );
 
     modalEl.value?.addEventListener("hidden.bs.modal", () => emit("hidden"));
@@ -134,7 +134,7 @@ watch(
     () => props.active,
     (newValue) => {
         switchBsModal(newValue);
-    }
+    },
 );
 </script>
 

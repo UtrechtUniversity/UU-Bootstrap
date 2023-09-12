@@ -34,17 +34,21 @@
         }
 
         &:not(:last-child) {
-            border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color-light);
+            border-bottom: 0.0625rem solid
+                var(--#{$uu-css-prefix}border-color-light);
         }
 
-        @each $x in ['left', 'right'] {
+        @each $x in [ "left", "right"] {
             .border-#{$x} {
                 padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap);
-                border-#{$x}: .0625rem solid var(--#{$uu-css-prefix}border-color-light);
+                border-#{$x}: 0.0625rem
+                    solid
+                    var(--#{$uu-css-prefix}border-color-light);
             }
         }
 
-        .#{$uu-prefix}header-title, .#{$uu-prefix}header-title a {
+        .#{$uu-prefix}header-title,
+        .#{$uu-prefix}header-title a {
             color: var(--#{$uu-css-prefix}header-title-color);
             text-decoration: none;
             font-size: $h2-font-size;
@@ -54,7 +58,10 @@
             max-height: 3rem;
         }
 
-        a, a:hover, a:focus, a:active {
+        a,
+        a:hover,
+        a:focus,
+        a:active {
             text-decoration: none;
         }
     }

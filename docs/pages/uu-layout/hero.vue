@@ -18,8 +18,8 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 const example_list = ref([
@@ -60,27 +60,20 @@ const example_list = ref([
     </div>
 </div>`,
 ]);
-
 </script>
 <template>
     <div class="uu-content">
         <Head>
-            <Title>
-                Hero | UU Layout | Portaldev Bootstrap theme docs
-            </Title>
+            <Title> Hero | UU Layout | Portaldev Bootstrap theme docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Hero</h1>
         </div>
         <Sidebar placement="right">
-            <template #sidebar-button>
-                Sidebar
-            </template>
+            <template #sidebar-button> Sidebar </template>
             <template #sidebar>
                 <uu-layout-nav />
-                <h2 class="mt-3">
-                    Variables
-                </h2>
+                <h2 class="mt-3">Variables</h2>
                 <Prism language="scss" class="w-100">
                     <pre>
 $uu-hero-bg:          $yellow;
@@ -91,14 +84,17 @@ $uu-hero-font-weight: 400;
                 </Prism>
             </template>
             <p>
-                The UU Layout Hero is basically a colored banner. It's very simple, but also very versatile.
+                The UU Layout Hero is basically a colored banner. It's very
+                simple, but also very versatile.
             </p>
             <p>
-                Once again, it's internal layouting is similar to <code>.row</code>, thus you can customize to your
-                hart's content.
+                Once again, it's internal layouting is similar to
+                <code>.row</code>, thus you can customize to your hart's
+                content.
             </p>
             <p>
-                Some examples of how you can use this element are at the bottom of this page.
+                Some examples of how you can use this element are at the bottom
+                of this page.
             </p>
         </Sidebar>
         <div v-for="example in example_list" class="uu-content">

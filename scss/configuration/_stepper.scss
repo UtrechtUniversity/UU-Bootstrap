@@ -8,16 +8,26 @@ $stepper-disabled-color: bootstrap.$text-muted !default;
 $stepper-disabled-color-dark: bootstrap.$text-muted !default;
 $stepper-complete-bg: bootstrap.$green-300 !default;
 $stepper-complete-bg-dark: bootstrap.$green-500 !default;
-$stepper-complete-color: bootstrap.color-contrast($stepper-complete-bg) !default;
-$stepper-complete-color-dark: bootstrap.color-contrast($stepper-complete-bg-dark) !default;
+$stepper-complete-color: bootstrap.color-contrast(
+    $stepper-complete-bg
+) !default;
+$stepper-complete-color-dark: bootstrap.color-contrast(
+    $stepper-complete-bg-dark
+) !default;
 $stepper-incomplete-bg: colors.$yellow !default;
 $stepper-incomplete-bg-dark: bootstrap.$yellow-600 !default;
-$stepper-incomplete-color: bootstrap.color-contrast($stepper-incomplete-bg) !default;
+$stepper-incomplete-color: bootstrap.color-contrast(
+    $stepper-incomplete-bg
+) !default;
 $stepper-incomplete-color-dark: bootstrap.$white !default; // No color-contrast, as it looks weird
 $stepper-inactive-bg: colors.$gray-400 !default;
 $stepper-inactive-bg-dark: colors.$gray-600 !default;
-$stepper-inactive-color: bootstrap.color-contrast($stepper-inactive-bg) !default;
-$stepper-inactive-color-dark: bootstrap.color-contrast($stepper-inactive-bg-dark) !default;
+$stepper-inactive-color: bootstrap.color-contrast(
+    $stepper-inactive-bg
+) !default;
+$stepper-inactive-color-dark: bootstrap.color-contrast(
+    $stepper-inactive-bg-dark
+) !default;
 $stepper-min-width: 15.625rem !default;
 $stepper-padding-y: 0.75rem !default;
 $stepper-line-width: 0.125rem !default;
@@ -26,15 +36,15 @@ $stepper-line-width: 0.125rem !default;
 $stepper-max-indent: 3rem !default;
 $stepper-bubble-max-size: 2rem !default;
 // Bit misleading, isn't _actually_ the min size unless you have a size 0
-$stepper-bubble-min-size: .3rem !default;
+$stepper-bubble-min-size: 0.3rem !default;
 // A map of size names (stepper-bubble-{size}) and ratios (higher number === larger actual size)
 $stepper-bubble-size-map: (
-    'largest': 5,
-    'large': 4,
-    'medium': 3,
-    'normal': 3,
-    'small': 2,
-    'smallest': 1,
+    "largest": 5,
+    "large": 4,
+    "medium": 3,
+    "normal": 3,
+    "small": 2,
+    "smallest": 1,
 ) !default;
 // Should be equal to the largest number in the size map
 $stepper-bubble-num-sizes: 5 !default;

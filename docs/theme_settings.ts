@@ -1,14 +1,14 @@
-import type {InjectionKey, Ref} from 'vue';
+import type { InjectionKey, Ref } from "vue";
 
 type _ThemeSettings = {
-    header: 'unified' | 'classic';
+    header: "unified" | "classic";
     showSettings: boolean;
     dark_theme: boolean;
     unifiedHeaderSettings: {
         spaced: boolean;
         app_name: boolean;
-        menuLocation: 'left' | 'center' | 'right';
-    }
+        menuLocation: "left" | "center" | "right";
+    };
 };
 
 type ThemeSettings = Ref<_ThemeSettings>;

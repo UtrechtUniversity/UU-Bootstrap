@@ -18,8 +18,7 @@
         background: var(--#{$uu-css-prefix}sidebar-background);
         color: var(--#{$uu-css-prefix}sidebar-color);
         flex: 0 0 $uu-sidebar-full-width;
-        padding:
-            var(--#{$uu-css-prefix}sidebar-padding-y)
+        padding: var(--#{$uu-css-prefix}sidebar-padding-y)
             var(--#{$uu-css-prefix}sidebar-padding-x)
             var(--#{$uu-css-prefix}sidebar-padding-y)
             $uu-content-spacing-padding-x;
@@ -33,14 +32,24 @@
 
         @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
             flex-basis: auto;
-            padding: var(--#{$uu-css-prefix}sidebar-mobile-padding-y) var(--#{$uu-css-prefix}container-padding-x);
+            padding: var(--#{$uu-css-prefix}sidebar-mobile-padding-y)
+                var(--#{$uu-css-prefix}container-padding-x);
         }
 
-        img, code, p, span, pre {
+        img,
+        code,
+        p,
+        span,
+        pre {
             display: inline-block;
         }
 
-        div, img, code, p, span, pre {
+        div,
+        img,
+        code,
+        p,
+        span,
+        pre {
             max-width: var(--#{$uu-css-prefix}sidebar-width);
             @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                 max-width: 100%;
@@ -65,12 +74,12 @@
 
             &::after {
                 border-bottom: 0;
-                border-left: .3em solid transparent;
-                border-right: .3em solid transparent;
-                border-top: .3em solid;
+                border-left: 0.3em solid transparent;
+                border-right: 0.3em solid transparent;
+                border-top: 0.3em solid;
                 content: "";
                 display: inline-block;
-                transition: transform .3s linear;
+                transition: transform 0.3s linear;
             }
 
             &[aria-expanded="true"]::after {
@@ -83,7 +92,6 @@
         }
 
         .#{$uu-prefix}sidebar-collapse {
-
             @media (max-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                 padding-top: var(--#{$uu-css-prefix}container-padding-y);
             }
@@ -93,15 +101,24 @@
             }
 
             @for $i from 1 through 7 {
-                h#{$i}, .h#{$i} {
-                    border-bottom: .1875rem solid var(--#{$uu-css-prefix}border-color);
-                    padding-bottom: var(--#{$uu-css-prefix}sidebar-header-padding-y);
+                h#{$i},
+                .h#{$i} {
+                    border-bottom: 0.1875rem
+                        solid
+                        var(--#{$uu-css-prefix}border-color);
+                    padding-bottom: var(
+                        --#{$uu-css-prefix}sidebar-header-padding-y
+                    );
                     margin-bottom: 0;
-                    font-weight: var(--#{$uu-css-prefix}sidebar-header-font-weight);
+                    font-weight: var(
+                        --#{$uu-css-prefix}sidebar-header-font-weight
+                    );
 
                     @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                         &.#{$uu-prefix}sidebar-header-linked {
-                            margin-right: calc(-1 * var(--#{$uu-css-prefix}sidebar-padding-x));
+                            margin-right: calc(
+                                -1 * var(--#{$uu-css-prefix}sidebar-padding-x)
+                            );
                         }
                     }
                 }
@@ -116,8 +133,10 @@
 
                 .nav-link {
                     color: var(--#{$prefix}body-color);
-                    border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
-                    padding: var(--#{$uu-css-prefix}sidebar-nav-padding-y) var(--#{$uu-css-prefix}sidebar-nav-padding-y);
+                    border-bottom: 0.0625rem solid
+                        var(--#{$uu-css-prefix}border-color);
+                    padding: var(--#{$uu-css-prefix}sidebar-nav-padding-y)
+                        var(--#{$uu-css-prefix}sidebar-nav-padding-y);
 
                     &.is-active {
                         font-weight: bold;
@@ -129,15 +148,18 @@
                     }
 
                     &.disabled {
-                        color: var(--#{$uu-css-prefix}sidebar-nav-disabled-color);
+                        color: var(
+                            --#{$uu-css-prefix}sidebar-nav-disabled-color
+                        );
                         cursor: not-allowed;
                     }
 
                     &.active {
-                        font-weight: var(--#{$uu-css-prefix}sidebar-nav-active-font-weight);
+                        font-weight: var(
+                            --#{$uu-css-prefix}sidebar-nav-active-font-weight
+                        );
                     }
                 }
-
             }
         }
     }
@@ -147,8 +169,7 @@
         flex: 1 1 auto;
         // Allows the div to shrink below initial content width
         min-width: 0;
-        padding:
-            var(--#{$uu-css-prefix}sidebar-padding-y)
+        padding: var(--#{$uu-css-prefix}sidebar-padding-y)
             var(--#{$uu-css-prefix}container-padding-x)
             var(--#{$uu-css-prefix}sidebar-padding-y);
 
@@ -163,9 +184,14 @@
         }
 
         @for $i from 1 through 7 {
-            h#{$i}.#{$uu-prefix}sidebar-header-linked, .h#{$i}.#{$uu-prefix}sidebar-header-linked {
-                border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
-                padding-bottom: calc(var(--#{$uu-css-prefix}sidebar-header-padding-y) + .0625rem);
+            h#{$i}.#{$uu-prefix}sidebar-header-linked,
+            .h#{$i}.#{$uu-prefix}sidebar-header-linked {
+                border-bottom: 0.0625rem
+                    solid
+                    var(--#{$uu-css-prefix}border-color);
+                padding-bottom: calc(
+                    var(--#{$uu-css-prefix}sidebar-header-padding-y) + 0.0625rem
+                );
 
                 @media (min-width: map.get($grid-breakpoints, $uu-sidebar-breakpoint)) {
                     padding-left: var(--#{$uu-css-prefix}sidebar-gap);
@@ -173,7 +199,6 @@
                 }
             }
         }
-
     }
 
     // Modifiers
@@ -236,11 +261,19 @@
 
                 .#{$uu-prefix}sidebar-collapse {
                     @for $i from 1 through 7 {
-                        h#{$i}, .h#{$i} {
+                        h#{$i},
+                        .h#{$i} {
                             &.#{$uu-prefix}sidebar-header-linked {
-                                padding-left: var(--#{$uu-css-prefix}sidebar-padding-x);
+                                padding-left: var(
+                                    --#{$uu-css-prefix}sidebar-padding-x
+                                );
                                 margin-right: 0;
-                                margin-left: calc(-1 * var(--#{$uu-css-prefix}sidebar-padding-x));
+                                margin-left: calc(
+                                    -1 *
+                                        var(
+                                            --#{$uu-css-prefix}sidebar-padding-x
+                                        )
+                                );
                             }
                         }
                     }
@@ -253,11 +286,14 @@
                 padding-left: $uu-content-spacing-padding-x;
 
                 @for $i from 1 through 7 {
-                    h#{$i}.#{$uu-prefix}sidebar-header-linked, .h#{$i}.#{$uu-prefix}sidebar-header-linked {
+                    h#{$i}.#{$uu-prefix}sidebar-header-linked,
+                    .h#{$i}.#{$uu-prefix}sidebar-header-linked {
                         padding-left: 0;
                         padding-right: var(--#{$uu-css-prefix}sidebar-gap);
                         margin-left: 0;
-                        margin-right: calc(-1 * var(--#{$uu-css-prefix}sidebar-gap));
+                        margin-right: calc(
+                            -1 * var(--#{$uu-css-prefix}sidebar-gap)
+                        );
                     }
                 }
 

@@ -1,4 +1,5 @@
-code, pre.code {
+code,
+pre.code {
     --#{$prefix}code-bg: #{$code-background};
     --#{$prefix}code-color: #{$code-color};
     --#{$prefix}code-border-radius: #{$code-border-radius};
@@ -19,7 +20,8 @@ pre.code {
 
 @if $enable-dark-mode {
     @include color-mode(dark) {
-        code, pre.code {
+        code,
+        pre.code {
             --#{$prefix}code-bg: #{$code-background-dark};
             --#{$prefix}code-color: #{$code-color-dark};
         }

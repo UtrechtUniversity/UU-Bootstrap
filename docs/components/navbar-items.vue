@@ -20,14 +20,10 @@ permissions and limitations under the Licence.
 <template>
     <ul class="navbar-nav">
         <li class="nav-item">
-            <NuxtLink to="/" class="nav-link">
-                Home
-            </NuxtLink>
+            <NuxtLink to="/" class="nav-link"> Home </NuxtLink>
         </li>
         <li class="nav-item">
-            <NuxtLink to="/extensions/" class="nav-link">
-                Extensions
-            </NuxtLink>
+            <NuxtLink to="/extensions/" class="nav-link"> Extensions </NuxtLink>
         </li>
         <li class="nav-item dropdown">
             <a
@@ -47,15 +43,21 @@ permissions and limitations under the Licence.
                     </NuxtLink>
                 </li>
                 <li>
-                    <hr class="dropdown-divider"/>
+                    <hr class="dropdown-divider" />
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/classic-header/" class="dropdown-item">
+                    <NuxtLink
+                        to="/uu-layout/classic-header/"
+                        class="dropdown-item"
+                    >
                         Classic Header & Navbar
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/uu-layout/unified-header/" class="dropdown-item">
+                    <NuxtLink
+                        to="/uu-layout/unified-header/"
+                        class="dropdown-item"
+                    >
                         Unified Header
                     </NuxtLink>
                 </li>
@@ -93,9 +95,7 @@ permissions and limitations under the Licence.
                 Components
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li class="dropdown-header">
-                    Custom
-                </li>
+                <li class="dropdown-header">Custom</li>
                 <li>
                     <NuxtLink to="/components/stepper/" class="dropdown-item">
                         Stepper
@@ -106,21 +106,25 @@ permissions and limitations under the Licence.
                         Tiles
                     </NuxtLink>
                 </li>
-                <li class="dropdown-header">
-                    Bootstrap
-                </li>
+                <li class="dropdown-header">Bootstrap</li>
                 <li>
                     <NuxtLink to="/components/buttons/" class="dropdown-item">
                         Buttons
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/components/pagination/" class="dropdown-item">
+                    <NuxtLink
+                        to="/components/pagination/"
+                        class="dropdown-item"
+                    >
                         Pagination
                     </NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/components/modal-nav-tabs/" class="dropdown-item">
+                    <NuxtLink
+                        to="/components/modal-nav-tabs/"
+                        class="dropdown-item"
+                    >
                         Modal Nav Tabs
                     </NuxtLink>
                 </li>
@@ -155,8 +159,6 @@ permissions and limitations under the Licence.
                 </li>
             </ul>
         </li>
-
     </ul>
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

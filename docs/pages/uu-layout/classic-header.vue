@@ -18,8 +18,8 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 // As a var because stuff breaks otherwise
@@ -85,7 +85,6 @@ const headerGridSpaced = ref(`<div class="uu-header">
     </div>
 </div>`);
 
-
 // As a var because stuff breaks otherwise
 const navbar_example = ref(`<nav class="navbar uu-navbar">
     <div class="uu-navbar-container">
@@ -148,24 +147,26 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
         </div>
     </div>
 </nav>`);
-
 </script>
 <template>
     <div class="uu-content">
         <Head>
             <Title>
-                Classic header & Navbar | UU Layout | Portaldev Bootstrap theme docs
+                Classic header & Navbar | UU Layout | Portaldev Bootstrap theme
+                docs
             </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Classic Header & Navbar</h1>
         </div>
-        <Sidebar placement="right" :sticky-sidebar="true" :mobile-sticky-sidebar="true">
-            <template #sidebar-button>
-                See also
-            </template>
+        <Sidebar
+            placement="right"
+            :sticky-sidebar="true"
+            :mobile-sticky-sidebar="true"
+        >
+            <template #sidebar-button> See also </template>
             <template #sidebar>
-                <uu-layout-nav/>
+                <uu-layout-nav />
             </template>
             <p>
                 The classic header and navbar replicates the most common layout
@@ -180,7 +181,9 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
             <p>
                 While named 'classic', it is considered up to date and still
                 fully supported by this project. Alternatively you can use the
-                <NuxtLink to="/uu-layout/unified-header/">Unified Header</NuxtLink>.
+                <NuxtLink to="/uu-layout/unified-header/"
+                    >Unified Header</NuxtLink
+                >.
             </p>
         </Sidebar>
         <Sidebar
@@ -188,13 +191,9 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
             mobile-placement="bottom"
             :mobile-sticky-sidebar="true"
         >
-            <template #sidebar-button>
-                Variables
-            </template>
+            <template #sidebar-button> Variables </template>
             <template #sidebar>
-                <h2 class="uu-sidebar-header-linked">
-                    Variables
-                </h2>
+                <h2 class="uu-sidebar-header-linked">Variables</h2>
                 <prism language="scss" class="w-100">
                     <pre>
 $uu-header-padding-y: 0.7rem;
@@ -206,34 +205,34 @@ $uu-navbar-breakpoint: md;
                     </pre>
                 </prism>
             </template>
-            <h2 class="uu-sidebar-header-linked">
-                Header
-            </h2>
+            <h2 class="uu-sidebar-header-linked">Header</h2>
             <p>
-                The header refers to all the space above the navbar. It's setup to be fairly modular, but <i>should</i>
-                at the very least contain the UU logo. Other elements often found inside the header are: langauge
-                switcher, app name title, search box and a login/logout link.
+                The header refers to all the space above the navbar. It's setup
+                to be fairly modular, but <i>should</i>
+                at the very least contain the UU logo. Other elements often
+                found inside the header are: langauge switcher, app name title,
+                search box and a login/logout link.
             </p>
             <p>
-                It is important to note that the header is only visible above a certain breakpoint (<code>md</code> by
-                default). Below that breakpoint, the navbar takes over as the topmost element. Thus, make sure you
-                provide alternatives for mobile users for anything functional in the header.
+                It is important to note that the header is only visible above a
+                certain breakpoint (<code>md</code> by default). Below that
+                breakpoint, the navbar takes over as the topmost element. Thus,
+                make sure you provide alternatives for mobile users for anything
+                functional in the header.
             </p>
             <p>
-                A header consists of a <code>div.uu-header</code> containing one or more <code>div.uu-header-row</code>
-                elements. These rows are flex containers, so you have the option to use Bootstrap's flexbox helpers to
-                layout your header, or using Bootstrap's columns (<code>.col-4</code> etc)
+                A header consists of a <code>div.uu-header</code> containing one
+                or more <code>div.uu-header-row</code> elements. These rows are
+                flex containers, so you have the option to use Bootstrap's
+                flexbox helpers to layout your header, or using Bootstrap's
+                columns (<code>.col-4</code> etc)
             </p>
-            <p>
-                An example of a header implementation:
-            </p>
+            <p>An example of a header implementation:</p>
 
             <prism language="html" class="w-100">
                 {{ headerCode }}
             </prism>
-            <p>
-                Some spacing method options:
-            </p>
+            <p>Some spacing method options:</p>
             <div class="accordion">
                 <div class="accordion-item">
                     <h2 id="headingOne" class="accordion-header">
@@ -248,7 +247,11 @@ $uu-navbar-breakpoint: md;
                             Margin spaced example
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                    <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                    >
                         <div class="accordion-body">
                             <prism language="html">
                                 {{ headerMarginSpaced }}
@@ -269,7 +272,11 @@ $uu-navbar-breakpoint: md;
                             Flex spaced
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                    <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                    >
                         <div class="accordion-body">
                             <prism language="html">
                                 {{ headerFlexSpaced }}
@@ -290,7 +297,11 @@ $uu-navbar-breakpoint: md;
                             Column spaced
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                    <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                    >
                         <div class="accordion-body">
                             <prism language="html">
                                 {{ headerGridSpaced }}
@@ -302,57 +313,54 @@ $uu-navbar-breakpoint: md;
         </Sidebar>
     </div>
     <Sidebar placement="right">
-        <template #sidebar-button>
-            Sidebar
-        </template>
+        <template #sidebar-button> Sidebar </template>
         <template #sidebar>
-            <h2 class="uu-sidebar-header-linked">
-                Variables
-            </h2>
+            <h2 class="uu-sidebar-header-linked">Variables</h2>
             <Prism language="scss" class="w-100">
-                    <pre>
+                <pre>
 $uu-navbar-breakpoint: md;
 $uu-navbar-mobile-height: 3.125rem;
 $uu-navbar-navlink-padding-x: .75rem;
 $uu-navbar-navlink-padding-y: .75rem;
-                    </pre>
+                    </pre
+                >
             </Prism>
         </template>
-        <h2 class="uu-sidebar-header-linked">
-            Navbar
-        </h2>
+        <h2 class="uu-sidebar-header-linked">Navbar</h2>
         <p>
-            The UU layout navbar is mostly identical to the regular Bootstrap navbar (which it extends);
-            the only differences are:
+            The UU layout navbar is mostly identical to the regular Bootstrap
+            navbar (which it extends); the only differences are:
         </p>
         <ul>
             <li>
-                It has a <code>.uu-navbar</code> class on the <code>.navbar</code> element.
+                It has a <code>.uu-navbar</code> class on the
+                <code>.navbar</code> element.
             </li>
             <li>
-                The internal container must be a <code>.uu-navbar-container</code>.
+                The internal container must be a
+                <code>.uu-navbar-container</code>.
             </li>
             <li>
-                You don't need to use <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the <code>.navbar</code>.
-                The UU navbar has all the CSS normally provided by those classes.
+                You don't need to use
+                <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the
+                <code>.navbar</code>. The UU navbar has all the CSS normally
+                provided by those classes.
                 <ul>
                     <li>
-                        If you want it to 'expand' on a different breakpoint, change the
+                        If you want it to 'expand' on a different breakpoint,
+                        change the
                         <code>$uu-navbar-breakpoint</code> SCSS variable.
                     </li>
                 </ul>
             </li>
             <li>
-                The <code>.navbar-brand</code> must only contain an <code>img</code> (of the UU logo). (Optionally
-                wrapped in a link)
+                The <code>.navbar-brand</code> must only contain an
+                <code>img</code> (of the UU logo). (Optionally wrapped in a
+                link)
             </li>
         </ul>
-        <p>
-            The rest is identical in use to the normal Navbar
-        </p>
-        <p>
-            Full example:
-        </p>
+        <p>The rest is identical in use to the normal Navbar</p>
+        <p>Full example:</p>
         <prism language="html" class="w-100">
             {{ navbar_example }}
         </prism>

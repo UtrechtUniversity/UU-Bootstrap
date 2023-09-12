@@ -24,24 +24,23 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
 
 const menuClasses = computed(() => {
     switch (themeSettings?.value.unifiedHeaderSettings?.menuLocation) {
-        case 'left':
-            return 'me-auto';
-        case 'right':
-            return 'ms-auto';
-        case 'center':
-            return 'ms-auto me-auto';
+        case "left":
+            return "me-auto";
+        case "right":
+            return "ms-auto";
+        case "center":
+            return "ms-auto me-auto";
         default:
-            return 'ms-auto';
+            return "ms-auto";
     }
 });
 
 const headerClasses = computed(() => {
-    let classes = '';
+    let classes = "";
 
     if (themeSettings?.value.unifiedHeaderSettings.spaced)
-        classes += 'uu-unified-header ';
-    else
-        classes += 'uu-fullwidth-unified-header ';
+        classes += "uu-unified-header ";
+    else classes += "uu-fullwidth-unified-header ";
 
     return classes;
 });
@@ -51,8 +50,15 @@ const headerClasses = computed(() => {
     <div class="navbar" :class="headerClasses">
         <div class="uu-unified-header-container">
             <div class="navbar-brand uu-brand">
-                <NuxtLink href="http://www.uu.nl/" target="_blank" class="uu-logo">
-                    <img v-if="themeSettings.dark_theme" src="~/assets/uu-logo-en-w.svg" />
+                <NuxtLink
+                    href="http://www.uu.nl/"
+                    target="_blank"
+                    class="uu-logo"
+                >
+                    <img
+                        v-if="themeSettings.dark_theme"
+                        src="~/assets/uu-logo-en-w.svg"
+                    />
                     <img v-else src="~/assets/uu-logo-en.svg" />
                 </NuxtLink>
             </div>
@@ -63,13 +69,18 @@ const headerClasses = computed(() => {
             >
                 Bootstrap theme
             </div>
-            <div id="unified-header-nav" class="collapse navbar-collapse me-md-2">
-                <navbar-items :class="menuClasses"/>
+            <div
+                id="unified-header-nav"
+                class="collapse navbar-collapse me-md-2"
+            >
+                <navbar-items :class="menuClasses" />
             </div>
 
             <div
                 class="navbar-text border-left ms-3 px-3 text-muted text-uppercase cursor-pointer text-center"
-                @click="themeSettings.showSettings = !themeSettings.showSettings"
+                @click="
+                    themeSettings.showSettings = !themeSettings.showSettings
+                "
             >
                 Theme Settings
             </div>
@@ -90,7 +101,7 @@ const headerClasses = computed(() => {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"/>
+                <span class="navbar-toggler-icon" />
             </button>
         </div>
     </div>

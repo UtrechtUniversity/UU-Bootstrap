@@ -18,8 +18,8 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 
 const tab = ref(1);
 
@@ -56,18 +56,10 @@ const example = ref(`<div class="modal" tabindex="-1">
         <div class="uu-hero">
             <h1>Modal Nav Tabs</h1>
         </div>
-        <Sidebar
-            id="buttons"
-            placement="right"
-            mobile-placement="bottom"
-        >
-            <template #sidebar-button>
-                Variables
-            </template>
+        <Sidebar id="buttons" placement="right" mobile-placement="bottom">
+            <template #sidebar-button> Variables </template>
             <template #sidebar>
-                <h2 class="d-lg-block d-none">
-                    Variables
-                </h2>
+                <h2 class="d-lg-block d-none">Variables</h2>
                 <Prism language="scss" class="w-100">
                     <pre>
 $modal-nav-tabs-gap: 0.625rem;
@@ -79,9 +71,7 @@ $modal-nav-tabs-hover-color: $black;
 $modal-nav-tabs-hover-bg: $gray-100;
                     </pre>
                 </Prism>
-                <h3 class="mt-3">
-                    See also
-                </h3>
+                <h3 class="mt-3">See also</h3>
                 <ul class="nav">
                     <li class="nav-item">
                         <NuxtLink
@@ -104,15 +94,16 @@ $modal-nav-tabs-hover-bg: $gray-100;
                 </ul>
             </template>
             <p>
-                Modal Nav Tabs is a variant of Bootstrap Nav Tabs for use in
-                a Modal's header, creating a tabbed-modal effect.
+                Modal Nav Tabs is a variant of Bootstrap Nav Tabs for use in a
+                Modal's header, creating a tabbed-modal effect.
             </p>
             <p>
                 Creating it is as simple as adding
                 <code class="text-nowrap">.modal-nav-tabs</code> to a
                 <code class="text-nowrap">.nav.nav-tabs</code> inside the modal
                 header. It will automatically use the right background/text
-                colors (header bg for inactive tabs, content bg for active tabs).
+                colors (header bg for inactive tabs, content bg for active
+                tabs).
             </p>
             <div class="mt-3 mb-3">
                 <div class="modal position-static d-block" tabindex="-1">
@@ -124,7 +115,7 @@ $modal-nav-tabs-hover-bg: $gray-100;
                                         <a
                                             href="#"
                                             class="nav-link"
-                                            :class="tab === 1 ? 'active' :''"
+                                            :class="tab === 1 ? 'active' : ''"
                                             @click.prevent="tab = 1"
                                         >
                                             Tab 1
@@ -134,14 +125,19 @@ $modal-nav-tabs-hover-bg: $gray-100;
                                         <a
                                             href="#"
                                             class="nav-link"
-                                            :class="tab === 2 ? 'active' :''"
+                                            :class="tab === 2 ? 'active' : ''"
                                             @click.prevent="tab = 2"
                                         >
                                             Tab 2
                                         </a>
                                     </li>
                                 </ul>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                />
                             </div>
                             <div class="modal-body">
                                 <p v-if="tab === 1">
@@ -168,9 +164,9 @@ $modal-nav-tabs-hover-bg: $gray-100;
                                     maximus aliquam. Donec feugiat ante eu odio
                                     commodo eleifend id id nisl. Suspendisse
                                     rutrum leo et elit egestas dapibus.
-                                    Vestibulum augue orci, interdum in
-                                    sagittis sit amet, imperdiet a quam.
-                                    Maecenas a tempor dui.
+                                    Vestibulum augue orci, interdum in sagittis
+                                    sit amet, imperdiet a quam. Maecenas a
+                                    tempor dui.
                                 </p>
                             </div>
                         </div>
@@ -180,7 +176,6 @@ $modal-nav-tabs-hover-bg: $gray-100;
             <Prism language="html">
                 {{ example }}
             </Prism>
-
         </Sidebar>
     </div>
 </template>

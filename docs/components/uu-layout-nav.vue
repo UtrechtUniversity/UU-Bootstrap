@@ -19,9 +19,7 @@ permissions and limitations under the Licence.
 -->
 <template>
     <div class="w-100">
-        <h2>
-            UU Layout
-        </h2>
+        <h2>UU Layout</h2>
         <ul class="nav">
             <li class="nav-item">
                 <NuxtLink to="/uu-layout/" class="nav-link">

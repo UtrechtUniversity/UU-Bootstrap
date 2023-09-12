@@ -30,68 +30,89 @@ const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
-    <Modal size="default" :centered="true" :active="active" @hidden="themeSettings.showSettings=false">
-        <template #title>
-            Theme settings
-        </template>
+    <Modal
+        size="default"
+        :centered="true"
+        :active="active"
+        @hidden="themeSettings.showSettings = false"
+    >
+        <template #title> Theme settings </template>
 
         <!-- Only show dark mode settings if enabled -->
         <template v-if="runtimeConfig.public.dark_mode">
-            <div class="fw-bold fs-4">
-                Color mode settings
-            </div>
+            <div class="fw-bold fs-4">Color mode settings</div>
 
             <div class="form-check form-switch mt-2">
-                <input class="form-check-input" type="checkbox" role="switch" name="spaced" v-model="themeSettings.dark_theme" />
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    name="spaced"
+                    v-model="themeSettings.dark_theme"
+                />
                 <label class="form-check-label" for="spaced">Dark mode</label>
             </div>
         </template>
 
-        <div class="fw-bold fs-4 mt-3">
-            Header settings
-        </div>
+        <div class="fw-bold fs-4 mt-3">Header settings</div>
 
         <label for="header" class="form-label">Header</label>
-        <select v-model="themeSettings.header" class="form-select" name="header">
-            <option value="classic">
-                Classic
-            </option>
-            <option value="unified">
-                Unified
-            </option>
+        <select
+            v-model="themeSettings.header"
+            class="form-select"
+            name="header"
+        >
+            <option value="classic">Classic</option>
+            <option value="unified">Unified</option>
         </select>
 
         <div v-if="themeSettings.header === 'unified'" class="mt-3">
-            <div class="fw-bold">
-                Unified header settings
-            </div>
+            <div class="fw-bold">Unified header settings</div>
 
-            <label for="unified-menu-alignment" class="form-label">Menu alignment</label>
-            <select v-model="themeSettings.unifiedHeaderSettings.menuLocation" class="form-select" name="unified-menu-alignment">
-                <option value="left">
-                    Left
-                </option>
-                <option value="center">
-                    Center
-                </option>
-                <option value="right">
-                    Right
-                </option>
+            <label for="unified-menu-alignment" class="form-label"
+                >Menu alignment</label
+            >
+            <select
+                v-model="themeSettings.unifiedHeaderSettings.menuLocation"
+                class="form-select"
+                name="unified-menu-alignment"
+            >
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
             </select>
 
-
             <div class="form-check form-switch mt-2">
-                <input class="form-check-input" type="checkbox" role="switch" name="spaced" v-model="themeSettings.unifiedHeaderSettings.spaced" />
-                <label class="form-check-label" for="spaced">Use spaced layout</label>
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    name="spaced"
+                    v-model="themeSettings.unifiedHeaderSettings.spaced"
+                />
+                <label class="form-check-label" for="spaced"
+                    >Use spaced layout</label
+                >
             </div>
             <div class="form-check form-switch mt-2">
-                <input class="form-check-input" type="checkbox" role="switch" name="app_name" v-model="themeSettings.unifiedHeaderSettings.app_name" />
-                <label class="form-check-label" for="app_name">Show app name block</label>
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    name="app_name"
+                    v-model="themeSettings.unifiedHeaderSettings.app_name"
+                />
+                <label class="form-check-label" for="app_name"
+                    >Show app name block</label
+                >
             </div>
         </div>
 
         <template #footer>
-            <button class="btn btn-primary" @click="themeSettings.showSettings=false">
+            <button
+                class="btn btn-primary"
+                @click="themeSettings.showSettings = false"
+            >
                 Close
             </button>
         </template>

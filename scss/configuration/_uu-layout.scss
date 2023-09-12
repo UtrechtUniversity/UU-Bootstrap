@@ -2,9 +2,9 @@
 @use "bootstrap";
 
 // Prefix used for all UU layout classes (eg. .uu-)
-$uu-prefix: 'uu-' !default;
+$uu-prefix: "uu-" !default;
 // $prefix + $uu-prefix, by hand because it's annoying to add bs' _variables.scss
-$uu-css-prefix: 'bs-uu-' !default;
+$uu-css-prefix: "bs-uu-" !default;
 
 // Width of the outer container
 $uu-container-width: 100rem !default;
@@ -24,14 +24,14 @@ $uu-border-color-dark: colors.$gray-800 !default;
 $uu-header-padding-y: 0.7rem !default;
 $uu-header-font-size: 0.9rem !default;
 // Officially we should be using red, but we like _blue_
-$uu-header-title-color: #094D8E !default;
+$uu-header-title-color: #094d8e !default;
 // If using a border-{left, right}, this is the padding added between content and border
 $uu-header-border-gap: 1.2rem !default;
 // At what breakpoint the navbar should be switching to mobile mode
 $uu-navbar-breakpoint: md !default;
 $uu-navbar-mobile-height: 3.125rem !default;
-$uu-navbar-navlink-padding-x: .75rem !default;
-$uu-navbar-navlink-padding-y: .75rem !default;
+$uu-navbar-navlink-padding-x: 0.75rem !default;
+$uu-navbar-navlink-padding-y: 0.75rem !default;
 
 $uu-unified-header-height: 4.5rem;
 $uu-unified-header-mobile-height: 3rem;
@@ -59,11 +59,11 @@ $uu-hero-padding-y: 1rem !default;
 $uu-hero-font-weight: 400 !default;
 // Default height of cover images, can be overriden with classes
 $uu-cover-default-height: 400px !default;
-$uu-cover-copyright-padding-x: .625rem !default;
-$uu-cover-copyright-padding-y: .625rem !default;
+$uu-cover-copyright-padding-x: 0.625rem !default;
+$uu-cover-copyright-padding-y: 0.625rem !default;
 $uu-cover-copyright-text-size: 0.8rem !default;
 $uu-cover-copyright-text-color: colors.$gray-300 !default;
-$uu-cover-copyright-background-color: rgba(0,0,0, 0.5) !default;
+$uu-cover-copyright-background-color: rgba(0, 0, 0, 0.5) !default;
 // Gap between content and sidebar in desktop view
 $uu-sidebar-width: 21.875rem !default;
 $uu-sidebar-gap: 6.25rem !default;
@@ -74,11 +74,11 @@ $uu-sidebar-color: $uu-container-color !default;
 $uu-sidebar-breakpoint: lg !default;
 $uu-sidebar-padding-x: 1.25rem !default;
 $uu-sidebar-padding-y: 1.25rem !default;
-$uu-sidebar-mobile-padding-y: .625rem !default;
+$uu-sidebar-mobile-padding-y: 0.625rem !default;
 // Padding applied below the header if using an underlined header
-$uu-sidebar-header-padding-y: .625rem !default;
+$uu-sidebar-header-padding-y: 0.625rem !default;
 $uu-sidebar-header-font-weight: 200 !default;
-$uu-sidebar-nav-padding-y: .4375rem !default;
+$uu-sidebar-nav-padding-y: 0.4375rem !default;
 $uu-sidebar-nav-padding-x: 0 !default;
 $uu-sidebar-nav-disabled-color: colors.$gray-600 !default;
 $uu-sidebar-nav-active-font-weight: 600 !default;
@@ -92,21 +92,30 @@ $uu-form-row-gap: 1.5rem !default;
 $uu-form-field-padding-x: 1.5rem !default;
 $uu-form-field-padding-y: 1.3rem !default;
 // Visual fix for form labels, otherwise padding doesn't look symmetrical
-$uu-form-field-padding-y-compensation: .3125rem !default;
+$uu-form-field-padding-y-compensation: 0.3125rem !default;
 $uu-form-field-bg: colors.$light !default;
 $uu-form-field-input-group-bg: colors.$gray-050 !default;
 $uu-form-aside-font-size: 0.9rem !default;
 $uu-form-aside-color: bootstrap.$text-muted !default;
 $uu-form-help-padding-x: 0 !default;
-$uu-form-help-padding-y: .5rem !default;
+$uu-form-help-padding-y: 0.5rem !default;
 
 // Some calculations that are shared, don't override!
 // Once we reach width == content-width we need to start spacing
-$uu-content-start-spacing-breakpoint: $uu-content-width + $uu-container-padding-x;
+$uu-content-start-spacing-breakpoint: $uu-content-width +
+    $uu-container-padding-x;
 // Calculation function for the needed padding to keep any content's actual width at $content-width
-$uu-content-spacing-padding-x: calc(50% - var(--#{$uu-css-prefix}content-width) / 2);
+$uu-content-spacing-padding-x: calc(
+    50% - var(--#{$uu-css-prefix}content-width) / 2
+);
 
 // flex-basis = width + padding (calculated) + padding-x
-$uu-sidebar-full-width: calc(var(--#{$uu-css-prefix}sidebar-width) + $uu-content-spacing-padding-x + var(--#{$uu-css-prefix}sidebar-padding-x));
+$uu-sidebar-full-width: calc(
+    var(--#{$uu-css-prefix}sidebar-width) + $uu-content-spacing-padding-x +
+        var(--#{$uu-css-prefix}sidebar-padding-x)
+);
 // flex-basis = width + padding-x (both sides)
-$uu-sidebar-intermediate-full-width: calc(var(--#{$uu-css-prefix}sidebar-width) + var(--#{$uu-css-prefix}sidebar-padding-x) * 2);
+$uu-sidebar-intermediate-full-width: calc(
+    var(--#{$uu-css-prefix}sidebar-width) +
+        var(--#{$uu-css-prefix}sidebar-padding-x) * 2
+);

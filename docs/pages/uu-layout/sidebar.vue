@@ -18,8 +18,8 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 const minimalExample = ref(`<div class="uu-sidebar-container">
@@ -52,14 +52,10 @@ const minimalExample = ref(`<div class="uu-sidebar-container">
             :sticky-sidebar="true"
             :mobile-sticky-sidebar="true"
         >
-            <template #sidebar-button>
-                Sidebar
-            </template>
+            <template #sidebar-button> Sidebar </template>
             <template #sidebar>
                 <uu-layout-nav />
-                <h2 class="mt-3">
-                    Variables
-                </h2>
+                <h2 class="mt-3">Variables</h2>
                 <Prism language="scss" class="w-100">
                     <pre>
 $uu-sidebar-width: 21.875rem;
@@ -92,9 +88,7 @@ $uu-sidebar-nav-active-font-weight: 600;
             <Prism language="html" class="w-100">
                 <pre>{{ minimalExample }}</pre>
             </Prism>
-            <h3 class="mt-3">
-                Collapse and alternatives
-            </h3>
+            <h3 class="mt-3">Collapse and alternatives</h3>
             <p>
                 The example above uses a
                 <Nuxtlink
@@ -110,13 +104,13 @@ $uu-sidebar-nav-active-font-weight: 600;
             <p>
                 There are two main alternatives: plain and offcanvas. Plain
                 simply means you'd use nothing and display everything all the
-                time. In this case, it's recommended to place the sidebar on
-                the bottom in mobile. See <NuxtLink to="#modifiers">
-                    Modifiers.
-                </NuxtLink>
+                time. In this case, it's recommended to place the sidebar on the
+                bottom in mobile. See
+                <NuxtLink to="#modifiers"> Modifiers. </NuxtLink>
             </p>
             <p>
-                Alternatively, you can wrap the sidebar content in an <NuxtLink
+                Alternatively, you can wrap the sidebar content in an
+                <NuxtLink
                     to="https://getbootstrap.com/docs/5.2/components/offcanvas/"
                     target="_blank"
                 >
@@ -143,11 +137,10 @@ $uu-sidebar-nav-active-font-weight: 600;
 .compact-sidebar {
     --bs-uu-sidebar-width: 16rem;
     --bs-uu-sidebar-gap: 2.5rem;
-}</pre>
+}</pre
+                >
             </Prism>
-            <h2 id="modifiers" class="mt-3">
-                Modifiers
-            </h2>
+            <h2 id="modifiers" class="mt-3">Modifiers</h2>
             <h3>Placement</h3>
             <p>
                 By default, the sidebar will be placed on the left on 'desktop'
@@ -159,12 +152,14 @@ $uu-sidebar-nav-active-font-weight: 600;
             </p>
             <h3>Sticky</h3>
             <p>
-                The sidebar is setup to allow <NuxtLink
+                The sidebar is setup to allow
+                <NuxtLink
                     to="https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky"
                     target="_blank"
                 >
                     'sticky' behaviour
-                </NuxtLink> during scrolling.
+                </NuxtLink>
+                during scrolling.
             </p>
             <p>
                 There are two of 'sticky' modifier classes, one for 'desktop'
@@ -187,10 +182,9 @@ $uu-sidebar-nav-active-font-weight: 600;
                 recommended collapse method, this is already the case.
             </div>
             <div class="alert alert-info">
-                Using <NuxtLink to="#linked-headers">
-                    linked headers
-                </NuxtLink> with this class looks a bit silly, I'd recommend
-                against it.
+                Using
+                <NuxtLink to="#linked-headers"> linked headers </NuxtLink> with
+                this class looks a bit silly, I'd recommend against it.
             </div>
             <strong class="d-block mt-3">Mobile</strong>
             <p>
@@ -207,28 +201,19 @@ $uu-sidebar-nav-active-font-weight: 600;
                 Do not use this class if you don't use any way of hiding the
                 sidebar's content on mobile!
             </div>
-            <h3 class="mt-3">
-                Hide on mobile
-            </h3>
+            <h3 class="mt-3">Hide on mobile</h3>
             <p>
                 Not really a build-in modifier, but if so desired you can hide
                 the sidebar on mobile by adding
                 <code class="text-nowrap">.d-none d-lg-block</code>
-                to the <code class="text-nowrap">.uu-sidebar</code> element.
-                The component will cope.
+                to the <code class="text-nowrap">.uu-sidebar</code> element. The
+                component will cope.
             </p>
         </Sidebar>
-        <Sidebar
-            placement="right"
-            :mobile-sticky-sidebar="true"
-        >
-            <template #sidebar-button>
-                See also
-            </template>
+        <Sidebar placement="right" :mobile-sticky-sidebar="true">
+            <template #sidebar-button> See also </template>
             <template #sidebar>
-                <h2 class="uu-sidebar-header-linked">
-                    See also
-                </h2>
+                <h2 class="uu-sidebar-header-linked">See also</h2>
                 <ul class="nav">
                     <li class="nav-item">
                         <NuxtLink
@@ -241,13 +226,11 @@ $uu-sidebar-nav-active-font-weight: 600;
                     </li>
                 </ul>
             </template>
-            <h2 class="uu-sidebar-header-linked">
-                Sidebar Nav
-            </h2>
+            <h2 class="uu-sidebar-header-linked">Sidebar Nav</h2>
             <p>
                 The sidebar also has custom styles applied to Bootstrap Nav
-                components. They should be applied automatically, so you'll
-                only have to follow the Bootstrap documentation (linked in the
+                components. They should be applied automatically, so you'll only
+                have to follow the Bootstrap documentation (linked in the
                 sidebar)
             </p>
             <p>
@@ -255,20 +238,11 @@ $uu-sidebar-nav-active-font-weight: 600;
                 directly preceded by a header element.
             </p>
         </Sidebar>
-        <Sidebar
-            placement="right"
-            :mobile-sticky-sidebar="true"
-        >
-            <template #sidebar-button>
-                Example header
-            </template>
+        <Sidebar placement="right" :mobile-sticky-sidebar="true">
+            <template #sidebar-button> Example header </template>
             <template #sidebar>
-                <h2 class="uu-sidebar-header-linked">
-                    Example header
-                </h2>
-                <p>
-                    Nothing to see here, really.
-                </p>
+                <h2 class="uu-sidebar-header-linked">Example header</h2>
+                <p>Nothing to see here, really.</p>
             </template>
             <h2 id="linked-headers" class="uu-sidebar-header-linked">
                 Linked headers
@@ -301,14 +275,13 @@ $uu-sidebar-nav-active-font-weight: 600;
             </p>
             <p>
                 The easiest way to have multiple linked headers, is to have
-                multiple Sidebar elements. (Which is what we do on this page).
-                A potential downside is that you'll have multiple sidebar
-                toggles on mobile. Although, it can actually work nicely in
-                some cases.
+                multiple Sidebar elements. (Which is what we do on this page). A
+                potential downside is that you'll have multiple sidebar toggles
+                on mobile. Although, it can actually work nicely in some cases.
             </p>
             <p>
-                An alternative would be to somehow ensure the content above
-                the second linked header is equal in height to the corresponding
+                An alternative would be to somehow ensure the content above the
+                second linked header is equal in height to the corresponding
                 sidebar section. This documentation does not have an idea on
                 exactly <i>how</i> you would do such a thing.
             </p>

@@ -19,16 +19,21 @@ permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
 import { ThemeSettings, ThemeSettingsKey } from "~/theme_settings";
-import {computed} from "#imports";
+import { computed } from "#imports";
 
 const currentYear = ref(new Date().getFullYear());
 const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
 
-const colorMode = computed(() => themeSettings?.value.dark_theme ? 'dark' : 'light');
-
+const colorMode = computed(() =>
+    themeSettings?.value.dark_theme ? "dark" : "light",
+);
 </script>
 <template>
-    <div class="uu-root-container" style="flex-basis: 100%" :data-bs-theme="colorMode">
+    <div
+        class="uu-root-container"
+        style="flex-basis: 100%"
+        :data-bs-theme="colorMode"
+    >
         <ClassicHeader v-if="themeSettings.header === 'classic'" />
         <UnifiedNavbar v-else />
         <slot />
@@ -37,11 +42,9 @@ const colorMode = computed(() => themeSettings?.value.dark_theme ? 'dark' : 'lig
                 <img src="~/assets/uu-logo-en-white.svg" />
             </div>
             <div class="col-12 col-md-8 text-md-end">
+                <p>Portaldev Bootstrap Theme</p>
                 <p>
-                    Portaldev Bootstrap Theme
-                </p>
-                <p>
-                    DH-IT Faculty Portal Development<br/>
+                    DH-IT Faculty Portal Development<br />
                     Utrecht University &copy; {{ currentYear }}
                 </p>
             </div>

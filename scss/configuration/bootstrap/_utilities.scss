@@ -1,12 +1,12 @@
-
 $utilities: map-merge(
-  $utilities,
-  (
-    "cursor": (
-      property: cursor,
-      class: cursor,
-      responsive: true,
-      values: auto pointer grab copy default help text none not-allowed progress wait zoom-in zoom-out,
+    $utilities,
+    (
+        "cursor": (
+            property: cursor,
+            class: cursor,
+            responsive: true,
+            values: auto pointer grab copy default help text none not-allowed
+                progress wait zoom-in zoom-out,
+        ),
     )
-  )
 );

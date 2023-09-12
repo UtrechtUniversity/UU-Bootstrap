@@ -21,14 +21,14 @@ permissions and limitations under the Licence.
 import Sidebar from "../../components/sidebar";
 
 interface Item {
-    id: number,
-    title: string,
-    applicant: string,
-    principal_investigator: string,
-    date_start: string,
-    status: number,
-    faculty: number,
-    favorite: boolean,
+    id: number;
+    title: string;
+    applicant: string;
+    principal_investigator: string;
+    date_start: string;
+    status: number;
+    faculty: number;
+    favorite: boolean;
 }
 
 const facultyMap = {
@@ -216,21 +216,22 @@ const filteredItems = computed(() => {
     const searchValue = search.value.toLowerCase();
 
     return items.value.filter((item) => {
-        if (favorites.value && !item.favorite)
-            return false;
+        if (favorites.value && !item.favorite) return false;
 
         if (statusFilters.value.length !== 0) {
-            if (!statusFilters.value.includes(item.status))
-                return false;
+            if (!statusFilters.value.includes(item.status)) return false;
         }
 
         if (facultyFilters.value.length !== 0) {
-            if (!facultyFilters.value.includes(item.faculty))
-                return false;
+            if (!facultyFilters.value.includes(item.faculty)) return false;
         }
 
         if (search.value) {
-            if (!item.applicant.includes(searchValue) && !item.title.toLowerCase().includes(searchValue) && !item.principal_investigator.toLowerCase().includes(searchValue))
+            if (
+                !item.applicant.includes(searchValue) &&
+                !item.title.toLowerCase().includes(searchValue) &&
+                !item.principal_investigator.toLowerCase().includes(searchValue)
+            )
                 return false;
         }
 
@@ -248,7 +249,7 @@ const sortedItems = computed(() => {
 const displayedItems = computed(() => {
     return sortedItems.value.slice(
         (currentPage.value - 1) * pageSize.value,
-        pageSize.value * currentPage.value
+        pageSize.value * currentPage.value,
     );
 });
 
@@ -256,36 +257,36 @@ const totalPages = computed<number>(() => {
     return Math.ceil(filteredItems.value.length / pageSize.value);
 });
 
-const pages = computed<number[]>(() => { return [...Array(totalPages.value).keys()].map(i => i + 1); });
+const pages = computed<number[]>(() => {
+    return [...Array(totalPages.value).keys()].map((i) => i + 1);
+});
 
-function toggleSelected (list, key: string|number) {
+function toggleSelected(list, key: string | number) {
     key = Number(key);
     const curVal = list.value.includes(key);
 
-    if (!curVal)
-        list.value.push(key);
+    if (!curVal) list.value.push(key);
     else {
         const index = list.value.indexOf(key);
-        if (index > -1)
-            list.value.splice(index, 1); // 2nd parameter means remove one item only
+        if (index > -1) list.value.splice(index, 1); // 2nd parameter means remove one item only
     }
 }
 
-function toggleStatus (key: string|number) {
+function toggleStatus(key: string | number) {
     toggleSelected(statusFilters, key);
 }
-function toggleFaculty (key: string|number) {
+function toggleFaculty(key: string | number) {
     toggleSelected(facultyFilters, key);
 }
 
-function statusColor (status: number) {
+function statusColor(status: number) {
     switch (status) {
         case 1:
-            return 'var(--bs-blue)';
+            return "var(--bs-blue)";
         case 2:
-            return 'var(--bs-red)';
+            return "var(--bs-red)";
         case 3:
-            return 'var(--bs-green)';
+            return "var(--bs-green)";
     }
 }
 </script>
@@ -299,14 +300,14 @@ function statusColor (status: number) {
             <h1>VWR PO list test</h1>
         </div>
         <Sidebar class="compact-sidebar" :sticky-sidebar="true">
-            <template #sidebar-button>
-                Filters
-            </template>
+            <template #sidebar-button> Filters </template>
             <template #sidebar>
-                <h1 class="uu-sidebar-header-linked">
-                    Filters
-                </h1>
-                <input v-model="search" class="form-control mt-2" placeholder="Zoeken..." />
+                <h1 class="uu-sidebar-header-linked">Filters</h1>
+                <input
+                    v-model="search"
+                    class="form-control mt-2"
+                    placeholder="Zoeken..."
+                />
 
                 <div class="mt-3 form-check">
                     <input
@@ -316,9 +317,15 @@ function statusColor (status: number) {
                         class="form-check-input"
                         @click="favorites = !favorites"
                     />
-                    <label class="form-check-label" for="favourite">Favorieten</label>
+                    <label class="form-check-label" for="favourite"
+                        >Favorieten</label
+                    >
                 </div>
-                <div v-for="(status, id) in statusMap" :key="id" class="mt-2 form-check">
+                <div
+                    v-for="(status, id) in statusMap"
+                    :key="id"
+                    class="mt-2 form-check"
+                >
                     <input
                         :id="'status' + id"
                         type="checkbox"
@@ -326,12 +333,16 @@ function statusColor (status: number) {
                         :value="id"
                         @click="toggleStatus(id)"
                     />
-                    <label class="form-check-label" :for="'status' + id">{{ status }}</label>
+                    <label class="form-check-label" :for="'status' + id">{{
+                        status
+                    }}</label>
                 </div>
-                <h3 class="mt-4">
-                    Faculteit
-                </h3>
-                <div v-for="(faculty, id) in facultyMap" :key="id" class="mt-2 form-check">
+                <h3 class="mt-4">Faculteit</h3>
+                <div
+                    v-for="(faculty, id) in facultyMap"
+                    :key="id"
+                    class="mt-2 form-check"
+                >
                     <input
                         :id="'faculty' + id"
                         type="checkbox"
@@ -339,51 +350,40 @@ function statusColor (status: number) {
                         :value="id"
                         @click="toggleFaculty(id)"
                     />
-                    <label class="form-check-label" :for="'faculty' + id">{{ faculty }}</label>
+                    <label class="form-check-label" :for="'faculty' + id">{{
+                        faculty
+                    }}</label>
                 </div>
             </template>
             <div class="h1 uu-sidebar-header-linked list-controls">
                 <div class="col-9 fs-4 text-muted">
-                    {{ (currentPage - 1) * pageSize + 1 }} tot {{ Math.min(currentPage * pageSize, filteredItems.length) }} van {{ filteredItems.length }} regristraties.
+                    {{ (currentPage - 1) * pageSize + 1 }} tot
+                    {{
+                        Math.min(currentPage * pageSize, filteredItems.length)
+                    }}
+                    van {{ filteredItems.length }} regristraties.
                 </div>
                 <div class="col-3">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>
-                            Sorteer op...
-                        </option>
-                        <option value="1">
-                            One
-                        </option>
-                        <option value="2">
-                            Two
-                        </option>
-                        <option value="3">
-                            Three
-                        </option>
+                    <select
+                        class="form-select"
+                        aria-label="Default select example"
+                    >
+                        <option selected>Sorteer op...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
                     </select>
                 </div>
             </div>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>
-                            Projectnaam
-                        </th>
-                        <th>
-                            Indiener
-                        </th>
-                        <th>
-                            PI
-                        </th>
-                        <th>
-                            Status
-                        </th>
-                        <th>
-                            Begindatum
-                        </th>
-                        <th>
-                            Tijd tot begindatum
-                        </th>
+                        <th>Projectnaam</th>
+                        <th>Indiener</th>
+                        <th>PI</th>
+                        <th>Status</th>
+                        <th>Begindatum</th>
+                        <th>Tijd tot begindatum</th>
                         <th />
                     </tr>
                 </thead>
@@ -403,31 +403,31 @@ function statusColor (status: number) {
                             {{ item.principal_investigator }}
                         </td>
                         <td
-                            :style="'border-left: 4px solid ' + statusColor(item.status)"
+                            :style="
+                                'border-left: 4px solid ' +
+                                statusColor(item.status)
+                            "
                         >
                             {{ statusMap[item.status] }}
                         </td>
                         <td class="text-center">
                             {{ item.date_start }}
                         </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            …
-                        </td>
+                        <td>&nbsp;</td>
+                        <td>…</td>
                     </tr>
                 </tbody>
             </table>
-            <ul class="pagination justify-content-center mt-4" role="navigation" aria-label="pagination">
+            <ul
+                class="pagination justify-content-center mt-4"
+                role="navigation"
+                aria-label="pagination"
+            >
                 <li
                     class="page-item page-button"
                     :class="currentPage === 1 ? 'disabled' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = (currentPage - 1)"
-                    >
+                    <a class="page-link" @click="currentPage = currentPage - 1">
                         Previous
                     </a>
                 </li>
@@ -435,12 +435,9 @@ function statusColor (status: number) {
                     v-for="item in pages"
                     :key="item"
                     class="page-item"
-                    :class="(item === currentPage ? 'active' : '')"
+                    :class="item === currentPage ? 'active' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = item"
-                    >
+                    <a class="page-link" @click="currentPage = item">
                         {{ item }}
                     </a>
                 </li>
@@ -448,10 +445,7 @@ function statusColor (status: number) {
                     class="page-item page-button"
                     :class="currentPage === totalPages ? 'disabled' : ''"
                 >
-                    <a
-                        class="page-link"
-                        @click="currentPage = (currentPage + 1)"
-                    >
+                    <a class="page-link" @click="currentPage = currentPage + 1">
                         Next
                     </a>
                 </li>
