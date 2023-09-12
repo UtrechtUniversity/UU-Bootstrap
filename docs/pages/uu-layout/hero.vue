@@ -22,7 +22,7 @@ import Prism from "vue-prism-component";
 import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
-const example_list = ref([
+const exampleList = ref([
     `<header class="uu-hero">
     <h1>Basic usage</h1>
 </header>`,
@@ -46,10 +46,17 @@ const example_list = ref([
     <div class="col-12">
         <h1>Content block hero</h1>
         <p>
-            You can also use this element as a UU container with a colored background. In fact, you could say a
-            UU hero is just such a container with a color background applied to it by default. It kinda is, kinda
-            isn't; mostly it isn't because it serves different function, but to be honest that's semantics. However,
-            semantics matter! Or so I've been told. And yes, I'm padding.
+            You can also use this element as a UU container with a colored background. You could
+            even say a UU hero is just such a container with a color background applied to it by
+            default. This is not entirely correct however, as UU containers have special padding
+            rules to avoid excessive padding.
+        </p>
+        <p>
+            If you were to use a UU container with a color helper class, the padding will probably
+            look weird. Using the UU Hero for this purposes avoids this issue, and is thus preferred.
+        </p>
+        <p>
+            And now for some text-padding;
         </p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis porttitor ante, eu malesuada dui
@@ -93,7 +100,7 @@ $uu-hero-font-weight: 400;
             </p>
             <p>Some examples of how you can use this element are at the bottom of this page.</p>
         </Sidebar>
-        <div v-for="example in example_list" class="uu-content">
+        <div v-for="example in exampleList" class="uu-content">
             <div class="uu-content" v-html="example" />
             <div class="uu-container">
                 <prism language="html" class="w-100">
