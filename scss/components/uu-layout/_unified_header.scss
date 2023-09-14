@@ -1,0 +1,218 @@
+@use "sass:map";
+
+.#{$uu-prefix}fullwidth-unified-header,
+.#{$uu-prefix}unified-header {
+    width: 100%;
+
+    background: var(--#{$uu-css-prefix}container-bg);
+
+    display: flex;
+    height: var(--#{$uu-css-prefix}unified-header-height);
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    font-size: 1rem;
+    padding-left: var(--#{$uu-css-prefix}unified-header-padding-x);
+    padding-right: var(--#{$uu-css-prefix}unified-header-padding-x);
+    border-bottom: var(--#{$uu-css-prefix}unified-header-border-size) solid
+        var(--#{$uu-css-prefix}border-color-light);
+
+    @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+        height: var(--#{$uu-css-prefix}unified-header-mobile-height);
+        padding-left: var(--#{$uu-css-prefix}unified-header-padding-mobile-x);
+        padding-right: var(--#{$uu-css-prefix}unified-header-padding-mobile-x);
+
+        position: sticky;
+        top: 0;
+        z-index: 9000;
+    }
+
+    .#{$uu-prefix}unified-header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: inherit;
+
+        .navbar-text {
+            padding-top: var(--#{$uu-css-prefix}header-padding-y);
+            padding-bottom: var(--#{$uu-css-prefix}header-padding-y);
+            align-items: center;
+            display: flex;
+            font-size: var(--bs-uu-header-font-size);
+        }
+
+        @each $x in [ "left", "right"] {
+            .border-#{$x} {
+                padding-#{$x}: var(--#{$uu-css-prefix}header-border-gap) !important;
+                border-#{$x}: var(--#{$uu-css-prefix}unified-header-border-size)
+                    solid
+                    var(--#{$uu-css-prefix}border-color-light) !important;
+            }
+        }
+
+        .#{$uu-prefix}brand {
+            flex: 1 0 auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: stretch;
+            padding: 0;
+
+            .#{$uu-prefix}logo {
+                height: var(--#{$uu-css-prefix}unified-header-height);
+                padding: var(--#{$uu-css-prefix}brand-padding-y)
+                    var(--#{$uu-css-prefix}brand-padding-x) var(--#{$uu-css-prefix}brand-padding-y)
+                    0;
+
+                @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                    height: var(--#{$uu-css-prefix}unified-header-mobile-height);
+                    padding: var(--#{$uu-css-prefix}brand-logo-padding-y)
+                        var(--#{$uu-css-prefix}brand-logo-padding-x);
+                }
+            }
+
+            @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                grid-template-columns: unset;
+                grid-template-rows: 1fr 1fr;
+                margin-left: 0;
+            }
+
+            .#{$uu-prefix}logo {
+                img {
+                    height: 100%;
+                }
+            }
+
+            .#{$uu-prefix}sender {
+                display: flex;
+                height: var(--#{$uu-css-prefix}unified-header-height);
+                align-items: center;
+                justify-content: center;
+                background: var(--#{$uu-css-prefix}brand-sender-bg);
+                color: var(--#{$uu-css-prefix}brand-sender-color);
+                font-family: "Merriweather", serif;
+                font-weight: bolder;
+                min-width: var(--#{$uu-css-prefix}brand-sender-min-width);
+                max-width: var(--#{$uu-css-prefix}brand-sender-max-width);
+                text-align: center;
+                padding: $uu-brand-padding-y $uu-brand-padding-x;
+
+                @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                    display: none;
+                }
+            }
+        }
+
+        > .#{$uu-prefix}logo img {
+            max-height: calc(
+                var(--#{$uu-css-prefix}unified-header-height) - calc(
+                        2 * var(--#{$uu-css-prefix}header-padding-y)
+                    )
+            );
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+            .navbar-toggler {
+                display: none;
+            }
+            .navbar-collapse {
+                display: flex;
+                padding: 0;
+                height: var(--#{$uu-css-prefix}unified-header-height);
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+            .navbar-collapse {
+                position: fixed;
+                top: var(--#{$uu-css-prefix}unified-header-mobile-height);
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        .navbar-nav {
+            height: var(--#{$uu-css-prefix}unified-header-height);
+
+            --#{$prefix}nav-link-color: #{$black};
+            --#{$prefix}nav-link-disabled-color: #{$gray-500};
+            --#{$prefix}nav-link-hover-border-color: #{$yellow};
+
+            @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                flex-direction: row;
+            }
+
+            .dropdown-menu {
+                --#{$prefix}dropdown-bg: #{$white};
+                border-top: none;
+
+                // Spacing fix, todo: figure out why BS places it offset
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+
+                @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                    position: absolute;
+                }
+
+                .dropdown-item.active,
+                .dropdown-item:active {
+                    color: inherit;
+                    background: inherit;
+                    font-weight: bold;
+                }
+            }
+
+            .nav-link {
+                @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                    padding: 0 var(--#{$uu-css-prefix}navbar-navlink-padding-x);
+
+                    display: flex;
+                    align-items: center;
+                    height: var(--#{$uu-css-prefix}unified-header-height);
+                    border-top: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height)
+                        solid transparent;
+                    border-bottom: var(--#{$uu-css-prefix}unified-header-navlink-indicator-height)
+                        solid transparent;
+                }
+
+                @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
+                    background: var(--#{$uu-css-prefix}unified-header-navlink-mobile-bg);
+                    color: var(--#{$uu-css-prefix}unified-header-navlink-mobile-color);
+                    padding-left: var(--#{$uu-css-prefix}container-padding-x);
+                    padding-right: var(--#{$uu-css-prefix}container-padding-x);
+                    border-top: var(--#{$uu-css-prefix}unified-header-border-size) solid
+                        var(--#{$uu-css-prefix}border-color-dark);
+                }
+
+                &.dropdown-toggle.show::after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .show > .nav-link,
+            .nav-link.active,
+            .nav-link:hover,
+            .nav-link.show {
+                border-bottom-color: var(--#{$prefix}nav-link-hover-border-color);
+            }
+        }
+    }
+}
+
+.#{$uu-prefix}unified-header {
+    padding-left: var(--#{$uu-css-prefix}container-padding-x);
+    padding-right: var(--#{$uu-css-prefix}container-padding-x);
+
+    @media (min-width: $uu-content-start-spacing-breakpoint) {
+        padding-left: $uu-content-spacing-padding-x;
+        padding-right: $uu-content-spacing-padding-x;
+    }
+}

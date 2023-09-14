@@ -1,2 +1,16 @@
-cover: Simona Evsatieva
-cover3: Dick Boetekees (UU copyright tho)
+All cover images used under the Unsplash License https://unsplash.com/license
+
+cover1.jpg:
+Photo by Mitchel Lensink
+Attribution HTML:
+Photo by <a href="https://unsplash.com/@lensinkmitchel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mitchel Lensink</a> on <a href="https://unsplash.com/photos/bH5b8o59vlI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+cover2.jpg:
+Photo by Max van den Oetelaar
+Attribution HTML:
+Photo by <a href="https://unsplash.com/@maxvdo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Max van den Oetelaar</a> on <a href="https://unsplash.com/photos/HtxypbwQEVM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+cover3.jpg
+Photo by Lieve Ransijn
+Attribution HTML:
+Photo by <a href="https://unsplash.com/es/@lievemax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lieve Ransijn</a> on <a href="https://unsplash.com/photos/WunbySkHf54?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

@@ -1,10 +1,10 @@
 .font-serif {
-  font-family: "Merriweather", serif;
+    font-family: "Merriweather", serif;
 }
 
 @for $i from 1 through 7 {
-  h#{$i}.hdr-underlined {
-    border-bottom: 0.0625rem solid $uu-border-color;
-    padding-bottom: $uu-sidebar-header-padding-y;
-  }
+    h#{$i}.hdr-underlined {
+        border-bottom: 0.0625rem solid $uu-border-color;
+        padding-bottom: $uu-sidebar-header-padding-y;
+    }
 }

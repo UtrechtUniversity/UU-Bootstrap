@@ -9,7 +9,7 @@
     @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
         background: $white !important;
         color: $black !important;
-        border-bottom: .0625rem solid var(--#{$uu-css-prefix}border-color);
+        border-bottom: 0.0625rem solid var(--#{$uu-css-prefix}border-color);
         flex-wrap: wrap;
         justify-content: space-between;
         position: sticky;
@@ -21,7 +21,9 @@
     .#{$uu-prefix}navbar-container {
         width: 100%;
         // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-        $-spaced-padding-x: calc(#{$uu-content-spacing-padding-x} - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
+        $-spaced-padding-x: calc(
+            #{$uu-content-spacing-padding-x} - var(--#{$uu-css-prefix}navbar-navlink-padding-x)
+        );
         padding-left: $-spaced-padding-x;
         padding-right: $-spaced-padding-x;
         display: flex;
@@ -31,7 +33,11 @@
 
         @media (max-width: $uu-content-start-spacing-breakpoint) {
             // We subtract the spacing of navlinks for better visual alignment with other spaced containers
-            $-padding-x: calc(var(--#{$uu-css-prefix}container-padding-x) - var(--#{$uu-css-prefix}navbar-navlink-padding-x));
+            $-padding-x: calc(
+                var(--#{$uu-css-prefix}container-padding-x) - var(
+                        --#{$uu-css-prefix}navbar-navlink-padding-x
+                    )
+            );
             padding-left: $-padding-x;
             padding-right: $-padding-x;
         }
@@ -52,7 +58,6 @@
         img {
             height: 1.5rem;
         }
-
     }
 
     @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
@@ -66,7 +71,6 @@
     }
 
     .navbar-nav {
-
         --#{$prefix}nav-link-color: #{$white};
         --#{$prefix}nav-link-disabled-color: #{$gray-500};
         --#{$prefix}nav-link-hover-color: #{$yellow};
@@ -76,6 +80,7 @@
         }
 
         .dropdown-menu {
+            --#{$prefix}dropdown-bg: #{$white};
             border-top: none;
 
             &[data-bs-popper] {
@@ -87,7 +92,8 @@
                 position: absolute;
             }
 
-            .dropdown-item.active, .dropdown-item:active {
+            .dropdown-item.active,
+            .dropdown-item:active {
                 color: inherit;
                 background: inherit;
                 font-weight: bold;
@@ -95,16 +101,16 @@
         }
 
         .nav-link {
-
             @media (min-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
-                padding: var(--#{$uu-css-prefix}navbar-navlink-padding-y) var(--#{$uu-css-prefix}navbar-navlink-padding-x);
+                padding: var(--#{$uu-css-prefix}navbar-navlink-padding-y)
+                    var(--#{$uu-css-prefix}navbar-navlink-padding-x);
             }
 
             @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {
                 background: $black;
                 padding-left: var(--#{$uu-css-prefix}container-padding-x);
                 padding-right: var(--#{$uu-css-prefix}container-padding-x);
-                border-top: .0625rem solid var(--#{$uu-css-prefix}border-color-dark);
+                border-top: 0.0625rem solid var(--#{$uu-css-prefix}border-color-dark);
             }
 
             &.dropdown-toggle.show::after {
@@ -113,7 +119,8 @@
         }
 
         .show > .nav-link,
-        .nav-link.active {
+        .nav-link.active,
+        .nav-link.show {
             color: var(--#{$prefix}nav-link-hover-color);
         }
     }

@@ -1,8 +1,9 @@
 .btn {
     font-weight: bold;
 
-    &.btn-arrow-right, &.btn-arrow-left {
-        &:not([class^='btn-outline']):not([class*=' btn-outline']) {
+    &.btn-arrow-right,
+    &.btn-arrow-left {
+        &:not([class^="btn-outline"]):not([class*=" btn-outline"]) {
             // The border interferes with the arrow, so we remove it from non-outlined buttons
             // We add the original border width to padding such that it will have the same size as other buttons
             --#{$prefix}btn-border-width: 0;
@@ -10,14 +11,36 @@
             --#{$prefix}btn-padding-y: calc(#{$btn-padding-y} + #{$btn-border-width});
         }
 
-        &::after, &::before {
+        &.btn-sm {
+            &:not([class^="btn-outline"]):not([class*=" btn-outline"]) {
+                // The border interferes with the arrow, so we remove it from non-outlined buttons
+                // We add the original border width to padding such that it will have the same size as other buttons
+                --#{$prefix}btn-border-width: 0;
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-sm} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+            }
+        }
+
+        &.btn-lg {
+            &:not([class^="btn-outline"]):not([class*=" btn-outline"]) {
+                // The border interferes with the arrow, so we remove it from non-outlined buttons
+                // We add the original border width to padding such that it will have the same size as other buttons
+                --#{$prefix}btn-border-width: 0;
+                --#{$prefix}btn-padding-x: calc(#{$btn-padding-x-lg} + #{$btn-border-width});
+                --#{$prefix}btn-padding-y: calc(#{$btn-padding-y-lg} + #{$btn-border-width});
+            }
+        }
+
+        &::after,
+        &::before {
             display: inline-block;
             font-weight: 900;
-            border: .0625rem solid transparent;
+            border: 0.0625rem solid transparent;
             @include transition($btn-transition);
         }
 
-        &:hover::after, &:hover::before {
+        &:hover::after,
+        &:hover::before {
             background: var(--#{$prefix}btn-hover-color);
             color: var(--#{$prefix}btn-hover-bg);
             border-color: black;
@@ -25,18 +48,24 @@
     }
 
     &.btn-arrow-right::after {
-        content: '＞';
-        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x)) var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
-        margin: calc(0px - var(--#{$prefix}btn-padding-y)) calc(0px - var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y)) calc(0.7 * var(--#{$prefix}btn-padding-x));
+        content: "＞";
+        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
+        margin: calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0px - var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0.7 * var(--#{$prefix}btn-padding-x));
 
         border-top-right-radius: var(--#{$prefix}btn-border-radius);
         border-bottom-right-radius: var(--#{$prefix}btn-border-radius);
     }
 
     &.btn-arrow-left::before {
-        content: '＜';
-        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x)) var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
-        margin: calc(0px - var(--#{$prefix}btn-padding-y)) calc(0.7 * var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y)) calc(0px - var(--#{$prefix}btn-padding-x));
+        content: "＜";
+        padding: var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x))
+            var(--#{$prefix}btn-padding-y) calc(0.8 * var(--#{$prefix}btn-padding-x));
+        margin: calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0.7 * var(--#{$prefix}btn-padding-x)) calc(0px - var(--#{$prefix}btn-padding-y))
+            calc(0px - var(--#{$prefix}btn-padding-x));
 
         border-top-left-radius: var(--#{$prefix}btn-border-radius);
         border-bottom-left-radius: var(--#{$prefix}btn-border-radius);
@@ -51,7 +80,7 @@
         }
 
         &::after {
-            border: .125rem solid #000;
+            border: 0.125rem solid #000;
             border-radius: 999999px;
             border-top-color: transparent !important;
             content: "";
@@ -59,9 +88,9 @@
             height: 1em;
             width: 1em;
             position: absolute;
-            left: calc(50% - (1em * .5));
-            top: calc(50% - (1em * .5));
-            animation: spinner-border .5s infinite linear;
+            left: calc(50% - (1em * 0.5));
+            top: calc(50% - (1em * 0.5));
+            animation: spinner-border 0.5s infinite linear;
         }
 
         @each $name, $color in $theme-colors {
@@ -70,7 +99,6 @@
             }
         }
     }
-
 }
 
 .btn-group {

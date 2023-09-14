@@ -7,7 +7,7 @@
     --#{$prefix}modal-nav-tabs-hover-color: #{$modal-nav-tabs-hover-color};
     --#{$prefix}modal-nav-tabs-hover-bg: #{$modal-nav-tabs-hover-bg};
 
-    margin-bottom: calc(0px  - var(--#{$prefix}modal-header-padding-y));
+    margin-bottom: calc(0px - var(--#{$prefix}modal-header-padding-y));
     border-bottom: 0;
     gap: var(--#{$prefix}modal-nav-tabs-gap);
     overflow-x: auto;
@@ -27,7 +27,8 @@
         border-color: transparent;
     }
 
-    .nav-link:not(.active):hover, .nav-link:not(.active):focus {
+    .nav-link:not(.active):hover,
+    .nav-link:not(.active):focus {
         color: var(--#{$prefix}modal-nav-tabs-hover-color);
         background-color: var(--#{$prefix}modal-nav-tabs-hover-bg);
         border-color: transparent;

@@ -1,4 +1,5 @@
 .tiles {
+    // Dark mode vars at end of file!
     --#{$prefix}tiles-gap: #{$tiles-gap};
     --#{$prefix}tiles-padding: #{$tiles-padding};
     --#{$prefix}tiles-bg: #{$tiles-bg};
@@ -16,10 +17,7 @@
     width: 100%;
     display: grid;
     gap: var(--#{$prefix}tiles-gap);
-    grid-template-columns: repeat(
-        var(--#{$prefix}tiles-n),
-        1fr
-    );
+    grid-template-columns: repeat(var(--#{$prefix}tiles-n), 1fr);
 
     .tile {
         display: flex;
@@ -28,7 +26,7 @@
         align-items: center;
 
         padding: var(--#{$prefix}tiles-padding);
-        aspect-ratio: 1 / 1 ;
+        aspect-ratio: 1 / 1;
 
         background: var(--#{$prefix}tiles-bg);
         color: var(--#{$prefix}tiles-color);
@@ -43,19 +41,30 @@
         }
     }
 
-    a.tile, .tile a {
+    a.tile,
+    .tile a {
         cursor: pointer;
         text-decoration: none;
     }
 
-     @each $breakpoint in map-keys($grid-breakpoints) {
-         $infix: breakpoint-infix($breakpoint);
-         @include media-breakpoint-up($breakpoint) {
-             @for $n from 1 through 12 {
-                 &.tiles-n#{$infix}-#{$n} {
-                     --#{$prefix}tiles-n: #{$n} !important;
-                 }
-             }
-         }
-     }
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint);
+        @include media-breakpoint-up($breakpoint) {
+            @for $n from 1 through 12 {
+                &.tiles-n#{$infix}-#{$n} {
+                    --#{$prefix}tiles-n: #{$n} !important;
+                }
+            }
+        }
+    }
+}
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .tiles {
+            --#{$prefix}tiles-bg: #{$tiles-bg-dark};
+            --#{$prefix}tiles-color: #{$tiles-color-dark};
+            --#{$prefix}tiles-hover-bg: #{$tiles-hover-bg-dark};
+            --#{$prefix}tiles-hover-color: #{$tiles-hover-color-dark};
+        }
+    }
 }
