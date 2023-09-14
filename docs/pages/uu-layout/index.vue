@@ -23,7 +23,7 @@ import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 // As a var because stuff breaks otherwise
-const full_page_code = ref(`<body>
+const fullPageCode = ref(`<body>
     <div class="uu-root-container">
         <!--header, see header pages-->
         <!--navbar, see navbar page-->
@@ -69,7 +69,7 @@ const full_page_code = ref(`<body>
             </p>
             <p>Full example for a page:</p>
             <prism language="html" class="w-100">
-                {{ full_page_code }}
+                {{ fullPageCode }}
             </prism>
         </Sidebar>
         <Sidebar placement="right" mobile-placement="bottom" :mobile-sticky-sidebar="true">
@@ -93,8 +93,8 @@ $uu-border-color-dark: $gray-800;
             </template>
             <h2 class="uu-sidebar-header-linked">Root container</h2>
             <p>
-                The root element for all UU layout pages is the
-                <i>root container</i>, which should be a child div below the body tag.
+                The root element for all UU layout pages is the <i>root container</i>, which should
+                be a child div below the body tag.
             </p>
             <p>
                 It's is a very simple flexbox with a max-width and white background. However, it
@@ -152,16 +152,24 @@ $uu-border-color-dark: $gray-800;
                 for layouting, but any other flexbox based layouting is supported too.
             </p>
             <p>
-                Tip: you can use Bootstrap's flex helpers like
-                <code>.flex-column</code> and <code>.justify-content-*</code> on the container
-                element for advanced flexbox stuff.
+                Tip: you can use Bootstrap's flex helpers like <code>.flex-column</code> and
+                <code>.justify-content-*</code> on the container element for advanced flexbox use.
+            </p>
+            <p>
+                It is possible, and even encouraged, to use multiple
+                <code class="text-nowrap">.uu-container</code> elements next to each other to
+                vertically separate sections of a page. A good rule of thumb is to use a new
+                container for every header on your page.
+            </p>
+            <p>
+                This will ensure consistent padding on the page, as you're relying on the build-in
+                rules for padding.
             </p>
             <h3>Fullwidth container</h3>
             <p>
                 The regular UU Layout container has the nice 'spaced' code applied to it, limiting
-                it to
-                <code class="text-nowrap">$content-width</code>. If you have an interface which for
-                whatever reason needs more width, you can use
+                it to <code class="text-nowrap">$content-width</code>. If you have an interface
+                which for whatever reason needs more width, you can use
                 <code class="text-nowrap">.uu-fullwidth-container</code>
                 instead. This container class will give you the entire width of the root container.
             </p>
@@ -173,9 +181,9 @@ $uu-border-color-dark: $gray-800;
             <h3>Other <i>content elements</i></h3>
             <p>
                 Other content elements are
-                <NuxtLink to="/uu-layout/cover/"> Cover </NuxtLink>,
-                <NuxtLink to="/uu-layout/hero/"> Hero </NuxtLink> and
-                <NuxtLink to="/uu-layout/sidebar/"> Sidebar </NuxtLink>.
+                <NuxtLink to="/uu-layout/cover/">Cover</NuxtLink>,
+                <NuxtLink to="/uu-layout/hero/">Hero</NuxtLink> and
+                <NuxtLink to="/uu-layout/sidebar/">Sidebar</NuxtLink>.
             </p>
         </Sidebar>
         <Sidebar placement="right" mobile-placement="bottom" :mobile-sticky-sidebar="true">
@@ -191,25 +199,20 @@ $uu-footer-background-color: $gray-850;
                 </prism>
             </template>
             <h2 class="uu-sidebar-header-linked">Footer</h2>
-            <p>I'm tired, so a short summary:</p>
-            <ul>
-                <li>It's a footer</li>
-                <li>
-                    Use <code>.uu-footer</code> on a <code>div</code> or (preferably) a
-                    <code>footer</code> element
-                </li>
-                <li>
-                    It's a flexbox thing, same layouting requirements as basically every other
-                    element described on this page
-                </li>
-                <li>
-                    It's convention to use the white/black UU logo as the leftmost element, but not
-                    required
-                    <ul>
-                        <li>For example, the corporate site has a sitemap there instead</li>
-                    </ul>
-                </li>
-            </ul>
+            <p>
+                A special content element to serve as the footer. It behaves like a normal
+                <code class="text-nowrap">uu-container</code> in most ways except padding. Thus, it
+                is possible to use both flexbox as well as Bootstrap's <code>.col-*</code> classes
+                inside of this element for layouting.
+            </p>
+            <p>
+                It is generally recommend to use a <code>&lt;footer&gt;</code> element, which will
+                help automated tools understand the page better.
+            </p>
+            <p>
+                It's convention to use the white/black UU logo as the leftmost element, but not
+                required. For example, the corporate site has a sitemap there instead.
+            </p>
         </Sidebar>
     </div>
 </template>
