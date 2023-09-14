@@ -1,4 +1,4 @@
-$enable-dark-mode: true; // disabled for now TODO actually disable this lol
+$enable-dark-mode: false; // disabled for now
 
 //// UU Color pallette
 // Primary colors
@@ -85,4 +85,3 @@ $theme-colors: (
 $theme-colors: map-merge($theme-colors, $colors);
 
 $link-color: $black;
-$body-bg: #f6f6f6;

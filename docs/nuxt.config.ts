@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            dark_mode: true,
+            dark_mode: false,
         },
     },
 

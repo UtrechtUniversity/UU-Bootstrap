@@ -3,7 +3,7 @@ import { ThemeSettingsKey } from "~/theme_settings";
 import ThemeSettingsModal from "~/components/ThemeSettingsModal.vue";
 
 const themeSettings = ref({
-    header: "unified",
+    header: "classic",
     showSettings: false,
     dark_theme: false,
     unifiedHeaderSettings: {
