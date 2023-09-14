@@ -61,13 +61,14 @@ const loading = ref(false);
             <h1 class="uu-sidebar-header-linked">Buttons</h1>
             <p>
                 Buttons are mostly untouched. Just a couple of small additions; Remember to set a
-                coloring class!
+                button variant (coloring) class!
             </p>
             <h3 class="hdr-underlined">Button arrows</h3>
-            <p>Fancy arrows added to a button! As seen on uu.nl!</p>
+            <p>One addition is the 'navigation' arrows commonly used on UU websites.</p>
             <p>
-                Just add <code>.btn-arrow-left</code> or <code>.btn-arrow-right</code> to your
-                <code>.btn</code>. Note: while working with outlined buttons, it doesn't look good.
+                Add <code>.btn-arrow-left</code> or <code>.btn-arrow-right</code> to your
+                <code>.btn</code>. Note: while it does work with outlined buttons, it doesn't look
+                good.
             </p>
             <div class="btn-group">
                 <button class="btn btn-secondary btn-arrow-left">Previous page</button>
@@ -76,9 +77,9 @@ const loading = ref(false);
             <h3 class="hdr-underlined mt-4">Button group</h3>
             <p>
                 Button groups in Bootstrap normally join buttons together. We've introduced a new
-                variable that set's the flexbox's gap parameter.
+                variable (<code class="text-nowrap">$btn-group-gap</code>) that set's the flexbox's
+                gap parameter.
             </p>
-            <p>Nothing fancy, but it looks nicer:</p>
             <div class="btn-group">
                 <button class="btn btn-primary">Save</button>
                 <button class="btn btn-secondary">Cancel</button>
@@ -86,9 +87,9 @@ const loading = ref(false);
             </div>
             <h3 class="hdr-underlined mt-3">Loading</h3>
             <p>
-                If you've got some action bound to a button that might take a sec, you can add the
-                <code>.btn-loading</code> class that will display a nice spinner inside the button.
-                Try it out:
+                If you've got some action bound to a button that might take a a few seconds, you can
+                add the <code>.btn-loading</code> class that will display a nice spinner inside the
+                button. For example:
             </p>
             <div class="btn-group">
                 <button
