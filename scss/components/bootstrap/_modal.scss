@@ -4,8 +4,19 @@
     --#{$prefix}modal-header-font-weight: #{$modal-header-font-weight};
 
     .modal-header {
-        background-color:var(--#{$prefix}modal-header-bg);
+        background-color: var(--#{$prefix}modal-header-bg);
         color: var(--#{$prefix}modal-header-color);
         font-weight: var(--#{$prefix}modal-header-font-weight);
+    }
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .modal {
+            --#{$prefix}modal-bg: #{$modal-content-bg-dark};
+            --#{$prefix}modal-color: #{$modal-content-color-dark};
+            --#{$prefix}modal-header-bg: #{$modal-header-bg-dark};
+            --#{$prefix}modal-header-color: #{$modal-header-color-dark};
+        }
     }
 }

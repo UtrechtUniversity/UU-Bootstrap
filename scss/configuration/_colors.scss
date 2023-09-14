@@ -1,82 +1,87 @@
+$enable-dark-mode: false; // disabled for now
+
 //// UU Color pallette
 // Primary colors
-$yellow:          #FFCD00;
-$red:             #C00A35;
+$yellow: #ffcd00;
+$red: #c00a35;
 // Secondary colors
-$cream:           #FFE6AB;
-$orange:          #F3965E;
-$bordeaux-red:    #AA1555;
-$brown:           #6E3B23;
-$teal:            #24A793; // UU calls this Green, but it looks teal
-$blue:            #5287C6;
-$dark-blue:       #001240;
-$purple:          #5B2182;
+$cream: #ffe6ab;
+$orange: #f3965e;
+$bordeaux-red: #aa1555;
+$brown: #6e3b23;
+$teal: #24a793; // UU calls this Green, but it looks teal
+$blue: #5287c6;
+$dark-blue: #001240;
+$purple: #5b2182;
 
 // Bootstrap colors
-$white:           #fff;
-$gray-050:        #f8f8f8;
-$gray-100:        #efefef;
-$gray-200:        #e9e9e9;
-$gray-300:        #dedede;
-$gray-400:        #cecece;
-$gray-500:        #adadad;
-$gray-600:        #6c6c6c;
-$gray-700:        #494949;
-$gray-800:        #343434;
+$white: #fff;
+$gray-050: #f8f8f8;
+$gray-100: #efefef;
+$gray-200: #e9e9e9;
+$gray-300: #dedede;
+$gray-400: #cecece;
+$gray-500: #adadad;
+$gray-600: #6c6c6c;
+$gray-700: #494949;
+$gray-800: #343434;
 // In between, custom
-$gray-850:        #262626;
-$gray-900:        #212121;
-$black:           #000;
+$gray-850: #262626;
+$gray-900: #212121;
+// In between, custom
+$gray-950: #171717;
+$black: #000;
 
-$indigo:          #6610f2;
-$pink:            #d63384;
-$green:           #2db83d;
-$cyan:            #0dcaf0;
+$indigo: #6610f2;
+$pink: #d63384;
+$green: #2db83d;
+$cyan: #0dcaf0;
 
-$primary:         $yellow;
-$secondary:       $black;
-$success:         $green;
-$info:            $cyan;
-$warning:         $orange;
-$danger:          $red;
-$error:           $danger;
-$light:           $gray-100;
-$dark:            $gray-850;
+$primary: $yellow;
+$secondary: $black;
+$success: $green;
+$info: $cyan;
+$warning: $orange;
+$danger: $red;
+$error: $danger;
+$light: $gray-100;
+$dark: $gray-850;
+
+$body-color: $gray-900;
 
 $colors: (
-  "blue":         $blue,
-  "dark-blue":    $dark-blue,
-  "indigo":       $indigo,
-  "purple":       $purple,
-  "pink":         $pink,
-  "red":          $red,
-  "bordeaux-red": $bordeaux-red,
-  "brown":        $brown,
-  "cream":        $cream,
-  "orange":       $orange,
-  "yellow":       $yellow,
-  "green":        $green,
-  "teal":         $teal,
-  "cyan":         $cyan,
-  "white":        $white,
-  "gray":         $gray-600,
-  "gray-dark":    $gray-800
+    "blue": $blue,
+    "dark-blue": $dark-blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "bordeaux-red": $bordeaux-red,
+    "brown": $brown,
+    "cream": $cream,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800,
 );
 
 $theme-colors: (
-  "primary":      $primary,
-  "secondary":    $secondary,
-  "success":      $success,
-  "info":         $info,
-  "warning":      $warning,
-  "danger":       $danger,
-  "error":        $error,
-  "light":        $light,
-  "dark":         $dark
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "error": $error,
+    "light": $light,
+    "dark": $dark,
 );
 
 // All colors accessible
 $theme-colors: map-merge($theme-colors, $colors);
 
 $link-color: $black;
-$body-bg: #F6F6F6;

@@ -18,8 +18,8 @@ See the Licence for the specific language governing
 permissions and limitations under the Licence.
 -->
 <script lang="ts" setup>
-import Prism from 'vue-prism-component';
-import Sidebar from '@/components/sidebar';
+import Prism from "vue-prism-component";
+import Sidebar from "@/components/sidebar";
 import UuLayoutNav from "~/components/uu-layout-nav.vue";
 
 // As a var because stuff breaks otherwise
@@ -84,27 +84,20 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
         </div>
     </div>
 </nav>`);
-
 </script>
 <template>
     <div class="uu-content">
         <Head>
-            <Title>
-                Navbar | UU Layout | Portaldev Bootstrap theme docs
-            </Title>
+            <Title> Navbar | UU Layout | Portaldev Bootstrap theme docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Navbar</h1>
         </div>
         <Sidebar placement="right">
-            <template #sidebar-button>
-                Sidebar
-            </template>
+            <template #sidebar-button> Sidebar </template>
             <template #sidebar>
                 <uu-layout-nav />
-                <h2 class="mt-3">
-                    Variables
-                </h2>
+                <h2 class="mt-3">Variables</h2>
                 <Prism language="scss" class="w-100">
                     <pre>
 $uu-navbar-breakpoint: md;
@@ -115,18 +108,18 @@ $uu-navbar-navlink-padding-y: .75rem;
                 </Prism>
             </template>
             <p>
-                The UU layout navbar is mostly identical to the regular Bootstrap navbar (which it extends);
-                the only differences are:
+                The UU layout navbar is mostly identical to the regular Bootstrap navbar (which it
+                extends); the only differences are:
             </p>
             <ul>
+                <li>It has a <code>.uu-navbar</code> class on the <code>.navbar</code> element.</li>
                 <li>
-                    It has a <code>.uu-navbar</code> class on the <code>.navbar</code> element.
+                    The internal container must be a
+                    <code>.uu-navbar-container</code>.
                 </li>
                 <li>
-                    The internal container must be a <code>.uu-navbar-container</code>.
-                </li>
-                <li>
-                    You don't need to use <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the <code>.navbar</code>.
+                    You don't need to use
+                    <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> on the <code>.navbar</code>.
                     The UU navbar has all the CSS normally provided by those classes.
                     <ul>
                         <li>
@@ -136,16 +129,12 @@ $uu-navbar-navlink-padding-y: .75rem;
                     </ul>
                 </li>
                 <li>
-                    The <code>.navbar-brand</code> must only contain an <code>img</code> (of the UU logo). (Optionally
-                    wrapped in a link)
+                    The <code>.navbar-brand</code> must only contain an <code>img</code> (of the UU
+                    logo). (Optionally wrapped in a link)
                 </li>
             </ul>
-            <p>
-                The rest is identical in use to the normal Navbar
-            </p>
-            <p>
-                Full example:
-            </p>
+            <p>The rest is identical in use to the normal Navbar</p>
+            <p>Full example:</p>
             <prism language="html" class="w-100">
                 {{ navbar_example }}
             </prism>

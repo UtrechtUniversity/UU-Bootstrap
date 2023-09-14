@@ -8,7 +8,8 @@
         }
     }
 
-    .#{$uu-prefix}form-row, .#{$uu-prefix}form-text-row {
+    .#{$uu-prefix}form-row,
+    .#{$uu-prefix}form-text-row {
         display: grid;
         margin-bottom: var(--#{$uu-css-prefix}form-row-gap);
 
@@ -26,26 +27,32 @@
             background-color: var(--#{$uu-css-prefix}form-field-bg);
             // The compensation is mostly for visual purposes. With symmetrical padding it doesn't look symmetrical
             // Probably something to do with line-heights etc
-            padding:
-                calc(var(--#{$uu-css-prefix}form-field-padding-y) - var(--#{$uu-css-prefix}form-field-padding-y-compensation))
+            padding: calc(
+                    var(--#{$uu-css-prefix}form-field-padding-y) - var(
+                            --#{$uu-css-prefix}form-field-padding-y-compensation
+                        )
+                )
                 var(--#{$uu-css-prefix}form-field-padding-y)
                 var(--#{$uu-css-prefix}form-field-padding-y);
 
-            .input-group-text, .form-control::file-selector-button {
+            .input-group-text,
+            .form-control::file-selector-button {
                 background: var(--#{$uu-css-prefix}form-field-input-group-bg);
             }
         }
 
         .#{$uu-prefix}form-help {
             @extend %aside;
-            padding: var(--#{$uu-css-prefix}form-help-padding-y) var(--#{$uu-css-prefix}form-help-padding-x);
+            padding: var(--#{$uu-css-prefix}form-help-padding-y)
+                var(--#{$uu-css-prefix}form-help-padding-x);
         }
     }
 
     .#{$uu-prefix}form-text-row {
         .#{$uu-prefix}form-text {
             @for $i from 1 through 7 {
-                .h#{$i}:last-child, h#{$i}:last-child {
+                .h#{$i}:last-child,
+                h#{$i}:last-child {
                     margin-bottom: 0;
                 }
             }
@@ -82,7 +89,8 @@
     }
 
     // Removes the asides from form text rows
-    &.#{$uu-prefix}form-no-aside .#{$uu-prefix}form-text-row, .#{$uu-prefix}form-text-row.#{$uu-prefix}form-no-aside {
+    &.#{$uu-prefix}form-no-aside .#{$uu-prefix}form-text-row,
+    .#{$uu-prefix}form-text-row.#{$uu-prefix}form-no-aside {
         grid-template-rows: 1fr;
 
         @include media-breakpoint-up($uu-form-breakpoint) {
@@ -96,7 +104,8 @@
     }
 
     // Removes the help texts from form rows
-    &.#{$uu-prefix}form-no-help .#{$uu-prefix}form-row, .#{$uu-prefix}form-row.#{$uu-prefix}form-no-help {
+    &.#{$uu-prefix}form-no-help .#{$uu-prefix}form-row,
+    .#{$uu-prefix}form-row.#{$uu-prefix}form-no-help {
         grid-template-rows: 1fr;
 
         @include media-breakpoint-up($uu-form-breakpoint) {

@@ -1,13 +1,15 @@
 @use "sass:math";
 
 .stepper {
+    // Dark theme colors at the end of the file
+    --#{$prefix}stepper-color: #{$stepper-color};
     --#{$prefix}stepper-disabled-color: #{$stepper-disabled-color};
     --#{$prefix}stepper-complete-bg: #{$stepper-complete-bg};
-    --#{$prefix}stepper-complete-color: #{color-contrast($stepper-complete-bg)};
+    --#{$prefix}stepper-complete-color: #{$stepper-complete-color};
     --#{$prefix}stepper-incomplete-bg: #{$stepper-incomplete-bg};
-    --#{$prefix}stepper-incomplete-color: #{color-contrast($stepper-incomplete-bg)};
+    --#{$prefix}stepper-incomplete-color: #{$stepper-incomplete-color};
     --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg};
-    --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg)};
+    --#{$prefix}stepper-inactive-color: #{$stepper-inactive-color};
     --#{$prefix}stepper-min-width: #{$stepper-min-width};
     --#{$prefix}stepper-padding-y: #{$stepper-padding-y};
     --#{$prefix}stepper-line-width: #{$stepper-line-width};
@@ -18,10 +20,11 @@
 
     a {
         text-decoration: none;
+        color: var(--#{$prefix}stepper-color);
     }
 
     > ul::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         left: calc(#{$stepper-bubble-max-size} / 2 - 1px);
@@ -55,18 +58,22 @@
                     font-style: italic;
                 }
 
-                &.complete .stepper-bubble, .stepper-bubble.complete,
-                &.finished .stepper-bubble, .stepper-bubble.finished {
+                &.complete .stepper-bubble,
+                .stepper-bubble.complete,
+                &.finished .stepper-bubble,
+                .stepper-bubble.finished {
                     background: var(--#{$prefix}stepper-complete-bg);
                     color: var(--#{$prefix}stepper-complete-color);
                 }
 
-                &.incomplete .stepper-bubble, .stepper-bubble.incomplete {
+                &.incomplete .stepper-bubble,
+                .stepper-bubble.incomplete {
                     background: var(--#{$prefix}stepper-incomplete-bg);
                     color: var(--#{$prefix}stepper-incomplete-color);
                 }
 
-                &.disabled .stepper-bubble, .stepper-bubble.disabled {
+                &.disabled .stepper-bubble,
+                .stepper-bubble.disabled {
                     font-style: normal;
                 }
 
@@ -83,9 +90,15 @@
 
                     @each $size, $portion in $stepper-bubble-size-map {
                         &.stepper-bubble-#{$size} {
-                            $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) * math.div($portion, $stepper-bubble-num-sizes) + $stepper-bubble-min-size;
+                            $actual-size: ($stepper-bubble-max-size - $stepper-bubble-min-size) *
+                                math.div($portion, $stepper-bubble-num-sizes) +
+                                $stepper-bubble-min-size;
                             $spacing: math.div($stepper-bubble-max-size - $actual-size, 2);
-                            $indent: math.div($stepper-bubble-num-sizes - $portion, $stepper-bubble-num-sizes) * $stepper-max-indent;
+                            $indent: math.div(
+                                    $stepper-bubble-num-sizes - $portion,
+                                    $stepper-bubble-num-sizes
+                                ) *
+                                $stepper-max-indent;
                             width: $actual-size;
                             height: $actual-size;
                             margin-left: $spacing;
@@ -103,6 +116,21 @@
             > ul {
                 padding-top: var(--#{$prefix}stepper-padding-y);
             }
+        }
+    }
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .stepper {
+            --#{$prefix}stepper-color: #{$stepper-color-dark};
+            --#{$prefix}stepper-disabled-color: #{$stepper-disabled-color-dark};
+            --#{$prefix}stepper-complete-bg: #{$stepper-complete-bg-dark};
+            --#{$prefix}stepper-complete-color: #{$stepper-complete-color-dark};
+            --#{$prefix}stepper-incomplete-bg: #{$stepper-incomplete-bg-dark};
+            --#{$prefix}stepper-incomplete-color: #{$stepper-incomplete-color-dark};
+            --#{$prefix}stepper-inactive-bg: #{$stepper-inactive-bg-dark};
+            --#{$prefix}stepper-inactive-color: #{color-contrast($stepper-inactive-bg-dark)};
         }
     }
 }

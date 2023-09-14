@@ -17,12 +17,36 @@ express or implied.
 * See the Licence for the specific language governing
 permissions and limitations under the Licence.
 */
-import { Alert, Button, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap';
+import {
+    Alert,
+    Button,
+    Collapse,
+    Dropdown,
+    Modal,
+    Offcanvas,
+    Popover,
+    ScrollSpy,
+    Tab,
+    Toast,
+    Tooltip,
+} from "bootstrap";
 
 export default defineNuxtPlugin(() => {
     return {
         provide: {
-            bootstrap: { Alert, Button, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip }
-        }
+            bootstrap: {
+                Alert,
+                Button,
+                Collapse,
+                Dropdown,
+                Modal,
+                Offcanvas,
+                Popover,
+                ScrollSpy,
+                Tab,
+                Toast,
+                Tooltip,
+            },
+        },
     };
 });

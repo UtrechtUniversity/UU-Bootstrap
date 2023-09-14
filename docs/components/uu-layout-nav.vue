@@ -19,39 +19,32 @@ permissions and limitations under the Licence.
 -->
 <template>
     <div class="w-100">
-        <h2>
-            UU Layout
-        </h2>
+        <h2>UU Layout</h2>
         <ul class="nav">
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/" class="nav-link">
-                    Overview
+                <NuxtLink to="/uu-layout/" class="nav-link"> Overview </NuxtLink>
+            </li>
+            <li class="nav-item">
+                <NuxtLink to="/uu-layout/classic-header/" class="nav-link">
+                    Classic Header & Navbar
                 </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/navbar/" class="nav-link">
-                    Navbar
+                <NuxtLink to="/uu-layout/unified-header/" class="nav-link">
+                    Unified Header
                 </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/cover/" class="nav-link">
-                    Cover
-                </NuxtLink>
+                <NuxtLink to="/uu-layout/cover/" class="nav-link"> Cover </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/hero/" class="nav-link">
-                    Hero
-                </NuxtLink>
+                <NuxtLink to="/uu-layout/hero/" class="nav-link"> Hero </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/sidebar/" class="nav-link">
-                    Sidebar
-                </NuxtLink>
+                <NuxtLink to="/uu-layout/sidebar/" class="nav-link"> Sidebar </NuxtLink>
             </li>
             <li class="nav-item">
-                <NuxtLink to="/uu-layout/form/" class="nav-link">
-                    Form
-                </NuxtLink>
+                <NuxtLink to="/uu-layout/form/" class="nav-link"> Form </NuxtLink>
             </li>
         </ul>
     </div>

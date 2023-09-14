@@ -1,7 +1,6 @@
 @use "sass:map";
 
 .#{$uu-prefix}cover {
-
     display: flex;
     position: relative;
     justify-content: center;
@@ -34,8 +33,7 @@
         bottom: 0;
         left: 0;
 
-        padding:
-            var(--#{$uu-css-prefix}cover-copyright-padding-y)
+        padding: var(--#{$uu-css-prefix}cover-copyright-padding-y)
             var(--#{$uu-css-prefix}cover-copyright-padding-x);
         background-color: var(--#{$uu-css-prefix}cover-copyright-background-color);
         color: var(--#{$uu-css-prefix}cover-copyright-text-color);
@@ -61,9 +59,7 @@
         @extend .#{$uu-prefix}hero;
         position: absolute;
         bottom: 0;
-        width: calc(
-            100% - #{$uu-sidebar-full-width}
-        );
+        width: calc(100% - #{$uu-sidebar-full-width});
 
         @media (max-width: $uu-content-start-spacing-breakpoint) {
             width: calc(100% - #{$uu-sidebar-intermediate-full-width});
@@ -85,7 +81,8 @@
             width: 100%;
 
             // We _could_ also use !important....
-            &:not(.#{$uu-prefix}cover-hero-left), &.#{$uu-prefix}cover-hero-left {
+            &:not(.#{$uu-prefix}cover-hero-left),
+            &.#{$uu-prefix}cover-hero-left {
                 padding-left: var(--#{$uu-css-prefix}container-padding-x);
                 padding-right: var(--#{$uu-css-prefix}container-padding-x);
             }
