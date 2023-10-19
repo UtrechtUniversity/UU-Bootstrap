@@ -1,11 +1,11 @@
-.form-control {
+.form-control, .form-select {
     --#{$prefix}input-bg: #{$input-bg};
     background: var(--#{$prefix}input-bg);
 }
 
 @if $enable-dark-mode {
     @include color-mode(dark) {
-        .form-control {
+        .form-control, .form-select {
             --#{$prefix}input-bg: #{$input-bg-dark};
         }
     }
