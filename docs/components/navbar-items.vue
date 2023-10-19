@@ -86,6 +86,9 @@ permissions and limitations under the Licence.
                 <li>
                     <NuxtLink to="/components/tiles/" class="dropdown-item"> Tiles </NuxtLink>
                 </li>
+                <li>
+                    <NuxtLink to="/components/uu-list/" class="dropdown-item"> UU-List </NuxtLink>
+                </li>
                 <li class="dropdown-header">Bootstrap</li>
                 <li>
                     <NuxtLink to="/components/buttons/" class="dropdown-item"> Buttons </NuxtLink>

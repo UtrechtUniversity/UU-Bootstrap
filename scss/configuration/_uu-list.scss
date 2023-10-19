@@ -1,0 +1,16 @@
+$uu-list-gap-x: 1.5rem !default;
+$uu-list-gap-y: 1rem !default;
+$uu-list-controls-bg: $light !default;
+$uu-list-controls-bg-dark: $gray-800 !default;
+$uu-list-controls-padding-x: 1rem !default;
+$uu-list-controls-padding-y: 1rem !default;
+$uu-list-controls-gap: 1rem !default;
+$uu-list-filters-width: 18rem !default;
+$uu-list-filters-gap: 1rem !default;
+$uu-list-filters-padding-x: 1rem !default;
+$uu-list-filters-padding-y: .5rem !default;
+$uu-list-filters-label-padding: 1rem 1rem 0.5rem 1rem !default;
+$uu-list-filters-border-width: 0.0625rem;
+$uu-list-filters-border-color: $gray-400;
+$uu-list-filters-border-color-dark: $gray-600;
+$uu-list-controls-search-width: $uu-list-filters-width - $uu-list-controls-padding-x !default;

@@ -1,0 +1,121 @@
+.uu-list,
+.uu-list-sidebar {
+    --#{$prefix}uu-list-gap-y: #{$uu-list-gap-y};
+    --#{$prefix}uu-list-gap-x: #{$uu-list-gap-x};
+    --#{$prefix}uu-list-controls-bg: #{$uu-list-controls-bg};
+    --#{$prefix}uu-list-controls-padding-x: #{$uu-list-controls-padding-x};
+    --#{$prefix}uu-list-controls-padding-y: #{$uu-list-controls-padding-y};
+    --#{$prefix}uu-list-controls-gap: #{$uu-list-controls-gap};
+    --#{$prefix}uu-list-controls-search-width: #{$uu-list-controls-search-width};
+    --#{$prefix}uu-list-filters-width: #{$uu-list-filters-width};
+    --#{$prefix}uu-list-filters-gap: #{$uu-list-filters-gap};
+    --#{$prefix}uu-list-filters-padding-x: #{$uu-list-filters-padding-x};
+    --#{$prefix}uu-list-filters-padding-y: #{$uu-list-filters-padding-y};
+    --#{$prefix}uu-list-filters-label-gap: #{$uu-list-filters-label-padding};
+    --#{$prefix}uu-list-filters-border-color: #{$uu-list-filters-border-color};
+    --#{$prefix}uu-list-filters-border-width: #{$uu-list-filters-border-width};
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .uu-list,
+        .uu-list-sidebar {
+            --#{$prefix}uu-list-controls-bg: #{$uu-list-controls-bg-dark};
+            --#{$prefix}uu-list-filters-border-color: #{$uu-list-filters-border-color-dark};
+        }
+    }
+}
+
+.uu-list {
+    display: grid;
+    width: 100%;
+    gap: var(--#{$prefix}uu-list-gap-y) var(--#{$prefix}uu-list-gap-x);
+
+    grid-template-columns: var(--#{$prefix}uu-list-filters-width) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "controls controls"
+        "filters content";
+
+    .uu-list-controls {
+        grid-area: controls;
+        width: 100%;
+        background: var(--#{$prefix}uu-list-controls-bg);
+
+        display: grid;
+        grid-template-columns: max-content auto max-content max-content;
+        grid-template-areas: "search searchText order pageSize";
+        align-items: center;
+
+        padding: var(--#{$prefix}uu-list-controls-padding-y)
+            var(--#{$prefix}uu-list-controls-padding-x);
+        gap: var(--#{$prefix}uu-list-controls-gap);
+
+        .uu-list-search-control {
+            grid-area: search;
+
+            width: var(--#{$prefix}uu-list-controls-search-width);
+        }
+        .uu-list-search-text-control {
+            grid-area: searchText;
+        }
+        .uu-list-order-control {
+            grid-area: order;
+        }
+        .uu-list-page-size-control {
+            grid-area: pageSize;
+        }
+    }
+
+    .uu-list-filters {
+        grid-area: filters;
+        background: var(--#{$prefix}uu-list-controls-bg);
+    }
+
+    // Also use the filter area if no filters are present
+    .uu-list-content {
+        grid-column-start: filters;
+        grid-column-end: content;
+    }
+    .uu-list-filters ~ .uu-list-content {
+        grid-area: content;
+    }
+}
+
+.uu-list-sidebar {
+    --bs-uu-sidebar-width: var(--#{$prefix}uu-list-filters-width);
+}
+
+.uu-list-filter {
+    --bs-border-color: var(--#{$prefix}uu-list-filters-border-color);
+    margin-bottom: var(--#{$prefix}uu-list-filters-gap);
+
+    .uu-list-filter-label {
+        border-bottom: var(--#{$prefix}uu-list-filters-border-width) solid
+            var(--#{$prefix}uu-list-filters-border-color);
+        padding: var(--#{$prefix}uu-list-filters-label-gap);
+        font-weight: 500;
+    }
+    .uu-list-filter-field {
+        padding: var(--#{$prefix}uu-list-filters-padding-y)
+            var(--#{$prefix}uu-list-filters-padding-x);
+    }
+    .form-check {
+        border-bottom: var(--#{$prefix}uu-list-filters-border-width) solid var(--#{$prefix}uu-list-filters-border-color);
+        display: flex;
+        width: 100%;
+        padding: var(--#{$prefix}uu-list-filters-padding-y)
+            var(--#{$prefix}uu-list-filters-padding-x);
+        gap: .75rem;
+        align-items: center;
+
+        .form-check-input {
+            flex: 0 0 auto;
+            margin: 0;
+        }
+
+        .form-check-label {
+            flex: 1 1 auto;
+        }
+    }
+}
