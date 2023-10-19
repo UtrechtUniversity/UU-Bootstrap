@@ -1,6 +1,6 @@
 .form-control, .form-select {
     --#{$prefix}input-bg: #{$input-bg};
-    background: var(--#{$prefix}input-bg);
+    background-color: var(--#{$prefix}input-bg);
 }
 
 @if $enable-dark-mode {
