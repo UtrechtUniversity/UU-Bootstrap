@@ -20,6 +20,28 @@
             bottom: 0;
         }
     }
+
+    &.loading tbody {
+        position: relative;
+
+        td {
+            opacity: 0.4;
+        }
+    }
+
+    &.loading tbody:after {
+        border: 0.2rem solid var(--bs-secondary);
+        border-radius: 999999px;
+        border-top-color: transparent !important;
+        content: "";
+        display: block;
+        height: 3em;
+        width: 3em;
+        position: absolute;
+        left: calc(50% - (3em * 0.5));
+        top: calc(50% - (3em * 0.5));
+        animation: spinner-border 0.5s infinite linear;
+    }
 }
 
 @media (max-width: map.get($grid-breakpoints, $uu-navbar-breakpoint)) {

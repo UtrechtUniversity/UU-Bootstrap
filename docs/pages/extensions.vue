@@ -25,6 +25,7 @@ function pickRandom(array: string[]) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+const tableLoadingState = ref(false);
 const fakeTableData = computed(() => {
     const firstnames = [
         "John",
@@ -195,6 +196,7 @@ $dark:                $gray-900;
                 </ul>
             </template>
             <h1 class="uu-sidebar-header-linked">Table sticky header/footer</h1>
+            <h2 class="hdr-underlined">Sticky header/footer</h2>
             <p>
                 For big tables it might be handy to have the table header 'stick' to the top (or the
                 footer to the bottom). For this usecase,
@@ -231,8 +233,23 @@ $dark:                $gray-900;
                     value manually.
                 </p>
             </div>
+            <h3 class="hdr-underlined">Loading indicator</h3>
+            <p>
+                When dynamically loading paginated content, one can use a new 'loading' state for
+                tables. This will add an overlay and a spinner over the table. Just add
+                <code>.loading</code> to the <code>.table</code>.
+            </p>
+            <p>
+                Note: the 'overlay' is faked by changing the opacity of <code>tbody</code>. This
+                might look weird if the underlying element is not black/white.
+            </p>
+
+            <div class="btn btn-primary mb-3" @click="tableLoadingState = !tableLoadingState">
+                Toggle loading state
+            </div>
             <table
                 class="table table-striped table-striped table-sticky-header table-sticky-footer"
+                :class="tableLoadingState ? 'loading' : ''"
             >
                 <thead class="table-primary">
                     <tr>
