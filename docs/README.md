@@ -39,7 +39,7 @@ You can then switch between light and dark using the theme settings.
 
 ## Deploy new version to GH Pages
 
--   Run `NUXT_APP_BASE_URL="/bootstrap-theme/" yarn generate` in this folder
+-   Run `NUXT_APP_BASE_URL="/UU-Bootstrap/" yarn generate` in this folder
 -   Make a separate clone of the gh-pages branch
 -   Copy the contents of `.output/public` into your gh-pages clone
 -   Commit and push the gh-pages branch!
