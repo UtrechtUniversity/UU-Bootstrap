@@ -1,11 +1,11 @@
-# Portaldev Bootstrap docs
+# UU-Bootstrap docs
 
 Small nuxt app to serve as both documentation as well as developing
 
 ## Requirements
 
 -   Yarn
--   Node >= 16 (other versions untested)
+-   Node >= 16 < 20 (other versions untested)
 
 ## Setup
 

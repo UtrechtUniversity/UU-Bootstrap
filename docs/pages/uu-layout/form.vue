@@ -52,7 +52,7 @@ const example2 = ref(`<div class="uu-form-text-row">
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Form | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Form | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Form</h1>

@@ -20,7 +20,7 @@ permissions and limitations under the Licence.
 <template>
     <div class="w-100">
         <Head>
-            <Title>Migrating | Portaldev Bootstrap theme docs</Title>
+            <Title>Migrating | UU-Bootstrap docs</Title>
         </Head>
         <div class="uu-hero">
             <h1>Migrating from bootstrap 4</h1>

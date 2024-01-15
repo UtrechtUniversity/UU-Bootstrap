@@ -1,6 +1,7 @@
 # UU-Bootstrap
 
-A custom build/extension of Bootstrap 5 for websites and web-apps developed at/for Utrecht University.
+A custom build/extension of Bootstrap 5 for websites and web-apps developed at/for Utrecht
+University.
 
 Our aim is to provide a high quality (reference) implementation of the
 [UU Corporate Identity](https://www.uu.nl/en/organisation/corporate-identity).
@@ -17,8 +18,9 @@ For further implementation details, see the docs!
 
 ## Maintainers & contributing
 
-UU-Bootstrap was originally developed at and is maintained by the [Centre For Digital Humanities](https://cdh.uu.nl).
-However, we'd love others to help us to make this project even better!
+UU-Bootstrap was originally developed at and is maintained by the
+[Centre For Digital Humanities](https://cdh.uu.nl). However, we'd love others to help us to make
+this project even better!
 
 For more info on how to contribute, please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
@@ -30,7 +32,6 @@ See the documentation on [GH Pages](https://utrechtuniversity.github.io/UU-Boots
 
 The source code for the documentation in the `docs/` folder also acts as a development environment.
 See the readme in that folder on how to set things up.
-
 
 # Copyright
 

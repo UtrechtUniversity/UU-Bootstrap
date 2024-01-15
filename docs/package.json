@@ -27,5 +27,8 @@
         "prismjs": "^1.28.0",
         "uuid": "^8.3.2",
         "vue-prism-component": "^2.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0 <20.0.0"
     }
 }

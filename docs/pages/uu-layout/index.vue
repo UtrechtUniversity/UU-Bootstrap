@@ -46,7 +46,7 @@ const fullPageCode = ref(`<body>
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Overview | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Overview | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout overview</h1>

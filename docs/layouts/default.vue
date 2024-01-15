@@ -36,11 +36,8 @@ const colorMode = computed(() => (themeSettings?.value.dark_theme ? "dark" : "li
                 <img src="~/assets/uu-logo-en-white.svg" />
             </div>
             <div class="col-12 col-md-8 text-md-end">
-                <p>Portaldev Bootstrap Theme</p>
-                <p>
-                    DH-IT Faculty Portal Development<br />
-                    Utrecht University &copy; {{ currentYear }}
-                </p>
+                <p>UU-Bootstrap</p>
+                <p>Utrecht University &copy; {{ currentYear }}</p>
             </div>
         </footer>
     </div>
