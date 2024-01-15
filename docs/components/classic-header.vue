@@ -30,9 +30,7 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
                 <img v-if="themeSettings.dark_theme" src="~/assets/uu-logo-en-w.svg" />
                 <img v-else src="~/assets/uu-logo-en.svg" />
             </NuxtLink>
-            <div class="text-center uu-header-title text-red ms-auto">
-                Portaldev Bootstrap theme
-            </div>
+            <div class="text-center uu-header-title text-red ms-auto">UU-Bootstrap</div>
             <div
                 class="border-left ms-auto px-3 text-muted text-uppercase cursor-pointer"
                 @click="themeSettings.showSettings = true"
@@ -42,7 +40,7 @@ const themeSettings = inject<ThemeSettings>(ThemeSettingsKey);
             <div class="border-left ps-3">
                 <NuxtLink
                     class="text-muted text-uppercase text-decoration-none"
-                    to="https://github.com/DH-IT-Portal-Development/bootstrap-theme"
+                    to="https://github.com/UtrechtUniversity/UU-Bootstrap"
                     target="_blank"
                 >
                     GitHub

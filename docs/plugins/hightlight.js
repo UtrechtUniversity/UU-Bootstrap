@@ -18,6 +18,7 @@ express or implied.
 permissions and limitations under the Licence.
 */
 import "prismjs";
+import "prismjs/components/prism-bash";
 import "prismjs/components/prism-scss";
 import "prismjs/components/prism-markup";
 import "prismjs/themes/prism-tomorrow.css";

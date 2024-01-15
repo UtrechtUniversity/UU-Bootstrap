@@ -59,7 +59,7 @@ const headerClasses = computed(() => {
                 v-if="themeSettings.unifiedHeaderSettings.app_name"
                 class="navbar-text fs-4 text-black d-none d-lg-flex text-nowrap pe-4"
             >
-                Bootstrap theme
+                UU-Bootstrap
             </div>
             <div id="unified-header-nav" class="collapse navbar-collapse me-md-2">
                 <navbar-items :class="menuClasses" />
@@ -74,7 +74,7 @@ const headerClasses = computed(() => {
             <div class="navbar-text border-left">
                 <NuxtLink
                     class="text-muted text-uppercase text-decoration-none"
-                    to="https://github.com/DH-IT-Portal-Development/bootstrap-theme"
+                    to="https://github.com/UtrechtUniversity/UU-Bootstrap"
                     target="_blank"
                 >
                     GitHub

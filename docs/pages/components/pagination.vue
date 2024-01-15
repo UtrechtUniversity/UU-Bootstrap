@@ -56,7 +56,7 @@ function changePage(page: number) {
 <template>
     <div class="uu-content">
         <Head>
-            <Title>Pagination | Portaldev Bootstrap theme docs</Title>
+            <Title>Pagination | UU-Bootstrap docs</Title>
         </Head>
         <Sidebar id="buttons" placement="right" mobile-placement="bottom">
             <template #sidebar-button> Variables </template>

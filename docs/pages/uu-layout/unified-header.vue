@@ -261,7 +261,7 @@ const toolExample = ref(`<div class="uu-unified-header navbar">
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Unified header | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Unified header | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero" id="intro">
             <h1>UU Layout Unified Header</h1>
