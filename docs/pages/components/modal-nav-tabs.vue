@@ -51,7 +51,7 @@ const example = ref(`<div class="modal" tabindex="-1">
 <template>
     <div class="uu-content">
         <Head>
-            <Title>Modal Nav Tabs | Portaldev Bootstrap theme docs</Title>
+            <Title>Modal Nav Tabs | UU-Bootstrap docs</Title>
         </Head>
         <div class="uu-hero">
             <h1>Modal Nav Tabs</h1>

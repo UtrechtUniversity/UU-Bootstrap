@@ -41,7 +41,7 @@ const heroExample = ref(`<div class="uu-cover">
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Cover | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Cover | UU Layout | UU-Bootstrap docs </Title>
         </Head>
 
         <div class="uu-cover h-100 align-items-center">

@@ -27,7 +27,7 @@ const loading = ref(false);
 <template>
     <div class="uu-content">
         <Head>
-            <Title>Buttons | Portaldev Bootstrap theme docs</Title>
+            <Title>Buttons | UU-Bootstrap docs</Title>
         </Head>
         <Sidebar id="buttons" placement="right" mobile-placement="bottom">
             <template #sidebar-button> Variables </template>

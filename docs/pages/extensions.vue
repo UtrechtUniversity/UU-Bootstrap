@@ -68,7 +68,7 @@ const fakeTableData = computed(() => {
 <template>
     <div class="w-100">
         <Head>
-            <Title>Extensions | Portaldev Bootstrap theme docs</Title>
+            <Title>Extensions | UU-Bootstrap docs</Title>
         </Head>
         <div class="uu-hero">
             <h1>Extensions</h1>

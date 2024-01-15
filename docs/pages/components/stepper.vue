@@ -93,7 +93,7 @@ const example2 = ref(`<div class="d-md-none">
 <template>
     <div class="uu-content">
         <Head>
-            <Title>Stepper | Portaldev Bootstrap theme docs</Title>
+            <Title>Stepper | UU-Bootstrap docs</Title>
         </Head>
         <div class="uu-hero">
             <h1>Stepper</h1>

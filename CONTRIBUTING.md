@@ -7,10 +7,29 @@ All types of contributions are encouraged and valued. See the
 project handles them. Please make sure to read the relevant section before making your contribution.
 It will make it a lot easier for us maintainers and smooth out the experience for all involved.
 
+# Table of Contents
+
+-   [I Have a Question](#i-have-a-question)
+-   [I Want To Contribute](#i-want-to-contribute)
+    -   [Reporting Bugs](#reporting-bugs)
+        -   [Before Submitting a Bug Report](#before-submitting-a-bug-report)
+        -   [How Do I Submit a Good Bug Report?](#how-do-i-submit-a-good-bug-report)
+    -   [Suggesting Enhancements](#suggesting-enhancements)
+        -   [Before Submitting an Enhancement](#before-submitting-an-enhancement)
+        -   [How Do I Submit a Good Enhancement Suggestion?](#how-do-i-submit-a-good-enhancement-suggestion)
+    -   [Your First Code Contribution](#your-first-code-contribution)
+-   [Project team](#project-team)
+    -   [Maintainers](#maintainers)
+    -   [Developers](#developers)
+-   [Style guides](#style-guides)
+    -   [Code style](#code-style)
+    -   [Commit Messages](#commit-messages)
+-   [Attribution](#attribution)
+
 ## I Have a Question
 
 > If you want to ask a question, we assume that you have read the available
-> [Documentation](https://dh-it-portal-development.github.io/bootstrap-theme/).
+> [Documentation](https://utrechtuniversity.github.io/UU-Bootstrap/).
 
 Before you ask a question, it is best to search for existing [Issues](/issues) or
 [Discussions](/discussions) that might help you. In case you have found a suitable issue/discussion
@@ -39,8 +58,8 @@ advance to help us fix any potential bug as fast as possible.
 
 -   Make sure that you are using the latest version.
 -   Determine if your bug is really a bug and not an error on your side (Make sure that you have
-    read the [documentation](https://dh-it-portal-development.github.io/bootstrap-theme/). If you
-    are looking for support, you might want to check [this section](#i-have-a-question)).
+    read the [documentation](https://utrechtuniversity.github.io/UU-Bootstrap/). If you are looking
+    for support, you might want to check [this section](#i-have-a-question)).
 -   To see if other users have experienced (and potentially already solved) the same issue you are
     having, check if there is not already a bug report existing for your bug or error in the
     [bug tracker](issues?q=label%3Abug).
@@ -91,8 +110,8 @@ maintainers and the community to understand your suggestion and find related sug
     -   In addition, component suggestions that can be easily implemented using a few bootstrap
         utilities/existing components (for example, a sitemap list) are not likely to be added.
 -   Make sure that you are using the latest version.
--   Read the [documentation](https://dh-it-portal-development.github.io/bootstrap-theme/) carefully
-    and find out if the functionality is already covered, maybe by an individual configuration.
+-   Read the [documentation](https://utrechtuniversity.github.io/UU-Bootstrap/) carefully and find
+    out if the functionality is already covered, maybe by an individual configuration.
 -   Perform a [search](/issues) to see if the enhancement has already been suggested. If it has, add
     a comment to the existing issue instead of opening a new one.
 
@@ -127,8 +146,8 @@ pull requests, triaging issues and handling releases.
 ### Maintainers
 
 This project is currently maintained by the Portal Development team of
-[Humanities IT](https://cdh.uu.nl/research/humanities-it/), part of the Centre for Digital
-Humanities.
+[Humanities IT](https://cdh.uu.nl/research/humanities-it/), part of the
+[Centre For Digital Humanities](https://cdh.uu.nl).
 
 We are willing and looking for other teams of Utrecht University to share maintainer
 responsibilities with. If your team is interested, please do contact us!
@@ -136,7 +155,7 @@ responsibilities with. If your team is interested, please do contact us!
 ### Developers
 
 To avoid creating a large group of people with maintainer access, we limit the number of maintainers
-to (around) 2 per team. Other team members can developer access instead.
+to (around) 2 per team. Other team members can get developer access instead.
 
 This only gives write access to the project repository (aside from the protected branches).
 

@@ -99,7 +99,7 @@ $tiles-hover-bg
 <template>
     <div class="uu-content">
         <Head>
-            <Title>Tiles | Portaldev Bootstrap theme docs</Title>
+            <Title>Tiles | UU-Bootstrap docs</Title>
         </Head>
         <div class="uu-hero">
             <h1>Tiles</h1>

@@ -39,7 +39,7 @@ const minimalExample = ref(`<div class="uu-sidebar-container">
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Sidebar | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Sidebar | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Sidebar</h1>

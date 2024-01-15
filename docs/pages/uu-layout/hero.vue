@@ -71,7 +71,7 @@ const exampleList = ref([
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Hero | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Hero | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Hero</h1>

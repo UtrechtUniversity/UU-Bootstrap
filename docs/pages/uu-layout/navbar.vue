@@ -88,7 +88,7 @@ const navbar_example = ref(`<nav class="navbar uu-navbar">
 <template>
     <div class="uu-content">
         <Head>
-            <Title> Navbar | UU Layout | Portaldev Bootstrap theme docs </Title>
+            <Title> Navbar | UU Layout | UU-Bootstrap docs </Title>
         </Head>
         <div class="uu-hero">
             <h1>UU Layout Navbar</h1>
