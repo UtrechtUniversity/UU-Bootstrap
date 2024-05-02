@@ -1,6 +1,6 @@
 import eslintPlugin from "vite-plugin-eslint";
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+
 export default defineNuxtConfig({
     ssr: false,
 
@@ -42,5 +42,11 @@ export default defineNuxtConfig({
         shim: false, // Enable if not running VSCode with Volar Extension or IntelliJ
         strict: true,
         typeCheck: false,
+        tsConfig: {
+            compilerOptions: {
+                // Nuxt 3.8+ enables this by default; but some of our dependencies are not compatible with this setting
+                verbatimModuleSyntax: false,
+            },
+        },
     },
 });
