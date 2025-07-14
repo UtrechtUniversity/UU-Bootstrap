@@ -1,5 +1,5 @@
 // 1. Basic functions
-@import "node_modules/bootstrap/scss/functions";
+@import "bootstrap/scss/functions";
 
 // 2. Overrides
 @import "misc"; // Looking for something and not finding it here? It's probably in here
@@ -14,11 +14,11 @@
 @import "nav";
 
 // 3. Configuration
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
-@import "node_modules/bootstrap/scss/maps";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/utilities";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
 // 4. Additions
 @import "utilities";

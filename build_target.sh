@@ -4,6 +4,9 @@
 TARGET=$1
 VERSION=$2
 
+# Make sure we can import stuff from node_modules (read: bootstrap)
+export SASS_PATH="node_modules"
+
 if [ -z "$TARGET" ]
 then
       echo "No target was provided"
